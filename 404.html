@@ -1,12 +1,36 @@
 <!doctype html><meta charset="utf-8">
 <title>Redirect…</title>
 <script>
-const m = location.pathname.match(/\/%23post-([0-9]+)\.html$/);
-if (m) {
-  const target = location.pathname.replace(/\/%23post-([0-9]+)\.html$/, '/#post-' + m[1]);
-  location.replace(target); // мягкий редирект клиентом
-} else {
-  // обычная 404
+/*
+  Перехватываем ошибочные URL вида:
+  /threads/.../%23post-510.html  →  /threads/.../#post-510
+  Работает и в подкаталоге (project pages), путь вычисляется автоматически.
+*/
+
+(function () {
+  var p = location.pathname;
+
+  // 1) %23post-123.html → #post-123  (убираем .html ПОСЛЕ якоря)
+  var m = p.match(/\/%23post-([0-9]+)\.html$/);
+  if (m) {
+    var target = p.replace(/\/%23post-([0-9]+)\.html$/, "/#post-" + m[1]);
+    // Сохраняем query/hash, если вдруг были
+    if (location.search) target += location.search;
+    // Жёсткая замена (без истории «назад на 404»)
+    location.replace(target);
+    return;
+  }
+
+  // 2) Аналогично на случай других якорей (если встретятся)
+  var m2 = p.match(/\/%23(comment|msg)-([0-9]+)\.html$/);
+  if (m2) {
+    var target2 = p.replace(/\/%23(comment|msg)-([0-9]+)\.html$/, "/#" + m2[1] + "-" + m2[2]);
+    if (location.search) target2 += location.search;
+    location.replace(target2);
+    return;
+  }
+
+  // Иначе — обычная 404
   document.write('<h1>404</h1><p>Page not found.</p>');
-}
+})();
 </script>
