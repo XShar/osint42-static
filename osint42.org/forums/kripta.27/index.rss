@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Крипта</title>
+    <description>Обсуждение майнинга, криптовалюты, кошельков и т.д.</description>
+    <pubDate>Sat, 27 Sep 2025 09:39:29 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:39:29 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/kripta.27/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/kripta.27/index.rss"/>
+    <item>
+      <title>Полное руководство по Electrum: храни свои Bitcoin под своим контролем</title>
+      <pubDate>Thu, 17 Jul 2025 07:37:01 +0000</pubDate>
+      <link>https://osint42.org/threads/polnoye-rukovodstvo-po-electrum-khrani-svoi-bitcoin-pod-svoim-kontrolem.109/</link>
+      <guid isPermaLink="false">109</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/kripta.27/"><![CDATA[Крипта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1752737812211-png.748/"
+			class="bbImage "
+			style=""
+			alt="1752737812211.png"
+			title="1752737812211.png"
+			width="512" height="512" loading="lazy" /><br />
+<br />
+<b>1. Что такое Bitcoin<br />
+<br />
+Bitcoin</b> — это:<br />
+<ul>
+<li data-xf-list-type="ul"><b>Децентрализованная цифровая валюта</b>, созданная Сатоши Накамото в 2009 году.</li>
+<li data-xf-list-type="ul"><b>Публичный блокчейн</b>, где все транзакции записаны и проверены сетью узлов.</li>
+<li data-xf-list-type="ul"><b>Ограниченный запас</b>: всего 21 млн монет, что делает BTC «цифровым золотом».</li>
+<li data-xf-list-type="ul"><b>Глобальный и без границ</b>: отправка в любую точку мира за несколько минут.</li>
+</ul><span style="color: red"><b>Важно:</b> транзакции необратимы, а доступ к монетам зависит от приватных ключей.</span>...<br />
+<br />
+<a href="https://osint42.org/threads/polnoye-rukovodstvo-po-electrum-khrani-svoi-bitcoin-pod-svoim-kontrolem.109/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Надежные криптобиржи, для покупки крипты за рубли</title>
+      <pubDate>Fri, 20 Jun 2025 08:46:35 +0000</pubDate>
+      <link>https://osint42.org/threads/nadezhnyye-kriptobirzhi-dlya-pokupki-kripty-za-rubli.85/</link>
+      <guid isPermaLink="false">85</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/kripta.27/"><![CDATA[Крипта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">На июнь 2025 года список <b>надежных криптобирж</b>, где можно купить криптовалюту <b>за рубли (RUB)</b>, сильно ограничен из-за санкций, ограничений на банковские переводы и ухода крупных платформ из РФ. Однако <b>всё ещё есть рабочие и относительно безопасные способы</b>. Ниже — актуальные варианты:<br />
+<hr /><br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-globe-with-meridians-1-bitpapa-bestchange-localbitcoins-analogichnyye"></a><img class="smilie smilie--emoji" alt="🌐" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f310.png" title="Globe with meridians    :globe_with_meridians:" data-shortname=":globe_with_meridians:" loading="lazy" width="64" height="64" /> 1<b>. Bitpapa / BestChange / LocalBitcoins (аналогичные)</b>&#8203;<a class="hoverLink" href="#-globe-with-meridians-1-bitpapa-bestchange-localbitcoins-analogichnyye" title="Постоянная ссылка"></a></h2><ul>
+<li data-xf-list-type="ul"><b>Тип:</b> Децентрализованные P2P-платформы и агрегаторы</li>
+<li data-xf-list-type="ul"><b>Плюсы:</b><ul>
+<li data-xf-list-type="ul">Большой выбор продавцов...</li>
+</ul></li>
+</ul><br />
+<a href="https://osint42.org/threads/nadezhnyye-kriptobirzhi-dlya-pokupki-kripty-za-rubli.85/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Неочевидные способы деанона через криптокошельки</title>
+      <pubDate>Fri, 20 Jun 2025 08:39:04 +0000</pubDate>
+      <link>https://osint42.org/threads/neochevidnyye-sposoby-deanona-cherez-kriptokoshel-ki.84/</link>
+      <guid isPermaLink="false">84</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/kripta.27/"><![CDATA[Крипта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Всем привет!<br />
+<br />
+Хочу затронуть одну недооценённую, но интересную тему в рамках OSINT — <b>деанонимизация пользователей по криптовалютным кошелькам</b>.<br />
+На первый взгляд может показаться, что блокчейн — это про анонимность. Но на практике всё наоборот: прозрачность транзакций часто играет против пользователя.<br />
+<br />
+Вот несколько <b>неочевидных векторов для деанона</b>:<br />
+<br />
+<hr /><br />
+<img class="smilie smilie--emoji" alt="✅" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/2705.png" title="White heavy check mark    :white_check_mark:" data-shortname=":white_check_mark:" loading="lazy" width="64" height="64" /> <b>1. Повторное использование адреса</b><br />
+Многие люди используют один и тот же кошелёк:<br />
+— для получения донатов<br />
+— в...<br />
+<br />
+<a href="https://osint42.org/threads/neochevidnyye-sposoby-deanona-cherez-kriptokoshel-ki.84/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>

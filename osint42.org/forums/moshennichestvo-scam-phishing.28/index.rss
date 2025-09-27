@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Мошенничество/SCAM/Phishing</title>
+    <description>Можете создать тему с описанием мошенничества, а также ссылки на такие сервисы.</description>
+    <pubDate>Sat, 27 Sep 2025 09:39:31 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:39:31 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/moshennichestvo-scam-phishing.28/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/moshennichestvo-scam-phishing.28/index.rss"/>
+    <item>
+      <title>Мошенничество с чужим Apple ID на вашем устройстве: как работает схема и как защититься</title>
+      <pubDate>Thu, 28 Aug 2025 07:07:57 +0000</pubDate>
+      <link>https://osint42.org/threads/moshennichestvo-s-chuzhim-apple-id-na-vashem-ustroistve-kak-rabotayet-skhema-i-kak-zashchitit-sya.159/</link>
+      <guid isPermaLink="false">159</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/moshennichestvo-scam-phishing.28/"><![CDATA[Мошенничество/SCAM/Phishing]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1756213190136-png.875/"
+			class="bbImage "
+			style=""
+			alt="1756213190136.png"
+			title="1756213190136.png"
+			width="768" height="512" loading="lazy" /><br />
+<br />
+В последнее время все чаще появляются истории о новой схеме мошенничества, связанной с устройствами Apple.<br />
+Сценарий обычно выглядит так: к вам обращается «добрый человек» и под любым предлогом просит <b>на минутку войти в его Apple ID</b> на вашем iPhone, iPad или Mac.<br />
+<br />
+Поводы придумывают разные: <br />
+<ul>
+<li data-xf-list-type="ul">проверить устройство перед покупкой/продажей;</li>
+<li data-xf-list-type="ul">оформить гарантию или страховку;</li>
+<li data-xf-list-type="ul">подключить iCloud+;</li>
+<li data-xf-list-type="ul">скачать какое-то приложение (даже «aYoGrAm» <img src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f642.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":)" title="Smile    :)"  data-smilie="1"data-shortname=":)" />);</li>
+<li data-xf-list-type="ul">или любую другую...</li>
+</ul><br />
+<a href="https://osint42.org/threads/moshennichestvo-s-chuzhim-apple-id-na-vashem-ustroistve-kak-rabotayet-skhema-i-kak-zashchitit-sya.159/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Как определить мошенника. Советы от Сбера</title>
+      <pubDate>Tue, 26 Aug 2025 07:54:23 +0000</pubDate>
+      <link>https://osint42.org/threads/kak-opredelit-moshennika-sovety-ot-sbera.158/</link>
+      <guid isPermaLink="false">158</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/moshennichestvo-scam-phishing.28/"><![CDATA[Мошенничество/SCAM/Phishing]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h3 class="bbHeading"><a class="u-anchorTarget" name="-skhemy-obmana"></a>Схемы обмана&#8203;<a class="hoverLink" href="#-skhemy-obmana" title="Постоянная ссылка"></a></h3><br />
+Узнайте о популярных схемах мошенничества, которые используют злоумышленники в телефонных звонках, email-рассылках, СМС, в интернете и других каналах связи<br />
+<br />
+<img class="smilie smilie--emoji" alt="💠" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4a0.png" title="Diamond with a dot    :diamond_shape_with_a_dot_inside:" data-shortname=":diamond_shape_with_a_dot_inside:" loading="lazy" width="64" height="64" />Фейковый сотрудник предлагает «продлить договор» и установить приложение<br />
+<img class="smilie smilie--emoji" alt="💠" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4a0.png" title="Diamond with a dot    :diamond_shape_with_a_dot_inside:" data-shortname=":diamond_shape_with_a_dot_inside:" loading="lazy" width="64" height="64" />Звонок по видеосвязи от сотрудника ФСБ, который убеждает жертву поучаствовать в спецоперации<br />
+<img class="smilie smilie--emoji" alt="💠" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4a0.png" title="Diamond with a dot    :diamond_shape_with_a_dot_inside:" data-shortname=":diamond_shape_with_a_dot_inside:" loading="lazy" width="64" height="64" />Звонит оператор сотовой связи и просит продлить договор, а затем получает доступ к Госуслугам<br />
+<img class="smilie smilie--emoji" alt="💠" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4a0.png" title="Diamond with a dot    :diamond_shape_with_a_dot_inside:" data-shortname=":diamond_shape_with_a_dot_inside:" loading="lazy" width="64" height="64" />Мошенники звонят от имени банка и сообщают, что некто...<br />
+<br />
+<a href="https://osint42.org/threads/kak-opredelit-moshennika-sovety-ot-sbera.158/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Брашинг, квишинг и другие виды мошенничества</title>
+      <pubDate>Wed, 20 Aug 2025 12:06:15 +0000</pubDate>
+      <link>https://osint42.org/threads/brashing-kvishing-i-drugiye-vidy-moshennichestva.134/</link>
+      <guid isPermaLink="false">134</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/moshennichestvo-scam-phishing.28/"><![CDATA[Мошенничество/SCAM/Phishing]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1755690982138-png.846/"
+			class="bbImage "
+			style=""
+			alt="1755690982138.png"
+			title="1755690982138.png"
+			width="730" height="480" loading="lazy" /><br />
+<br />
+Вы получаете уведомление о доставке или просто находите у своей входной двери уже доставленную посылку. Но вы ничего не заказывали! Хотя подарки любят почти все, нужно насторожиться. Есть несколько мошеннических схем, которые начинаются именно с физической доставки.<br />
+<br />
+Конечно, стоит связаться с друзьями и близкими — может, кто-то из них сделал заказ, а вас не предупредил? Но если такой человек не нашелся, скорее всего, вас пытаются вовлечь в одну из схем обмана, описанных ниже...<br />
+<br />
+<a href="https://osint42.org/threads/brashing-kvishing-i-drugiye-vidy-moshennichestva.134/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Мошенничество в мессенджере Макс</title>
+      <pubDate>Tue, 19 Aug 2025 08:31:53 +0000</pubDate>
+      <link>https://osint42.org/threads/moshennichestvo-v-messendzhere-maks.127/</link>
+      <guid isPermaLink="false">127</guid>
+      <author>invalid@example.com (bbbcode)</author>
+      <category domain="https://osint42.org/forums/moshennichestvo-scam-phishing.28/"><![CDATA[Мошенничество/SCAM/Phishing]]></category>
+      <dc:creator>bbbcode</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img class="smilie smilie--emoji" alt="‼️" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/203c.png" title="Double exclamation mark    :bangbang:" data-shortname=":bangbang:" loading="lazy" width="64" height="64" /> Мошенники использовали новый мессенджер для обмана 34-летней курянки <br />
+<br />
+ <img class="smilie smilie--emoji" alt="📲" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4f2.png" title="Mobile phone with arrow    :calling:" data-shortname=":calling:" loading="lazy" width="64" height="64" />Жительница областного центра выполнила указания мошенников, представлявшихся сотрудниками различных государственных органов, и лишилась 444 тысяч рублей. Обман начался со звонка через мессенджер Max, установленный в телефоне потерпевшей. <br />
+ <br />
+<img class="smilie smilie--emoji" alt="📩" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4e9.png" title="Envelope with arrow    :envelope_with_arrow:" data-shortname=":envelope_with_arrow:" loading="lazy" width="64" height="64" />Незнакомец сообщил о доставке на ее имя посылки и попросил продиктовать код из поступившего смс-сообщения. Даже не ожидая никакой бандероли, курянка передала секретный код...<br />
+<br />
+<a href="https://osint42.org/threads/moshennichestvo-v-messendzhere-maks.127/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>СМС - защита не безопасна. Ваши деньги под угрозой</title>
+      <pubDate>Wed, 06 Aug 2025 07:36:48 +0000</pubDate>
+      <link>https://osint42.org/threads/sms-zashchita-ne-bezopasna-vashi-den-gi-pod-ugrozoi.122/</link>
+      <guid isPermaLink="false">122</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/moshennichestvo-scam-phishing.28/"><![CDATA[Мошенничество/SCAM/Phishing]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1754420219497-png.817/"
+			class="bbImage "
+			style=""
+			alt="1754420219497.png"
+			title="1754420219497.png"
+			width="512" height="768" loading="lazy" /><br />
+<br />
+Вообще все банки якобы защищены от взлома смс-проверкой.<br />
+<br />
+Но у каждого банка, зная телефон клиента банка можно по смс зайти в личный кабинет или приложение и собственно распоряжаться деньгами, также по смс можно и войти во всякие-там госуслуги и т.д.<br />
+<br />
+Сейчас опустим мошенников, которые под разными предлогами могут попытаться завладеть кодом из смс, кстати на самом деле любой может попасться на такой развод.)<br />
+<br />
+Но есть ещё и другая угроза.<img src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f641.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":(" title="Frown    :("  data-smilie="3"data-shortname=":(" /><br />
+<br />
+Давайте поговорим про SIM Swap.<br />
+<br />
+<b>SIM...</b><br />
+<br />
+<a href="https://osint42.org/threads/sms-zashchita-ne-bezopasna-vashi-den-gi-pod-ugrozoi.122/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Мошенническая схеме с домофонами</title>
+      <pubDate>Tue, 05 Aug 2025 11:47:59 +0000</pubDate>
+      <link>https://osint42.org/threads/moshennicheskaya-skheme-s-domofonami.121/</link>
+      <guid isPermaLink="false">121</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/moshennichestvo-scam-phishing.28/"><![CDATA[Мошенничество/SCAM/Phishing]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1754393484099-png.815/"
+			class="bbImage "
+			style=""
+			alt="1754393484099.png"
+			title="1754393484099.png"
+			width="800" height="534" loading="lazy" /><br />
+<br />
+Всем привет!<br />
+<br />
+Словил очередной развод.)<br />
+<br />
+Позвонили...<br />
+Чепушила представился сотрудником «общероссийского сервиса» и сообщил о якобы запланированной модернизации домофона, согласованной с управляющей компанией.<br />
+<br />
+Убедительно описывал детали: предлагал бесплатно заменить ключи, уточнил их количество и назначил время выдачи новых —на утро пятницы. <br />
+Для большей правдоподобности попросил взять наличные, если нужно больше трёх ключей.<br />
+<br />
+<b>Далее интересно...</b><br />
+<br />
+Чепушила сказал, что...<br />
+<br />
+<a href="https://osint42.org/threads/moshennicheskaya-skheme-s-domofonami.121/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Не включайте камеру при разговоре с мошенниками</title>
+      <pubDate>Tue, 22 Jul 2025 10:42:55 +0000</pubDate>
+      <link>https://osint42.org/threads/ne-vklyuchaite-kameru-pri-razgovore-s-moshennikami.110/</link>
+      <guid isPermaLink="false">110</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/moshennichestvo-scam-phishing.28/"><![CDATA[Мошенничество/SCAM/Phishing]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1753166791128-png.771/"
+			class="bbImage "
+			style=""
+			alt="1753166791128.png"
+			title="1753166791128.png"
+			width="780" height="390" loading="lazy" /><br />
+<br />
+В продолжении этой статьи:<a href="https://osint42.org/articles/bez-lokha-i-zhizn-plokha-povest-o-prikomandirovannom-sotrudnike-fsb.54/" class="link link--internal">Без лоха и жизнь плоха. Повесть о прикомандированном сотруднике ФСБ</a><br />
+<br />
+Участились случаи, что мошенники просят включить камеру, или звонят по видеозвонку...<br />
+<br />
+<b>Почему это опасно:</b><br />
+<br />
+Ваш образ запишут и будут использовать для дальнейших атак.<br />
+<br />
+Тут дальше вариантов много, от создание фейкового аккаунта, до проведения атак от вашего имени, жертва будет думать что общается с вами.<img src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f641.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":(" title="Frown    :("  data-smilie="3"data-shortname=":(" /><br />
+<br />
+<b>Ну и памятка, как защитится и виды атак:<br />
+<br />
+Стандартный телефонный...</b><br />
+<br />
+<a href="https://osint42.org/threads/ne-vklyuchaite-kameru-pri-razgovore-s-moshennikami.110/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Мошенники осваивают месседжер Max</title>
+      <pubDate>Tue, 22 Jul 2025 10:42:36 +0000</pubDate>
+      <link>https://osint42.org/threads/moshenniki-osvaivayut-messedzher-max.111/</link>
+      <guid isPermaLink="false">111</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/moshennichestvo-scam-phishing.28/"><![CDATA[Мошенничество/SCAM/Phishing]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1753180802553-png.777/"
+			class="bbImage "
+			style=""
+			alt="1753180802553.png"
+			title="1753180802553.png"
+			width="1156" height="667" loading="lazy" /><br />
+<br />
+Редакция «Кода Дурова» зафиксировала первые случаи мошенничества, в которых фигурирует мессенджер Max.<br />
+<br />
+Злоумышленники представляются сотрудниками платформы и под предлогом подключения дополнительных мер защиты пытаются получить доступ к личным данным пользователей.<br />
+<br />
+Как рассказали очевидцы, звонки совершаются не через сам Max, а по обычной мобильной связи. В ходе разговора пользователю сообщают, что ему срочно нужно зарегистрироваться в «национальном мессенджере» и активировать...<br />
+<br />
+<a href="https://osint42.org/threads/moshenniki-osvaivayut-messedzher-max.111/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>

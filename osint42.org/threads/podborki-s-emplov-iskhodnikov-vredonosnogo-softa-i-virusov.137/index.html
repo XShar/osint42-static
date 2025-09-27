@@ -1,0 +1,5922 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="thread_view_type_article"
+	data-container-key="node-4"
+	data-content-key="thread-137"
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965902,491a0fda7e087db22210c39c22b166cc"
+	class="has-no-js template-thread_view_type_article"
+	 data-run-jobs="">
+
+<!-- Mirrored from osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:54:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Заметка - Подборки сэмплов, исходников вредоносного софта и вирусов | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta name="description" content="Для исследования вредоносного софта, либо тестирование защиты часто необходимы сэмплы зверьков, так просто в поиске их не найти.
+
+Поэтому существуют готовые..." />
+		<meta property="og:description" content="Для исследования вредоносного софта, либо тестирование защиты часто необходимы сэмплы зверьков, так просто в поиске их не найти.
+
+Поэтому существуют готовые репозитории и базы сэмплов где их можно скачать.
+
+Также для изучения зверьков существуют и базы исходников, одну из таких баз я уже..." />
+		<meta property="twitter:description" content="Для исследования вредоносного софта, либо тестирование защиты часто необходимы сэмплы зверьков, так просто в поиске их не найти.
+
+Поэтому существуют готовые репозитории и базы сэмплов где их можно..." />
+	
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+		
+	
+	
+	<meta property="og:type" content="website" />
+
+
+	
+	
+		
+	
+	
+	
+		<meta property="og:title" content="Заметка - Подборки сэмплов, исходников вредоносного софта и вирусов" />
+		<meta property="twitter:title" content="Заметка - Подборки сэмплов, исходников вредоносного софта и вирусов" />
+	
+
+
+	
+	
+	
+	
+		
+	
+	
+	
+		<meta property="og:image" content="../../data/assets/logo/192192.png" />
+		<meta property="twitter:image" content="../../data/assets/logo/192192.png" />
+		<meta property="twitter:card" content="summary" />
+	
+
+
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../css4b5c.css?css=public%3Aalnb_navigation.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Amessage.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=2ed7579772272a11665b195f4b692b2e15158024" />
+
+
+	
+		<script data-cfasync="false" src="../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965902,491a0fda7e087db22210c39c22b166cc',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:message.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965902,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="thread_view_type_article">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../articles/authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965902%2C491a0fda7e087db22210c39c22b166cc"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965902%2C491a0fda7e087db22210c39c22b166cc"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965902%2C491a0fda7e087db22210c39c22b166cc"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;}">Темы</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;,&quot;c&quot;:{&quot;nodes&quot;:[4],&quot;child_nodes&quot;:1}}">Этот раздел</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;,&quot;c&quot;:{&quot;thread&quot;:137}}">Эта тема</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965902,491a0fda7e087db22210c39c22b166cc" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/posts/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+1"
+	data-nav-id="newPosts">Новые сообщения</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../search/index4009.html?type=post"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+2"
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../cdn-cgi/l/email-protection.html#8be2e5ede4cbe4f8e2e5ffbfb9a5e8e4e6" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="cfa6a1a9a08fa0bca6a1bbfbfde1aca0a2">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html" itemprop="item">
+			<span itemprop="name">Форум</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html#tekhniki-atak-i-ekspluatatsiya.19" itemprop="item">
+			<span itemprop="name">Техники атак и эксплуатация</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/obsuzhdeniye-vredonosnogo-softa.4/index.html" itemprop="item">
+			<span itemprop="name">Обсуждение вредоносного софта</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+						
+							<div class="p-title ">
+								
+									
+										<h1 class="p-title-value"><span class="label label--lightGreen" dir="auto">Заметка</span><span class="label-append">&nbsp;</span>Подборки сэмплов, исходников вредоносного софта и вирусов</h1>
+									
+									
+								
+							</div>
+						
+
+						
+							<div class="p-description">
+	<ul class="listInline listInline--bullet">
+		<li>
+			<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор темы</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+			<span class="u-srOnly">Автор темы</span>
+
+			<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+		</li>
+		<li>
+			<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата начала</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+			<span class="u-srOnly">Дата начала</span>
+
+			<a href="index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-08-22T16:17:05+0300" data-timestamp="1755868625" data-date="22.08.2025" data-time="16:17" data-short="22 Авг" title="22.08.2025 в 16:17">22.08.2025</time></a>
+		</li>
+		
+		
+	</ul>
+</div>
+						
+					
+				</div>
+			
+
+			<div class="p-body-main  ">
+				
+				<div class="p-body-contentCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	<div class="block block--messages "
+		data-xf-init="lightbox select-to-quote"
+		data-message-selector=".js-post"
+		data-lb-id="thread-137">
+		
+			
+	
+
+
+			<div class="block-outer"></div>
+
+			
+	<div class="block-outer js-threadStatusField"></div>
+
+		
+
+		<div class="block-container">
+			<div class="block-body">
+				
+					
+
+
+	
+	<article class="message message--article js-post js-inlineModContainer
+		
+		"
+		data-author="0x42"
+		data-content="post-339"
+		id="js-post-339">
+
+		<span class="u-anchorTarget" id="post-339"></span>
+		<div class="message-inner">
+			<div class="message-cell message-cell--main">
+				<div class="message-expandWrapper js-expandWatch is-expanded">
+					<div class="message-expandContent js-expandContent">
+						<div class="message-main js-quickEditTarget">
+
+							
+
+							
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline listInline--bullet">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-339.html" rel="nofollow" >
+					<time  class="u-dt" dir="auto" datetime="2025-08-22T16:17:05+0300" data-timestamp="1755868625" data-date="22.08.2025" data-time="16:17" data-short="22 Авг" title="22.08.2025 в 16:17">22.08.2025</time>
+				</a>
+			</li>
+			
+				<li class="u-concealed">
+					<a href="index.html#posts">
+						<i class="fa--xf far fa-comment  u-spaceAfter"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#comment"></use></svg></i>Ответы: 14
+					</a>
+				</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-339.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/339/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+		</ul>
+	</header>
+
+
+							
+	
+	
+	
+
+
+							<div class="message-content js-messageContent">
+								
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-339"
+		data-lb-caption-desc="0x42 &middot; 22.08.2025 в 16:17">
+
+		
+			
+
+	
+		
+	
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div >
+				
+					<div class="bbWrapper"><script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="1755868103285.png"
+		data-src="https://osint42.org/attachments/1755868103285-png.857/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1755868103285-png.857/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1755868103285.png"
+			title="1755868103285.png"
+			width="512" height="768" loading="lazy" />
+	</div><br />
+<br />
+Для исследования вредоносного софта, либо тестирование защиты часто необходимы сэмплы зверьков, так просто в поиске их не найти.<br />
+<br />
+Поэтому существуют готовые репозитории и базы сэмплов где их можно скачать.<br />
+<br />
+Также для изучения зверьков существуют и базы исходников, одну из таких баз я уже выкладывал здесь:<a href="../../articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/ogromnaya-baza-iskhodnikov-sovremennykh-virusov-dlya-raznykh-platform.38/index.html" class="link link--internal">Огромная база исходников современных вирусов для разных платформ | Цикл статей &quot;Изучение вредоносных программ&quot;</a><br />
+<br />
+Под хайдом подборка ссылок на сэмплы, исходники и т.д.:<br />
+<br />
+[POSTS=3]<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-1-https-github-com-ytisf-thezoo"></a>1) <a href="https://github.com/ytisf/theZoo" target="_blank" class="link link--external" rel="noopener">https://github.com/ytisf/theZoo</a>&#8203;<a class="hoverLink" href="#-1-https-github-com-ytisf-thezoo" title="Постоянная ссылка"></a></h3><ul>
+<li data-xf-list-type="ul">Репозиторий с реальными образцами вредоносного ПО.</li>
+<li data-xf-list-type="ul">Доступен исходный код и бинарники.</li>
+<li data-xf-list-type="ul">Важно: бинарные файлы заархивированы и защищены паролем (infected).</li>
+</ul><b>2) <a href="https://vx-underground.org/" target="_blank" class="link link--external" rel="noopener">https://vx-underground.org/</a></b><br />
+<ul>
+<li data-xf-list-type="ul">Огромная база данных вредоносных семплов, эксплойтов, документов.</li>
+<li data-xf-list-type="ul">Используется исследователями в кибербезопасности.</li>
+</ul><b>3) <a href="https://bazaar.abuse.ch/" target="_blank" class="link link--external" rel="noopener">https://bazaar.abuse.ch/</a></b><br />
+<ul>
+<li data-xf-list-type="ul">Очень популярная площадка для обмена свежими семплами.</li>
+<li data-xf-list-type="ul">Поддерживается сообществом специалистов по кибербезопасности.</li>
+<li data-xf-list-type="ul">Требуется регистрация.</li>
+</ul><b>4) <a href="https://app.any.run/" target="_blank" class="link link--external" rel="noopener">https://app.any.run/</a></b><br />
+<ul>
+<li data-xf-list-type="ul">Онлайн-песочница, которая позволяет запускать вирусы в изолированной среде.</li>
+<li data-xf-list-type="ul">Можно скачать семплы, если у тебя есть учетная запись.</li>
+</ul><b>5) <a href="https://malshare.com/" target="_blank" class="link link--external" rel="noopener">https://malshare.com/</a></b><br />
+<ul>
+<li data-xf-list-type="ul">Бесплатная база данных вредоносных файлов.</li>
+<li data-xf-list-type="ul">Регистрация обязательна, доступ предоставляется по API.</li>
+</ul>[/POSTS]<br />
+<br />
+<b>Рекомендации по безопасности</b><br />
+<ul>
+<li data-xf-list-type="ul">Используй <b>виртуальные машины</b> (например, VirtualBox, VMware, KVM).</li>
+<li data-xf-list-type="ul">Лучше делать <b>снепшоты</b> перед запуском вируса, чтобы легко откатить систему.</li>
+<li data-xf-list-type="ul">Либо используй <b>песочницы</b>:</li>
+</ul>1) <a href="https://app.any.run/" target="_blank" class="link link--external" rel="noopener">https://app.any.run/</a><br />
+2) <a href="https://www.joesandbox.com/" target="_blank" class="link link--external" rel="noopener">https://www.joesandbox.com/</a><br />
+<ul>
+<li data-xf-list-type="ul">Работай только в <b>отключенной от сети</b> среде или через VPN с отдельным сегментом.</li>
+<li data-xf-list-type="ul">Никогда не запускай семплы на <b>основной системе</b>.</li>
+</ul></div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+			
+
+	
+		
+	
+
+		
+
+		
+			
+	
+
+		
+	</div>
+
+
+								
+	
+
+	
+
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/339/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>HMCoba</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+
+						</div>
+					</div>
+					<div class="message-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+				</div>
+			</div>
+		</div>
+
+		
+			<aside class="message-articleUserInfo">
+				<div class="message-cell">
+					
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/1b812.jpg?1746634773" srcset="/data/avatars/l/0/1.jpg?1746634773 2x" alt="0x42" class="avatar-u1-m" width="96" height="96" loading="lazy" /> 
+		</a>
+		</div>
+		<div class="contentRow-main">
+
+			<div class="message-articleUserFirstLine">
+				<div class="message-articleWrittenBy u-srOnly">Автор</div>
+				<h3 class="message-articleUserName">
+					<a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--style3 username--moderator username--admin">0x42</span></a>
+				</h3>
+
+				
+					<div class="message-articleUserBlurb">
+						
+							<div class="" dir="auto" ><span class="userTitle" dir="auto">Администрация</span></div>
+						
+					</div>
+				
+			</div>
+
+			
+
+			
+				<div class="message-articleUserBanners">
+					<em class="userBanner userBanner userBanner--primary"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></em>
+				</div>
+			
+
+			<div class="message-articleUserStats">
+				<ul class="listInline listInline--bullet">
+					
+					<li><dl class="pairs pairs--inline">
+						<dt>Сообщения</dt>
+						<dd>198</dd>
+					</dl></li>
+					
+					<li><dl class="pairs pairs--inline">
+						<dt>Реакции</dt>
+						<dd>137</dd>
+					</dl></li>
+					
+					
+					
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+				</div>
+			</aside>
+		
+
+	</article>
+
+	
+		
+	
+
+				
+			</div>
+		</div>
+
+		
+	</div>
+
+
+
+
+
+<div class="block block--messages" data-xf-init="" data-type="post" data-href="/inline-mod/" data-search-target="*">
+
+	<span class="u-anchorTarget" id="posts"></span>
+
+	
+
+	<div class="block-outer"></div>
+
+	
+
+	
+
+	<div class="block-container lbContainer"
+		data-xf-init="lightbox select-to-quote"
+		data-message-selector=".js-post"
+		data-lb-id="thread-137"
+		data-lb-universal="0">
+
+		<div class="block-body js-replyNewMessageContainer">
+			
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="ЗашелТолькоПосмотреть"
+		data-content="post-340"
+		id="js-post-340"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/340/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #2" />
+		
+
+		<span class="u-anchorTarget" id="post-340"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/zasheltol-koposmotret.256/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/zasheltol-koposmotret.256/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="256" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/2567bb3.jpg?1755931062" srcset="/data/avatars/l/0/256.jpg?1755931062 2x" alt="ЗашелТолькоПосмотреть" class="avatar-u256-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="username " dir="auto" data-user-id="256" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">ЗашелТолькоПосмотреть</span></a>
+      </h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Робот-Крабоид</h5>
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>20.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>74</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>19</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-340.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T01:20:58+0300" data-timestamp="1755901258" data-date="23.08.2025" data-time="01:20" data-short="22 Авг" title="23.08.2025 в 01:20" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-340.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/340/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-340.html" rel="nofollow">
+						#2
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-340"
+		data-lb-caption-desc="ЗашелТолькоПосмотреть &middot; 23.08.2025 в 01:20">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper">все не понимаю, как мне набрать сообщения ,чтобы начать читать хайды...</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="0" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="0x42"
+		data-content="post-342"
+		id="js-post-342"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/342/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #3" />
+		
+
+		<span class="u-anchorTarget" id="post-342"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/0x42.1/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/0x42.1/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/1b812.jpg?1746634773" srcset="/data/avatars/l/0/1.jpg?1746634773 2x" alt="0x42" class="avatar-u1-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--style3 username--moderator username--admin" itemprop="name">0x42</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>05.05.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>198</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>137</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-342.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T08:17:32+0300" data-timestamp="1755926252" data-date="23.08.2025" data-time="08:17" data-short="23 Авг" title="23.08.2025 в 08:17" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-342.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/342/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-342.html" rel="nofollow">
+						#3
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-342"
+		data-lb-caption-desc="0x42 &middot; 23.08.2025 в 08:17">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 256" data-quote="ЗашелТолькоПосмотреть" data-source="post: 340"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-340.html?id=340"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-340">ЗашелТолькоПосмотреть сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			все не понимаю, как мне набрать сообщения ,чтобы начать читать хайды...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>У тебя сейчас 3 сообщения, должен быть доступ ?<br />
+Есть еще сообщения в разделе статьи, они похоже не учитываются в хайде.<img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f641.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":(" title="Frown    :("  data-smilie="3"data-shortname=":(" /><br />
+Учитываются посты на форуме.<br />
+Возможно пересмотрю хайд, т.к. иначе просто начинают набирать сообщения...<br />
+Думал так активность повысить.)</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+		
+			<aside class="message-signature">
+			
+				<div class="bbWrapper">В районе богачей, если нет оружия и не таишь злобу, главное это деньги, а не любовь.<br />
+<b><img class="smilie smilie--emoji" alt="💰" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4b0.png" title="Money bag    :moneybag:" data-shortname=":moneybag:" loading="lazy" width="64" height="64" /> Donate (BTC):bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz</b></div>
+			
+			</aside>
+		
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="1" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/342/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>ЗашелТолькоПосмотреть</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="ЗашелТолькоПосмотреть"
+		data-content="post-344"
+		id="js-post-344"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/344/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #4" />
+		
+
+		<span class="u-anchorTarget" id="post-344"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/zasheltol-koposmotret.256/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/zasheltol-koposmotret.256/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="256" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/2567bb3.jpg?1755931062" srcset="/data/avatars/l/0/256.jpg?1755931062 2x" alt="ЗашелТолькоПосмотреть" class="avatar-u256-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="username " dir="auto" data-user-id="256" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">ЗашелТолькоПосмотреть</span></a>
+      </h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Робот-Крабоид</h5>
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>20.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>74</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>19</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-344.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T09:26:19+0300" data-timestamp="1755930379" data-date="23.08.2025" data-time="09:26" data-short="23 Авг" title="23.08.2025 в 09:26" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-344.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/344/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-344.html" rel="nofollow">
+						#4
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-344"
+		data-lb-caption-desc="ЗашелТолькоПосмотреть &middot; 23.08.2025 в 09:26">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 1" data-quote="0x42" data-source="post: 342"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-342.html?id=342"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-342">0x42 сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			У тебя сейчас 3 сообщения, должен быть доступ ?<br />
+Есть еще сообщения в разделе статьи, они похоже не учитываются в хайде.<img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f641.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":(" title="Frown    :("  data-smilie="3"data-shortname=":(" /><br />
+Учитываются посты на форуме.<br />
+Возможно пересмотрю хайд, т.к. иначе просто начинают набирать сообщения...<br />
+Думал так активность повысить.)
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>Да. уже понял, что нужно в постах с плашкой &quot;Заметки&quot; оставлять комментарии....<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Думал так активность повысить.)
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>Поможем, чем сможем!<br />
+Но не в ущерб качеству контента. Таких как тот форум, который был удален.... мало таких в сети я встречал..</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+		<div class="message-lastEdit">
+			
+				Последнее редактирование: <time  class="u-dt" dir="auto" datetime="2025-08-23T09:35:28+0300" data-timestamp="1755930928" data-date="23.08.2025" data-time="09:35" data-short="23 Авг" title="23.08.2025 в 09:35" itemprop="dateModified">23.08.2025</time>
+			
+		</div>
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="1" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/344/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>0x42</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="0x42"
+		data-content="post-353"
+		id="js-post-353"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/353/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #5" />
+		
+
+		<span class="u-anchorTarget" id="post-353"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/0x42.1/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/0x42.1/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/1b812.jpg?1746634773" srcset="/data/avatars/l/0/1.jpg?1746634773 2x" alt="0x42" class="avatar-u1-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--style3 username--moderator username--admin" itemprop="name">0x42</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>05.05.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>198</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>137</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-353.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T12:53:38+0300" data-timestamp="1755942818" data-date="23.08.2025" data-time="12:53" data-short="23 Авг" title="23.08.2025 в 12:53" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-353.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/353/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-353.html" rel="nofollow">
+						#5
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-353"
+		data-lb-caption-desc="0x42 &middot; 23.08.2025 в 12:53">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 256" data-quote="ЗашелТолькоПосмотреть" data-source="post: 344"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-344.html?id=344"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-344">ЗашелТолькоПосмотреть сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Да. уже понял, что нужно в постах с плашкой &quot;Заметки&quot; оставлять комментарии....
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>Это потому-что я хотел восстановить контент старого форума, но изначально не планировал делать форум...)<br />
+<br />
+Пробовал разные движки, такие как dle, wordpress, но ничего не нравилось, более того даже словил блокировку домена от регистратора.)<br />
+<br />
+В итоге остановился, на том что есть сейчас...<br />
+<br />
+К сожалению, а может и к счастью, какую-то супер активность или посещалку тут не получится получить...<br />
+<br />
+Но в этом есть и плюсы, понял что устаю от людей и не хочется уже какой-то супер активности...</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+		
+			<aside class="message-signature">
+			
+				<div class="bbWrapper">В районе богачей, если нет оружия и не таишь злобу, главное это деньги, а не любовь.<br />
+<b><img class="smilie smilie--emoji" alt="💰" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4b0.png" title="Money bag    :moneybag:" data-shortname=":moneybag:" loading="lazy" width="64" height="64" /> Donate (BTC):bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz</b></div>
+			
+			</aside>
+		
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="1" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/353/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>ЗашелТолькоПосмотреть</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="ЗашелТолькоПосмотреть"
+		data-content="post-354"
+		id="js-post-354"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/354/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #6" />
+		
+
+		<span class="u-anchorTarget" id="post-354"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/zasheltol-koposmotret.256/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/zasheltol-koposmotret.256/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="256" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/2567bb3.jpg?1755931062" srcset="/data/avatars/l/0/256.jpg?1755931062 2x" alt="ЗашелТолькоПосмотреть" class="avatar-u256-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="username " dir="auto" data-user-id="256" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">ЗашелТолькоПосмотреть</span></a>
+      </h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Робот-Крабоид</h5>
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>20.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>74</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>19</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-354.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T13:10:59+0300" data-timestamp="1755943859" data-date="23.08.2025" data-time="13:10" data-short="23 Авг" title="23.08.2025 в 13:10" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-354.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/354/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-354.html" rel="nofollow">
+						#6
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-354"
+		data-lb-caption-desc="ЗашелТолькоПосмотреть &middot; 23.08.2025 в 13:10">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 1" data-quote="0x42" data-source="post: 353"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-353.html?id=353"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-353">0x42 сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Это потому-что я хотел восстановить контент старого форума, но изначально не планировал делать форум...)<br />
+<br />
+Пробовал разные движки, такие как dle, wordpress, но ничего не нравилось, более того даже словил блокировку домена от регистратора.)<br />
+<br />
+В итоге остановился, на том что есть сейчас...<br />
+<br />
+К сожалению, а может и к счастью, какую-то супер активность или посещалку тут не получится получить...<br />
+<br />
+Но в этом есть и плюсы, понял что устаю от людей и не хочется уже какой-то супер активности...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>Xenforo - отец всех форумов.<br />
+Так не нужно было удалять.... теперь все восстанавливать xD<br />
+ну ничего, у меня гдето лежат ссылки на контент с того форума, буду грузить в ПМ))</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="0" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="ЗашелТолькоПосмотреть"
+		data-content="post-355"
+		id="js-post-355"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/355/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #7" />
+		
+
+		<span class="u-anchorTarget" id="post-355"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/zasheltol-koposmotret.256/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/zasheltol-koposmotret.256/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="256" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/2567bb3.jpg?1755931062" srcset="/data/avatars/l/0/256.jpg?1755931062 2x" alt="ЗашелТолькоПосмотреть" class="avatar-u256-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="username " dir="auto" data-user-id="256" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">ЗашелТолькоПосмотреть</span></a>
+      </h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Робот-Крабоид</h5>
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>20.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>74</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>19</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-355.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T13:16:30+0300" data-timestamp="1755944190" data-date="23.08.2025" data-time="13:16" data-short="23 Авг" title="23.08.2025 в 13:16" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-355.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/355/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-355.html" rel="nofollow">
+						#7
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-355"
+		data-lb-caption-desc="ЗашелТолькоПосмотреть &middot; 23.08.2025 в 13:16">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 1" data-quote="0x42" data-source="post: 353"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-353.html?id=353"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-353">0x42 сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			К сожалению, а может и к счастью, какую-то супер активность или посещалку тут не получится получить...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>почему не получится?</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="0" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="0x42"
+		data-content="post-356"
+		id="js-post-356"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/356/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #8" />
+		
+
+		<span class="u-anchorTarget" id="post-356"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/0x42.1/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/0x42.1/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/1b812.jpg?1746634773" srcset="/data/avatars/l/0/1.jpg?1746634773 2x" alt="0x42" class="avatar-u1-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--style3 username--moderator username--admin" itemprop="name">0x42</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>05.05.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>198</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>137</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-356.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T13:19:20+0300" data-timestamp="1755944360" data-date="23.08.2025" data-time="13:19" data-short="23 Авг" title="23.08.2025 в 13:19" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-356.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/356/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-356.html" rel="nofollow">
+						#8
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-356"
+		data-lb-caption-desc="0x42 &middot; 23.08.2025 в 13:19">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 256" data-quote="ЗашелТолькоПосмотреть" data-source="post: 355"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-355.html?id=355"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-355">ЗашелТолькоПосмотреть сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			почему не получится?
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>Контент узкоспециализированный, мотивации пользователей нет.</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+		
+			<aside class="message-signature">
+			
+				<div class="bbWrapper">В районе богачей, если нет оружия и не таишь злобу, главное это деньги, а не любовь.<br />
+<b><img class="smilie smilie--emoji" alt="💰" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4b0.png" title="Money bag    :moneybag:" data-shortname=":moneybag:" loading="lazy" width="64" height="64" /> Donate (BTC):bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz</b></div>
+			
+			</aside>
+		
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="1" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/356/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>ЗашелТолькоПосмотреть</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="ЗашелТолькоПосмотреть"
+		data-content="post-357"
+		id="js-post-357"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/357/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #9" />
+		
+
+		<span class="u-anchorTarget" id="post-357"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/zasheltol-koposmotret.256/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/zasheltol-koposmotret.256/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="256" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/2567bb3.jpg?1755931062" srcset="/data/avatars/l/0/256.jpg?1755931062 2x" alt="ЗашелТолькоПосмотреть" class="avatar-u256-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="username " dir="auto" data-user-id="256" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">ЗашелТолькоПосмотреть</span></a>
+      </h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Робот-Крабоид</h5>
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>20.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>74</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>19</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-357.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T13:24:47+0300" data-timestamp="1755944687" data-date="23.08.2025" data-time="13:24" data-short="23 Авг" title="23.08.2025 в 13:24" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-357.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/357/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-357.html" rel="nofollow">
+						#9
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-357"
+		data-lb-caption-desc="ЗашелТолькоПосмотреть &middot; 23.08.2025 в 13:24">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 1" data-quote="0x42" data-source="post: 356"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-356.html?id=356"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-356">0x42 сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Контент узкоспециализированный, мотивации пользователей нет.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>вот вот, всем глубоко все равно на безопасность, это же иллюзия</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="0" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="0x42"
+		data-content="post-358"
+		id="js-post-358"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/358/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #10" />
+		
+
+		<span class="u-anchorTarget" id="post-358"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/0x42.1/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/0x42.1/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/1b812.jpg?1746634773" srcset="/data/avatars/l/0/1.jpg?1746634773 2x" alt="0x42" class="avatar-u1-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--style3 username--moderator username--admin" itemprop="name">0x42</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>05.05.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>198</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>137</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-358.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T13:52:05+0300" data-timestamp="1755946325" data-date="23.08.2025" data-time="13:52" data-short="23 Авг" title="23.08.2025 в 13:52" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-358.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/358/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-358.html" rel="nofollow">
+						#10
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-358"
+		data-lb-caption-desc="0x42 &middot; 23.08.2025 в 13:52">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 256" data-quote="ЗашелТолькоПосмотреть" data-source="post: 357"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-357.html?id=357"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-357">ЗашелТолькоПосмотреть сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			вот вот, всем глубоко все равно на безопасность, это же иллюзия
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>Многое ещё зависит от подачи материала, вот например тема, хоть и копипаст:<a href="../../articles/bez-lokha-i-zhizn-plokha-povest-o-prikomandirovannom-sotrudnike-fsb.54/index.html" class="link link--internal">Без лоха и жизнь плоха. Повесть о прикомандированном сотруднике ФСБ</a><br />
+<br />
+Много заходов с Яндекса, по запросу &quot;Прикомандированный сотрудник ФСБ&quot; или &quot; В.И Глухов&quot;. <img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f631.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":eek:" title="Eek!    :eek:"  data-smilie="9"data-shortname=":eek:" /> <img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f61b.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":p" title="Stick out tongue    :p"  data-smilie="7"data-shortname=":p" /><br />
+<br />
+А вот я в своё время делал компиляцию статей:<a href="../../articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/index.html" class="link link--internal">Цикл статей &quot;Изучение вредоносных программ&quot;</a><br />
+<br />
+Заходов мало очень...<br />
+<br />
+Короче для большой посещалки нужны какие-то вирусные статьи и не сложные.<br />
+<br />
+Но самое сложное в этом всем, как завлечь посетителей, почти 90% потом уходят и не возращаются никогда...<br />
+<br />
+Это и есть мотивация пользователей, желание заходить повторно, пока-что очень слабая, если говорить про большинство посетивших сайт первый раз.</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+		
+			<aside class="message-signature">
+			
+				<div class="bbWrapper">В районе богачей, если нет оружия и не таишь злобу, главное это деньги, а не любовь.<br />
+<b><img class="smilie smilie--emoji" alt="💰" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4b0.png" title="Money bag    :moneybag:" data-shortname=":moneybag:" loading="lazy" width="64" height="64" /> Donate (BTC):bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz</b></div>
+			
+			</aside>
+		
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="0" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="ЗашелТолькоПосмотреть"
+		data-content="post-359"
+		id="js-post-359"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/359/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #11" />
+		
+
+		<span class="u-anchorTarget" id="post-359"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/zasheltol-koposmotret.256/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/zasheltol-koposmotret.256/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="256" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/2567bb3.jpg?1755931062" srcset="/data/avatars/l/0/256.jpg?1755931062 2x" alt="ЗашелТолькоПосмотреть" class="avatar-u256-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="username " dir="auto" data-user-id="256" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">ЗашелТолькоПосмотреть</span></a>
+      </h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Робот-Крабоид</h5>
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>20.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>74</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>19</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-359.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T14:01:50+0300" data-timestamp="1755946910" data-date="23.08.2025" data-time="14:01" data-short="23 Авг" title="23.08.2025 в 14:01" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-359.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/359/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-359.html" rel="nofollow">
+						#11
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-359"
+		data-lb-caption-desc="ЗашелТолькоПосмотреть &middot; 23.08.2025 в 14:01">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 1" data-quote="0x42" data-source="post: 358"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-358.html?id=358"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-358">0x42 сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Многое ещё зависит от подачи материала, вот например тема, хоть и копипаст:<a href="../../articles/bez-lokha-i-zhizn-plokha-povest-o-prikomandirovannom-sotrudnike-fsb.54/index.html" class="link link--internal">Без лоха и жизнь плоха. Повесть о прикомандированном сотруднике ФСБ</a><br />
+<br />
+Много заходов с Яндекса, по запросу &quot;Прикомандированный сотрудник ФСБ&quot; или &quot; В.И Глухов&quot;. <img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f631.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":eek:" title="Eek!    :eek:"  data-smilie="9"data-shortname=":eek:" /> <img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f61b.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":p" title="Stick out tongue    :p"  data-smilie="7"data-shortname=":p" /><br />
+<br />
+А вот я в своё время делал компиляцию статей:<a href="../../articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/index.html" class="link link--internal">Цикл статей &quot;Изучение вредоносных программ&quot;</a><br />
+<br />
+Заходов мало очень...<br />
+<br />
+Короче для большой посещалки нужны какие-то вирусные статьи и не сложные.<br />
+<br />
+Но самое сложное в этом всем, как завлечь посетителей, почти 90% потом уходят и не возращаются никогда...<br />
+<br />
+Это и есть мотивация пользователей, желание заходить повторно, пока-что очень слабая, если говорить про большинство посетивших сайт первый раз.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>Если думать про бюджетный нагон трафика, то это действительно не просто, мне так кажется, вот например, как ты написал, про вирусные статьи, которые по запросу будут выдавать форум в первых строчках списка поискового ответа. Сам понял, что задумывался больше над удержанием аудитории, вовлечении в &quot;форумную&quot; жизнь ...  Вот коммерческий вариант может тоже про удержание больше. Можно на всяких link-base[.]ms рекламироваться и т.п.. Там беслпатная публикация.</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="1" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/359/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>0x42</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="ЗашелТолькоПосмотреть"
+		data-content="post-360"
+		id="js-post-360"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/360/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #12" />
+		
+
+		<span class="u-anchorTarget" id="post-360"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/zasheltol-koposmotret.256/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/zasheltol-koposmotret.256/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="256" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/2567bb3.jpg?1755931062" srcset="/data/avatars/l/0/256.jpg?1755931062 2x" alt="ЗашелТолькоПосмотреть" class="avatar-u256-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="username " dir="auto" data-user-id="256" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">ЗашелТолькоПосмотреть</span></a>
+      </h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Робот-Крабоид</h5>
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>20.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>74</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>19</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-360.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T14:06:06+0300" data-timestamp="1755947166" data-date="23.08.2025" data-time="14:06" data-short="23 Авг" title="23.08.2025 в 14:06" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-360.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/360/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-360.html" rel="nofollow">
+						#12
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-360"
+		data-lb-caption-desc="ЗашелТолькоПосмотреть &middot; 23.08.2025 в 14:06">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 256" data-quote="ЗашелТолькоПосмотреть" data-source="post: 359"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-359.html?id=359"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-359">ЗашелТолькоПосмотреть сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Если думать про бюджетный нагон трафика, то это действительно не просто, мне так кажется, вот например, как ты написал, про вирусные статьи, которые по запросу будут выдавать форум в первых строчках списка поискового ответа. Сам понял, что задумывался больше над удержанием аудитории, вовлечении в &quot;форумную&quot; жизнь ...  Вот коммерческий вариант может тоже про удержание больше. Можно на всяких link-base[.]ms рекламироваться и т.п.. Там беслпатная публикация.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>Тем более сейчас нисша более или менее действительно свободна и, как понимаю, много всего дерьмового плодится, не слежу если честно за этим, но есть высокая вероятность занять ее качественным товаром(форумом), так еще и с коммерсантской позиции, но тут тебе решать уже, что, кого и куда.</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="1" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/360/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>0x42</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="ЗашелТолькоПосмотреть"
+		data-content="post-361"
+		id="js-post-361"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/361/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #13" />
+		
+
+		<span class="u-anchorTarget" id="post-361"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/zasheltol-koposmotret.256/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/zasheltol-koposmotret.256/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="256" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/2567bb3.jpg?1755931062" srcset="/data/avatars/l/0/256.jpg?1755931062 2x" alt="ЗашелТолькоПосмотреть" class="avatar-u256-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/zasheltol-koposmotret.256/" class="username " dir="auto" data-user-id="256" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">ЗашелТолькоПосмотреть</span></a>
+      </h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Робот-Крабоид</h5>
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>20.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>74</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>19</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-361.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T14:07:09+0300" data-timestamp="1755947229" data-date="23.08.2025" data-time="14:07" data-short="23 Авг" title="23.08.2025 в 14:07" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-361.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/361/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-361.html" rel="nofollow">
+						#13
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-361"
+		data-lb-caption-desc="ЗашелТолькоПосмотреть &middot; 23.08.2025 в 14:07">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper">Я лишь хочу, чтобы ты больше не удалял форумы!!! а то черпать достойную информацию в интернете все меньше и меньше вариантов... либо мне так кажется</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="1" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/361/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>0x42</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="0x42"
+		data-content="post-362"
+		id="js-post-362"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/362/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #14" />
+		
+
+		<span class="u-anchorTarget" id="post-362"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/0x42.1/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/0x42.1/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/1b812.jpg?1746634773" srcset="/data/avatars/l/0/1.jpg?1746634773 2x" alt="0x42" class="avatar-u1-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--style3 username--moderator username--admin" itemprop="name">0x42</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>05.05.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>198</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>137</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-362.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T14:08:52+0300" data-timestamp="1755947332" data-date="23.08.2025" data-time="14:08" data-short="23 Авг" title="23.08.2025 в 14:08" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-362.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/362/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-362.html" rel="nofollow">
+						#14
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-362"
+		data-lb-caption-desc="0x42 &middot; 23.08.2025 в 14:08">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper">Удалять не планирую, да это была ошибка...<br />
+Я хотел передать его, но кому передал, почему-то забили на форум, не получилось что-то.<br />
+Передача тоже была ошибкой...<img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f641.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":(" title="Frown    :("  data-smilie="3"data-shortname=":(" /></div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+		
+			<aside class="message-signature">
+			
+				<div class="bbWrapper">В районе богачей, если нет оружия и не таишь злобу, главное это деньги, а не любовь.<br />
+<b><img class="smilie smilie--emoji" alt="💰" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4b0.png" title="Money bag    :moneybag:" data-shortname=":moneybag:" loading="lazy" width="64" height="64" /> Donate (BTC):bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz</b></div>
+			
+			</aside>
+		
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="0" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="GoGaBoHGa"
+		data-content="post-364"
+		id="js-post-364"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/364/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #15" />
+		
+
+		<span class="u-anchorTarget" id="post-364"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/gogabohga.165/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/gogabohga.165/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/gogabohga.165/" class="avatar avatar--m dcom-lc-avaOffline avatar--default avatar--default--dynamic" data-user-id="165" data-xf-init="member-tooltip" style="background-color: #a34729; color: #e6ac99">
+			<span class="avatar-u165-m" role="img" aria-label="GoGaBoHGa">G</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/gogabohga.165/" class="username " dir="auto" data-user-id="165" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">GoGaBoHGa</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>17.07.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>3</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>2</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-364.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-23T15:50:57+0300" data-timestamp="1755953457" data-date="23.08.2025" data-time="15:50" data-short="23 Авг" title="23.08.2025 в 15:50" itemprop="datePublished">23.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-364.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/364/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-364.html" rel="nofollow">
+						#15
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-364"
+		data-lb-caption-desc="GoGaBoHGa &middot; 23.08.2025 в 15:50">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper"><blockquote data-attributes="member: 1" data-quote="0x42" data-source="post: 362"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="%23post-362.html?id=362"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-362">0x42 сказал(а):</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Удалять не планирую, да это была ошибка...<br />
+Я хотел передать его, но кому передал, почему-то забили на форум, не получилось что-то.<br />
+Передача тоже была ошибкой...<img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f641.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":(" title="Frown    :("  data-smilie="3"data-shortname=":(" />
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>Мне лично нравится контент, я когда-то натыкался на старый форум твой, но был глуп и не читал, сейчас все это читать одно наслаждение)</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="0" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+			
+		</div>
+	</div>
+
+	
+		<div class="block-outer block-outer--after">
+			
+				
+
+				
+				
+					<div class="block-outer-opposite">
+						
+							<a href="../../login/index.html" class="button button--link button--wrap" data-xf-click="overlay"><span class="button-text">
+								Для ответа нужно войти/зарегистрироваться
+							</span></a>
+						
+					</div>
+				
+			
+		</div>
+	
+
+	
+	
+
+</div>
+
+
+
+
+
+
+
+	<div class="dcom-lc-online-block">
+		
+	</div>
+
+
+
+
+
+
+
+	
+
+<div class="blockMessage blockMessage--none">
+	
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965902"></span>
+
+			
+				<span class="shareButtons-label">Поделиться:</span>
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965902" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965902"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965902" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+</div>
+
+
+
+
+
+
+
+</div>
+					
+				</div>
+
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html" itemprop="item">
+			<span itemprop="name">Форум</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html#tekhniki-atak-i-ekspluatatsiya.19" itemprop="item">
+			<span itemprop="name">Техники атак и эксплуатация</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/obsuzhdeniye-vredonosnogo-softa.4/index.html" itemprop="item">
+			<span itemprop="name">Обсуждение вредоносного софта</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965902%2C491a0fda7e087db22210c39c22b166cc"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965902%2C491a0fda7e087db22210c39c22b166cc"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965902%2C491a0fda7e087db22210c39c22b166cc"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+	
+	
+		
+		
+			<script type="application/ld+json">
+				{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/",
+    "mainEntity": {
+        "@type": "Article",
+        "@id": "https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/",
+        "headline": "\u041f\u043e\u0434\u0431\u043e\u0440\u043a\u0438 \u0441\u044d\u043c\u043f\u043b\u043e\u0432, \u0438\u0441\u0445\u043e\u0434\u043d\u0438\u043a\u043e\u0432 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u043e\u0433\u043e \u0441\u043e\u0444\u0442\u0430 \u0438 \u0432\u0438\u0440\u0443\u0441\u043e\u0432",
+        "datePublished": "2025-08-22T13:17:05+00:00",
+        "url": "https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/",
+        "articleSection": "\u041e\u0431\u0441\u0443\u0436\u0434\u0435\u043d\u0438\u0435 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u043e\u0433\u043e \u0441\u043e\u0444\u0442\u0430",
+        "author": {
+            "@type": "Person",
+            "@id": "https://osint42.org/members/0x42.1/",
+            "name": "0x42",
+            "url": "https://osint42.org/members/0x42.1/"
+        },
+        "interactionStatistic": [
+            {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/ViewAction",
+                "userInteractionCount": 223
+            },
+            {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": 14
+            },
+            {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": 1
+            }
+        ],
+        "image": "https://osint42.org/attachments/1755868103285-png.857/",
+        "articleBody": "\u0414\u043b\u044f \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u043e\u0433\u043e \u0441\u043e\u0444\u0442\u0430, \u043b\u0438\u0431\u043e \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0437\u0430\u0449\u0438\u0442\u044b \u0447\u0430\u0441\u0442\u043e \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b \u0441\u044d\u043c\u043f\u043b\u044b \u0437\u0432\u0435\u0440\u044c\u043a\u043e\u0432, \u0442\u0430\u043a \u043f\u0440\u043e\u0441\u0442\u043e \u0432 \u043f\u043e\u0438\u0441\u043a\u0435 \u0438\u0445 \u043d\u0435 \u043d\u0430\u0439\u0442\u0438.\n\n\u041f\u043e\u044d\u0442\u043e\u043c\u0443 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044e\u0442 \u0433\u043e\u0442\u043e\u0432\u044b\u0435 \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0438 \u0438 \u0431\u0430\u0437\u044b \u0441\u044d\u043c\u043f\u043b\u043e\u0432 \u0433\u0434\u0435 \u0438\u0445 \u043c\u043e\u0436\u043d\u043e \u0441\u043a\u0430\u0447\u0430\u0442\u044c.\n\n\u0422\u0430\u043a\u0436\u0435 \u0434\u043b\u044f \u0438\u0437\u0443\u0447\u0435\u043d\u0438\u044f \u0437\u0432\u0435\u0440\u044c\u043a\u043e\u0432 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044e\u0442 \u0438 \u0431\u0430\u0437\u044b \u0438\u0441\u0445\u043e\u0434\u043d\u0438\u043a\u043e\u0432, \u043e\u0434\u043d\u0443 \u0438\u0437 \u0442\u0430\u043a\u0438\u0445 \u0431\u0430\u0437 \u044f \u0443\u0436\u0435 \u0432\u044b\u043a\u043b\u0430\u0434\u044b\u0432\u0430\u043b \u0437\u0434\u0435\u0441\u044c:\u041e\u0433\u0440\u043e\u043c\u043d\u0430\u044f \u0431\u0430\u0437\u0430 \u0438\u0441\u0445\u043e\u0434\u043d\u0438\u043a\u043e\u0432 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445 \u0432\u0438\u0440\u0443\u0441\u043e\u0432 \u0434\u043b\u044f \u0440\u0430\u0437\u043d\u044b\u0445 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c | \u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439 \"\u0418\u0437\u0443\u0447\u0435\u043d\u0438\u0435 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0445 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\"\n\n\u041f\u043e\u0434 \u0445\u0430\u0439\u0434\u043e\u043c \u043f\u043e\u0434\u0431\u043e\u0440\u043a\u0430 \u0441\u0441\u044b\u043b\u043e\u043a \u043d\u0430 \u0441\u044d\u043c\u043f\u043b\u044b, \u0438\u0441\u0445\u043e\u0434\u043d\u0438\u043a\u0438 \u0438 \u0442.\u0434.:\n\n\n1) https://github.com/ytisf/theZoo\n\n\u0420\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0439 \u0441 \u0440\u0435\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u043e\u0431\u0440\u0430\u0437\u0446\u0430\u043c\u0438 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u043e\u0433\u043e \u041f\u041e.\n\u0414\u043e\u0441\u0442\u0443\u043f\u0435\u043d \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434 \u0438 \u0431\u0438\u043d\u0430\u0440\u043d\u0438\u043a\u0438.\n\u0412\u0430\u0436\u043d\u043e: \u0431\u0438\u043d\u0430\u0440\u043d\u044b\u0435 \u0444\u0430\u0439\u043b\u044b \u0437\u0430\u0430\u0440\u0445\u0438\u0432\u0438\u0440\u043e\u0432\u0430\u043d\u044b \u0438 \u0437\u0430\u0449\u0438\u0449\u0435\u043d\u044b \u043f\u0430\u0440\u043e\u043b\u0435\u043c (infected).\n\n2) https://vx-underground.org/\n\n\u041e\u0433\u0440\u043e\u043c\u043d\u0430\u044f \u0431\u0430\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0445 \u0441\u0435\u043c\u043f\u043b\u043e\u0432, \u044d\u043a\u0441\u043f\u043b\u043e\u0439\u0442\u043e\u0432, \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u043e\u0432.\n\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044f\u043c\u0438 \u0432 \u043a\u0438\u0431\u0435\u0440\u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438.\n\n3) https://bazaar.abuse.ch/\n\n\u041e\u0447\u0435\u043d\u044c \u043f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u0430\u044f \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0430 \u0434\u043b\u044f \u043e\u0431\u043c\u0435\u043d\u0430 \u0441\u0432\u0435\u0436\u0438\u043c\u0438 \u0441\u0435\u043c\u043f\u043b\u0430\u043c\u0438.\n\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e\u043c \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u043e\u0432 \u043f\u043e \u043a\u0438\u0431\u0435\u0440\u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438.\n\u0422\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f.\n\n4) https://app.any.run/\n\n\u041e\u043d\u043b\u0430\u0439\u043d-\u043f\u0435\u0441\u043e\u0447\u043d\u0438\u0446\u0430, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c \u0432\u0438\u0440\u0443\u0441\u044b \u0432 \u0438\u0437\u043e\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u043e\u0439 \u0441\u0440\u0435\u0434\u0435.\n\u041c\u043e\u0436\u043d\u043e \u0441\u043a\u0430\u0447\u0430\u0442\u044c \u0441\u0435\u043c\u043f\u043b\u044b, \u0435\u0441\u043b\u0438 \u0443 \u0442\u0435\u0431\u044f \u0435\u0441\u0442\u044c \u0443\u0447\u0435\u0442\u043d\u0430\u044f \u0437\u0430\u043f\u0438\u0441\u044c.\n\n5) https://malshare.com/\n\n\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u0430\u044f \u0431\u0430\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0445 \u0444\u0430\u0439\u043b\u043e\u0432.\n\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u0430, \u0434\u043e\u0441\u0442\u0443\u043f \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043f\u043e API.\n\n\n\n\u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0430\u0446\u0438\u0438 \u043f\u043e \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438\n\n\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0439 \u0432\u0438\u0440\u0442\u0443\u0430\u043b\u044c\u043d\u044b\u0435 \u043c\u0430\u0448\u0438\u043d\u044b (\u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, VirtualBox, VMware, KVM).\n\u041b\u0443\u0447\u0448\u0435 \u0434\u0435\u043b\u0430\u0442\u044c \u0441\u043d\u0435\u043f\u0448\u043e\u0442\u044b \u043f\u0435\u0440\u0435\u0434 \u0437\u0430\u043f\u0443\u0441\u043a\u043e\u043c \u0432\u0438\u0440\u0443\u0441\u0430, \u0447\u0442\u043e\u0431\u044b \u043b\u0435\u0433\u043a\u043e \u043e\u0442\u043a\u0430\u0442\u0438\u0442\u044c \u0441\u0438\u0441\u0442\u0435\u043c\u0443.\n\u041b\u0438\u0431\u043e \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0439 \u043f\u0435\u0441\u043e\u0447\u043d\u0438\u0446\u044b:\n\n1) https://app.any.run/\n2) https://www.joesandbox.com/\n\n\u0420\u0430\u0431\u043e\u0442\u0430\u0439 \u0442\u043e\u043b\u044c\u043a\u043e \u0432 \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u043d\u043e\u0439 \u043e\u0442 \u0441\u0435\u0442\u0438 \u0441\u0440\u0435\u0434\u0435 \u0438\u043b\u0438 \u0447\u0435\u0440\u0435\u0437 VPN \u0441 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u044b\u043c \u0441\u0435\u0433\u043c\u0435\u043d\u0442\u043e\u043c.\n\u041d\u0438\u043a\u043e\u0433\u0434\u0430 \u043d\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0439 \u0441\u0435\u043c\u043f\u043b\u044b \u043d\u0430 \u043e\u0441\u043d\u043e\u0432\u043d\u043e\u0439 \u0441\u0438\u0441\u0442\u0435\u043c\u0435."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Osint42.Org - \u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0438 \u043a\u043e\u0434",
+        "alternateName": "Osint42.Org - \u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0438 \u043a\u043e\u0434",
+        "description": "Osint42.Org - \u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0438 \u043a\u043e\u0434",
+        "url": "https://osint42.org",
+        "logo": "https://osint42.org/data/assets/logo/192192.png"
+    }
+}
+			</script>
+		
+	
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:55:17 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

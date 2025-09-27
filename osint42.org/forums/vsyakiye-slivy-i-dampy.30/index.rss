@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Всякие сливы и дампы</title>
+    <description>Всякие сливы и дампы</description>
+    <pubDate>Sat, 27 Sep 2025 09:38:36 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:38:36 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/vsyakiye-slivy-i-dampy.30/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/vsyakiye-slivy-i-dampy.30/index.rss"/>
+    <item>
+      <title>Дамп крупнейшей утечки документов из Великого Китайского Файервола</title>
+      <pubDate>Mon, 15 Sep 2025 12:51:54 +0000</pubDate>
+      <link>https://osint42.org/threads/damp-krupneishei-utechki-dokumentov-iz-velikogo-kitaiskogo-faiervola.189/</link>
+      <guid isPermaLink="false">189</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/vsyakiye-slivy-i-dampy.30/"><![CDATA[Всякие сливы и дампы]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">В четверг 11 сентября 2025 года произошла крупнейшая за всю историю «Великого китайского файрвола» (GFW). <br />
+В сеть попало более 500 ГБ исходного кода, рабочих журналов и записей внутренней переписки, раскрывающих подробности исследований, разработок и деятельности GFW.<br />
+<br />
+Утечка данных произошла из-за ключевых технических источников, стоящих за GFW: Geedge Networks (главный научный сотрудник которой — Фан Биньсин) и лаборатории MESA при Институте информационной инженерии Китайской академии...<br />
+<br />
+<a href="https://osint42.org/threads/damp-krupneishei-utechki-dokumentov-iz-velikogo-kitaiskogo-faiervola.189/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Дамп рабочей станции северокорейской APT-группы Kimsuky</title>
+      <pubDate>Wed, 20 Aug 2025 20:58:17 +0000</pubDate>
+      <link>https://osint42.org/threads/damp-rabochei-stantsii-severokoreiskoi-apt-gruppy-kimsuky.129/</link>
+      <guid isPermaLink="false">129</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/vsyakiye-slivy-i-dampy.30/"><![CDATA[Всякие сливы и дампы]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1755279547960-png.842/"
+			class="bbImage "
+			style=""
+			alt="1755279547960.png"
+			title="1755279547960.png"
+			width="960" height="1280" loading="lazy" /><br />
+<br />
+Хакеры опубликовали полный дамп рабочей станции северокорейской APT-группы Kimsuky, включая исходники бэкдоров, пароли и документацию атак на южнокорейские госструктуры.<br />
+<br />
+В утечке оказались инструменты для фишинга против Командования военной контрразведки Южной Кореи, исходники кастомного Cobalt Strike-beacon, ядерный руткит для Linux и клиент для бэкдора RootRot. <br />
+Судя по файлам, злоумышленники имели доступ к внутренней сети правительства Южной Кореи через портал...<br />
+<br />
+<a href="https://osint42.org/threads/damp-rabochei-stantsii-severokoreiskoi-apt-gruppy-kimsuky.129/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>3</slash:comments>
+    </item>
+  </channel>
+</rss>

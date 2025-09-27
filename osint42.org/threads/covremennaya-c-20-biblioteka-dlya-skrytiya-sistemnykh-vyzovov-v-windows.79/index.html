@@ -1,0 +1,2527 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="thread_view"
+	data-container-key="node-26"
+	data-content-key="thread-79"
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965628,ce4c958c5eb337ac2710d9ac122045ef"
+	class="has-no-js template-thread_view"
+	 data-run-jobs="">
+
+<!-- Mirrored from osint42.org/threads/covremennaya-c-20-biblioteka-dlya-skrytiya-sistemnykh-vyzovov-v-windows.79/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:47:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Заметка - Cовременная C++20 библиотека для скрытия системных вызовов в Windows | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta name="description" content="Введение
+
+syscalls-cpp — это заголовочная библиотека на C++20, реализующая политику-ориентированный фреймворк для выполнения прямых системных вызовов в..." />
+		<meta property="og:description" content="Введение
+
+syscalls-cpp — это заголовочная библиотека на C++20, реализующая политику-ориентированный фреймворк для выполнения прямых системных вызовов в окружениях x86/x64 под Windows.
+
+Она предоставляет модульную архитектуру, где вы можете на этапе компиляции комбинировать различные стратегии..." />
+		<meta property="twitter:description" content="Введение
+
+syscalls-cpp — это заголовочная библиотека на C++20, реализующая политику-ориентированный фреймворк для выполнения прямых системных вызовов в окружениях x86/x64 под Windows.
+
+Она..." />
+	
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+		
+	
+	
+	<meta property="og:type" content="website" />
+
+
+	
+	
+		
+	
+	
+	
+		<meta property="og:title" content="Заметка - Cовременная C++20 библиотека для скрытия системных вызовов в Windows" />
+		<meta property="twitter:title" content="Заметка - Cовременная C++20 библиотека для скрытия системных..." />
+	
+
+
+	
+	
+	
+	
+		
+	
+	
+	
+		<meta property="og:image" content="../../data/assets/logo/192192.png" />
+		<meta property="twitter:image" content="../../data/assets/logo/192192.png" />
+		<meta property="twitter:card" content="summary" />
+	
+
+
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../css4b5c.css?css=public%3Aalnb_navigation.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Amessage.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=2ed7579772272a11665b195f4b692b2e15158024" />
+
+
+	
+		<script data-cfasync="false" src="../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965628,ce4c958c5eb337ac2710d9ac122045ef',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/xf\/code_block-compiled.js?_v=01eb82fa":true,"\/js\/copycode\/copycode.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:message.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965628,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/xf/code_block-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/copycode/copycode.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="thread_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../articles/authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965628%2Cce4c958c5eb337ac2710d9ac122045ef"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965628%2Cce4c958c5eb337ac2710d9ac122045ef"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965628%2Cce4c958c5eb337ac2710d9ac122045ef"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;}">Темы</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;,&quot;c&quot;:{&quot;nodes&quot;:[26],&quot;child_nodes&quot;:1}}">Этот раздел</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;,&quot;c&quot;:{&quot;thread&quot;:79}}">Эта тема</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965628,ce4c958c5eb337ac2710d9ac122045ef" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/posts/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+1"
+	data-nav-id="newPosts">Новые сообщения</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../search/index4009.html?type=post"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+2"
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../cdn-cgi/l/email-protection.html#98f1f6fef7d8f7ebf1f6ecacaab6fbf7f5" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="0b62656d644b647862657f3f3925686466">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html" itemprop="item">
+			<span itemprop="name">Форум</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html#tekhniki-atak-i-ekspluatatsiya.19" itemprop="item">
+			<span itemprop="name">Техники атак и эксплуатация</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/pentesting.26/index.html" itemprop="item">
+			<span itemprop="name">Пентестинг</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+						
+							<div class="p-title ">
+								
+									
+										<h1 class="p-title-value"><span class="label label--lightGreen" dir="auto">Заметка</span><span class="label-append">&nbsp;</span>Cовременная C++20 библиотека для скрытия системных вызовов в Windows</h1>
+									
+									
+								
+							</div>
+						
+
+						
+							<div class="p-description">
+	<ul class="listInline listInline--bullet">
+		<li>
+			<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор темы</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+			<span class="u-srOnly">Автор темы</span>
+
+			<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+		</li>
+		<li>
+			<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата начала</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+			<span class="u-srOnly">Дата начала</span>
+
+			<a href="index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-06-18T18:44:39+0300" data-timestamp="1750261479" data-date="18.06.2025" data-time="18:44" data-short="18 Июн" title="18.06.2025 в 18:44">18.06.2025</time></a>
+		</li>
+		
+		
+	</ul>
+</div>
+						
+					
+				</div>
+			
+
+			<div class="p-body-main  ">
+				
+				<div class="p-body-contentCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="block block--messages" data-xf-init="" data-type="post" data-href="/inline-mod/" data-search-target="*">
+
+	<span class="u-anchorTarget" id="posts"></span>
+
+	
+		
+	
+
+	
+
+	<div class="block-outer"></div>
+
+	
+
+	
+		
+	<div class="block-outer js-threadStatusField"></div>
+
+	
+
+	<div class="block-container lbContainer"
+		data-xf-init="lightbox select-to-quote"
+		data-message-selector=".js-post"
+		data-lb-id="thread-79"
+		data-lb-universal="0">
+
+		<div class="block-body js-replyNewMessageContainer">
+			
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="0x42"
+		data-content="post-162"
+		id="js-post-162"
+		>
+
+		
+
+		<span class="u-anchorTarget" id="post-162"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		
+		
+		>
+
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/1b812.jpg?1746634773" srcset="/data/avatars/l/0/1.jpg?1746634773 2x" alt="0x42" class="avatar-u1-m" width="96" height="96" loading="lazy" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--style3 username--moderator username--admin">0x42</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>05.05.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>198</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>137</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-162.html" rel="nofollow" >
+					<time  class="u-dt" dir="auto" datetime="2025-06-18T18:44:39+0300" data-timestamp="1750261479" data-date="18.06.2025" data-time="18:44" data-short="18 Июн" title="18.06.2025 в 18:44">18.06.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-162.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/162/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-162.html" rel="nofollow">
+						#1
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-162"
+		data-lb-caption-desc="0x42 &middot; 18.06.2025 в 18:44">
+
+		
+			
+
+	
+		
+	
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div >
+				
+					<div class="bbWrapper"><script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="1750261475468.png"
+		data-src="https://osint42.org/attachments/1750261475468-png.580/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750261475468-png.580/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750261475468.png"
+			title="1750261475468.png"
+			width="544" height="172" loading="lazy" />
+	</div><br />
+<br />
+<span style="font-size: 22px"><b>Введение</b></span><br />
+<br />
+syscalls-cpp — это заголовочная библиотека на C++20, реализующая политику-ориентированный фреймворк для выполнения прямых системных вызовов в окружениях x86/x64 под Windows.<br />
+<br />
+Она предоставляет модульную архитектуру, где вы можете на этапе компиляции комбинировать различные стратегии выделения памяти и генерации stub-функций для достижения оптимального баланса между безопасностью и производительностью.<br />
+<br />
+Библиотека автоматически определяет номера системных вызовов, напрямую парся метаданные ntdll.dll: на x64 — через структуру exception directory, а на x86 — сортируя экспортированные функции по адресам.<br />
+<br />
+Такой подход устойчив к пользовательским хукам и позволяет находить даже «соседние» вызовы, если оригинал был подменён или патчен.<br />
+<br />
+<span style="font-size: 22px"><b>Основные компоненты (политики)</b></span><br />
+<br />
+Все политики разделены на три группы: выделение памяти (Allocation), генерация stub-функций (Stub Generation) и разбор метаданных (Parsing).<br />
+Любую политику аллокации можно сочетать с любой политикой генерации и разбора.<br />
+<br />
+<span style="font-size: 22px"><b>1. Политики выделения памяти</b></span><br />
+<br />
+<i><b>allocator::section</b> — вызывает NtCreateSection с флагом SEC_NO_CHANGE;</i><br />
+<b>allocator::heap</b> — создает секцию через HeapCreate с HEAP_CREATE_ENABLE_EXECUTE;<br />
+<b>allocator::memory</b> — использует NtAllocateVirtualMemory (RW → RX).<br />
+<br />
+<span style="font-size: 22px"><b>2. Политики генерации stub-функций</b></span><br />
+<br />
+<i><b>generator::direct</b> — классическая инструкция syscall внутри самостоятельного кода;</i><br />
+<b>generator::gadget</b> (только x64) — прыжок на найденный в ntdll.dll gadget «syscall; ret»;<br />
+<b>generator::exception</b> (только x64) — генерирует UD2 и обрабатывает его через векторный обработчик исключений (VEH).<br />
+<br />
+<span style="font-size: 22px">3. Политики разбора метаданных системных вызовов</span><br />
+<br />
+[*]<i><b>parser::directory</b> — на x64 связывает exception directory (.pdata) с таблицей экспорта, на x86 сортирует Zw</i> функции по адресу;<br />
+[*]<b>parser::signature</b> — сканирует пролога функций на подпись «mov r10, rcx; mov eax, syscall_id» с учётом защиты от хуков.<br />
+<br />
+<b><span style="color: rgb(224, 224, 224)"><span style="font-size: 22px">Установка</span></span></b><br />
+<br />
+<i><b><span style="font-size: 22px">Через vcpkg:</span></b><br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>vcpkg install syscalls-cpp</code></pre>
+	</div>
+</div></i> <br />
+<i><b>Интеграция с MSBuild и CMake происходит автоматически.</b></i><br />
+<br />
+<b><span style="font-size: 22px">Ручная настройка:</span></b><br />
+<br />
+<a href="https://github.com/sapdragon/syscalls-cpp" target="_blank" class="link link--external" rel="noopener">Клонируйте репозиторий</a> и добавьте папку include в пути компиляции.<br />
+<br />
+<span style="font-size: 22px"><b>Пример использования</b></span><br />
+ <span style="font-size: 22px"><b>Стандартный сценарий</b></span><br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C++:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="cpp"><code>#include &lt;iostream&gt;
+#include &lt;syscalls-cpp/syscall.hpp&gt;
+
+int main()
+{
+    syscall::Manager&lt;syscall::policies::allocator::section, syscall::policies::generator::direct&gt; syscallManager;
+    if (!syscallManager.initialize())
+    {
+        std::cerr &lt;&lt; &quot;initialization failed!\n&quot;;
+        return 1;
+    }
+
+    PVOID pBaseAddress = nullptr;
+    SIZE_T uSize = 0x1000;
+
+    syscallManager.invoke&lt;NTSTATUS&gt;(
+        SYSCALL_ID(&quot;NtAllocateVirtualMemory&quot;),
+        syscall::native::getCurrentProcess(),
+        &amp;pBaseAddress,
+        0, &amp;uSize,
+        MEM_COMMIT | MEM_RESERVE,
+        PAGE_READWRITE
+    );
+
+    if (pBaseAddress)
+        std::cout &lt;&lt; &quot;allocation successful at 0x&quot; &lt;&lt; pBaseAddress &lt;&lt; std::endl;
+
+    return 0;
+}</code></pre>
+	</div>
+</div><br />
+<b><span style="font-size: 22px">Расширенный сценарий:</span></b><br />
+<br />
+<span style="font-size: 15px">В стандартном сценарии просто получение и вызов системного вызова.</span><br />
+<br />
+<b>В следующим ниже фрагменте кода реализуется динамическая генерация «обфусцированного» стаба (stub) для прямого вызова системного вызова с помощью политики EncryptedShellGenerator:</b><br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C++:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="cpp"><code>#pragma warning(disable : 4146) // neg for unsigned
+
+#include &lt;syscalls-cpp/syscall.hpp&gt;
+
+#include &lt;iostream&gt;
+#include &lt;cstdint&gt;
+#include &lt;array&gt;
+#include &lt;vector&gt;
+#include &lt;random&gt;
+#include &lt;functional&gt;
+#include &lt;chrono&gt;
+#include &lt;initializer_list&gt;
+#include &lt;cstring&gt;
+
+class CBufferWriter
+{
+public:
+    CBufferWriter(uint8_t* buffer, size_t size) : m_pStart(buffer), m_pCurrent(buffer), m_pEnd(buffer + size)
+    {
+
+    }
+
+    template&lt;typename T&gt;
+    void write(T value)
+    {
+        if (m_pCurrent + sizeof(T) &lt;= m_pEnd)
+        {
+            *reinterpret_cast&lt;T*&gt;(m_pCurrent) = value;
+            m_pCurrent += sizeof(T);
+        }
+    }
+
+    void writeBytes(std::initializer_list&lt;uint8_t&gt; listBytes) {
+        if (m_pCurrent + listBytes.size() &lt;= m_pEnd)
+        {
+            memcpy(m_pCurrent, listBytes.begin(), listBytes.size());
+            m_pCurrent += listBytes.size();
+        }
+    }
+
+    size_t getCurrentSize() const {
+        return m_pCurrent - m_pStart;
+    }
+
+    void fillRest(uint8_t uValue)
+    {
+        if (m_pCurrent &lt; m_pEnd) {
+            memset(m_pCurrent, uValue, m_pEnd - m_pCurrent);
+        }
+    }
+
+private:
+    uint8_t* m_pStart;
+    uint8_t* m_pCurrent;
+    const uint8_t* m_pEnd;
+};
+
+
+struct EncryptedShellGenerator
+{
+    static constexpr bool bRequiresGadget = false;
+    static constexpr size_t kMaxStubSize = 128;
+
+private:
+    enum class EOperationType { ADD, SUB, XOR, NOT, NEG, ROL, ROR };
+
+    struct ObfuscationLayer_t
+    {
+        EOperationType m_eType;
+        uint32_t m_uKey;
+    };
+
+    inline static std::mt19937 randEngine{ static_cast&lt;unsigned int&gt;(std::chrono::high_resolution_clock::now().time_since_epoch().count()) };
+
+public:
+    static void generate(uint8_t* pBuffer, uint32_t uSyscallNumber, void* /*pGadgetAddress*/)
+    {
+        CBufferWriter writer(pBuffer, kMaxStubSize);
+
+        std::uniform_int_distribution&lt;&gt; operationDist(0, 6);
+        std::uniform_int_distribution&lt;uint32_t&gt; keyDist(1, 0xFFFFFFFF);
+        std::uniform_int_distribution&lt;&gt; layersDist(4, 8);
+
+        const int iAmountOfLayers = layersDist(randEngine);
+        std::vector&lt;ObfuscationLayer_t&gt; vecLayers;
+        vecLayers.reserve(iAmountOfLayers);
+
+        for (int i = 0; i &lt; iAmountOfLayers; ++i)
+        {
+            EOperationType operationType = static_cast&lt;EOperationType&gt;(operationDist(randEngine));
+            uint32_t uKey = 0;
+
+            if (operationType == EOperationType::ROL || operationType == EOperationType::ROR)
+                uKey = keyDist(randEngine) % 31 + 1;
+            else if (operationType != EOperationType::NOT &amp;&amp; operationType != EOperationType::NEG)
+            {
+                uKey = keyDist(randEngine);
+
+                if (uKey == 0)
+                    uKey = 1;
+            }
+
+            vecLayers.push_back({ operationType, uKey });
+        }
+        uint32_t uEncryptedValue = uSyscallNumber;
+        for (auto it = vecLayers.rbegin(); it != vecLayers.rend(); ++it)
+        {
+            const auto&amp; layer = *it;
+            switch (layer.m_eType)
+            {
+                case EOperationType::ADD: uEncryptedValue -= layer.m_uKey; break;
+                case EOperationType::SUB: uEncryptedValue += layer.m_uKey; break;
+                case EOperationType::XOR: uEncryptedValue ^= layer.m_uKey; break;
+                case EOperationType::NOT: uEncryptedValue = ~uEncryptedValue; break;
+                case EOperationType::NEG: uEncryptedValue = -uEncryptedValue; break;
+                case EOperationType::ROL: uEncryptedValue = (uEncryptedValue &gt;&gt; layer.m_uKey) | (uEncryptedValue &lt;&lt; (32 - layer.m_uKey)); break; // ROR
+                case EOperationType::ROR: uEncryptedValue = (uEncryptedValue &lt;&lt; layer.m_uKey) | (uEncryptedValue &gt;&gt; (32 - layer.m_uKey)); break; // ROL
+            }
+        }
+
+        writer.writeBytes({ 0x51, 0x41, 0x5A });     // push rcx; pop r10
+
+        writer.write&lt;uint8_t&gt;(0xB8);                // mov eax, ...
+        writer.write&lt;uint32_t&gt;(uEncryptedValue);    // ... encryptedValue
+
+        emitJunk(writer);
+
+        for (const auto&amp; layer : vecLayers)
+        {
+            switch (layer.m_eType) {
+            case EOperationType::ADD:
+                writer.write&lt;uint8_t&gt;(0x05);    // add eax, key
+                writer.write&lt;uint32_t&gt;(layer.m_uKey);
+                break;
+            case EOperationType::SUB:
+                writer.write&lt;uint8_t&gt;(0x2D);    // sub eax, key
+                writer.write&lt;uint32_t&gt;(layer.m_uKey);
+                break;
+            case EOperationType::XOR:
+                writer.write&lt;uint8_t&gt;(0x35);    // xor eax, key
+                writer.write&lt;uint32_t&gt;(layer.m_uKey);
+                break;
+            case EOperationType::NOT:
+                writer.writeBytes({ 0xF7, 0xD0 }); // not eax
+                break;
+            case EOperationType::NEG:
+                writer.writeBytes({ 0xF7, 0xD8 }); // neg eax
+                break;
+            case EOperationType::ROL:
+                writer.writeBytes({ 0xC1, 0xC0 }); // rol eax, key
+                writer.write&lt;uint8_t&gt;(static_cast&lt;uint8_t&gt;(layer.m_uKey));
+                break;
+            case EOperationType::ROR:
+                writer.writeBytes({ 0xC1, 0xC8 }); // ror eax, key
+                writer.write&lt;uint8_t&gt;(static_cast&lt;uint8_t&gt;(layer.m_uKey));
+                break;
+            }
+
+            emitJunk(writer);
+        }
+
+        writer.writeBytes({ 0x0F, 0x05 });                  // syscall
+        writer.writeBytes({ 0x48, 0x83, 0xC4, 0x08 });     // add rsp 8
+        writer.writeBytes({ 0xFF, 0x64, 0x24, 0xF8 });     // jmp qword ptr [rsp-8]
+
+        writer.fillRest(0xCC); // int3
+    }
+
+    static constexpr size_t getStubSize() { return kMaxStubSize; }
+private:
+    static void emitJunk(CBufferWriter&amp; writer)
+    {
+        std::uniform_int_distribution&lt;&gt; junkDist(0, 5);
+        int iJunkType = junkDist(randEngine);
+
+        const uint8_t uREXW = 0x48;
+        const std::array&lt;uint8_t, 6&gt; arrPushOpcodes = { 0x50, 0x51, 0x52, 0x53, 0x56, 0x57 };
+        const std::array&lt;uint8_t, 6&gt; arrPopOpcodes = { 0x58, 0x59, 0x5A, 0x5B, 0x5E, 0x5F };
+
+        const std::array&lt;uint8_t, 6&gt; arrIncDecNegModRM = { 0xC0, 0xC1, 0xC2, 0xC3, 0xC6, 0xC7 };
+        const std::array&lt;uint8_t, 6&gt; arrLeaModRM = { 0x40, 0x49, 0x52, 0x5B, 0x76, 0x7F };
+        std::uniform_int_distribution&lt;&gt; regDist(0, arrPushOpcodes.size() - 1);
+        int iRegIdx = regDist(randEngine);
+
+        switch (iJunkType)
+        {
+            case 0:
+                // nop
+                writer.write&lt;uint8_t&gt;(0x90);
+                break;
+
+            case 1:
+                // push rXX; pop rXX
+                writer.write&lt;uint8_t&gt;(arrPushOpcodes[iRegIdx]);
+                writer.write&lt;uint8_t&gt;(arrPopOpcodes[iRegIdx]);
+                break;
+
+            case 2:
+                // pushfq
+                writer.write&lt;uint8_t&gt;(0x9C);
+                // inc rXX
+                writer.writeBytes({ uREXW, 0xFF, arrIncDecNegModRM[iRegIdx] });
+                // dec rXX
+                writer.writeBytes({ uREXW, 0xFF, (uint8_t)(arrIncDecNegModRM[iRegIdx] + 0x08) });
+                // popfq
+                writer.write&lt;uint8_t&gt;(0x9D);
+                break;
+
+            case 3:
+                // lea rXX, [rXX + 0x00]
+                writer.writeBytes({ uREXW, 0x8D, arrLeaModRM[iRegIdx], 0x00 });
+                break;
+
+            case 4:
+            {
+                // pushfq
+                writer.write&lt;uint8_t&gt;(0x9C);
+
+                std::uniform_int_distribution&lt;uint32_t&gt; valDist;
+                uint32_t uRandomVal = valDist(randEngine);
+
+                // xor rXX, imm32
+                writer.writeBytes({ uREXW, 0x81, (uint8_t)(0xF0 + iRegIdx) });
+                writer.write&lt;uint32_t&gt;(uRandomVal);
+
+                // xor rXX, imm32
+                writer.writeBytes({ uREXW, 0x81, (uint8_t)(0xF0 + iRegIdx) });
+                writer.write&lt;uint32_t&gt;(uRandomVal);
+
+                // popfq
+                writer.write&lt;uint8_t&gt;(0x9D);
+            }
+            break;
+
+            case 5:
+                break;
+        }
+    }
+};
+
+int main()
+{
+    syscall::Manager &lt; syscall::policies::allocator::section, EncryptedShellGenerator&gt; syscallManager;
+    if (!syscallManager.initialize())
+    {
+        std::cerr &lt;&lt; &quot;failed to initialize syscall manager&quot; &lt;&lt; std::endl;
+        return 1;
+    }
+
+    std::cout &lt;&lt; &quot;syscall manager initialized successfully&quot; &lt;&lt; std::endl;
+
+    NTSTATUS status;
+    PVOID pBaseAddress = nullptr;
+    SIZE_T uSize = 0x1000;
+
+    status = syscallManager.invoke&lt;NTSTATUS&gt;(
+        SYSCALL_ID(&quot;NtAllocateVirtualMemory&quot;),
+        syscall::native::getCurrentProcess(),
+        &amp;pBaseAddress,
+        0,
+        &amp;uSize,
+        MEM_COMMIT | MEM_RESERVE,
+        PAGE_READWRITE
+    );
+
+    if(pBaseAddress)
+        std::cout &lt;&lt; &quot;memory allocated: &quot; &lt;&lt; pBaseAddress;
+    else
+        std::cout &lt;&lt; &quot;failed to allocate, status:&quot; &lt;&lt; status;
+
+    return 0;
+}</code></pre>
+	</div>
+</div><br />
+<b>Структура EncryptedShellGenerator</b><br />
+Это политика генерации стаба для <code class="bbCodeInline">syscall::Manager</code>.<br />
+<br />
+Она умеет:<br />
+<ul>
+<li data-xf-list-type="ul"><b>Случайно генерировать цепочку из 4–8 обфускационных «слоёв»</b> (операций <code class="bbCodeInline">ADD</code>, <code class="bbCodeInline">SUB</code>, <code class="bbCodeInline">XOR</code>, <code class="bbCodeInline">NOT</code>, <code class="bbCodeInline">NEG</code>, <code class="bbCodeInline">ROL</code>, <code class="bbCodeInline">ROR</code>), каждая с собственным 32-битным ключом или сдвигом.</li>
+<li data-xf-list-type="ul"><b>Предварительно «зашифровывать» номер системного вызова</b> путём последовательного применения <i>обратных</i> операций всех слоёв (чтобы в самом стубе сначала выполнить дешифровку).</li>
+<li data-xf-list-type="ul"><b>Записывать в буфер</b>:<ol>
+<li data-xf-list-type="ol">Пролог для переноса <code class="bbCodeInline">rcx</code> → <code class="bbCodeInline">r10</code> (<code class="bbCodeInline">push rcx; pop r10</code>) — требуется для корректной работы <code class="bbCodeInline">syscall</code> на x64.</li>
+<li data-xf-list-type="ol">Инструкцию <code class="bbCodeInline">mov eax, &lt;encryptedValue&gt;</code> (Мнемоника <code class="bbCodeInline">0xB8 …</code>) со «зашифрованным» номером.</li>
+<li data-xf-list-type="ol">Случайный «мусор» (<code class="bbCodeInline">emitJunk</code>) — одна из пяти вариаций, чтобы шумить статический анализ в памяти.</li>
+<li data-xf-list-type="ol">Блок расшифровки: для каждого слоя по очереди генерируется нужная машинная инструкция (<code class="bbCodeInline">add eax, key</code>, <code class="bbCodeInline">sub eax, key</code>, <code class="bbCodeInline">xor eax, key</code>, <code class="bbCodeInline">not eax</code>, <code class="bbCodeInline">neg eax</code>, <code class="bbCodeInline">rol eax, imm8</code>, <code class="bbCodeInline">ror eax, imm8</code>), с чередованием мусора.</li>
+<li data-xf-list-type="ol">Наконец, сам <code class="bbCodeInline">syscall</code> (<code class="bbCodeInline">0x0F 0x05</code>), корректное выравнивание стека (<code class="bbCodeInline">add rsp, 8</code>) и переход по адресу возврата (<code class="bbCodeInline">jmp qword ptr [rsp-8]</code>).</li>
+<li data-xf-list-type="ol">Паддинг до максимального размера стуба (<code class="bbCodeInline">kMaxStubSize = 128 байт</code>) инструкциями <code class="bbCodeInline">int3</code> (<code class="bbCodeInline">0xCC</code>). Т</li>
+</ol></li>
+</ul>Такой подход даёт максимально компактный и одновременно сильно обфусцированный машинный код системного вызова, устойчивый к тривиальному сканированию по сигнатурам.<br />
+<br />
+<b>Функция emitJunk</b><br />
+Вставляет один из нескольких видов «бесполезных» инструкций (NOP, push/pop регистров, манипуляции флагами и т. п.), чтобы ещё больше запутать дизассемблированный код.<br />
+<br />
+<b>Основная функция <code class="bbCodeInline">main</code></b><br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>syscall::Manager&lt;syscall::policies::allocator::section,
+                EncryptedShellGenerator&gt; syscallManager;
+if (!syscallManager.initialize()) { … }
+syscallManager.invoke&lt;NTSTATUS&gt;(
+    SYSCALL_ID(&quot;NtAllocateVirtualMemory&quot;),
+    syscall::native::getCurrentProcess(), &amp;pBaseAddress, 0, &amp;uSize,
+    MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE
+);</code></pre>
+	</div>
+</div><br />
+Здесь создаётся менеджер системных вызовов, который:<br />
+<ul>
+<li data-xf-list-type="ul">Использует политику allocator::section (создаёт исполняемую секцию через NtCreateSection).</li>
+<li data-xf-list-type="ul">Для генерации каждого стаба применяет политику EncryptedShellGenerator.<br />
+После инициализации он напрямую вызывает NtAllocateVirtualMemory, указав параметры для резервирования и коммита памяти в текущем процессе.</li>
+</ul>В результате этот код позволяет вызывать системные функции Windows обходя стандартные API-прокси, при этом сам машинный код стаба жёстко обфусцирован и динамически генерируется в памяти.<br />
+<br />
+Репозиторй, где можно скачать фреймворк:<a href="https://github.com/sapdragon/syscalls-cpp/" target="_blank" class="link link--external" rel="noopener">GitHub - sapdragon/syscalls-cpp: A modern C++20 header-only library for advanced direct system call invocation.</a></div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+			
+
+	
+		
+	
+
+		
+
+		
+			
+	
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+		<div class="message-lastEdit">
+			
+				Последнее редактирование: <time  class="u-dt" dir="auto" datetime="2025-06-18T20:05:45+0300" data-timestamp="1750266345" data-date="18.06.2025" data-time="20:05" data-short="18 Июн" title="18.06.2025 в 20:05">18.06.2025</time>
+			
+		</div>
+	
+
+								
+
+								
+									
+	
+		
+			<aside class="message-signature">
+			
+				<div class="bbWrapper">В районе богачей, если нет оружия и не таишь злобу, главное это деньги, а не любовь.<br />
+<b><img class="smilie smilie--emoji" alt="💰" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4b0.png" title="Money bag    :moneybag:" data-shortname=":moneybag:" loading="lazy" width="64" height="64" /> Donate (BTC):bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz</b></div>
+			
+			</aside>
+		
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/162/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>HMCoba</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+			
+		</div>
+	</div>
+
+	
+		<div class="block-outer block-outer--after">
+			
+				
+
+				
+				
+					<div class="block-outer-opposite">
+						
+							<a href="../../login/index.html" class="button button--link button--wrap" data-xf-click="overlay"><span class="button-text">
+								Для ответа нужно войти/зарегистрироваться
+							</span></a>
+						
+					</div>
+				
+			
+		</div>
+	
+
+	
+	
+
+</div>
+
+
+
+
+
+
+
+	<div class="dcom-lc-online-block">
+		
+	</div>
+
+
+
+
+
+
+
+	
+
+<div class="blockMessage blockMessage--none">
+	
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965628"></span>
+
+			
+				<span class="shareButtons-label">Поделиться:</span>
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965628" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965628"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965628" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+</div>
+
+
+
+
+
+
+
+</div>
+					
+				</div>
+
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html" itemprop="item">
+			<span itemprop="name">Форум</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html#tekhniki-atak-i-ekspluatatsiya.19" itemprop="item">
+			<span itemprop="name">Техники атак и эксплуатация</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/pentesting.26/index.html" itemprop="item">
+			<span itemprop="name">Пентестинг</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965628%2Cce4c958c5eb337ac2710d9ac122045ef"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965628%2Cce4c958c5eb337ac2710d9ac122045ef"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965628%2Cce4c958c5eb337ac2710d9ac122045ef"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+	
+	
+		
+		
+			<script type="application/ld+json">
+				{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://osint42.org/threads/covremennaya-c-20-biblioteka-dlya-skrytiya-sistemnykh-vyzovov-v-windows.79/",
+    "mainEntity": {
+        "@type": "DiscussionForumPosting",
+        "@id": "https://osint42.org/threads/covremennaya-c-20-biblioteka-dlya-skrytiya-sistemnykh-vyzovov-v-windows.79/",
+        "headline": "C\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u0430\u044f C++20 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0430 \u0434\u043b\u044f \u0441\u043a\u0440\u044b\u0442\u0438\u044f \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u044b\u0445 \u0432\u044b\u0437\u043e\u0432\u043e\u0432 \u0432 Windows",
+        "datePublished": "2025-06-18T15:44:39+00:00",
+        "url": "https://osint42.org/threads/covremennaya-c-20-biblioteka-dlya-skrytiya-sistemnykh-vyzovov-v-windows.79/",
+        "articleSection": "\u041f\u0435\u043d\u0442\u0435\u0441\u0442\u0438\u043d\u0433",
+        "author": {
+            "@type": "Person",
+            "@id": "https://osint42.org/members/0x42.1/",
+            "name": "0x42",
+            "url": "https://osint42.org/members/0x42.1/"
+        },
+        "interactionStatistic": [
+            {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/ViewAction",
+                "userInteractionCount": 95
+            },
+            {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": 0
+            },
+            {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": 1
+            }
+        ],
+        "dateModified": "2025-06-18T17:05:45+00:00",
+        "image": "https://osint42.org/attachments/1750261475468-png.580/",
+        "text": "\u0412\u0432\u0435\u0434\u0435\u043d\u0438\u0435\n\nsyscalls-cpp \u2014 \u044d\u0442\u043e \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u0447\u043d\u0430\u044f \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0430 \u043d\u0430 C++20, \u0440\u0435\u0430\u043b\u0438\u0437\u0443\u044e\u0449\u0430\u044f \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0443-\u043e\u0440\u0438\u0435\u043d\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0444\u0440\u0435\u0439\u043c\u0432\u043e\u0440\u043a \u0434\u043b\u044f \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f \u043f\u0440\u044f\u043c\u044b\u0445 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u044b\u0445 \u0432\u044b\u0437\u043e\u0432\u043e\u0432 \u0432 \u043e\u043a\u0440\u0443\u0436\u0435\u043d\u0438\u044f\u0445 x86/x64 \u043f\u043e\u0434 Windows.\n\n\u041e\u043d\u0430 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442 \u043c\u043e\u0434\u0443\u043b\u044c\u043d\u0443\u044e \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0443, \u0433\u0434\u0435 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043d\u0430 \u044d\u0442\u0430\u043f\u0435 \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0446\u0438\u0438 \u043a\u043e\u043c\u0431\u0438\u043d\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 \u0441\u0442\u0440\u0430\u0442\u0435\u0433\u0438\u0438 \u0432\u044b\u0434\u0435\u043b\u0435\u043d\u0438\u044f \u043f\u0430\u043c\u044f\u0442\u0438 \u0438 \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u0438 stub-\u0444\u0443\u043d\u043a\u0446\u0438\u0439 \u0434\u043b\u044f \u0434\u043e\u0441\u0442\u0438\u0436\u0435\u043d\u0438\u044f \u043e\u043f\u0442\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0431\u0430\u043b\u0430\u043d\u0441\u0430 \u043c\u0435\u0436\u0434\u0443 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c\u044e \u0438 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c\u044e.\n\n\u0411\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0430 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u044f\u0435\u0442 \u043d\u043e\u043c\u0435\u0440\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u044b\u0445 \u0432\u044b\u0437\u043e\u0432\u043e\u0432, \u043d\u0430\u043f\u0440\u044f\u043c\u0443\u044e \u043f\u0430\u0440\u0441\u044f \u043c\u0435\u0442\u0430\u0434\u0430\u043d\u043d\u044b\u0435 ntdll.dll: \u043d\u0430 x64 \u2014 \u0447\u0435\u0440\u0435\u0437 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0443 exception directory, \u0430 \u043d\u0430 x86 \u2014 \u0441\u043e\u0440\u0442\u0438\u0440\u0443\u044f \u044d\u043a\u0441\u043f\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u043f\u043e \u0430\u0434\u0440\u0435\u0441\u0430\u043c.\n\n\u0422\u0430\u043a\u043e\u0439 \u043f\u043e\u0434\u0445\u043e\u0434 \u0443\u0441\u0442\u043e\u0439\u0447\u0438\u0432 \u043a \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u0438\u043c \u0445\u0443\u043a\u0430\u043c \u0438 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u043d\u0430\u0445\u043e\u0434\u0438\u0442\u044c \u0434\u0430\u0436\u0435 \u00ab\u0441\u043e\u0441\u0435\u0434\u043d\u0438\u0435\u00bb \u0432\u044b\u0437\u043e\u0432\u044b, \u0435\u0441\u043b\u0438 \u043e\u0440\u0438\u0433\u0438\u043d\u0430\u043b \u0431\u044b\u043b \u043f\u043e\u0434\u043c\u0435\u043d\u0451\u043d \u0438\u043b\u0438 \u043f\u0430\u0442\u0447\u0435\u043d.\n\n\u041e\u0441\u043d\u043e\u0432\u043d\u044b\u0435 \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u044b (\u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0438)\n\n\u0412\u0441\u0435 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0438 \u0440\u0430\u0437\u0434\u0435\u043b\u0435\u043d\u044b \u043d\u0430 \u0442\u0440\u0438 \u0433\u0440\u0443\u043f\u043f\u044b: \u0432\u044b\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043f\u0430\u043c\u044f\u0442\u0438 (Allocation), \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u044f stub-\u0444\u0443\u043d\u043a\u0446\u0438\u0439 (Stub Generation) \u0438 \u0440\u0430\u0437\u0431\u043e\u0440 \u043c\u0435\u0442\u0430\u0434\u0430\u043d\u043d\u044b\u0445 (Parsing).\n\u041b\u044e\u0431\u0443\u044e \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0443 \u0430\u043b\u043b\u043e\u043a\u0430\u0446\u0438\u0438 \u043c\u043e\u0436\u043d\u043e \u0441\u043e\u0447\u0435\u0442\u0430\u0442\u044c \u0441 \u043b\u044e\u0431\u043e\u0439 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u043e\u0439 \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u0438 \u0438 \u0440\u0430\u0437\u0431\u043e\u0440\u0430.\n\n1. \u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0438 \u0432\u044b\u0434\u0435\u043b\u0435\u043d\u0438\u044f \u043f\u0430\u043c\u044f\u0442\u0438\n\nallocator::section \u2014 \u0432\u044b\u0437\u044b\u0432\u0430\u0435\u0442 NtCreateSection \u0441 \u0444\u043b\u0430\u0433\u043e\u043c SEC_NO_CHANGE;\nallocator::heap \u2014 \u0441\u043e\u0437\u0434\u0430\u0435\u0442 \u0441\u0435\u043a\u0446\u0438\u044e \u0447\u0435\u0440\u0435\u0437 HeapCreate \u0441 HEAP_CREATE_ENABLE_EXECUTE;\nallocator::memory \u2014 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 NtAllocateVirtualMemory (RW \u2192 RX).\n\n2. \u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0438 \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u0438 stub-\u0444\u0443\u043d\u043a\u0446\u0438\u0439\n\ngenerator::direct \u2014 \u043a\u043b\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f syscall \u0432\u043d\u0443\u0442\u0440\u0438 \u0441\u0430\u043c\u043e\u0441\u0442\u043e\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u043a\u043e\u0434\u0430;\ngenerator::gadget (\u0442\u043e\u043b\u044c\u043a\u043e x64) \u2014 \u043f\u0440\u044b\u0436\u043e\u043a \u043d\u0430 \u043d\u0430\u0439\u0434\u0435\u043d\u043d\u044b\u0439 \u0432 ntdll.dll gadget \u00absyscall; ret\u00bb;\ngenerator::exception (\u0442\u043e\u043b\u044c\u043a\u043e x64) \u2014 \u0433\u0435\u043d\u0435\u0440\u0438\u0440\u0443\u0435\u0442 UD2 \u0438 \u043e\u0431\u0440\u0430\u0431\u0430\u0442\u044b\u0432\u0430\u0435\u0442 \u0435\u0433\u043e \u0447\u0435\u0440\u0435\u0437 \u0432\u0435\u043a\u0442\u043e\u0440\u043d\u044b\u0439 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a \u0438\u0441\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0439 (VEH).\n\n3. \u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0438 \u0440\u0430\u0437\u0431\u043e\u0440\u0430 \u043c\u0435\u0442\u0430\u0434\u0430\u043d\u043d\u044b\u0445 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u044b\u0445 \u0432\u044b\u0437\u043e\u0432\u043e\u0432\n\nparser::directory \u2014 \u043d\u0430 x64 \u0441\u0432\u044f\u0437\u044b\u0432\u0430\u0435\u0442 exception directory (.pdata) \u0441 \u0442\u0430\u0431\u043b\u0438\u0446\u0435\u0439 \u044d\u043a\u0441\u043f\u043e\u0440\u0442\u0430, \u043d\u0430 x86 \u0441\u043e\u0440\u0442\u0438\u0440\u0443\u0435\u0442 Zw \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u043f\u043e \u0430\u0434\u0440\u0435\u0441\u0443;\nparser::signature \u2014 \u0441\u043a\u0430\u043d\u0438\u0440\u0443\u0435\u0442 \u043f\u0440\u043e\u043b\u043e\u0433\u0430 \u0444\u0443\u043d\u043a\u0446\u0438\u0439 \u043d\u0430 \u043f\u043e\u0434\u043f\u0438\u0441\u044c \u00abmov r10, rcx; mov eax, syscall_id\u00bb \u0441 \u0443\u0447\u0451\u0442\u043e\u043c \u0437\u0430\u0449\u0438\u0442\u044b \u043e\u0442 \u0445\u0443\u043a\u043e\u0432.\n\n\u0423\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430\n\n\u0427\u0435\u0440\u0435\u0437 vcpkg:\n\nvcpkg install syscalls-cpp\n \n\u0418\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044f \u0441 MSBuild \u0438 CMake \u043f\u0440\u043e\u0438\u0441\u0445\u043e\u0434\u0438\u0442 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438.\n\n\u0420\u0443\u0447\u043d\u0430\u044f \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430:\n\n\u041a\u043b\u043e\u043d\u0438\u0440\u0443\u0439\u0442\u0435 \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0439 \u0438 \u0434\u043e\u0431\u0430\u0432\u044c\u0442\u0435 \u043f\u0430\u043f\u043a\u0443 include \u0432 \u043f\u0443\u0442\u0438 \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0446\u0438\u0438.\n\n\u041f\u0440\u0438\u043c\u0435\u0440 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f\n \u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u044b\u0439 \u0441\u0446\u0435\u043d\u0430\u0440\u0438\u0439\n\n#include <iostream>\n#include <syscalls-cpp/syscall.hpp>\n\nint main()\n{\n    syscall::Manager<syscall::policies::allocator::section, syscall::policies::generator::direct> syscallManager;\n    if (!syscallManager.initialize())\n    {\n        std::cerr << \"initialization failed!\\n\";\n        return 1;\n    }\n\n    PVOID pBaseAddress = nullptr;\n    SIZE_T uSize = 0x1000;\n\n    syscallManager.invoke<NTSTATUS>(\n        SYSCALL_ID(\"NtAllocateVirtualMemory\"),\n        syscall::native::getCurrentProcess(),\n        &pBaseAddress,\n        0, &uSize,\n        MEM_COMMIT | MEM_RESERVE,\n        PAGE_READWRITE\n    );\n\n    if (pBaseAddress)\n        std::cout << \"allocation successful at 0x\" << pBaseAddress << std::endl;\n\n    return 0;\n}\n\n\u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u043d\u044b\u0439 \u0441\u0446\u0435\u043d\u0430\u0440\u0438\u0439:\n\n\u0412 \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u043e\u043c \u0441\u0446\u0435\u043d\u0430\u0440\u0438\u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u0435 \u0438 \u0432\u044b\u0437\u043e\u0432 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u043e\u0433\u043e \u0432\u044b\u0437\u043e\u0432\u0430.\n\n\u0412 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u043c \u043d\u0438\u0436\u0435 \u0444\u0440\u0430\u0433\u043c\u0435\u043d\u0442\u0435 \u043a\u043e\u0434\u0430 \u0440\u0435\u0430\u043b\u0438\u0437\u0443\u0435\u0442\u0441\u044f \u0434\u0438\u043d\u0430\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u044f \u00ab\u043e\u0431\u0444\u0443\u0441\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u043e\u0433\u043e\u00bb \u0441\u0442\u0430\u0431\u0430 (stub) \u0434\u043b\u044f \u043f\u0440\u044f\u043c\u043e\u0433\u043e \u0432\u044b\u0437\u043e\u0432\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u043e\u0433\u043e \u0432\u044b\u0437\u043e\u0432\u0430 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0438 EncryptedShellGenerator:\n#pragma warning(disable : 4146) // neg for unsigned\n\n#include <syscalls-cpp/syscall.hpp>\n\n#include <iostream>\n#include <cstdint>\n#include <array>\n#include <vector>\n#include <random>\n#include <functional>\n#include <chrono>\n#include <initializer_list>\n#include <cstring>\n\nclass CBufferWriter\n{\npublic:\n    CBufferWriter(uint8_t* buffer, size_t size) : m_pStart(buffer), m_pCurrent(buffer), m_pEnd(buffer + size)\n    {\n\n    }\n\n    template<typename T>\n    void write(T value)\n    {\n        if (m_pCurrent + sizeof(T) <= m_pEnd)\n        {\n            *reinterpret_cast<T*>(m_pCurrent) = value;\n            m_pCurrent += sizeof(T);\n        }\n    }\n\n    void writeBytes(std::initializer_list<uint8_t> listBytes) {\n        if (m_pCurrent + listBytes.size() <= m_pEnd)\n        {\n            memcpy(m_pCurrent, listBytes.begin(), listBytes.size());\n            m_pCurrent += listBytes.size();\n        }\n    }\n\n    size_t getCurrentSize() const {\n        return m_pCurrent - m_pStart;\n    }\n\n    void fillRest(uint8_t uValue)\n    {\n        if (m_pCurrent < m_pEnd) {\n            memset(m_pCurrent, uValue, m_pEnd - m_pCurrent);\n        }\n    }\n\nprivate:\n    uint8_t* m_pStart;\n    uint8_t* m_pCurrent;\n    const uint8_t* m_pEnd;\n};\n\n\nstruct EncryptedShellGenerator\n{\n    static constexpr bool bRequiresGadget = false;\n    static constexpr size_t kMaxStubSize = 128;\n\nprivate:\n    enum class EOperationType { ADD, SUB, XOR, NOT, NEG, ROL, ROR };\n\n    struct ObfuscationLayer_t\n    {\n        EOperationType m_eType;\n        uint32_t m_uKey;\n    };\n\n    inline static std::mt19937 randEngine{ static_cast<unsigned int>(std::chrono::high_resolution_clock::now().time_since_epoch().count()) };\n\npublic:\n    static void generate(uint8_t* pBuffer, uint32_t uSyscallNumber, void* /*pGadgetAddress*/)\n    {\n        CBufferWriter writer(pBuffer, kMaxStubSize);\n\n        std::uniform_int_distribution<> operationDist(0, 6);\n        std::uniform_int_distribution<uint32_t> keyDist(1, 0xFFFFFFFF);\n        std::uniform_int_distribution<> layersDist(4, 8);\n\n        const int iAmountOfLayers = layersDist(randEngine);\n        std::vector<ObfuscationLayer_t> vecLayers;\n        vecLayers.reserve(iAmountOfLayers);\n\n        for (int i = 0; i < iAmountOfLayers; ++i)\n        {\n            EOperationType operationType = static_cast<EOperationType>(operationDist(randEngine));\n            uint32_t uKey = 0;\n\n            if (operationType == EOperationType::ROL || operationType == EOperationType::ROR)\n                uKey = keyDist(randEngine) % 31 + 1;\n            else if (operationType != EOperationType::NOT && operationType != EOperationType::NEG)\n            {\n                uKey = keyDist(randEngine);\n\n                if (uKey == 0)\n                    uKey = 1;\n            }\n\n            vecLayers.push_back({ operationType, uKey });\n        }\n        uint32_t uEncryptedValue = uSyscallNumber;\n        for (auto it = vecLayers.rbegin(); it != vecLayers.rend(); ++it)\n        {\n            const auto& layer = *it;\n            switch (layer.m_eType)\n            {\n                case EOperationType::ADD: uEncryptedValue -= layer.m_uKey; break;\n                case EOperationType::SUB: uEncryptedValue += layer.m_uKey; break;\n                case EOperationType::XOR: uEncryptedValue ^= layer.m_uKey; break;\n                case EOperationType::NOT: uEncryptedValue = ~uEncryptedValue; break;\n                case EOperationType::NEG: uEncryptedValue = -uEncryptedValue; break;\n                case EOperationType::ROL: uEncryptedValue = (uEncryptedValue >> layer.m_uKey) | (uEncryptedValue << (32 - layer.m_uKey)); break; // ROR\n                case EOperationType::ROR: uEncryptedValue = (uEncryptedValue << layer.m_uKey) | (uEncryptedValue >> (32 - layer.m_uKey)); break; // ROL\n            }\n        }\n\n        writer.writeBytes({ 0x51, 0x41, 0x5A });     // push rcx; pop r10\n\n        writer.write<uint8_t>(0xB8);                // mov eax, ...\n        writer.write<uint32_t>(uEncryptedValue);    // ... encryptedValue\n\n        emitJunk(writer);\n\n        for (const auto& layer : vecLayers)\n        {\n            switch (layer.m_eType) {\n            case EOperationType::ADD:\n                writer.write<uint8_t>(0x05);    // add eax, key\n                writer.write<uint32_t>(layer.m_uKey);\n                break;\n            case EOperationType::SUB:\n                writer.write<uint8_t>(0x2D);    // sub eax, key\n                writer.write<uint32_t>(layer.m_uKey);\n                break;\n            case EOperationType::XOR:\n                writer.write<uint8_t>(0x35);    // xor eax, key\n                writer.write<uint32_t>(layer.m_uKey);\n                break;\n            case EOperationType::NOT:\n                writer.writeBytes({ 0xF7, 0xD0 }); // not eax\n                break;\n            case EOperationType::NEG:\n                writer.writeBytes({ 0xF7, 0xD8 }); // neg eax\n                break;\n            case EOperationType::ROL:\n                writer.writeBytes({ 0xC1, 0xC0 }); // rol eax, key\n                writer.write<uint8_t>(static_cast<uint8_t>(layer.m_uKey));\n                break;\n            case EOperationType::ROR:\n                writer.writeBytes({ 0xC1, 0xC8 }); // ror eax, key\n                writer.write<uint8_t>(static_cast<uint8_t>(layer.m_uKey));\n                break;\n            }\n\n            emitJunk(writer);\n        }\n\n        writer.writeBytes({ 0x0F, 0x05 });                  // syscall\n        writer.writeBytes({ 0x48, 0x83, 0xC4, 0x08 });     // add rsp 8\n        writer.writeBytes({ 0xFF, 0x64, 0x24, 0xF8 });     // jmp qword ptr [rsp-8]\n\n        writer.fillRest(0xCC); // int3\n    }\n\n    static constexpr size_t getStubSize() { return kMaxStubSize; }\nprivate:\n    static void emitJunk(CBufferWriter& writer)\n    {\n        std::uniform_int_distribution<> junkDist(0, 5);\n        int iJunkType = junkDist(randEngine);\n\n        const uint8_t uREXW = 0x48;\n        const std::array<uint8_t, 6> arrPushOpcodes = { 0x50, 0x51, 0x52, 0x53, 0x56, 0x57 };\n        const std::array<uint8_t, 6> arrPopOpcodes = { 0x58, 0x59, 0x5A, 0x5B, 0x5E, 0x5F };\n\n        const std::array<uint8_t, 6> arrIncDecNegModRM = { 0xC0, 0xC1, 0xC2, 0xC3, 0xC6, 0xC7 };\n        const std::array<uint8_t, 6> arrLeaModRM = { 0x40, 0x49, 0x52, 0x5B, 0x76, 0x7F };\n        std::uniform_int_distribution<> regDist(0, arrPushOpcodes.size() - 1);\n        int iRegIdx = regDist(randEngine);\n\n        switch (iJunkType)\n        {\n            case 0:\n                // nop\n                writer.write<uint8_t>(0x90);\n                break;\n\n            case 1:\n                // push rXX; pop rXX\n                writer.write<uint8_t>(arrPushOpcodes[iRegIdx]);\n                writer.write<uint8_t>(arrPopOpcodes[iRegIdx]);\n                break;\n\n            case 2:\n                // pushfq\n                writer.write<uint8_t>(0x9C);\n                // inc rXX\n                writer.writeBytes({ uREXW, 0xFF, arrIncDecNegModRM[iRegIdx] });\n                // dec rXX\n                writer.writeBytes({ uREXW, 0xFF, (uint8_t)(arrIncDecNegModRM[iRegIdx] + 0x08) });\n                // popfq\n                writer.write<uint8_t>(0x9D);\n                break;\n\n            case 3:\n                // lea rXX, [rXX + 0x00]\n                writer.writeBytes({ uREXW, 0x8D, arrLeaModRM[iRegIdx], 0x00 });\n                break;\n\n            case 4:\n            {\n                // pushfq\n                writer.write<uint8_t>(0x9C);\n\n                std::uniform_int_distribution<uint32_t> valDist;\n                uint32_t uRandomVal = valDist(randEngine);\n\n                // xor rXX, imm32\n                writer.writeBytes({ uREXW, 0x81, (uint8_t)(0xF0 + iRegIdx) });\n                writer.write<uint32_t>(uRandomVal);\n\n                // xor rXX, imm32\n                writer.writeBytes({ uREXW, 0x81, (uint8_t)(0xF0 + iRegIdx) });\n                writer.write<uint32_t>(uRandomVal);\n\n                // popfq\n                writer.write<uint8_t>(0x9D);\n            }\n            break;\n\n            case 5:\n                break;\n        }\n    }\n};\n\nint main()\n{\n    syscall::Manager < syscall::policies::allocator::section, EncryptedShellGenerator> syscallManager;\n    if (!syscallManager.initialize())\n    {\n        std::cerr << \"failed to initialize syscall manager\" << std::endl;\n        return 1;\n    }\n\n    std::cout << \"syscall manager initialized successfully\" << std::endl;\n\n    NTSTATUS status;\n    PVOID pBaseAddress = nullptr;\n    SIZE_T uSize = 0x1000;\n\n    status = syscallManager.invoke<NTSTATUS>(\n        SYSCALL_ID(\"NtAllocateVirtualMemory\"),\n        syscall::native::getCurrentProcess(),\n        &pBaseAddress,\n        0,\n        &uSize,\n        MEM_COMMIT | MEM_RESERVE,\n        PAGE_READWRITE\n    );\n\n    if(pBaseAddress)\n        std::cout << \"memory allocated: \" << pBaseAddress;\n    else\n        std::cout << \"failed to allocate, status:\" << status;\n\n    return 0;\n}\n\n\u0421\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430 EncryptedShellGenerator\n\u042d\u0442\u043e \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u0438 \u0441\u0442\u0430\u0431\u0430 \u0434\u043b\u044f syscall::Manager.\n\n\u041e\u043d\u0430 \u0443\u043c\u0435\u0435\u0442:\n\n\u0421\u043b\u0443\u0447\u0430\u0439\u043d\u043e \u0433\u0435\u043d\u0435\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0446\u0435\u043f\u043e\u0447\u043a\u0443 \u0438\u0437 4\u20138 \u043e\u0431\u0444\u0443\u0441\u043a\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0445 \u00ab\u0441\u043b\u043e\u0451\u0432\u00bb (\u043e\u043f\u0435\u0440\u0430\u0446\u0438\u0439 ADD, SUB, XOR, NOT, NEG, ROL, ROR), \u043a\u0430\u0436\u0434\u0430\u044f \u0441 \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u043c 32-\u0431\u0438\u0442\u043d\u044b\u043c \u043a\u043b\u044e\u0447\u043e\u043c \u0438\u043b\u0438 \u0441\u0434\u0432\u0438\u0433\u043e\u043c.\n\u041f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u00ab\u0437\u0430\u0448\u0438\u0444\u0440\u043e\u0432\u044b\u0432\u0430\u0442\u044c\u00bb \u043d\u043e\u043c\u0435\u0440 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u043e\u0433\u043e \u0432\u044b\u0437\u043e\u0432\u0430 \u043f\u0443\u0442\u0451\u043c \u043f\u043e\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u043e\u0431\u0440\u0430\u0442\u043d\u044b\u0445 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u0439 \u0432\u0441\u0435\u0445 \u0441\u043b\u043e\u0451\u0432 (\u0447\u0442\u043e\u0431\u044b \u0432 \u0441\u0430\u043c\u043e\u043c \u0441\u0442\u0443\u0431\u0435 \u0441\u043d\u0430\u0447\u0430\u043b\u0430 \u0432\u044b\u043f\u043e\u043b\u043d\u0438\u0442\u044c \u0434\u0435\u0448\u0438\u0444\u0440\u043e\u0432\u043a\u0443).\n\u0417\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440:\n\n\u041f\u0440\u043e\u043b\u043e\u0433 \u0434\u043b\u044f \u043f\u0435\u0440\u0435\u043d\u043e\u0441\u0430 rcx \u2192 r10 (push rcx; pop r10) \u2014 \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u043b\u044f \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b syscall \u043d\u0430 x64.\n\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044e mov eax, <encryptedValue> (\u041c\u043d\u0435\u043c\u043e\u043d\u0438\u043a\u0430 0xB8 \u2026) \u0441\u043e \u00ab\u0437\u0430\u0448\u0438\u0444\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u043c\u00bb \u043d\u043e\u043c\u0435\u0440\u043e\u043c.\n\u0421\u043b\u0443\u0447\u0430\u0439\u043d\u044b\u0439 \u00ab\u043c\u0443\u0441\u043e\u0440\u00bb (emitJunk) \u2014 \u043e\u0434\u043d\u0430 \u0438\u0437 \u043f\u044f\u0442\u0438 \u0432\u0430\u0440\u0438\u0430\u0446\u0438\u0439, \u0447\u0442\u043e\u0431\u044b \u0448\u0443\u043c\u0438\u0442\u044c \u0441\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0432 \u043f\u0430\u043c\u044f\u0442\u0438.\n\u0411\u043b\u043e\u043a \u0440\u0430\u0441\u0448\u0438\u0444\u0440\u043e\u0432\u043a\u0438: \u0434\u043b\u044f \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u0441\u043b\u043e\u044f \u043f\u043e \u043e\u0447\u0435\u0440\u0435\u0434\u0438 \u0433\u0435\u043d\u0435\u0440\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043d\u0443\u0436\u043d\u0430\u044f \u043c\u0430\u0448\u0438\u043d\u043d\u0430\u044f \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f (add eax, key, sub eax, key, xor eax, key, not eax, neg eax, rol eax, imm8, ror eax, imm8), \u0441 \u0447\u0435\u0440\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435\u043c \u043c\u0443\u0441\u043e\u0440\u0430.\n\u041d\u0430\u043a\u043e\u043d\u0435\u0446, \u0441\u0430\u043c syscall (0x0F 0x05), \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e\u0435 \u0432\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u0441\u0442\u0435\u043a\u0430 (add rsp, 8) \u0438 \u043f\u0435\u0440\u0435\u0445\u043e\u0434 \u043f\u043e \u0430\u0434\u0440\u0435\u0441\u0443 \u0432\u043e\u0437\u0432\u0440\u0430\u0442\u0430 (jmp qword ptr [rsp-8]).\n\u041f\u0430\u0434\u0434\u0438\u043d\u0433 \u0434\u043e \u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0440\u0430\u0437\u043c\u0435\u0440\u0430 \u0441\u0442\u0443\u0431\u0430 (kMaxStubSize = 128 \u0431\u0430\u0439\u0442) \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f\u043c\u0438 int3 (0xCC). \u0422\n\n\n\u0422\u0430\u043a\u043e\u0439 \u043f\u043e\u0434\u0445\u043e\u0434 \u0434\u0430\u0451\u0442 \u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e \u043a\u043e\u043c\u043f\u0430\u043a\u0442\u043d\u044b\u0439 \u0438 \u043e\u0434\u043d\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u0441\u0438\u043b\u044c\u043d\u043e \u043e\u0431\u0444\u0443\u0441\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u043c\u0430\u0448\u0438\u043d\u043d\u044b\u0439 \u043a\u043e\u0434 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u043e\u0433\u043e \u0432\u044b\u0437\u043e\u0432\u0430, \u0443\u0441\u0442\u043e\u0439\u0447\u0438\u0432\u044b\u0439 \u043a \u0442\u0440\u0438\u0432\u0438\u0430\u043b\u044c\u043d\u043e\u043c\u0443 \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044e \u043f\u043e \u0441\u0438\u0433\u043d\u0430\u0442\u0443\u0440\u0430\u043c.\n\n\u0424\u0443\u043d\u043a\u0446\u0438\u044f emitJunk\n\u0412\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442 \u043e\u0434\u0438\u043d \u0438\u0437 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0432\u0438\u0434\u043e\u0432 \u00ab\u0431\u0435\u0441\u043f\u043e\u043b\u0435\u0437\u043d\u044b\u0445\u00bb \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0439 (NOP, push/pop \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u043e\u0432, \u043c\u0430\u043d\u0438\u043f\u0443\u043b\u044f\u0446\u0438\u0438 \u0444\u043b\u0430\u0433\u0430\u043c\u0438 \u0438 \u0442. \u043f.), \u0447\u0442\u043e\u0431\u044b \u0435\u0449\u0451 \u0431\u043e\u043b\u044c\u0448\u0435 \u0437\u0430\u043f\u0443\u0442\u0430\u0442\u044c \u0434\u0438\u0437\u0430\u0441\u0441\u0435\u043c\u0431\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u043a\u043e\u0434.\n\n\u041e\u0441\u043d\u043e\u0432\u043d\u0430\u044f \u0444\u0443\u043d\u043a\u0446\u0438\u044f main\nsyscall::Manager<syscall::policies::allocator::section,\n                EncryptedShellGenerator> syscallManager;\nif (!syscallManager.initialize()) { \u2026 }\nsyscallManager.invoke<NTSTATUS>(\n    SYSCALL_ID(\"NtAllocateVirtualMemory\"),\n    syscall::native::getCurrentProcess(), &pBaseAddress, 0, &uSize,\n    MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE\n);\n\n\u0417\u0434\u0435\u0441\u044c \u0441\u043e\u0437\u0434\u0430\u0451\u0442\u0441\u044f \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u044b\u0445 \u0432\u044b\u0437\u043e\u0432\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u044b\u0439:\n\n\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0443 allocator::section (\u0441\u043e\u0437\u0434\u0430\u0451\u0442 \u0438\u0441\u043f\u043e\u043b\u043d\u044f\u0435\u043c\u0443\u044e \u0441\u0435\u043a\u0446\u0438\u044e \u0447\u0435\u0440\u0435\u0437 NtCreateSection).\n\u0414\u043b\u044f \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u0438 \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u0441\u0442\u0430\u0431\u0430 \u043f\u0440\u0438\u043c\u0435\u043d\u044f\u0435\u0442 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0443 EncryptedShellGenerator.\n\u041f\u043e\u0441\u043b\u0435 \u0438\u043d\u0438\u0446\u0438\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438 \u043e\u043d \u043d\u0430\u043f\u0440\u044f\u043c\u0443\u044e \u0432\u044b\u0437\u044b\u0432\u0430\u0435\u0442 NtAllocateVirtualMemory, \u0443\u043a\u0430\u0437\u0430\u0432 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b \u0434\u043b\u044f \u0440\u0435\u0437\u0435\u0440\u0432\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0438 \u043a\u043e\u043c\u043c\u0438\u0442\u0430 \u043f\u0430\u043c\u044f\u0442\u0438 \u0432 \u0442\u0435\u043a\u0443\u0449\u0435\u043c \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u0435.\n\n\u0412 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u0435 \u044d\u0442\u043e\u0442 \u043a\u043e\u0434 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0432\u044b\u0437\u044b\u0432\u0430\u0442\u044c \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u044b\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 Windows \u043e\u0431\u0445\u043e\u0434\u044f \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u044b\u0435 API-\u043f\u0440\u043e\u043a\u0441\u0438, \u043f\u0440\u0438 \u044d\u0442\u043e\u043c \u0441\u0430\u043c \u043c\u0430\u0448\u0438\u043d\u043d\u044b\u0439 \u043a\u043e\u0434 \u0441\u0442\u0430\u0431\u0430 \u0436\u0451\u0441\u0442\u043a\u043e \u043e\u0431\u0444\u0443\u0441\u0446\u0438\u0440\u043e\u0432\u0430\u043d \u0438 \u0434\u0438\u043d\u0430\u043c\u0438\u0447\u0435\u0441\u043a\u0438 \u0433\u0435\u043d\u0435\u0440\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u0432 \u043f\u0430\u043c\u044f\u0442\u0438.\n\n\u0420\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0439, \u0433\u0434\u0435 \u043c\u043e\u0436\u043d\u043e \u0441\u043a\u0430\u0447\u0430\u0442\u044c \u0444\u0440\u0435\u0439\u043c\u0432\u043e\u0440\u043a:GitHub - sapdragon/syscalls-cpp: A modern C++20 header-only library for advanced direct system call invocation."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Osint42.Org - \u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0438 \u043a\u043e\u0434",
+        "alternateName": "Osint42.Org - \u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0438 \u043a\u043e\u0434",
+        "description": "Osint42.Org - \u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0438 \u043a\u043e\u0434",
+        "url": "https://osint42.org",
+        "logo": "https://osint42.org/data/assets/logo/192192.png"
+    }
+}
+			</script>
+		
+	
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/threads/covremennaya-c-20-biblioteka-dlya-skrytiya-sistemnykh-vyzovov-v-windows.79/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:47:34 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

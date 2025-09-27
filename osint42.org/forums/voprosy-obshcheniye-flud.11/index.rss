@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Вопросы, общение, флуд</title>
+    <description>Вопросы, общение, флуд</description>
+    <pubDate>Sat, 27 Sep 2025 09:33:49 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:33:49 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/voprosy-obshcheniye-flud.11/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/voprosy-obshcheniye-flud.11/index.rss"/>
+    <item>
+      <title>Идеи подарков для хакеров</title>
+      <pubDate>Sun, 21 Sep 2025 14:46:00 +0000</pubDate>
+      <link>https://osint42.org/threads/idei-podarkov-dlya-khakerov.192/</link>
+      <guid isPermaLink="false">192</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1758464478955-png.934/"
+			class="bbImage "
+			style=""
+			alt="1758464478955.png"
+			title="1758464478955.png"
+			width="512" height="512" loading="lazy" /><br />
+<br />
+Если твоя девушка или парень хакер, или может есть знакомые или друзья хакеры...<br />
+<br />
+Интересно что можно подарить ?<br />
+<br />
+Есть идеи на тему:<br />
+<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-nakleiki"></a>Наклейки&#8203;<a class="hoverLink" href="#-nakleiki" title="Постоянная ссылка"></a></h3><ul>
+<li data-xf-list-type="ul"><a href="https://neatstickersco.etsy.com/" target="_blank" class="link link--external" rel="noopener">https://neatstickersco.etsy.com</a> (используйте промокод REDDIT для скидки 5%) — наклейки на тему взлома и кибербезопасности</li>
+<li data-xf-list-type="ul">UwU Underground - <a href="https://uwu-underground-shop.fourthwall.com/collections/all" target="_blank" class="link link--external" rel="noopener">All Products | UwU Underground</a></li>
+<li data-xf-list-type="ul"><a href="https://www.etsy.com/shop/hackerculture" target="_blank" class="link link--external" rel="noopener">https://www.etsy.com/shop/hackerculture</a></li>
+</ul><h3 class="bbHeading"><a class="u-anchorTarget" name="-ustroistva"></a>Устройства&#8203;<a class="hoverLink" href="#-ustroistva" title="Постоянная ссылка"></a></h3><ul>
+<li data-xf-list-type="ul">FlipperZero - <a href="https://flipperzero.one/" target="_blank" class="link link--external" rel="noopener">https://flipperzero.one</a></li>
+<li data-xf-list-type="ul">Raspberry...</li>
+</ul><br />
+<a href="https://osint42.org/threads/idei-podarkov-dlya-khakerov.192/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>[0-Day + PoC] CVE-2025-29966/29967 — Zero-Click RDP Client RCE (Windows 11/10, Server 2022)</title>
+      <pubDate>Thu, 18 Sep 2025 03:11:38 +0000</pubDate>
+      <link>https://osint42.org/threads/0-day-poc-cve-2025-29966-29967-zero-click-rdp-client-rce-windows-11-10-server-2022.52/</link>
+      <guid isPermaLink="false">52</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">20 мая 2025 Microsoft тихо залатала две критические дыры (CVSS 8.8) в службах Remote Desktop — CVE-2025-29966 и CVE-2025-29967.  <br />
+Эксплойт уже гуляет в приватных чатах: одно подключение к подставному RDP-серверу = полный код на машине жертвы (zero-click для клиента, аутентификация не нужна).  <br />
+<br />
+В треде:<br />
+• технический разбор heap-based overflow,  <br />
+• PoC-скрипт (Python) + готовый Metasploit-модуль,  <br />
+• видео-демо ― SYSTEM-shell за 60 секунд,  <br />
+• mitigation-чеклист и сигнатуры YARA.  <br />
+<br />
+<img class="smilie smilie--emoji" alt="⚠️" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/26a0.png" title="Warning    :warning:" data-shortname=":warning:" loading="lazy" width="64" height="64" /> Файлы...<br />
+<br />
+<a href="https://osint42.org/threads/0-day-poc-cve-2025-29966-29967-zero-click-rdp-client-rce-windows-11-10-server-2022.52/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>Конкурс 32к и всякое...</title>
+      <pubDate>Wed, 03 Sep 2025 14:07:33 +0000</pubDate>
+      <link>https://osint42.org/threads/konkurs-32k-i-vsyakoye.176/</link>
+      <guid isPermaLink="false">176</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Хе, на васме увидел ссылку на конкурс разработке игр, очень старая ссылка на геймдев:<a href="https://gamedev.ru/projects/forum/?id=209634" target="_blank" class="link link--external" rel="noopener">Конкурс 32к (2016). Результаты + публикуем свои игры на Pouet! / Конкурсы / Форум / Проекты / GameDev.ru — Разработка игр</a><br />
+<ul>
+<li data-xf-list-type="ul">Игра должна представлять собой один исполняемый файл размером не более 32 кб (32768 байт).</li>
+<li data-xf-list-type="ul">Игра должна запускаться как минимум на одной из ОС: WinXP SP3 32 бит*, Win7 или Win8 32 или 64 бита (архитектура x86/x86_64). Вопрос о Линуксе и других ОС еще не решён, но...</li>
+</ul><br />
+<a href="https://osint42.org/threads/konkurs-32k-i-vsyakoye.176/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>FunPay Авто-Аренда Steam</title>
+      <pubDate>Wed, 03 Sep 2025 08:34:04 +0000</pubDate>
+      <link>https://osint42.org/threads/funpay-avto-arenda-steam.175/</link>
+      <guid isPermaLink="false">175</guid>
+      <author>invalid@example.com (x64dbg)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>x64dbg</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Кому-нибудь интересна авто-аренда стим?<br />
+Собираю бота по чуть-чуть, могу выдать бесплатный доступ, пока бот на стадии разработки.<br />
+Бот сам выдает аккаунт, код Steam Guard, сам меняет пароль, по окончанию аренды.<br />
+Удобная панель управления в телеграмм.</div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>DarkCodeTechnology - Убей себя об стену. Или хитрый развод ?</title>
+      <pubDate>Sat, 30 Aug 2025 06:28:11 +0000</pubDate>
+      <link>https://osint42.org/threads/darkcodetechnology-ubei-sebya-ob-stenu-ili-khitryi-razvod.125/</link>
+      <guid isPermaLink="false">125</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Я тут всё наблюдаю за андеграунд форумами, заканчивать конечно надо, но сегодня был под столом от смеха.<br />
+<br />
+Не хочу вмешиваться, но и сдержаться тоже не могу.<br />
+<br />
+<b>Итак анекдот:</b><br />
+<br />
+Есть многострадальный XSS.is, историю наверняка все знают, так-вот его переодически атакуют, короче ддосят.<br />
+<br />
+Мне было интересно чего такое хитрое они придумают для защиты, т.к. тема атак, а больше даже защита мне интересна в этой сфере...<br />
+<br />
+Итак сейчас будете смеяться:<br />
+<br />
+1) В начале они поставили какую-то капчу, при...<br />
+<br />
+<a href="https://osint42.org/threads/darkcodetechnology-ubei-sebya-ob-stenu-ili-khitryi-razvod.125/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>Изучение антифрод-систем</title>
+      <pubDate>Fri, 29 Aug 2025 22:28:46 +0000</pubDate>
+      <link>https://osint42.org/threads/izucheniye-antifrod-sistem.171/</link>
+      <guid isPermaLink="false">171</guid>
+      <author>invalid@example.com (Anton)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>Anton</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Всех приветствую! Посоветуйте, с чего стоит начать изучение антифрод-систем.</div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Тут будет гарант-сервис\авто-гарант?</title>
+      <pubDate>Mon, 25 Aug 2025 20:32:17 +0000</pubDate>
+      <link>https://osint42.org/threads/tut-budet-garant-servis-avto-garant.143/</link>
+      <guid isPermaLink="false">143</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Не помню, чтобы в теме про коммерческие услуги про это было упоминание, но это важно, поэтому поднимаю этот вопрос тут. <br />
+Начали появляться торговые темы, стоит задуматься о том, чтобы обезопасить стороны сделок(рыночный отношений) от обмана\скама\прочих недобросовестных подходов в купле-продажи\предоставлении услуг\сотрудничества. <br />
+<br />
+Еще, как экономически выгодное предложение для форума - можно подумать о пошлинах и рекламе)</div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Получается мы все под колпаком ?</title>
+      <pubDate>Sat, 23 Aug 2025 15:26:20 +0000</pubDate>
+      <link>https://osint42.org/threads/poluchayet-sya-my-vse-pod-kolpakom.138/</link>
+      <guid isPermaLink="false">138</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1755956248389-png.865/"
+			class="bbImage "
+			style=""
+			alt="1755956248389.png"
+			title="1755956248389.png"
+			width="512" height="768" loading="lazy" /><br />
+<br />
+Сейчас в новостях прочитал:<br />
+<br />
+Банк России определил <a href="https://cbr.ru/Crosscut/LawActs/File/10070" target="_blank" class="link link--external" rel="noopener">девять признаков</a> мошеннических операций при снятии наличных через банкоматы.<br />
+С 1 сентября 2025 года кредитные организации будут руководствоваться этими признаками, а в случае их обнаружения вводить временный лимит на выдачу наличных денег в банкомате на 48 часов.<br />
+<br />
+<b>Что бросилось в глаза, один из признаков:</b><br />
+<br />
+Наличие у кредитной организации информации, что как минимум за шесть часов до операции<b> у человека изменилась...</b><br />
+<br />
+<a href="https://osint42.org/threads/poluchayet-sya-my-vse-pod-kolpakom.138/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Обход санкций</title>
+      <pubDate>Sat, 23 Aug 2025 07:54:59 +0000</pubDate>
+      <link>https://osint42.org/threads/obkhod-sanktsii.55/</link>
+      <guid isPermaLink="false">55</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Кто-как оплачивает зарубежные сервисы ?<br />
+<br />
+Вот отличный сервис для покупки карт для оплаты, также выкладывайте чем пользуетесь вы ?<br />
+<br />
+[POSTS=2]<br />
+
+	
+
+	<div class="bbCodeBlock bbCodeBlock--unfurl    js-unfurl fauxBlockLink"
+		data-unfurl="true" data-result-id="32" data-url="https://t.me/usa_virtual_cards" data-host="t.me" data-pending="false">
+		<div class="contentRow">
+			
+				<div class="contentRow-figure contentRow-figure--fixedSmall js-unfurl-figure">
+					
+						<img src="https://cdn1.cdn-telegram.org/file/hsu241EWN4aiGtTZ7kf1GQC5oLKKy28IAkQRQFYHYUA-cxFKaZwu8m_lROVEjMnUT5fNfq9aNhJP68HbFc70z0-sBopdFa0Z2WrjZUnuue3XCrDSuceZHlcRkudF39jIq5BnPIOo03a9S1PZVbl_wk_G-71TzCSOcWbtj6QofszAZ4BFo5vTUW2EjWokA8jQpoIGlB_vcPiEe0LQ97lLMaKuaZcfCSP-mUnlWAquUWn9nybjQTxrmcP7k7idLRUauVwNl33nGsPBRqd4yOcQUyuXkh7n5ACPypznICnuqOaRN57J8MtgKJNF14FaWoVIWsgEhddiwe8Se8yi-nR_zQ.jpg" loading="lazy" alt="t.me" class="bbCodeBlockUnfurl-image" data-onerror="hide-parent"/>
+					
+				</div>
+			
+			<div class="contentRow-main">
+				<h3 class="contentRow-header js-unfurl-title">
+					<a href="https://t.me/usa_virtual_cards"
+						class="link link--external fauxBlockLink-blockLink"
+						target="_blank"
+						rel="noopener"
+						data-proxy-href="">
+						usa_virtual_cards
+					</a>
+				</h3>
+
+				<div class="contentRow-snippet js-unfurl-desc">Сервис по выпуску виртуальных карт для оплаты зарубежных сервисов и покупок за границей. Время работы с 9:00 до 21:00 по мск.</div>
+
+				<div class="contentRow-minor contentRow-minor--hideLinks">
+					<span class="js-unfurl-favicon">
+						
+							<img src="https://telegram.org/img/favicon-32x32.png" loading="lazy" alt="t.me" class="bbCodeBlockUnfurl-icon"
+								data-onerror="hide-parent"/>
+						
+					</span>
+					t.me
+				</div>
+			</div>
+		</div>
+	</div>
+[/POSTS]</div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Кто и чем пользуется для проверки криптованных файлов?</title>
+      <pubDate>Tue, 19 Aug 2025 15:01:17 +0000</pubDate>
+      <link>https://osint42.org/threads/kto-i-chem-pol-zuyet-sya-dlya-proverki-kriptovannykh-failov.133/</link>
+      <guid isPermaLink="false">133</guid>
+      <author>invalid@example.com (thsrx)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>thsrx</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">После закрытия avcheck.net теперь у меня появился вопрос где проверять мои закриптованные файлы. Потому что на данный момент, из сервисов либо плати 0.20$ за один файл (чек 26 антивирусами) что мне не очень подходит, либо сливай сигнатуры на вт и убивай крипт<br />
+Кто знает, есть какие то бесплатные варианты? Помню на avcheck.net раньше можно было чекать через тг бота.</div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>почты в tor и за его пределами</title>
+      <pubDate>Fri, 15 Aug 2025 21:05:45 +0000</pubDate>
+      <link>https://osint42.org/threads/pochty-v-tor-i-za-yego-predelami.130/</link>
+      <guid isPermaLink="false">130</guid>
+      <author>invalid@example.com (dizlivert)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>dizlivert</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Здравствуйте участники форума, вопрос о почтовых провайдерах за пределами торвеба: какие вышли недавно и каким стоило бы доверять?</div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>damagelib против СБУ. Кто победит ?</title>
+      <pubDate>Fri, 15 Aug 2025 17:25:45 +0000</pubDate>
+      <link>https://osint42.org/threads/damagelib-protiv-sbu-kto-pobedit.123/</link>
+      <guid isPermaLink="false">123</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1754422002876-png.819/"
+			class="bbImage "
+			style=""
+			alt="1754422002876.png"
+			title="1754422002876.png"
+			width="768" height="512" loading="lazy" /><br />
+<br />
+Все наверное в курсе хронологии событий:<br />
+<br />
+<a href="https://osint42.org/threads/xss-is-vse-ili-vernut-sya.114" class="link link--internal">Важно - xss.is - Всё ? Или вернутся ?</a><br />
+<br />
+<a href="https://osint42.org/threads/situatsiya-s-xss-is-vzglyad-ot-sbu.116/" class="link link--internal">Заметка - Ситуация с XSS.IS, взгляд от СБУ</a><br />
+<br />
+<a href="https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119" class="link link--internal">Важно - Апдейт по ситуации с XSS.IS. Что с xss.is. Где теперь xss</a><br />
+<br />
+Если вкратце, модераторы xss.is сделали свой ресурс:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>https://damagelib.tw/</code></pre>
+	</div>
+</div><br />
+<b>СМИ молчат, но на самом деле сейчас развернулась настоящая война между СБУ, или незнаю кто стоит за новым админом xss и модераторами, теперь уже нового ресурса damagelib.</b><br />
+Что...<br />
+<br />
+<a href="https://osint42.org/threads/damagelib-protiv-sbu-kto-pobedit.123/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>Хакеры импортозамещаются, или иллюзия безопасности</title>
+      <pubDate>Sun, 10 Aug 2025 03:15:27 +0000</pubDate>
+      <link>https://osint42.org/threads/khakery-importozameshchayut-sya-ili-illyuziya-bezopasnosti.124/</link>
+      <guid isPermaLink="false">124</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1754756480688-png.824/"
+			class="bbImage "
+			style=""
+			alt="1754756480688.png"
+			title="1754756480688.png"
+			width="512" height="512" loading="lazy" /><br />
+<br />
+Незнаю прочитает-ли кто эту заметку и начнет думать наконец, но напишу.<br />
+<br />
+Наблюдаю я за разными андеграунд площадками и многие решили либо по незнанию, либо специально переходить на сервисы в РФ.<br />
+<br />
+Вот даже прочитал на одном канале такой площадки:<br />
+<br />
+<img src="https://osint42.org/attachments/1754756480432-png.822/"
+			class="bbImage "
+			style=""
+			alt="1754756480432.png"
+			title="1754756480432.png"
+			width="430" height="669" loading="lazy" /><br />
+<br />
+Кто-то красит логотип в цвета флага РФ и размещает на серверах в РФ.<br />
+<br />
+Патриотично, классно-да...<br />
+<br />
+<img src="https://osint42.org/attachments/1754756480444-png.823/"
+			class="bbImage "
+			style=""
+			alt="1754756480444.png"
+			title="1754756480444.png"
+			width="400" height="267" loading="lazy" /><br />
+<br />
+<b>Но на сколько это безопасно, как для андеграунд площадок, так и для пользователей, давайте разбираться:</b><br />
+<br />
+1)Если...<br />
+<br />
+<a href="https://osint42.org/threads/khakery-importozameshchayut-sya-ili-illyuziya-bezopasnosti.124/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Кто какими анонимными сервисами пользуется ? Каталоги Jabber, Matrix и т.д.</title>
+      <pubDate>Tue, 05 Aug 2025 12:22:12 +0000</pubDate>
+      <link>https://osint42.org/threads/kto-kakimi-anonimnymi-servisami-pol-zuyet-sya-katalogi-jabber-matrix-i-t-d.117/</link>
+      <guid isPermaLink="false">117</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Всем привет!<br />
+<br />
+Вопрос в теме, кто-то какими-то анонимными сервисами пользуется, мессенджерами, то какими ?<br />
+<br />
+Вообще раньше были каталоги тех-же Jabber, но все закончилось примерно в 20-х годах.<br />
+<br />
+Получается неактуально ?<br />
+<br />
+Хотя многие сервисы живы.<br />
+<br />
+Короче в теме ваше мнение, почему-так.<br />
+<br />
+И выкладывайте ссылки на такие сервисы.<br />
+<br />
+<b>На всякий случай скажу, сервис анонимный если:</b><br />
+<br />
+1)Анонимная регистрация, без привязки к чему-либо, даже к почте.<br />
+2)Не хранит логи.<br />
+3)Не хранит сообщения.<br />
+4)Удаляет...<br />
+<br />
+<a href="https://osint42.org/threads/kto-kakimi-anonimnymi-servisami-pol-zuyet-sya-katalogi-jabber-matrix-i-t-d.117/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+  </channel>
+</rss>

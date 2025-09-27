@@ -1,0 +1,2739 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="xa_ams_article_view"
+	data-container-key="amsCategory-9"
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965443,c45f760269d99549762e9231c3ab25e1"
+	class="has-no-js template-xa_ams_article_view"
+	 data-run-jobs="">
+
+<!-- Mirrored from osint42.org/articles/pochemu-v-linux-vse-fail.73/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:34:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Почему в Linux всё — файл? | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta property="og:title" content="Почему в Linux всё — файл?" />
+		<meta property="twitter:title" content="Почему в Linux всё — файл?" />
+	
+	
+		
+		<meta name="description" content="TL;DR 
+ В Linux всё — файл. Файлы — это не только документы, скрипты или фотографии, а абсолютно всё: 
+ устройства, процессы, сокеты, память, сеть, драйверы..." />
+		<meta property="og:description" content="TL;DR 
+ В Linux всё — файл. Файлы — это не только документы, скрипты или фотографии, а абсолютно всё: 
+ устройства, процессы, сокеты, память, сеть, драйверы и даже настройки ядра. 
+ Этот принцип — не шутка, а фундаментальная философия UNIX.
+
+
+---..." />
+		<meta property="twitter:description" content="TL;DR 
+ В Linux всё — файл. Файлы — это не только документы, скрипты или фотографии, а абсолютно всё: 
+ устройства, процессы, сокеты, память, сеть, драйверы и даже настройки ядра. 
+ Этот принцип —..." />
+	
+	
+		<meta property="og:type" content="article" />
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+		
+		<meta property="og:image" content="1757444658266.png" />
+		<meta property="twitter:image" content="1757444658266.png" />
+		<meta property="twitter:card" content="summary_large_image" />
+	
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../css002d.css?css=public%3Aalnb_navigation.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Axa_ams.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=f5241ce3061674c4a2bfd77343d9ccd4f3736920" />
+
+
+	
+		<script data-cfasync="false" src="../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965443,c45f760269d99549762e9231c3ab25e1',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/xf\/code_block-compiled.js?_v=01eb82fa":true,"\/js\/copycode\/copycode.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:xa_ams.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965443,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/xf/code_block-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/copycode/copycode.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="xa_ams_article_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965443%2Cc45f760269d99549762e9231c3ab25e1"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965443%2Cc45f760269d99549762e9231c3ab25e1"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965443%2Cc45f760269d99549762e9231c3ab25e1"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;}">Статьи</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;,&quot;c&quot;:{&quot;categories&quot;:[9],&quot;child_categories&quot;:1}}">Эта категория</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965443,c45f760269d99549762e9231c3ab25e1" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+1"
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+2"
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../authors/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+3"
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../cdn-cgi/l/email-protection.html#b6dfd8d0d9f6d9c5dfd8c2828498d5d9db" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="1d74737b725d726e747369292f337e7270">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/razrabotka-operatsionnykh-sistem.9/index.html" itemprop="item">
+			<span itemprop="name">Разработка операционных систем</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							
+							Почему в Linux всё — файл?
+						
+					</h1>
+				</div>
+				
+					<div class="p-description">
+						
+							<ul class="listInline listInline--bullet">
+								<li>
+									<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+									<span class="u-srOnly">Автор</span>
+									
+										<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+									
+								</li>
+								
+								<li>
+									<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата публикации</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+									<span class="u-srOnly">Дата публикации</span>
+
+									<a href="index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-09-09T22:04:21+0300" data-timestamp="1757444661" data-date="09.09.2025" data-time="22:04" data-short="17 д." title="09.09.2025 в 22:04">09.09.2025</time></a>
+								</li>
+								
+																
+									<li>
+										<i class="fa--xf far fa-hourglass "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Article read time</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#hourglass"></use></svg></i>
+										<span class="u-srOnly">Article read time</span>
+
+										3 min read
+									</li>
+								
+								
+								
+							</ul>
+						
+					</div>
+				
+
+				
+
+	
+		
+	
+
+			</div>
+		</div>
+	
+				</div>
+				
+
+			<div class="p-body-main p-body-main--withSidebar ">
+				
+				<div class="p-body-contentCol"></div>
+				
+					<div class="p-body-sidebarCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+<div class="block">
+	
+
+	
+	
+		
+	
+	
+	
+	<div class="block-container">
+		<div class="block-body lbContainer js-articleBody"
+			data-xf-init="lightbox"
+			data-lb-id="article-73"
+			data-lb-caption-desc="0x42 &middot; 09.09.2025 в 22:04"
+			id="js-articleBody-73">
+
+			<div class="articleBody">
+				<article class="articleBody-main js-lbContainer">
+					
+					
+					
+					
+						
+
+	
+		
+	
+
+					
+
+					
+						
+
+						<div class="bbWrapper"><div class="bbImageWrapper  js-lbImage" title="1757444658266.png"
+		data-src="https://osint42.org/attachments/1757444658266-png.927/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1757444658266-png.927/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1757444658266.png"
+			title="1757444658266.png"
+			width="768" height="512" loading="lazy" />
+	</div><br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<b>TL;DR</b> <br />
+ В Linux <b>всё</b> — файл. Файлы — это не только документы, скрипты или фотографии, а <b>абсолютно всё</b>: <br />
+ устройства, процессы, сокеты, память, сеть, драйверы и даже настройки ядра. <br />
+ Этот принцип — не шутка, а фундаментальная философия UNIX.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+---<br />
+<br />
+## <img class="smilie smilie--emoji" alt="🔹" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f539.png" title="Small blue diamond    :small_blue_diamond:" data-shortname=":small_blue_diamond:" loading="lazy" width="64" height="64" /> Оглавление<br />
+<ul>
+<li data-xf-list-type="ul">[1. Философия UNIX: «Everything is a file»]</li>
+<li data-xf-list-type="ul">[2. Как работает VFS — Virtual File System]</li>
+<li data-xf-list-type="ul">[3. Файловая иерархия Linux]</li>
+<li data-xf-list-type="ul">[4. /dev — устройства как файлы]</li>
+<li data-xf-list-type="ul">[5. /proc — процессы и ядро]</li>
+<li data-xf-list-type="ul">[6. /sys — драйверы и атрибуты]</li>
+<li data-xf-list-type="ul">[7. Управление системой через файлы]</li>
+<li data-xf-list-type="ul">[8. Сокеты, TTY и файловые дескрипторы]</li>
+<li data-xf-list-type="ul">[9. Память как файл]</li>
+<li data-xf-list-type="ul">[10. FIFO, каналы и пайпы]</li>
+<li data-xf-list-type="ul">[11. Плюсы и минусы подхода]</li>
+<li data-xf-list-type="ul">[12. Чек-лист практики]</li>
+<li data-xf-list-type="ul">[13. Полезные ссылки и man-страницы]</li>
+</ul>---<br />
+<br />
+## 1. Философия UNIX: «Everything is a file»<br />
+<br />
+В 1970-х создатели UNIX решили: <br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<b>&quot;Любой ресурс системы должен быть доступен через один универсальный интерфейс — файловые операции.&quot;</b>
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+Это значит, что:<br />
+<ul>
+<li data-xf-list-type="ul">Жёсткий диск, веб-камера, сетевой порт, процесс и даже сокет TCP/IP — <b>всё имеет файловый интерфейс</b>.</li>
+<li data-xf-list-type="ul">Мы используем одинаковые вызовы: <code class="bbCodeInline">open()</code>, <code class="bbCodeInline">read()</code>, <code class="bbCodeInline">write()</code>, <code class="bbCodeInline">ioctl()</code>, <code class="bbCodeInline">close()</code>.</li>
+</ul><br />
+Это делает систему <b>универсальной</b>: если ты умеешь читать файл, значит умеешь читать температуру процессора, управлять сетью и работать с USB-устройствами.<br />
+<br />
+---<br />
+<br />
+## 2. Как работает VFS — Virtual File System<br />
+<br />
+<b>VFS</b> — слой ядра, который абстрагирует доступ к <b>разным источникам данных</b>:<br />
+<ul>
+<li data-xf-list-type="ul">EXT4, XFS, Btrfs, ZFS — обычные файловые системы</li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">/proc</code> и <code class="bbCodeInline">/sys</code> — виртуальные системы</li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">/dev</code> — устройства как файлы</li>
+<li data-xf-list-type="ul">Сетевые сокеты</li>
+<li data-xf-list-type="ul">Пайпы и FIFO</li>
+</ul><br />
+VFS делает так, что приложение видит <b>всё как файлы</b>, хотя ядро под капотом работает с совершенно разными объектами.<br />
+<br />
+---<br />
+<br />
+## 3. Файловая иерархия Linux<br />
+<br />
+Linux использует единую иерархию — <b>нет разделения на диски (C:, D<img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f642.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":)" title="Smile    :)"  data-smilie="1"data-shortname=":)" /> как в Windows</b>. Всё смонтировано в <code class="bbCodeInline">/</code>.<br />
+<br />
+| Путь   | Назначение                                  |<br />
+|--------|-------------------------------------------|<br />
+| <code class="bbCodeInline">/</code>    | Корень всей системы                       |<br />
+| <code class="bbCodeInline">/dev</code> | Файлы устройств                            |<br />
+| <code class="bbCodeInline">/proc</code>| Виртуальные файлы процессов и ядра        |<br />
+| <code class="bbCodeInline">/sys</code> | Драйверы, устройства, параметры системы   |<br />
+| <code class="bbCodeInline">/etc</code> | Конфигурационные файлы                     |<br />
+| <code class="bbCodeInline">/home</code>| Домашние каталоги пользователей          |<br />
+| <code class="bbCodeInline">/var</code> | Логи, базы данных, очереди               |<br />
+| <code class="bbCodeInline">/tmp</code> | Временные файлы                           |<br />
+| <code class="bbCodeInline">/run</code> | Временные сокеты и данные процессов      |<br />
+<br />
+<b>Пример:</b><br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>tree -L 1 /
+/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib
+├── proc
+├── sys
+└── var</code></pre>
+	</div>
+</div><br />
+---<br />
+<br />
+## 4. /dev — устройства как файлы<br />
+<br />
+Всё оборудование отображается как <b>файлы</b>.<br />
+<br />
+Примеры устройств:<br />
+<ul>
+<li data-xf-list-type="ul"><b>Жёсткие диски</b>: <code class="bbCodeInline">/dev/sda</code>, <code class="bbCodeInline">/dev/nvme0n1</code></li>
+<li data-xf-list-type="ul"><b>USB</b>: <code class="bbCodeInline">/dev/bus/usb/001/002</code></li>
+<li data-xf-list-type="ul"><b>Веб-камера</b>: <code class="bbCodeInline">/dev/video0</code></li>
+<li data-xf-list-type="ul"><b>Звук</b>: <code class="bbCodeInline">/dev/snd/</code></li>
+<li data-xf-list-type="ul"><b>Клавиатура/мышь</b>: <code class="bbCodeInline">/dev/input/*</code></li>
+</ul><br />
+Посмотрим диск:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>ls -lh /dev/sda
+brw-rw---- 1 root disk 8, 0 Sep  9 18:42 /dev/sda</code></pre>
+	</div>
+</div><br />
+<ul>
+<li data-xf-list-type="ul"><code class="bbCodeInline">b</code> → блочное устройство</li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">rw</code> → права</li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">8,0</code> → идентификатор</li>
+</ul><br />
+Прочитаем первые 512 байт MBR:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>sudo dd if=/dev/sda bs=512 count=1 | hexdump -C</code></pre>
+	</div>
+</div><br />
+---<br />
+<br />
+## 5. /proc — процессы и ядро<br />
+<br />
+<code class="bbCodeInline">/proc</code> — <b>виртуальная файловая система</b>, которую ядро создаёт «на лету». <br />
+Содержит <b>информацию о процессах</b> и <b>параметрах ядра</b>.<br />
+<br />
+Полезные файлы:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>cat /proc/cpuinfo      # Информация о CPU
+cat /proc/meminfo      # Оперативная память
+cat /proc/uptime       # Время работы системы
+cat /proc/partitions   # Разделы дисков</code></pre>
+	</div>
+</div><br />
+Информация о процессах:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>ls /proc             # PID процессов
+ls /proc/$$/fd       # Файлы текущего shell
+cat /proc/$$/status  # Статус shell-процесса</code></pre>
+	</div>
+</div><br />
+---<br />
+<br />
+## 6. /sys — драйверы и атрибуты<br />
+<br />
+<code class="bbCodeInline">/sys</code> (sysfs) — интерфейс к драйверам и железу.<br />
+<br />
+Примеры:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>ls /sys/class/net         # Сетевые интерфейсы
+ls /sys/block            # Диски и разделы
+ls /sys/class/thermal    # Датчики температуры</code></pre>
+	</div>
+</div><br />
+Чтение температуры CPU:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>cat /sys/class/thermal/thermal_zone0/temp</code></pre>
+	</div>
+</div><br />
+Обычно значение делится на 1000: <code class="bbCodeInline">42000 → 42.0°C</code>.<br />
+<br />
+---<br />
+<br />
+## 7. Управление системой через файлы<br />
+<br />
+Изменение параметров ядра = запись значения в файл.<br />
+<br />
+<b>Пример: включаем IP forwarding:</b><br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code></pre>
+	</div>
+</div><br />
+<b>Альтернатива:</b><br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>sysctl -w net.ipv4.ip_forward=1</code></pre>
+	</div>
+</div><br />
+<b>Меняем лимит открытых файлов:</b><br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>echo 65535 &gt; /proc/sys/fs/file-max</code></pre>
+	</div>
+</div><br />
+Сделать изменения постоянными:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>sudo nano /etc/sysctl.conf</code></pre>
+	</div>
+</div><br />
+---<br />
+<br />
+## 8. Сокеты, TTY и файловые дескрипторы<br />
+<br />
+<b>Файловые дескрипторы</b> — числовые ссылки на открытые файлы:<br />
+<ul>
+<li data-xf-list-type="ul"><code class="bbCodeInline">0</code> — stdin</li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">1</code> — stdout</li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">2</code> — stderr</li>
+</ul><br />
+Список дескрипторов текущего shell:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>ls -l /proc/$$/fd</code></pre>
+	</div>
+</div><br />
+Сетевые соединения — тоже файлы:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>lsof -i -P -n</code></pre>
+	</div>
+</div><br />
+Отправляем сообщение в чужой терминал:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>echo &quot;Привет!&quot; &gt; /dev/pts/1</code></pre>
+	</div>
+</div><br />
+---<br />
+<br />
+## 9. Память как файл<br />
+<br />
+Linux предоставляет доступ к памяти как файлу:<br />
+<ul>
+<li data-xf-list-type="ul"><code class="bbCodeInline">/dev/mem</code> → физическая память</li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">/proc/kcore</code> → дамп ядра</li>
+</ul><br />
+<b>Пример:</b><br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>sudo hexdump -C /dev/mem | head</code></pre>
+	</div>
+</div><br />
+<img class="smilie smilie--emoji" alt="⚠️" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/26a0.png" title="Warning    :warning:" data-shortname=":warning:" loading="lazy" width="64" height="64" /> Осторожно: запись может убить систему.<br />
+<br />
+---<br />
+<br />
+## 10. FIFO, каналы и пайпы<br />
+<br />
+Linux позволяет соединять процессы через <b>пайпы</b>:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>dmesg | grep error</code></pre>
+	</div>
+</div><br />
+Создание именованного канала:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>mkfifo mypipe
+echo &quot;data&quot; &gt; mypipe &amp;
+cat mypipe</code></pre>
+	</div>
+</div><br />
+---<br />
+<br />
+## 11. Плюсы и минусы подхода<br />
+<br />
+### <img class="smilie smilie--emoji" alt="✅" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/2705.png" title="White heavy check mark    :white_check_mark:" data-shortname=":white_check_mark:" loading="lazy" width="64" height="64" /> Преимущества:<br />
+<ul>
+<li data-xf-list-type="ul">Универсальный интерфейс</li>
+<li data-xf-list-type="ul">Простота API</li>
+<li data-xf-list-type="ul">Лёгкость автоматизации</li>
+<li data-xf-list-type="ul">Мощные пайплайны команд</li>
+</ul><br />
+### <img class="smilie smilie--emoji" alt="⚠️" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/26a0.png" title="Warning    :warning:" data-shortname=":warning:" loading="lazy" width="64" height="64" /> Недостатки:<br />
+<ul>
+<li data-xf-list-type="ul"><code class="bbCodeInline">/proc</code> и <code class="bbCodeInline">/sys</code> пугают новичков</li>
+<li data-xf-list-type="ul">Ошибочная запись может сломать ядро</li>
+<li data-xf-list-type="ul">Разные ядра → разные атрибуты</li>
+</ul><br />
+---<br />
+<br />
+## 12. Чек-лист практики<br />
+<br />
+<ul>
+<li data-xf-list-type="ul">[ ] Проверить CPU → <code class="bbCodeInline">cat /proc/cpuinfo</code></li>
+<li data-xf-list-type="ul">[ ] Посмотреть диски → <code class="bbCodeInline">lsblk</code></li>
+<li data-xf-list-type="ul">[ ] Изучить температуру CPU → <code class="bbCodeInline">cat /sys/class/thermal/thermal_zone0/temp</code></li>
+<li data-xf-list-type="ul">[ ] Найти сетевые сокеты → <code class="bbCodeInline">ss -tulpn</code></li>
+<li data-xf-list-type="ul">[ ] Проверить процессы → <code class="bbCodeInline">ps aux | less</code></li>
+<li data-xf-list-type="ul">[ ] Настроить sysctl → <code class="bbCodeInline">sysctl -a | less</code></li>
+</ul><br />
+---<br />
+<br />
+## 13. Полезные ссылки и man-страницы<br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><a href="https://www.kernel.org/doc/html/latest/filesystems/vfs.html" target="_blank" class="link link--external" rel="noopener">Документация Linux VFS</a></li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">man 5 proc</code></li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">man 5 sysfs</code></li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">man 2 open</code></li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">man 2 read</code></li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">man 2 write</code></li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">man 7 unix</code></li>
+<li data-xf-list-type="ul"><code class="bbCodeInline">man 7 fifo</code></li>
+</ul><br />
+---<br />
+<br />
+## <img class="smilie smilie--emoji" alt="🎯" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f3af.png" title="Direct hit    :dart:" data-shortname=":dart:" loading="lazy" width="64" height="64" /> Заключение<br />
+<br />
+Linux строится на фундаментальной идее:<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<b>&quot;Всё — файл.&quot;</b>
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+Эта философия:<br />
+<ul>
+<li data-xf-list-type="ul">упрощает разработку,</li>
+<li data-xf-list-type="ul">делает систему гибкой,</li>
+<li data-xf-list-type="ul">открывает доступ к мощнейшим инструментам.</li>
+</ul><br />
+Если ты умеешь читать файлы — ты уже умеешь управлять системой.</div>
+					
+
+					
+						
+
+	
+		
+	
+
+					
+					
+										
+
+					
+
+					
+						
+					
+
+					
+
+					
+
+					<div class="reactionsBar js-reactionsList ">
+						
+					</div>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</article>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="columnContainer"
+		data-xf-init="lightbox"
+		data-lb-id="article-73"
+		data-lb-universal="0">
+
+		<span class="u-anchorTarget" id="comments"></span>
+
+		<div class="columnContainer-comments">
+			
+	
+	
+
+	<div class="block block--messages"
+		data-xf-init=""
+		data-type="ams_comment"
+		data-href="/inline-mod/">
+
+		
+	
+	
+
+
+		<div class="block-outer"></div>
+		
+		<div class="block-container"
+			data-xf-init="select-to-quote"
+			data-message-selector=".js-comment">
+			
+			<h3 class="block-header">Комментарии</h3>
+			<div class="block-body js-replyNewCommentContainer">
+				
+					<div class="blockMessage js-replyNoMessages">Нет комментариев для отображения.</div>
+				
+			</div>
+		</div>
+
+		<div class="block-outer block-outer--after">
+			
+			
+		</div>
+
+		
+	
+	
+
+	</div>
+
+	
+	
+	
+
+	
+
+
+		</div>
+	</div>	
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+</div>
+					
+				</div>
+
+				
+					<div class="p-body-sidebar">
+						
+						
+							<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">Информация о статье</h3>
+			<div class="block-body block-row block-row--minor">
+				<dl class="pairs pairs--justified">
+					<dt>Автор</dt>
+					
+						<dd><a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a></dd>
+					
+				</dl>
+				
+					<dl class="pairs pairs--justified">
+						<dt>Article read time</dt>
+						<dd>3 min read</dd>
+					</dl>
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Просмотры</dt>
+						<dd>90</dd>
+					</dl>
+				
+				
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Последнее обновление</dt>
+						<dd><time  class="u-dt" dir="auto" datetime="2025-09-09T22:04:21+0300" data-timestamp="1757444661" data-date="09.09.2025" data-time="22:04" data-short="17 д." title="09.09.2025 в 22:04">09.09.2025</time></dd>
+					</dl>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</div>
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-minorHeader"><a href="../categories/razrabotka-operatsionnykh-sistem.9/index.html">Больше в Разработка операционных систем</a></h3>
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../pishem-draiver-yadra-linux-dlya-neizvestnogo-usb-ustroistva.30/index.html">Пишем драйвер ядра Linux для неизвестного USB-устройства</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				На хабре нашёл весьма интересную статью:Пишем драйвер ядра Linux для неизвестного USB-устройства...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../razrabotka-operatsionnykh-sistem-v-2025-shpargalka.19/index.html">Разработка операционных систем в 2025:Шпаргалка</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Почему стоит заняться разработкой ОС прямо сейчас
+
+Linux 6.15 активно внедряет Rust: более 2%...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../zapuskayem-programmu-bez-operatsionnoi-sistemy.9/index.html">Запускаем программу без операционной системы</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В интернете существует огромное количество описаний и туториалов о том как написать собственную...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+			<div class="block-container">
+				
+					<h3 class="block-minorHeader"><a href="../authors/0x42.1/index.html">Больше от 0x42</a></h3>
+				
+
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../o-tom-kak-boryut-sya-s-tor-v-rf.75/index.html">О том как борются с TOR в РФ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Недавно решил поддержать проект TOR, решил поднять middle relay.
+
+Напомню, что для поддержки...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../bezumnyi-maks-skam.74/index.html">Безумный МАКС/СКАМ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				По телевизору передают, что мессенджер МАКС полюбили россияне, зарегистрировалось почти вся...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../obkhod-antivirusov-cherez-uyazvimyi-draiver.71/index.html">Обход антивирусов через уязвимый драйвер</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Пока хакер не прикрыли, из-за дурацких законов, решил скопировать приватную статью.
+
+Вот...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../zashchita-ot-roskomnadzora.70/index.html">Защита от Роскомнадзора</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В связи с тем-что РКН внедрили ботов для автоматического поиска неугодного контента и...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../uyazvimosti-v-bash-skriptakh.69/index.html">Уязвимости в bash скриптах</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Вот кто хоть раз интересовался безопасностью, наверное помнят всякие инъекции в php и не...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+				<div class="block-container">
+					
+						<h3 class="block-minorHeader">Поделиться этой статьей</h3>
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965443"></span>
+
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965443" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965443"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965443" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+								
+							</div>
+						
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-2-1758965443">Копировать BB-код адреса статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[URL=&quot;https://osint42.org/articles/pochemu-v-linux-vse-fail.73/&quot;]Почему в Linux всё — файл?[/URL]" id="_xfUid-2-1758965443" />
+		</div>
+	</div>
+
+									
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-3-1758965443">Копировать BB-код статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[AMS=article, 73][/AMS]" id="_xfUid-3-1758965443" />
+		</div>
+	</div>
+
+									
+								
+							</div>
+						
+					
+				</div>
+			</div>
+						
+						
+					</div>
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/razrabotka-operatsionnykh-sistem.9/index.html" itemprop="item">
+			<span itemprop="name">Разработка операционных систем</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965443%2Cc45f760269d99549762e9231c3ab25e1"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965443%2Cc45f760269d99549762e9231c3ab25e1"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965443%2Cc45f760269d99549762e9231c3ab25e1"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../../threads/pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+    
+    
+        
+        
+            <script type="application/ld+json">
+                {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "@id": "https://osint42.org/articles/pochemu-v-linux-vse-fail.73/",
+    "name": "\u041f\u043e\u0447\u0435\u043c\u0443 \u0432 Linux \u0432\u0441\u0451 \u2014 \u0444\u0430\u0439\u043b?",
+    "headline": "\u041f\u043e\u0447\u0435\u043c\u0443 \u0432 Linux \u0432\u0441\u0451 \u2014 \u0444\u0430\u0439\u043b?",
+    "alternativeHeadline": "\u041f\u043e\u0447\u0435\u043c\u0443 \u0432 Linux \u0432\u0441\u0451 \u2014 \u0444\u0430\u0439\u043b?",
+    "description": "TL;DR \n \u0412 Linux \u0432\u0441\u0451 \u2014 \u0444\u0430\u0439\u043b. \u0424\u0430\u0439\u043b\u044b \u2014 \u044d\u0442\u043e \u043d\u0435 \u0442\u043e\u043b\u044c\u043a\u043e \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b, \u0441\u043a\u0440\u0438\u043f\u0442\u044b \u0438\u043b\u0438 \u0444\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u0438, \u0430 \u0430\u0431\u0441\u043e\u043b\u044e\u0442\u043d\u043e \u0432\u0441\u0451: \n \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430, \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u044b, \u0441\u043e\u043a\u0435\u0442\u044b, \u043f\u0430\u043c\u044f\u0442\u044c, \u0441\u0435\u0442\u044c, \u0434\u0440\u0430\u0439\u0432\u0435\u0440\u044b \u0438 \u0434\u0430\u0436\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u044f\u0434\u0440\u0430. \n \u042d\u0442\u043e\u0442 \u043f\u0440\u0438\u043d\u0446\u0438\u043f \u2014 \u043d\u0435 \u0448\u0443\u0442\u043a\u0430, \u0430 \u0444\u0443\u043d\u0434\u0430\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u0430\u044f \u0444\u0438\u043b\u043e\u0441\u043e\u0444\u0438\u044f UNIX.\n\n\n---...",
+    "keywords": "",
+    "dateCreated": "2025-09-09T19:04:21+00:00",
+    "dateModified": "2025-09-09T19:04:21+00:00",
+    "author": {
+        "@type": "Person",
+        "name": "0x42"
+    },
+    "thumbnailUrl": "https://osint42.org/data/attachments/0/927-3f626878a6adab1b79a14b28e61ae66c.jpg?hash=PI-o2qjfUM",
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/CommentAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/LikeAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/ViewAction",
+            "userInteractionCount": "90"
+        }
+    ]
+}
+            </script>
+        
+    
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/articles/pochemu-v-linux-vse-fail.73/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:34:52 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Медиа</title>
+    <description>RSS канал для всех медиа с Osint42.Org - Безопасность и код</description>
+    <pubDate>Sat, 27 Sep 2025 09:31:36 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:31:36 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/media/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/media/index.rss"/>
+    <item>
+      <title>IPCamBruter.png</title>
+      <pubDate>Thu, 21 Aug 2025 07:08:28 +0000</pubDate>
+      <link>https://osint42.org/media/ipcambruter-png.22/</link>
+      <guid isPermaLink="false">22</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskiye-kartinki.2/"><![CDATA[Хакерские картинки]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<img src="https://osint42.org/media/ipcambruter-png.22/full" alt="IPCamBruter.png" width="500" />
+		
+	</p>
+	
+	<p>
+		<a href="https://osint42.org/media/ipcambruter-png.22/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>3</slash:comments>
+    </item>
+    <item>
+      <title>Video.mp4</title>
+      <description><![CDATA[Intro]]></description>
+      <pubDate>Fri, 18 Jul 2025 17:32:18 +0000</pubDate>
+      <link>https://osint42.org/media/video-mp4.21/</link>
+      <guid isPermaLink="false">21</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskoye-video.1/"><![CDATA[Хакерское видео]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<video controls poster="/data/xfmg/poster/0/21-6f83683de1b0d120cab51c3abf80f374.jpg?1752912253" width="500">
+				<source src="https://osint42.org/data/xfmg/video/0/750-64f8163e6ca39ff07025c2d6e02e4516.mp4" type="video/mp4" />
+			</video>
+		
+	</p>
+	
+		<p>Intro</p>
+	
+	<p>
+		<a href="https://osint42.org/media/video-mp4.21/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Danabot.jpg</title>
+      <pubDate>Sat, 05 Jul 2025 01:09:49 +0000</pubDate>
+      <link>https://osint42.org/media/danabot-jpg.20/</link>
+      <guid isPermaLink="false">20</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskiye-kartinki.2/"><![CDATA[Хакерские картинки]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<img src="https://osint42.org/media/danabot-jpg.20/full" alt="Danabot.jpg" width="500" />
+		
+	</p>
+	
+	<p>
+		<a href="https://osint42.org/media/danabot-jpg.20/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Payloads.jpg</title>
+      <pubDate>Fri, 04 Jul 2025 18:08:48 +0000</pubDate>
+      <link>https://osint42.org/media/payloads-jpg.17/</link>
+      <guid isPermaLink="false">17</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskiye-kartinki.2/"><![CDATA[Хакерские картинки]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<img src="https://osint42.org/media/payloads-jpg.17/full" alt="Payloads.jpg" width="500" />
+		
+	</p>
+	
+	<p>
+		<a href="https://osint42.org/media/payloads-jpg.17/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>САМАЯ ПОПУЛЯРНАЯ УЯЗВИМОСТЬ | XSS</title>
+      <description><![CDATA[Успейте зарабрать 20% скидку на серверы в США по ссылке https://aeza.net/ru/virtual-servers/?ref=hacker Реклама. ООО «Аеза Групп» ИНН: 7813654490 erid: 2Vtzq...]]></description>
+      <pubDate>Fri, 04 Jul 2025 15:50:52 +0000</pubDate>
+      <link>https://osint42.org/media/samaya-populyarnaya-uyazvimost-xss.14/</link>
+      <guid isPermaLink="false">14</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskoye-video.1/"><![CDATA[Хакерское видео]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<div class="bbWrapper"><div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="A3R2SDJRDXI">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/A3R2SDJRDXI?wmode=opaque&start=159"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div></div>
+		
+	</p>
+	
+		<p>Успейте зарабрать 20% скидку на серверы в США по ссылке <a href="https://aeza.net/ru/virtual-servers/?ref=hacker" class="link link--external" rel="nofollow" target="_blank">https://aeza.net/ru/virtual-servers/?ref=hacker</a> Реклама. ООО «Аеза Групп» ИНН: 7813654490 erid: 2Vtzq...</p>
+	
+	<p>
+		<a href="https://osint42.org/media/samaya-populyarnaya-uyazvimost-xss.14/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>БАЗА без которой ты зря тратишь время</title>
+      <description><![CDATA[ТГК КАНАЛ - hackerinvite00:00 Введение в вебхакинг01:07 Основы сетей02:00 Сетевой и транспортный уровни03:14 Прикладной уровень05:04 Установка соединения07:1...]]></description>
+      <pubDate>Fri, 04 Jul 2025 15:47:11 +0000</pubDate>
+      <link>https://osint42.org/media/baza-bez-kotoroi-ty-zrya-tratish-vremya.13/</link>
+      <guid isPermaLink="false">13</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskoye-video.1/"><![CDATA[Хакерское видео]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<div class="bbWrapper"><div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="255Pv3Z9gj4">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/255Pv3Z9gj4?wmode=opaque"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div></div>
+		
+	</p>
+	
+		<p>ТГК КАНАЛ - hackerinvite00:00 Введение в вебхакинг01:07 Основы сетей02:00 Сетевой и транспортный уровни03:14 Прикладной уровень05:04 Установка соединения07:1...</p>
+	
+	<p>
+		<a href="https://osint42.org/media/baza-bez-kotoroi-ty-zrya-tratish-vremya.13/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Ты точно не знаешь эти 50 хакерских команд Kali Linux! | Как стать хакером в 2025</title>
+      <description><![CDATA[🔥 ТОП 50 хакерских команд, которые используют настоящие профи в 2025 году.]]></description>
+      <pubDate>Wed, 25 Jun 2025 19:46:34 +0000</pubDate>
+      <link>https://osint42.org/media/ty-tochno-ne-znayesh-eti-50-khakerskikh-komand-kali-linux-kak-stat-khakerom-v-2025.12/</link>
+      <guid isPermaLink="false">12</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskoye-video.1/"><![CDATA[Хакерское видео]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<div class="bbWrapper"><div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="W5SCBRebIu4">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/W5SCBRebIu4?wmode=opaque"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div></div>
+		
+	</p>
+	
+		<p><img class="smilie smilie--emoji" alt="🔥" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f525.png" title="Fire    :fire:" data-shortname=":fire:" loading="lazy" width="64" height="64" /> ТОП 50 хакерских команд, которые используют настоящие профи в 2025 году.</p>
+	
+	<p>
+		<a href="https://osint42.org/media/ty-tochno-ne-znayesh-eti-50-khakerskikh-komand-kali-linux-kak-stat-khakerom-v-2025.12/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Угадай по звуку что за клавиатура ?</title>
+      <description><![CDATA[Звук работы на клавиатуре]]></description>
+      <pubDate>Sat, 31 May 2025 13:29:19 +0000</pubDate>
+      <link>https://osint42.org/media/ugadai-po-zvuku-chto-za-klaviatura.8/</link>
+      <guid isPermaLink="false">8</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/media/categories/audio.3/"><![CDATA[Аудио]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<video controls poster="" width="500">
+				<source src="https://osint42.org/data/xfmg/audio/0/510-0f3b39708875c59175af4f9ca59e004b.mp3" type="audio/mpeg" />
+			</video>
+		
+	</p>
+	
+		<p>Звук работы на клавиатуре</p>
+	
+	<p>
+		<a href="https://osint42.org/media/ugadai-po-zvuku-chto-za-klaviatura.8/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Osint42 - Безопасность и код</title>
+      <pubDate>Sat, 31 May 2025 13:24:57 +0000</pubDate>
+      <link>https://osint42.org/media/osint42-bezopasnost-i-kod.7/</link>
+      <guid isPermaLink="false">7</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/media/categories/khakerskiye-kartinki.2/"><![CDATA[Хакерские картинки]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<img src="https://osint42.org/media/osint42-bezopasnost-i-kod.7/full" alt="Osint42 - Безопасность и код" width="500" />
+		
+	</p>
+	
+	<p>
+		<a href="https://osint42.org/media/osint42-bezopasnost-i-kod.7/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Нейросеть правит картинку</title>
+      <description><![CDATA[Лаги ChatGPT]]></description>
+      <pubDate>Thu, 29 May 2025 11:45:06 +0000</pubDate>
+      <link>https://osint42.org/media/neiroset-pravit-kartinku.6/</link>
+      <guid isPermaLink="false">6</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/media/categories/vsyakoye.4/"><![CDATA[Всякое]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<video controls poster="/data/xfmg/poster/0/6-0ebd5e307beaf4626b598ace4079d597.jpg?1748519170" width="500">
+				<source src="https://osint42.org/data/xfmg/video/0/464-9a7bc5006bddda16e6a6d96a8c7e7ca1.mp4" type="video/mp4" />
+			</video>
+		
+	</p>
+	
+		<p>Лаги ChatGPT</p>
+	
+	<p>
+		<a href="https://osint42.org/media/neiroset-pravit-kartinku.6/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Денис Легезо — Злые фреймворки и генерируемый ими позиционно-независимый код</title>
+      <description><![CDATA[Ближайшая конференция C++ Russia: https://jrg.su/9Sszhd— —В прошлом докладе Денис говорил о том, как выглядит ваш код на С++]]></description>
+      <pubDate>Fri, 16 May 2025 07:09:24 +0000</pubDate>
+      <link>https://osint42.org/media/denis-legezo-zlyye-freimvorki-i-generiruyemyi-imi-pozitsionno-nezavisimyi-kod.4/</link>
+      <guid isPermaLink="false">4</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/media/categories/khakerskoye-video.1/"><![CDATA[Хакерское видео]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<div class="bbWrapper"><div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="d7pJjQu6FUw">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/d7pJjQu6FUw?wmode=opaque"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div></div>
+		
+	</p>
+	
+		<p>Ближайшая конференция C++ Russia: <a href="https://jrg.su/9Sszhd—" class="link link--external" rel="nofollow" target="_blank">https://jrg.su/9Sszhd—</a> —В прошлом докладе Денис говорил о том, как выглядит ваш код на С++</p>
+	
+	<p>
+		<a href="https://osint42.org/media/denis-legezo-zlyye-freimvorki-i-generiruyemyi-imi-pozitsionno-nezavisimyi-kod.4/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Денис Легезо — Взгляд с обратной стороны: как смотрит на код реверсер</title>
+      <description><![CDATA[Ближайшая конференция C++ Russia: https://jrg.su/9Sszhd— —Денис покажет, как софт видит реверсер.]]></description>
+      <pubDate>Fri, 16 May 2025 07:06:31 +0000</pubDate>
+      <link>https://osint42.org/media/denis-legezo-vzglyad-s-obratnoi-storony-kak-smotrit-na-kod-reverser.3/</link>
+      <guid isPermaLink="false">3</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/media/categories/khakerskoye-video.1/"><![CDATA[Хакерское видео]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<div class="bbWrapper"><div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="P_OlqsohKyM">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/P_OlqsohKyM?wmode=opaque"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div></div>
+		
+	</p>
+	
+		<p>Ближайшая конференция C++ Russia: <a href="https://jrg.su/9Sszhd—" class="link link--external" rel="nofollow" target="_blank">https://jrg.su/9Sszhd—</a> —Денис покажет, как софт видит реверсер.</p>
+	
+	<p>
+		<a href="https://osint42.org/media/denis-legezo-vzglyad-s-obratnoi-storony-kak-smotrit-na-kod-reverser.3/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Понятный Reverse Engineering Binary Ninja и DeepSeek</title>
+      <description><![CDATA[Как скоро искусственный интеллект доберётся до ревёрсинга программ? Уже добрался!..Безальтернативное видео о реверс инжиниринге !]]></description>
+      <pubDate>Fri, 16 May 2025 07:05:20 +0000</pubDate>
+      <link>https://osint42.org/media/ponyatnyi-reverse-engineering-binary-ninja-i-deepseek.2/</link>
+      <guid isPermaLink="false">2</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/media/categories/khakerskoye-video.1/"><![CDATA[Хакерское видео]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<div class="bbWrapper"><div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="aZeDTkmA6ks">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/aZeDTkmA6ks?wmode=opaque"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div></div>
+		
+	</p>
+	
+		<p>Как скоро искусственный интеллект доберётся до ревёрсинга программ? Уже добрался!..Безальтернативное видео о реверс инжиниринге !</p>
+	
+	<p>
+		<a href="https://osint42.org/media/ponyatnyi-reverse-engineering-binary-ninja-i-deepseek.2/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Разговор с нейронкой</title>
+      <description><![CDATA[Разговор с нейронкой, не лучшая идея.)]]></description>
+      <pubDate>Thu, 08 May 2025 17:40:45 +0000</pubDate>
+      <link>https://osint42.org/media/razgovor-s-neironkoi.1/</link>
+      <guid isPermaLink="false">1</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/media/categories/khakerskoye-video.1/"><![CDATA[Хакерское видео]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<video controls poster="/data/xfmg/poster/0/1-e89e1ab7cd8dccd73997e461b02e82fd.jpg?1746799923" width="500">
+				<source src="https://osint42.org/data/xfmg/video/0/41-82071cfdc18766f205af7f6492bedc16.mp4" type="video/mp4" />
+			</video>
+		
+	</p>
+	
+		<p>Разговор с нейронкой, не лучшая идея.)</p>
+	
+	<p>
+		<a href="https://osint42.org/media/razgovor-s-neironkoi.1/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>

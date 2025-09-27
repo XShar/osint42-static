@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+osint42.org	TRUE	/	FALSE	1999999999	xf_csrf	Ec-wnbbD9Y4GHhJs
+osint42.org	TRUE	/	FALSE	1999999999	xf_session	-xXkDbvS5W9wWDVHEatd6m5pH6qdVqFN
+osint42.org	TRUE	/	FALSE	1999999999	xf_language_id	2
+

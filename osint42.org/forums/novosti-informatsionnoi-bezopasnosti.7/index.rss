@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Новости информационной безопасности</title>
+    <description>Новости информационной безопасности</description>
+    <pubDate>Sat, 27 Sep 2025 09:32:56 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:32:56 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/index.rss"/>
+    <item>
+      <title>Они читают ваши письма!  Gmail под угрозой: ChatGPT мог тайно сливать ваши письма</title>
+      <pubDate>Fri, 26 Sep 2025 12:08:41 +0000</pubDate>
+      <link>https://osint42.org/threads/oni-chitayut-vashi-pis-ma-gmail-pod-ugrozoi-chatgpt-mog-taino-slivat-vashi-pis-ma.199/</link>
+      <guid isPermaLink="false">199</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Исследователи безопасности из компании Radware выявили серьёзную уязвимость в Deep Research Mode ChatGPT, которая позволяет злоумышленникам тайно получать доступ к личной переписке Gmail пользователей. Уязвимость получила название ShadowLeak и представляет собой новый тип атак, использующих скрытые инструкции в электронных письмах для манипуляции AI.<br />
+<br />
+Суть атаки проста и вместе с тем опасна. Злоумышленник отправляет жертве письмо, в котором скрыты инструкции — например, белый текст на белом...<br />
+<br />
+<a href="https://osint42.org/threads/oni-chitayut-vashi-pis-ma-gmail-pod-ugrozoi-chatgpt-mog-taino-slivat-vashi-pis-ma.199/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Новая функция ChatGPT</title>
+      <pubDate>Fri, 26 Sep 2025 12:07:59 +0000</pubDate>
+      <link>https://osint42.org/threads/novaya-funktsiya-chatgpt.198/</link>
+      <guid isPermaLink="false">198</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Глава OpenAI Сэм Альтман анонсировал в своем X добавление в ChatGP новых функций, который потребует значительных вычислительных мощностей. Из-за этого доступ к части новинок ограничат подпиской Pro, а за некоторые придется доплатить:<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			В ближайшие недели мы запускаем новые ресурсоемкие сервисы. Из-за связанных с ними затрат некоторые функции поначалу будут доступны только подписчикам Pro, а за часть новых продуктов придется платить дополнительно. Наша цель остается прежней — максимально...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://osint42.org/threads/novaya-funktsiya-chatgpt.198/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Подозрительные корейцы и мутная криптовалюта</title>
+      <pubDate>Fri, 26 Sep 2025 12:07:29 +0000</pubDate>
+      <link>https://osint42.org/threads/podozritel-nyye-koreitsy-i-mutnaya-kriptovalyuta.197/</link>
+      <guid isPermaLink="false">197</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Согласно Подразделению финансовой разведки Южной Кореи (FIU) и Корейской таможенной службе (KCS), с января по август местные поставщики услуг виртуальных активов (VASP) подали 36 684 отчета о подозрительных транзакциях. В 2023 и 2024 году было зафиксировано соответственно 16 076 и 19 658 подозрительных криптотранзакций. Текущий показатель также значительно превышает цифры 2022 года (10 797 случаев) и 2021 года (199 случаев).<br />
+<br />
+Согласно законам Южной Кореи, финансовые учреждения, казино и...<br />
+<br />
+<a href="https://osint42.org/threads/podozritel-nyye-koreitsy-i-mutnaya-kriptovalyuta.197/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Органы наблюдают за Microsoft в России</title>
+      <pubDate>Fri, 26 Sep 2025 12:05:53 +0000</pubDate>
+      <link>https://osint42.org/threads/organy-nablyudayut-za-microsoft-v-rossii.196/</link>
+      <guid isPermaLink="false">196</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Суд ввёл процедуру наблюдения в дочернем предприятии Microsoft в России. Американская бигтех‑компания прекратила работу в России в 2022 году, но продолжала обслуживание клиентов через дочернее предприятие до 2025 года. 23 сентября 2025 года Арбитражный суд Москвы ввёл процедуру наблюдения в отношении российского подразделения корпорации Microsoft ООО «Майкрософт Рус». Решение было принято в рамках дела о банкротстве, инициированного российским подразделением американской компании ещё в конце...<br />
+<br />
+<a href="https://osint42.org/threads/organy-nablyudayut-za-microsoft-v-rossii.196/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>За год количество криптомиллионеров увеличилось на 40%</title>
+      <pubDate>Fri, 26 Sep 2025 12:04:54 +0000</pubDate>
+      <link>https://osint42.org/threads/za-god-kolichestvo-kriptomillionerov-uvelichilos-na-40.195/</link>
+      <guid isPermaLink="false">195</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Согласно новому отчёту компании Henley &amp; Partners, число криптомиллионеров выросло по сравнению с прошлым годом на 40% и составило 241,700 человек.<br />
+<br />
+Количество людей, чьи криптовалютные активы превышают $100 млн, выросло на 38% и составило 450 человек, а число криптомиллиардеров к концу июня 2025 года увеличилось на 29% и достигло 36 человек.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<b>Этот значительный рост совпал с переломным годом для институционального внедрения, — заявили аналитики Henley &amp; Partners.</b>
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>...<br />
+<br />
+<a href="https://osint42.org/threads/za-god-kolichestvo-kriptomillionerov-uvelichilos-na-40.195/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>ФинТех. Банк России и ИИ в работе.</title>
+      <pubDate>Fri, 26 Sep 2025 12:03:18 +0000</pubDate>
+      <link>https://osint42.org/threads/fintekh-bank-rossii-i-ii-v-rabote.193/</link>
+      <guid isPermaLink="false">193</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Банк России в своём Telegram-канале рассказал, что применяет искусственный интеллект в своей деятельности. По словам ЦБ, ИИ используется при работе с жалобами и для адаптации языка аналитических материалов регулятора.<br />
+<br />
+Центробанк отметил, что ИИ — важный инструмент для аналитиков и экономистов, помогающий эффективно обрабатывать данные и собирать больше информации. Однако для его эффективного использования требуется большой объём исторических данных, которого сейчас нет.<br />
+<br />
+И работа экспертов...<br />
+<br />
+<a href="https://osint42.org/threads/fintekh-bank-rossii-i-ii-v-rabote.193/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Апдейт по ситуации с XSS.IS. Что с xss.is. Где теперь xss</title>
+      <pubDate>Sun, 21 Sep 2025 13:40:29 +0000</pubDate>
+      <link>https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/</link>
+      <guid isPermaLink="false">119</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1754139394458-png.804/"
+			class="bbImage "
+			style=""
+			alt="1754139394458.png"
+			title="1754139394458.png"
+			width="990" height="539" loading="lazy" /><br />
+<br />
+<b>Мне написали модеры:<br />
+<br />
+Апдейт по ситуации!</b><br />
+<br />
+Модераторы обращаются к вам с важным предупреждением:  <b>мы не смогли верифицировать личность нового админа.</b><br />
+<br />
+По нашему мнению,<b> Дамага находится под контролем французских правоохранительных органов и СБУ. </b><br />
+Он до сих пор онлайн как часть операции под прикрытием.<br />
+<br />
+Задачи этой операции: собрать еще больше доказательств на пользователей и совершить еще больше арестов!<br />
+<b>Уголовное дело касается не только Тохи, но и всей...</b><br />
+<br />
+<a href="https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>40</slash:comments>
+    </item>
+    <item>
+      <title>Интервью Никиты Назарова про хакерские группировки</title>
+      <pubDate>Thu, 11 Sep 2025 10:24:59 +0000</pubDate>
+      <link>https://osint42.org/threads/interv-yu-nikity-nazarova-pro-khakerskiye-gruppirovki.187/</link>
+      <guid isPermaLink="false">187</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1757585515737-png.929/"
+			class="bbImage "
+			style=""
+			alt="1757585515737.png"
+			title="1757585515737.png"
+			width="960" height="540" loading="lazy" /><br />
+<br />
+Есть отчет Kaspersky Cyber Threat Intelligence про хакерсике группировки и угрозы:<a href="https://lp.kaspersky.com/ru/stream-analytical-report-by-CTI-and-TE/" target="_blank" class="link link--external" rel="noopener">Kaspersky Stream Analytical Report</a><br />
+<br />
+Но этот отчет для профи, можете его скачать и посмотреть.<br />
+<br />
+Для обычных людей интересно интервью ria.ru, там не много текста, но какое-то понимание думаю даст...<br />
+<br />
+<i>Прошедшее лето стало беспрецедентным по числу кибератак на российские компании, считает руководитель отдела расширенного исследования угроз &quot;Лаборатории Касперского&quot; Никита Назаров. <br />
+В интервью...</i><br />
+<br />
+<a href="https://osint42.org/threads/interv-yu-nikity-nazarova-pro-khakerskiye-gruppirovki.187/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>OpenAI. ChatGPT. Новые функции безопасности.</title>
+      <pubDate>Wed, 10 Sep 2025 05:40:52 +0000</pubDate>
+      <link>https://osint42.org/threads/openai-chatgpt-novyye-funktsii-bezopasnosti.177/</link>
+      <guid isPermaLink="false">177</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">OpenAI представила обновления системы безопасности в ChatGPT, направленные на защиту молодых пользователей и поддержку в кризисных ситуациях.<br />
+<br />
+Главное нововведение — это автоматическая маршрутизация диалога. Если система обнаружит признаки сильного психологического стресса, разговор будет передаваться так называемым «думающим» моделям. Эти модели обучены с помощью метода <i>Deliberative Alignment</i> и способны выдавать более медленные и взвешенные ответы. Запуск функции запланирован в...<br />
+<br />
+<a href="https://osint42.org/threads/openai-chatgpt-novyye-funktsii-bezopasnosti.177/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Усиление контроля за фейками перед выборами в России</title>
+      <pubDate>Tue, 09 Sep 2025 05:05:52 +0000</pubDate>
+      <link>https://osint42.org/threads/usileniye-kontrolya-za-feikami-pered-vyborami-v-rossii.183/</link>
+      <guid isPermaLink="false">183</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img class="smilie smilie--emoji" alt="🗳️" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f5f3.png" title="Ballot box with ballot    :ballot_box:" data-shortname=":ballot_box:" loading="lazy" width="64" height="64" /> <b>Методы и технологии борьбы:</b><br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><b>Инструменты:</b> ЦИК и АНО «Диалог» заявили о внедрении систем мониторинга на базе ИИ, способных в режиме реального времени анализировать соцсети и медиапространство на предмет глубоких подделок (deepfakes) и скоординированных кампаний по дезинформации.</li>
+<li data-xf-list-type="ul"><b>Статистика:</b> По данным Роскомнадзора, в предвыборный период 2024 года было выявлено и заблокировано более <b>350 тысяч</b> фейковых новостей и поддельных страниц.</li>
+<li data-xf-list-type="ul"><b>Источники:</b><ul>
+<li data-xf-list-type="ul">...</li>
+</ul></li>
+</ul><br />
+<a href="https://osint42.org/threads/usileniye-kontrolya-za-feikami-pered-vyborami-v-rossii.183/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Apple обвинили в использовании пиратских книг для обучения ИИ</title>
+      <pubDate>Tue, 09 Sep 2025 05:04:07 +0000</pubDate>
+      <link>https://osint42.org/threads/apple-obvinili-v-ispol-zovanii-pirat-skikh-knig-dlya-obucheniya-ii.182/</link>
+      <guid isPermaLink="false">182</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img class="smilie smilie--emoji" alt="🍎" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f34e.png" title="Red apple    :apple:" data-shortname=":apple:" loading="lazy" width="64" height="64" /> <b>Юридический прецедент и отраслевой контекст:</b><br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><b>Суть иска:</b> Писатели обвиняют Apple в скачивании тысяч нелицензированных книг из теневых интернет-библиотек (таких как Z-Library) для обучения своей ИИ-модели Apple Intelligence.</li>
+<li data-xf-list-type="ul"><b>Глобальный тренд:</b> Это не первый случай: аналогичные иски были поданы против <b>OpenAI</b> (авторами Джорджем Мартином и Джоди Пикулт) и <b>Meta</b>. Суды пока не выработали единой практики, что делает дело против Apple особенно важным...</li>
+</ul><br />
+<a href="https://osint42.org/threads/apple-obvinili-v-ispol-zovanii-pirat-skikh-knig-dlya-obucheniya-ii.182/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Белые списки сервисов при отключении интернета в России</title>
+      <pubDate>Tue, 09 Sep 2025 05:03:10 +0000</pubDate>
+      <link>https://osint42.org/threads/belyye-spiski-servisov-pri-otklyuchenii-interneta-v-rossii.181/</link>
+      <guid isPermaLink="false">181</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img class="smilie smilie--emoji" alt="📱" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4f1.png" title="Mobile phone    :mobile_phone:" data-shortname=":mobile_phone:" loading="lazy" width="64" height="64" /> <b>Технические и регуляторные детали:</b><br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><b>Реализация:</b> Механизм реализуется через технологию <b>TAS (Traffic Annotating System)</b>, которая позволяет маркировать и приоритизировать трафик критически важных сервисов на сетевом уровне.</li>
+<li data-xf-list-type="ul"><b>Правовая база:</b> Инициатива является частью исполнения закона о &quot;суверенном Рунете&quot; и регламентов Минцифры по обеспечению устойчивости интернета.</li>
+<li data-xf-list-type="ul"><b>Источники:</b><ul>
+<li data-xf-list-type="ul"><a href="https://digital.gov.ru/ru/documents/8024/" target="_blank" class="link link--external" rel="nofollow ugc noopener">Постановление Правительства РФ №1529</a> (о порядке...</li>
+</ul></li>
+</ul><br />
+<a href="https://osint42.org/threads/belyye-spiski-servisov-pri-otklyuchenii-interneta-v-rossii.181/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Рекордные убытки от криптовзломов в начале сентября</title>
+      <pubDate>Tue, 09 Sep 2025 05:01:32 +0000</pubDate>
+      <link>https://osint42.org/threads/rekordnyye-ubytki-ot-kriptovzlomov-v-nachale-sentyabrya.180/</link>
+      <guid isPermaLink="false">180</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img class="smilie smilie--emoji" alt="💰" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4b0.png" title="Money bag    :moneybag:" data-shortname=":moneybag:" loading="lazy" width="64" height="64" /> <b>Детализация и контекст:</b><br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><b>Сумма ущерба:</b> Убытки в размере <b>$25.4 млн</b> за первую неделю сентября, из которых <b>$14.4 млн</b> были возвращены или заморожены, согласуются с трендом 2024 года, когда, по данным Chainalysis, ущерб от хакерских атак на криптопроекты превысил $1.4 млрд только во втором квартале.</li>
+<li data-xf-list-type="ul"><b>Основные векторы атак:</b> Наиболее частыми причинами инцидентов остаются уязвимости в смарт-контрактах и мошенничество с ликвидацией залогов (rug pulls) в...</li>
+</ul><br />
+<a href="https://osint42.org/threads/rekordnyye-ubytki-ot-kriptovzlomov-v-nachale-sentyabrya.180/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>скаМ - Сломайте Макс</title>
+      <pubDate>Sat, 30 Aug 2025 18:53:34 +0000</pubDate>
+      <link>https://osint42.org/threads/skam-slomaite-maks.173/</link>
+      <guid isPermaLink="false">173</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1756579635699-png.900/"
+			class="bbImage "
+			style=""
+			alt="1756579635699.png"
+			title="1756579635699.png"
+			width="512" height="512" loading="lazy" /><br />
+<br />
+В сети (на GitHub) программисты выложили программу &quot;skaM&quot;, предназначенную для противодействия мессенджеру &quot;MAX&quot;! <br />
+<br />
+Название программы читается как <b>&quot;Макс наоборот&quot;</b>. <br />
+Уже очевидно, что рекламная кампания Макс так всех достала, что люди желают избавиться от насильно навязанного &quot;чуда&quot; любыми способами выражая тем самым свой протест против насильного навязывания мессенджера.<br />
+<br />
+Собственно, эта программа предназначена просто для того, чтобы с не особо разбирающимися в технике...<br />
+<br />
+<a href="https://osint42.org/threads/skam-slomaite-maks.173/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Места продажи сим-карт оборудуют видеокамерами</title>
+      <pubDate>Fri, 29 Aug 2025 05:55:29 +0000</pubDate>
+      <link>https://osint42.org/threads/mesta-prodazhi-sim-kart-oboruduyut-videokamerami.167/</link>
+      <guid isPermaLink="false">167</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">C 1 сентября места продажи сим-карт в России должны быть оборудованы видеокамерами. Об этом сообщает РИА Новости со ссылкой на соответствующее постановление правительства.<br />
+<br />
+Как указано в документе, все торговые точки, которые занимаются продажей сим-карт, должны не только установить видеокамеры, но и обеспечить сохранность видеозаписей в течение как минимум месяца. Камеры должны фиксировать действия как сотрудника оператора связи, так и гражданина, заключающего договор, а записи должны...<br />
+<br />
+<a href="https://osint42.org/threads/mesta-prodazhi-sim-kart-oboruduyut-videokamerami.167/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>PayPal заблокировал платежи на сумму в €10 млрд из-за подозрений в мошенничестве</title>
+      <pubDate>Fri, 29 Aug 2025 05:54:10 +0000</pubDate>
+      <link>https://osint42.org/threads/paypal-zablokiroval-platezhi-na-summu-v-eur10-mlrd-iz-za-podozrenii-v-moshennichestve.166/</link>
+      <guid isPermaLink="false">166</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Банки Германии заблокировали платежи PayPal на €10 млрд из-за подозрений в мошенничестве. Об этом сообщила газета Sueddeutsche Zeitung, не уточняя источник информации. Выплаты приостановили 25 августа 2025 года после того, как финансовые организации выявили миллионы подозрительных прямых списаний через PayPal, появившихся на прошлой неделе, уточнили в газете.<br />
+<br />
+Представитель PayPal заявил, что временный сбой в работе сервиса повлиял на «некоторые транзакции банковских партнёров и, вероятно...<br />
+<br />
+<a href="https://osint42.org/threads/paypal-zablokiroval-platezhi-na-summu-v-eur10-mlrd-iz-za-podozrenii-v-moshennichestve.166/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Минцифры. Борьба с кибермошенниками.</title>
+      <pubDate>Wed, 27 Aug 2025 07:21:05 +0000</pubDate>
+      <link>https://osint42.org/threads/mintsifry-bor-ba-s-kibermoshennikami.162/</link>
+      <guid isPermaLink="false">162</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">В Минцифры пояснили СМИ, что в рамках борьбы с кибермошенниками «жёсткой привязки IMEI к мобильному номеру не будет», но планируется блокировка связи для нарушителей по номеру IMEI (International Mobile Equipment Identity).<br />
+<br />
+В конце августа 2025 года Минцифры опубликовало для ознакомления на портале проектов нормативных правовых актов материалы по второму пакету мер от ведомства с внесением поправок в действующее законодательство РФ в рамках борьбы с кибермошенниками и усиления защиты...<br />
+<br />
+<a href="https://osint42.org/threads/mintsifry-bor-ba-s-kibermoshennikami.162/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Binance мошенники</title>
+      <pubDate>Tue, 26 Aug 2025 15:56:32 +0000</pubDate>
+      <link>https://osint42.org/threads/binance-moshenniki.160/</link>
+      <guid isPermaLink="false">160</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">По словам Ричарда Тэнга, под видом сотрудников службы поддержки мошенники убеждают клиентов биржи изменить настройки API (механизмы, позволяющие двум программным компонентам взаимодействовать друг с другом). Злоумышленники ссылаются на необходимость провести «плановое обновление систем безопасности». Как только злоумышленники получают доступ к учетным записям, они переводят все средства на свои криптокошельки.<br />
+<br />
+Сотрудники Binance не запрашивают пароли или другие чувствительные для...<br />
+<br />
+<a href="https://osint42.org/threads/binance-moshenniki.160/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Google. Google в сговоре. Google поймали за руку.</title>
+      <pubDate>Tue, 26 Aug 2025 05:22:14 +0000</pubDate>
+      <link>https://osint42.org/threads/google-google-v-sgovore-google-poimali-za-ruku.144/</link>
+      <guid isPermaLink="false">144</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/screenshot-2025-08-25-at-16-25-52-ekonomicheske-vygodnoye-google-search-png.869/"
+			class="bbImage "
+			style="width: 532px"
+			alt="Screenshot 2025-08-25 at 16-25-52 экономическе выгодное - Google Search.png"
+			title="Screenshot 2025-08-25 at 16-25-52 экономическе выгодное - Google Search.png"
+			width="160" height="37" loading="lazy" /><br />
+<br />
+Сегодня стало известно, что Google достигла соглашения с Австралийской комиссией по конкуренции и защите прав потребителей (<b>ACCC</b>) о выплате штрафа в размере <b>55 млн австралийских долларов</b> (примерно <b>36 млн долларов США</b>) за нарушение антимонопольного законодательства.<br />
+<br />
+Google ранее заключила контракты с крупнейшими операторами Австралии — <b>Telstra</b> и <b>Optus</b>, действовавших с декабря 2019-го по март 2021-го. По условиям соглашений, операторы обязаны были...<br />
+<br />
+<a href="https://osint42.org/threads/google-google-v-sgovore-google-poimali-za-ruku.144/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Почему заблокировали Telegram и WhatsApp? Стала известна истинная причина блокировки WhatsApp и Telegram.</title>
+      <pubDate>Mon, 25 Aug 2025 22:08:03 +0000</pubDate>
+      <link>https://osint42.org/threads/pochemu-zablokirovali-telegram-i-whatsapp-stala-izvestna-istinnaya-prichina-blokirovki-whatsapp-i-telegram.145/</link>
+      <guid isPermaLink="false">145</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/screenshot-2025-08-25-at-16-28-08-sotovyi-operator-plachet-google-search-png.870/"
+			class="bbImage "
+			style="width: 769px"
+			alt="Screenshot 2025-08-25 at 16-28-08 сотовый оператор плачет - Google Search.png"
+			title="Screenshot 2025-08-25 at 16-28-08 сотовый оператор плачет - Google Search.png"
+			width="471" height="230" loading="lazy" /><br />
+<br />
+По информации СМИ на основе финансовой отчётности по МСФО за первое полугодие 2025 года, у трёх из четырёх крупнейших российских операторов связи чистая прибыль значительно упала. Например, у «МегаФона» — на 36,17% (до 17,1 млрд рублей), у МТС — на 83,5% (до 7,6 млрд рублей), у «Ростелекома» — на 50,7% (до 12,8 млрд рублей).<br />
+<br />
+Также у операторов связи РФ снижается или почти не растёт CAPEX: у «МегаФона» он упал на 12,61% (до 22,7 млрд рублей), у МТС вырос на 2,98% (до 62,4 млрд...<br />
+<br />
+<a href="https://osint42.org/threads/pochemu-zablokirovali-telegram-i-whatsapp-stala-izvestna-istinnaya-prichina-blokirovki-whatsapp-i-telegram.145/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+  </channel>
+</rss>

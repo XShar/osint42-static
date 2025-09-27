@@ -1,0 +1,2812 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="xa_ams_article_view"
+	data-container-key="amsCategory-9"
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965521,447e00ba43bec7697855d07bbd7c4283"
+	class="has-no-js template-xa_ams_article_view"
+	>
+
+<!-- Mirrored from osint42.org/articles/pishem-draiver-yadra-linux-dlya-neizvestnogo-usb-ustroistva.30/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:41:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Пишем драйвер ядра Linux для неизвестного USB-устройства | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta property="og:title" content="Пишем драйвер ядра Linux для неизвестного USB-устройства" />
+		<meta property="twitter:title" content="Пишем драйвер ядра Linux для неизвестного USB-устройства" />
+	
+	
+		
+		<meta name="description" content="На хабре нашёл весьма интересную статью:Пишем драйвер ядра Linux для неизвестного USB-устройства
+
+В этой статье можно ознакомится как создавать символьные..." />
+		<meta property="og:description" content="На хабре нашёл весьма интересную статью:Пишем драйвер ядра Linux для неизвестного USB-устройства
+
+В этой статье можно ознакомится как создавать символьные устройства для Линукс, да и просто не плохая вводная часть по разработке драйверов, не..." />
+		<meta property="twitter:description" content="На хабре нашёл весьма интересную статью:Пишем драйвер ядра Linux для неизвестного USB-устройства
+
+В этой статье можно ознакомится как создавать символьные устройства для Линукс, да и просто не..." />
+	
+	
+		<meta property="og:type" content="article" />
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+		
+		<meta property="og:image" content="1748790606961.png" />
+		<meta property="twitter:image" content="1748790606961.png" />
+		<meta property="twitter:card" content="summary_large_image" />
+	
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../css002d.css?css=public%3Aalnb_navigation.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Axa_ams.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=f5241ce3061674c4a2bfd77343d9ccd4f3736920" />
+
+
+	
+		<script data-cfasync="false" src="../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965521,447e00ba43bec7697855d07bbd7c4283',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/xf\/code_block-compiled.js?_v=01eb82fa":true,"\/js\/copycode\/copycode.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:xa_ams.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965521,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/xf/code_block-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/copycode/copycode.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="xa_ams_article_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965521%2C447e00ba43bec7697855d07bbd7c4283"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965521%2C447e00ba43bec7697855d07bbd7c4283"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965521%2C447e00ba43bec7697855d07bbd7c4283"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;}">Статьи</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;,&quot;c&quot;:{&quot;categories&quot;:[9],&quot;child_categories&quot;:1}}">Эта категория</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965521,447e00ba43bec7697855d07bbd7c4283" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+1"
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+2"
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../authors/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+3"
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../cdn-cgi/l/email-protection.html#3c55525a537c534f555248080e125f5351" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="deb7b0b8b19eb1adb7b0aaeaecf0bdb1b3">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/razrabotka-operatsionnykh-sistem.9/index.html" itemprop="item">
+			<span itemprop="name">Разработка операционных систем</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							
+							Пишем драйвер ядра Linux для неизвестного USB-устройства
+						
+					</h1>
+				</div>
+				
+					<div class="p-description">
+						
+							<ul class="listInline listInline--bullet">
+								<li>
+									<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+									<span class="u-srOnly">Автор</span>
+									
+										<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+									
+								</li>
+								
+								<li>
+									<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата публикации</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+									<span class="u-srOnly">Дата публикации</span>
+
+									<a href="index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-06-01T18:11:45+0300" data-timestamp="1748790705" data-date="01.06.2025" data-time="18:11" data-short="1 Июн" title="01.06.2025 в 18:11">01.06.2025</time></a>
+								</li>
+								
+																
+									<li>
+										<i class="fa--xf far fa-hourglass "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Article read time</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#hourglass"></use></svg></i>
+										<span class="u-srOnly">Article read time</span>
+
+										14 min read
+									</li>
+								
+								
+								
+							</ul>
+						
+					</div>
+				
+
+				
+
+	
+		
+	
+
+			</div>
+		</div>
+	
+				</div>
+				
+
+			<div class="p-body-main p-body-main--withSidebar ">
+				
+				<div class="p-body-contentCol"></div>
+				
+					<div class="p-body-sidebarCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+<div class="block">
+	
+
+	
+	
+		
+	
+	
+	
+	<div class="block-container">
+		<div class="block-body lbContainer js-articleBody"
+			data-xf-init="lightbox"
+			data-lb-id="article-30"
+			data-lb-caption-desc="0x42 &middot; 01.06.2025 в 18:11"
+			id="js-articleBody-30">
+
+			<div class="articleBody">
+				<article class="articleBody-main js-lbContainer">
+					
+					
+					
+					
+						
+
+	
+		
+	
+
+					
+
+					
+						
+
+						<div class="bbWrapper"><div class="bbImageWrapper  js-lbImage" title="1748790606961.png"
+		data-src="https://osint42.org/attachments/1748790606961-png.516/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1748790606961-png.516/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1748790606961.png"
+			title="1748790606961.png"
+			width="789" height="580" loading="lazy" />
+	</div><br />
+<br />
+На хабре нашёл весьма интересную статью:<a href="https://habr.com/ru/company/timeweb/blog/710962/" target="_blank" class="link link--external" rel="noopener">Пишем драйвер ядра Linux для неизвестного USB-устройства</a><br />
+<br />
+В этой статье можно ознакомится как создавать символьные устройства для Линукс, да и просто не плохая вводная часть по разработке драйверов, не плохо написано.)<br />
+<br />
+В этой статье объяснен весь процесс, на выходе которого получается рабочий драйвер ядра Linux для недокументированного USB-устройства. Выполнив обратную разработку коммуникационного протокола USB, я покажу архитектуру драйвера ядра для USB. Кроме драйвера ядра в этой статье будет рассказано о простом инструменте для пользовательского пространства; при помощи этого инструмента можно управлять таким устройством. Конечно, придется углубиться в подробности, касающиеся конкретного прибора, но не сомневайтесь – описанный процесс с тем же успехом применим и к другим USB-устройствам.<br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-vvedeniye"></a>❯ Введение&#8203;<a class="hoverLink" href="#-vvedeniye" title="Постоянная ссылка"></a></h2><br />
+<div class="bbImageWrapper  js-lbImage" title="1748790620324.png"
+		data-src="https://osint42.org/attachments/1748790620324-png.517/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1748790620324-png.517/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1748790620324.png"
+			title="1748790620324.png"
+			width="312" height="312" loading="lazy" />
+	</div><br />
+<br />
+Как-то раз я нашел на eBay занятный прибор: USB-ракетницу <a href="http://www.roborealm.com/help/DC_Missile.php" target="_blank" class="link link--external" rel="noopener">DreamCheeky</a>. Производитель не предоставил Linux-драйвера к ней, а также не опубликовал спецификацию USB-протокола. Был доступен только двоичный драйвер для Windows, а с ним ракетница превращалась для пользователей Linux в настоящий «черный ящик». Вот это задачка! Давайте заставим эту адскую машину работать под Linux.<br />
+<br />
+Чтобы было проще программировать для USB, существует USB-интерфейс, доступный из пользовательского пространства при помощи <a href="https://libusb.info/" target="_blank" class="link link--external" rel="noopener">libusb</a>, программного API, за которым скрыты низкоуровневые взаимодействия с ядром. Чтобы грамотно написать драйвер устройства для этой ракетницы, пришлось бы полагаться на этот API и проигнорировать всю специфику ядра. Тем не менее, я хотел заняться именно программированием ядра, поэтому решил написать модуль ядра, несмотря на то, что это гораздо более сложный и трудозатратный процесс.<br />
+<br />
+Оставшаяся часть этой статьи структурирована следующим образом. Вначале я привожу некоторые смежные работы, чтобы обрисовать контекст, а затем делаю экспресс-обзор USB. После этого я предложу вашему вниманию процесс обратной разработки: покажу, как собрать неизвестные команды USB, управляющие ракетницей. Опишу архитектуру модуля ядра, в состав которого входят выведенные мной управляющие команды. Наконец, покажу, как работать с простым инструментом пользовательского пространства; при помощи этого инструмента мы работаем с драйвером.<br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-smezhnyye-raboty"></a>❯ Смежные работы&#8203;<a class="hoverLink" href="#-smezhnyye-raboty" title="Постоянная ссылка"></a></h2><br />
+Очевидно, не мне одному довелось повозиться с этим гаджетом. Но ни в одном из описанных подходов, которые я нашел, не ставилась цель создать собственный драйвер устройства под Linux именно для <i>ядра</i>. В частности, для управления этой ракетницей <a href="http://www.amctrl.com/rocketlauncher.html" target="_blank" class="link link--external" rel="noopener">есть</a> приложение ncurses. Также обратите внимание на <a href="https://github.com/ab3nd/Missile-Launcher" target="_blank" class="link link--external" rel="noopener">этот репозиторий</a> с реализацией на C++. Пользователи Apple могут попробовать следующий <a href="https://dgwilson.wordpress.com/" target="_blank" class="link link--external" rel="noopener">новозеландский проект для управления USB-ракетницей</a>. Кроме того, сохранилась библиотека <a href="https://code.google.com/archive/p/pymissile/" target="_blank" class="link link--external" rel="noopener">pymissile</a>, реализация на Python, поддерживающая работу с ракетницей другого производителя. Автор подружил ракетницу с веб-камерой, чтобы получился автоматический караульный прибор, реагирующий на движение. К этим занятным идеям я вернусь ниже.<br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-azbuka-usb"></a>❯ Азбука USB&#8203;<a class="hoverLink" href="#-azbuka-usb" title="Постоянная ссылка"></a></h2><br />
+Универсальная последовательная шина (USB) позволяет подключать к хост-машине разнообразные периферийные устройства. Шина была спроектирована для унификации самых разных старых и медленных шин (параллельных, последовательных и клавиатурных), чтобы все они были сведены к шине одного типа. Топологически она сконструирована не как шина, а как дерево из нескольких соединений точка-точка. Хост-контроллер для USB периодически опрашивает каждое из устройств, нет ли у него данных на отправку. При такой конструкции ни одно устройство не может отправить данные до того, как ему поступит явный запрос на отправку информации. Получается архитектура, замечательно приспособленная для использования в режиме <a href="https://ru.wikipedia.org/wiki/Plug_and_Play" target="_blank" class="link link--external" rel="noopener">PnP</a> («подключи и работай»).<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1748790635896.png"
+		data-src="https://osint42.org/attachments/1748790635896-png.518/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1748790635896-png.518/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1748790635896.png"
+			title="1748790635896.png"
+			width="417" height="403" loading="lazy" />
+	</div><br />
+<br />
+В Linux поддерживаются драйверы двух основных типов: драйверы хоста и драйверы устройств. Давайте абстрагируемся от драйверов хоста и подробнее рассмотрим USB как устройство. Как показано на рисунке, USB-<i>устройство</i> состоит из одной или более <i>конфигураций</i>, а они, в свою очередь, имеют по одному или более <i>интерфейсов</i>. У этих интерфейсов бывает от нуля и более конечных точек, на которых и строится USB-коммуникация в простейшей форме. Конечная точка всегда является однонаправленной и ведет либо с хоста на устройство (конечная точка типа OUT), или с устройства на хост (конечная точка типа <i>IN</i>). Существует четыре типа конечных точек, и каждая передает данные по-своему:<br />
+<br />
+<ul>
+<li data-xf-list-type="ul">Управляющие (control)</li>
+<li data-xf-list-type="ul">Для прерываний (interrupt)</li>
+<li data-xf-list-type="ul">Для сплошной передачи (bulk)</li>
+<li data-xf-list-type="ul">Изохронные (isochronous)</li>
+</ul><i>Управляющие конечные точки</i> обычно используются для асинхронного контроля над USB-устройством, т. е., для отправки команд на него или для извлечения информации о состоянии устройства. В каждом устройстве есть «нулевая» управляющая конечная точка, используемая ядром USB для инициализации этого устройства. Конечные точки для прерываний расставляются периодически и передают небольшие фиксированные порции информации всякий раз, когда хост запрашивает у USB эти данные. Конечные точки для сплошной передачи и изохронные конечные точки в рамках данного примера с ракетницей нас не интересует. Превосходное введение в работу с этими единицами с точки зрения программиста приводится в книге <a href="http://lwn.net/Kernel/LDD3" target="_blank" class="link link--external" rel="noopener">Linux Device Drivers</a>. Ниже предлагается небольшой вывод от lsusb -v с подробной информацией о ракетнице.<br />
+<br />
+Bus 005 Device 004: ID 1941:8021<br />
+Device Descriptor:<br />
+bLength 18<br />
+bDescriptorType 1<br />
+bcdUSB 1.10<br />
+bDeviceClass 0 (Defined at Interface level)<br />
+bDeviceSubClass 0<br />
+bDeviceProtocol 0<br />
+bMaxPacketSize0 8<br />
+idVendor 0x1941<br />
+idProduct 0x8021<br />
+bcdDevice 1.00<br />
+iManufacturer 0<br />
+iProduct 0<br />
+iSerial 0<br />
+bNumConfigurations 1<br />
+Configuration Descriptor:<br />
+bLength 9<br />
+bDescriptorType 2<br />
+wTotalLength 34<br />
+bNumInterfaces 1<br />
+bConfigurationValue 1<br />
+iConfiguration 0<br />
+bmAttributes 0xa0<br />
+Remote Wakeup<br />
+MaxPower 100mA<br />
+Interface Descriptor:<br />
+bLength 9<br />
+bDescriptorType 4<br />
+bInterfaceNumber 0<br />
+bAlternateSetting 0<br />
+bNumEndpoints 1<br />
+bInterfaceClass 3 Human Interface Devices<br />
+bInterfaceSubClass 0 No Subclass<br />
+bInterfaceProtocol 0 None<br />
+iInterface 0<br />
+HID Device Descriptor:<br />
+bLength 9<br />
+bDescriptorType 33<br />
+bcdHID 1.00<br />
+bCountryCode 0 Not supported<br />
+bNumDescriptors 1<br />
+bDescriptorType 34 Report<br />
+wDescriptorLength 52<br />
+Report Descriptors:<br />
+** UNAVAILABLE **<br />
+Endpoint Descriptor:<br />
+bLength 7<br />
+bDescriptorType 5<br />
+bEndpointAddress 0x81 EP 1 IN<br />
+bmAttributes 3<br />
+Transfer Type Interrupt<br />
+Synch Type None<br />
+Usage Type Data<br />
+wMaxPacketSize 0x0008 1x 8 bytes<br />
+bInterval 10<br />
+<br />
+Общая структура этого вывода и расставленные в нем отступы характерны для типичного USB-устройства. Сначала указан производитель и идет ID продукта, однозначно идентифицирующие конкретный USB-гаджет. Эти ID используются ядром USB, чтобы определиться, какой драйвер должен быть придан данному устройству. Более того, скрипты горячего подключения (hotplug) позволяют решать, какой именно драйвер загружать, когда к машине подсоединяют конкретное устройство. Далее в конфигурационном разделе можно считывать максимальное использование питания (100 mA). Подчиненный интерфейс, очевидно, содержит одну конечную точку IN для прерываний (кроме управляющей конечной точки 0), к которой можно обратиться по адресу 0x81. Поскольку это конечная точка IN, она возвращает с устройства информацию о его состоянии. Для обработки входящих данных сперва необходимо понять тот управляющий протокол, который действует на ракетнице.<br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-obratnaya-razrabotka-usb-protokola"></a>❯ Обратная разработка USB-протокола&#8203;<a class="hoverLink" href="#-obratnaya-razrabotka-usb-protokola" title="Постоянная ссылка"></a></h2><br />
+Первым делом выполним обратную разработку (т. н. «отслеживание») коммуникационного протокола USB, по которому общается двоичный драйвер Windows. Один из возможных подходов – заключить устройство в VMware, а те данные, которыми обмениваются хост и подключенный девайс, перехватывать на хост-системе. Но, поскольку уже существует несколько инструментов для анализа USB-трафика, существует решение проще – положиться на один из них. По-видимому, самое популярное из бесплатных приложений такого рода — <a href="http://sourceforge.net/projects/usbsnoop" target="_blank" class="link link--external" rel="noopener">SnoopyPro</a>. Как ни странно, у меня под рукой не оказалось компьютера с Windows, поэтому пришлось установить в VMware двоичный драйвер вместе с SnoopyPro.<br />
+<br />
+Чтобы мы могли собрать все важные данные, касающиеся USB, а также чтобы перехватить все управляющие команды, касающиеся устройства, ракетница, пока ее наблюдают, должна совершить все возможные действия: двигаться по каждой из двух осей и по обеим осям одновременно, стрелять, перемещаться в пределах ограничивающих осей (такая ось – это линия, по достижении которой срабатывает уведомление, что далее в данном направлении ось подвинуть нельзя). При анализе дампа SnoopyPro не составляет труда обнаружить управляющие команды, посылаемые на ракетницу. <br />
+<br />
+Пример: на следующем рисунке показан 8-байтный буфер передачи. При перемещении ракетницы вправо в буфере содержится 0x00000008. Когда ракетница поворачивается вверх, содержимое этого буфера меняется на 0x00000001. Очевидно, что очень просто логически вывести управляющие байты, на использовании которых построена работа ракетницы. Если на устройство не будет отправлена команда «стоп» (0x00000000), то в буфере содержится состояние последней команды. Это значит, что, получив команду «вниз», ракетница будет опускаться на штативе до тех пор, пока не получит новую команду. Если дальнейшее движение невозможно, двигатель продолжит работу, шестеренки при этом будут невыносимо скрежетать, пока не треснут. <br />
+<br />
+При более тщательном рассмотрении оказывается, что буфер конечной точки для прерываний, ориентированной на IN, будет меняться в зависимости от того, какое положение устройство принимает в данный момент. Всякий раз, когда ось движения доходит до непреодолимой границы (и начинается этот невыносимый скрежет), устройство обнаруживает данную ситуацию и соответствующим образом меняет содержимое буфера прерывания. Таким образом, разработчик ядра может полагаться на эти уведомления, чтобы реализовать механизм проверки границ; этот механизм должен выдавать команду «стоп», как только ракетница «упрется в стенку».<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1748790660703.png"
+		data-src="https://osint42.org/attachments/1748790660703-png.519/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1748790660703-png.519/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1748790660703.png"
+			title="1748790660703.png"
+			width="728" height="736" loading="lazy" />
+	</div><br />
+<br />
+Вот выдержка из исходного кода драйвера. В ней приведен полный список управляющих команд, которые могут быть отправлены на устройство.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>#define ML_STOP         0x00
+#define ML_UP           0x01
+#define ML_DOWN         0x02
+#define ML_LEFT         0x04
+#define ML_RIGHT        0x08
+#define ML_UP_LEFT      (ML_UP | ML_LEFT)
+#define ML_DOWN_LEFT    (ML_DOWN | ML_LEFT)
+#define ML_UP_RIGHT     (ML_UP | ML_RIGHT)
+#define ML_DOWN_RIGHT   (ML_DOWN | ML_RIGHT)
+#define ML_FIRE         0x10</code></pre>
+	</div>
+</div><br />
+Следующие байты появляются в буфере конечной точки для прерываний (IN) – они заключены в комментариях – и свидетельствуют о достижении границ.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>#define ML_MAX_UP       0x80        /* 80 00 00 00 00 00 00 00 */
+#define ML_MAX_DOWN     0x40        /* 40 00 00 00 00 00 00 00 */
+#define ML_MAX_LEFT     0x04        /* 00 04 00 00 00 00 00 00 */
+#define ML_MAX_RIGHT    0x08        /* 00 08 00 00 00 00 00 00 */</code></pre>
+	</div>
+</div><br />
+Имея на руках всю необходимую информацию об управлении, давайте воспользуемся ею при разработке и углубимся на территорию программирования для ядра.<br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-draiver-ustroistva"></a>❯ Драйвер устройства&#8203;<a class="hoverLink" href="#-draiver-ustroistva" title="Постоянная ссылка"></a></h2><br />
+Писать код для ядра – это своего рода искусство, и в данной статье мы можем рассмотреть лишь верхушку этого айсберга. Для более глубокого изучения темы рекомендую книги <a href="http://lwn.net/Kernel/LDD3" target="_blank" class="link link--external" rel="noopener">Linux Device Drivers</a> и <a href="http://www.oreilly.com/catalog/understandlk" target="_blank" class="link link--external" rel="noopener">Understanding the Linux Kernel</a>.<br />
+<br />
+Как и во многих других дисциплинах, разделение <i>механизма</i> и <i>политики</i> – это фундаментальная парадигма, которой должен придерживаться каждый программист. Механизм предоставляет возможности, а в правилах политики выражено, как должны использоваться эти возможности. Обычно в различных средах доступ к аппаратному обеспечению также происходит по-разному. Поэтому совершенно обязательно писать код, не <i>зависящий от политик</i>: драйвер должен просто предоставлять аппаратное обеспечение, не налагая никаких ограничений.<br />
+<br />
+Приятная черта Linux заключается в возможности динамического связывания кода объекта с работающим ядром. Такой образец объектного кода называется <i>модулем</i> ядра. В Linux различаются три основных типа устройств, которые может воплощать модуль:<br />
+<ul>
+<li data-xf-list-type="ul">Символьные устройства</li>
+<li data-xf-list-type="ul">Блочные устройства</li>
+<li data-xf-list-type="ul">Сетевые устройства</li>
+</ul><i>Символьное устройство (char)</i> передает поток байт из пользовательского процесса и в пользовательский процесс. Следовательно, модуль реализует системные вызовы, в частности, <i>open</i>, <i>close</i>, <i>read</i>, <i>write</i> и <i>ioctl</i>. Символьное устройство выглядит как файл, за исключением того, что по этому устройству можно выполнять поиск, а также в том, что большинство устройств работает последовательно. Примеры символьных устройств – текстовая консоль (/dev/console) и последовательные порты (/dev/ttyS0). Простейшие аппаратные устройства управляются символьными драйверами. Обсуждение блочных устройств и сетевых интерфейсов выходит за рамки этих устройств, почитайте о них в специальной литературе.<br />
+<br />
+Кроме этой классификации существуют и другие способы, принципиально иные. Например, USB-устройства можно реализовывать в виде USB-модулей, но они же могут фигурировать в качестве символьных устройств (таких, как ракетница), блочных устройств (скажем, USB-флешек) или сетевых интерфейсов (таких, как Ethernet-интерфейс для USB). Далее давайте в общих чертах рассмотрим, как устроен модуль ядра, предназначенный для работы с USB, а затем перейдем к частностям, касающимся нашей ракетницы.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>struct usb_ml {
+    /* По одной структуре для каждого подключенного устройства */
+};
+ 
+static struct usb_device_id ml_table [] = {
+    { USB_DEVICE(ML_VENDOR_ID, ML_PRODUCT_ID) },
+    { }
+};
+ 
+static int ml_open(struct inode *inode, struct file *file)
+{
+    /* системный вызов open */
+}
+static int ml_release(struct inode *inode, struct file *file)
+{
+    /* системный вызов close */
+}
+ 
+static ssize_t ml_write(struct file *file, const char __user *user_buf, size_t
+        count, loff_t *ppos);
+{
+    /* системный вызов write */
+}
+ 
+static struct file_operations ml_fops = {
+    .owner =    THIS_MODULE,
+    .write =    ml_write,
+    .open =     ml_open,
+    .release =  ml_release,
+};
+ 
+static int ml_probe(struct usb_interface *interface, const struct usb_device_id
+        *id)
+{
+    /* Вызывается при подключении USB-устройства к компьютеру. */
+}
+ 
+static void ml_disconnect(struct usb_interface *interface)
+{
+    /* Вызывается при извлечении USB-устройства. */
+}
+ 
+static struct usb_driver ml_driver = {
+    .name = &quot;missile_launcher&quot;,
+    .id_table = ml_table,
+    .probe = ml_probe,
+    .disconnect = ml_disconnect,
+};
+ 
+static int __init usb_ml_init(void)
+{
+    /* Вызывается при загрузке модуля */
+}
+ 
+static void __exit usb_ml_exit(void)
+{
+    /* Вызывается при выгрузке модуля */
+}
+ 
+module_init(usb_ml_init);
+module_exit(usb_ml_exit);</code></pre>
+	</div>
+</div><br />
+Не считая некоторых глобальных переменных, вспомогательных функций и обработчиков прерываний – это уже практически весь модуль ядра целиком! Но давайте разберемся с ним шаг за шагом. USB-драйвер ядра представлен структурой struct usb_driver, в которой содержатся некоторые обратные вызовы функций и переменные, идентифицирующие USB-драйвер. Когда модуль загружается при помощи программы <i>insmod</i>, выполняется функция __init usb_ml_init(void), регистрирующая драйвер в рамках подсистемы USB. При выгрузке модуля вызывается функция __exit usb_ml_exit(void), разрегистрирующая модуль из подсистемы USB.<br />
+<br />
+Токены __init и __exit указывают, что эти функции вызываются только при инициализации и в момент выхода. После того, как модуль загружен, устанавливаются обратные вызовы функций <i>probe</i> и <i>disconnect</i>. При обратном вызове функции probe (вызывается при подключении устройства в разъем) драйвер инициализирует все локальные структуры данных, используемые для управления USB-устройством. Например, он выделяет память для структуры struct usb_ml, в которой содержится информация о том состоянии, в котором находится подключенное устройство, пока работает. Вот выдержка из начальной части этой функции:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>static int ml_probe(struct usb_interface *interface,
+                    const struct usb_device_id *id)
+{
+    struct usb_device *udev = interface_to_usbdev(interface);
+    struct usb_ml *dev = NULL;
+    struct usb_host_interface *iface_desc;
+    struct usb_endpoint_descriptor *endpoint;
+    int i, int_end_size;
+    int retval = -ENODEV;
+ 
+    if (! udev)
+    {
+        DBG_ERR(&quot;udev is NULL&quot;);
+        goto exit;
+    }
+ 
+    dev = kzalloc(sizeof(struct usb_ml), GFP_KERNEL);
+    if (! dev)
+    {
+        DBG_ERR(&quot;cannot allocate memory for struct usb_ml&quot;);
+        retval = -ENOMEM;
+        goto exit;
+    }
+ 
+    dev-&gt;command = ML_STOP;
+ 
+    init_MUTEX(&amp;dev-&gt;sem);
+    spin_lock_init(&amp;dev-&gt;cmd_spinlock);
+ 
+    dev-&gt;udev = udev;
+    dev-&gt;interface = interface;
+    iface_desc = interface-&gt;cur_altsetting;
+ 
+    /* Устанавливаем информацию о конечной точке для прерываний. */
+    for (i = 0; i &lt; iface_desc-&gt;desc.bNumEndpoints; ++i)
+    {
+        endpoint = &amp;iface_desc-&gt;endpoint[i].desc;
+ 
+        if (((endpoint-&gt;bEndpointAddress &amp; USB_ENDPOINT_DIR_MASK) == USB_DIR_IN)
+                &amp;&amp; ((endpoint-&gt;bmAttributes &amp; USB_ENDPOINT_XFERTYPE_MASK) ==
+                    USB_ENDPOINT_XFER_INT))
+            dev-&gt;int_in_endpoint = endpoint;
+ 
+    }
+    if (! dev-&gt;int_in_endpoint)
+    {
+        DBG_ERR(&quot;could not find interrupt in endpoint&quot;);
+        goto error;
+    }
+ 
+    /* ... */
+ 
+    /* Сейчас можем зарегистрировать устройство, так как оно уже готово */
+    retval = usb_register_dev(interface, &amp;ml_class);
+ 
+    /* ... */
+}</code></pre>
+	</div>
+</div><br />
+Возможно, вы заметили, что в этом фрагменте кода используются инструкции goto. Притом, что использование инструкций goto обычно <a href="https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf" target="_blank" class="link link--external" rel="noopener">порицается</a>, разработчики ядра пользуются инструкциями goto, чтобы сконцентрировать обработку ошибок в некой централизованной точке, избавившись от сложной логики и кода, пестрящего отступами. Функция probe выделяет память для хранения внутренней структуры устройства, инициализирует семафоры и спинлоки, а также задает информацию о конечных точках. Ниже в этой же функции происходит регистрация устройства. Теперь устройство готово, к нему можно обращаться из пользовательского пространства, пользуясь для этого системными вызовами. Ниже мы обсудим простой инструмент из пользовательского пространства, через который можно обратиться к ракетнице. Но прежде я покажу вам коммуникационные примитивы, при помощи которых данные отправляются на устройство.<br />
+<br />
+В качестве «носителя данных» реализация USB для Linux использует <i>блок запросов</i> USB (USB request block, URB), и именно с его помощью осуществляется коммуникация с USB-устройствами URB подобны информационным сообщениям, которые асинхронно отсылаются на конечные точки и с конечных точек. Существует четыре различных типа URB, таких же, как и типы конечных точек, предусмотренных в стандарте USB: управляющие, для прерываний, для сплошной передачи данных и изохронные. Как только URB выделен и инициализирован драйвером, он подлежит передаче в ядро USB, которое, в свою очередь, переадресует его на устройство. Если URB был успешно доставлен к ядру USB, то выполняется <i>обработчик завершения</i>. Затем ядро USB возвращает управление драйверу устройства.<br />
+<br />
+Поскольку в нашей ракетнице фигурируют две конечные точки (конечная точка 0 и конечная точка для прерываний), нам приходится иметь дело с URB, предназначенными как для управления, так и для работы с прерываниями. Те команды, которые мы обратно разработали, в принципе, упакованы в управляющий URB, а оттуда направляются на устройство. Кроме того, мы непрерывно получаем информацию о состоянии из периодически срабатывающих URB для прерываний. Например, чтобы отправить в ракетницу простые данные, используется функция usb_control_msg:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>memset(&amp;buf, 0, sizeof(buf));
+buf[0] = cmd;
+ 
+/* Обработчик прерывания на конечной точке также модифицирует dev-&gt;command. */
+spin_lock(&amp;dev-&gt;cmd_spinlock);
+dev-&gt;command = cmd;
+spin_unlock(&amp;dev-&gt;cmd_spinlock);
+ 
+retval = usb_control_msg(dev-&gt;udev,
+        usb_sndctrlpipe(dev-&gt;udev, 0),
+        ML_CTRL_REQUEST,
+        ML_CTRL_REQEUST_TYPE,
+        ML_CTRL_VALUE,
+        ML_CTRL_INDEX,
+        &amp;buf,
+        sizeof(buf),
+        HZ * 5);
+ 
+if (retval &lt; 0)
+{
+    DBG_ERR(&quot;usb_control_msg failed (%d)&quot;, retval);
+    goto unlock_exit;
+}</code></pre>
+	</div>
+</div><br />
+Команда cmd вставляется в буфер buf, а в этом буфере содержатся данные, которые должны быть отправлены на устройство. Если работа URB завершается успешно, то выполняется соответствующий обработчик. Он не выполняет ничего экзотического, просто сообщает драйверу, что мы запустили (пока не скорректированную) команду при помощи системного вызова <i>write</i>:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>static void ml_ctrl_callback(struct urb *urb, struct pt_regs *regs)
+{
+    struct usb_ml *dev = urb-&gt;context;
+    dev-&gt;correction_required = 0;
+}</code></pre>
+	</div>
+</div><br />
+Мы не хотим повредить аппаратную часть ракетницы, ни посылая ей неправильных команд, ни посылая вообще каких-либо команд, как только прибор «упрется» в непреодолимую граничную ось. В идеале, как только такая ось будет достигнута (то есть, ракетница не сможет больше ничуть продвинуться в данном направлении), движение в эту сторону должно прекратиться. Оказывается, обработчик завершения для URB прерываний – как раз то место, где удобнее всего реализовать эту идею:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>static void ml_int_in_callback(struct urb *urb, struct pt_regs *regs)
+{
+        /* ... */
+ 
+        if (dev-&gt;int_in_buffer[0] &amp; ML_MAX_UP &amp;&amp; dev-&gt;command &amp; ML_UP)
+        {
+            dev-&gt;command &amp;= ~ML_UP;
+            dev-&gt;correction_required = 1;
+        } else if (dev-&gt;int_in_buffer[0] &amp; ML_MAX_DOWN &amp;&amp;
+                dev-&gt;command &amp; ML_DOWN)
+        {
+            dev-&gt;command &amp;= ~ML_DOWN;
+            dev-&gt;correction_required = 1;
+        }
+ 
+        if (dev-&gt;int_in_buffer[1] &amp; ML_MAX_LEFT &amp;&amp; dev-&gt;command &amp; ML_LEFT)
+        {
+            dev-&gt;command &amp;= ~ML_LEFT;
+            dev-&gt;correction_required = 1;
+        } else if (dev-&gt;int_in_buffer[1] &amp; ML_MAX_RIGHT &amp;&amp;
+                dev-&gt;command &amp; ML_RIGHT)
+        {
+            dev-&gt;command &amp;= ~ML_RIGHT;
+            dev-&gt;correction_required = 1;
+        }
+ 
+        /* ... */
+}</code></pre>
+	</div>
+</div><br />
+При помощи вышеприведенного кода устанавливается переменная correction_required, от которой зависит срабатывание «корректирующего» управляющего URB: в этом URB содержится всего лишь последняя команда без вредного бита. Напомню, что функции обратного вызова URB работают в <i>контексте прерывания</i> и, следовательно, они не должны выполнять никаких выделений памяти, не должны удерживать семафоры или провоцировать какие-либо события, из-за которых процесс может перейти в спящий режим. При применении такого автоматического корректирующего механизма ракетница защищена от ненадлежащего использования. Опять же, на уровне политики здесь никаких ограничений не навязывается, мы просто защищаем само устройство.<br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-upravleniye-v-pol-zovatel-skom-prostranstve"></a>❯ Управление в пользовательском пространстве&#8203;<a class="hoverLink" href="#-upravleniye-v-pol-zovatel-skom-prostranstve" title="Постоянная ссылка"></a></h2>Для большинства читателей самое интересное начнется здесь. Никто еще не надорвался за разыменованием указателей на NULL, старый добрый libc также в наличии. После того, как наш модуль ядра будет загружен, ракетница доступна по /dev/ml0. В таком случае вторая ракетница отобразится как /dev/ml1 и т. д. Вот очень простое приложение для управления этим устройством:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>#include &lt;fcntl.h
+#include &lt;stdio.h
+#include &lt;stdlib.h
+#include &lt;unistd.h
+ 
+#define DEFAULT_DEVICE      &quot;/dev/ml0&quot;
+#define DEFAULT_DURATION    800
+ 
+#define ML_STOP         0x00
+#define ML_UP           0x01
+#define ML_DOWN         0x02
+#define ML_LEFT         0x04
+#define ML_RIGHT        0x08
+#define ML_FIRE         0x10
+ 
+#define ML_FIRE_DELAY   5000
+ 
+void send_cmd(int fd, int cmd)
+{
+    int retval = 0;
+ 
+    retval = write(fd, &amp;cmd, 1);
+    if (retval &lt; 0)
+        fprintf(stderr, &quot;an error occured: %d\n&quot;, retval);
+}
+ 
+static void usage(char *name)
+{
+    fprintf(stderr,
+            &quot;\nusage: %s [-mslrudfh] [-t msecs]\n\n&quot;
+            &quot;  -m      missile launcher [/dev/ml0]\n&quot;
+            &quot;  -s      stop\n&quot;
+            &quot;  -l      turn left\n&quot;
+            &quot;  -r      turn right\n&quot;
+            &quot;  -u      turn up\n&quot;
+            &quot;  -d      turn down\n&quot;
+            &quot;  -f      fire\n&quot;
+            &quot;  -t      specify duration in milli seconds\n&quot;
+            &quot;  -h      display this help\n\n&quot;
+            &quot;notes:\n&quot;
+            &quot;* it is possible to combine the directions of the two axes, e.g.\n&quot;
+            &quot;  &#039;-lu&#039; send_cmds the missile launcher up and left at the same time.\n&quot;
+            &quot;&quot; , name);
+    exit(1);
+}
+ 
+int main(int argc, char *argv[])
+{
+    char c;
+    int fd;
+    int cmd = ML_STOP;
+    int duration = DEFAULT_DURATION;
+    char *dev = DEFAULT_DEVICE;
+ 
+    if (argc &lt; 2)
+        usage(argv[0]);
+ 
+    while ((c = getopt(argc, argv, &quot;mslrudfht:&quot;)) != -1)
+    {
+        switch (c)
+        {
+            case &#039;m&#039;: dev = optarg;
+                      break;
+            case &#039;l&#039;: cmd |= ML_LEFT;
+                      break;
+            case &#039;r&#039;: cmd |= ML_RIGHT;
+                      break;
+            case &#039;u&#039;: cmd |= ML_UP;
+                      break;
+            case &#039;d&#039;: cmd |= ML_DOWN;
+                      break;
+            case &#039;f&#039;: cmd = ML_FIRE;
+                      break;
+            case &#039;s&#039;: cmd = ML_STOP;
+                      break;
+            case &#039;t&#039;: duration = atoi(optarg);
+                      break;
+            default: usage(argv[0]);
+        }
+    }
+ 
+    fd = open(dev, O_RDWR);
+    if (fd == -1)
+    {
+        perror(&quot;open&quot;);
+        exit(1);
+    }
+ 
+    send_cmd(fd, cmd);
+ 
+    if (cmd &amp; ML_FIRE)
+        duration = ML_FIRE_DELAY;
+    else if (cmd == ML_UP || cmd == ML_DOWN)
+        duration /= 2;
+    usleep(duration * 1000);
+ 
+    send_cmd(fd, ML_STOP);
+ 
+    close(fd);
+ 
+    return EXIT_SUCCESS;
+}</code></pre>
+	</div>
+</div><br />
+Этот инструмент (назовем его ml_control) позволяет пользователю отправлять данные на устройство при помощи системного вызова <i>write</i>. Например, если указать ./ml_control -ul -t 3000, то ракетница будет в течение 3 секунд двигаться вверх и влево. По команде ./ml_control –f она будет стрелять, а по команде ./ml_control –s – остановится. Считайте этот код просто «проверкой концепции»; разумеется, можно представить гораздо более изощренные примеры использования.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1748790687797.png"
+		data-src="https://osint42.org/attachments/1748790687797-png.520/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1748790687797-png.520/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1748790687797.png"
+			title="1748790687797.png"
+			width="234" height="395" loading="lazy" />
+	</div><br />
+<br />
+Просто для интереса я также установил на ракетницу внешнюю камеру iSight. Сам автор <a href="https://code.google.com/archive/p/pymissile/" target="_blank" class="link link--external" rel="noopener">pymissile</a> подсказывает, что следующий занятный шаг – реализовать функцию «часового» на основе детектирования движения. Как только в актуальном поле обзора фиксируется движение, ракетница должна сама навестись на цель и выстрелить. У меня не хватило времени на реализацию этого проекта – может быть, когда-нибудь потом вернусь к этой идее, если станет скучно. Правда, мой друг Торстен Рёдер смог быстро накропать на Qt GUI-интерфейс для этой задачи (на вид немного напоминает старенький Quake).<br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-itogi"></a>❯ Итоги&#8203;<a class="hoverLink" href="#-itogi" title="Постоянная ссылка"></a></h2>В этой статье я обрисовал, как создать для ядра Linux собственный драйвер, предназначенный для работы с USB-устройством. Сначала мы выполнили обратную разработку неизвестного USB-протокола; для этого воспользовались драйвером Windows, при помощи которого перехватили весь входящий и исходящий USB-трафик. Перехватив все коммуникационные примитивы, я объяснил, как собрать драйвер ядра для работы с USB. Наконец, в качестве проверки концепции мы написали инструмент для пользовательского пространства, закладывающий основы для дальнейших, более интересных идей. Далее я затрагиваю возможности развития этого проекта – например, как дополнить ракетницу камерой или устанавливать ее на другие устройства. <br />
+<br />
+Полная реализация данного драйвера ядра и весь код к статье выложены в моем <a href="https://github.com/mavam/ml-driver" target="_blank" class="link link--external" rel="noopener">репозитории на GitHub</a>.</div>
+					
+
+					
+						
+
+	
+		
+	
+
+					
+					
+										
+
+					
+
+					
+						
+					
+
+					
+
+					
+
+					<div class="reactionsBar js-reactionsList ">
+						
+					</div>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</article>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="columnContainer"
+		data-xf-init="lightbox"
+		data-lb-id="article-30"
+		data-lb-universal="0">
+
+		<span class="u-anchorTarget" id="comments"></span>
+
+		<div class="columnContainer-comments">
+			
+	
+	
+
+	<div class="block block--messages"
+		data-xf-init=""
+		data-type="ams_comment"
+		data-href="/inline-mod/">
+
+		
+	
+	
+
+
+		<div class="block-outer"></div>
+		
+		<div class="block-container"
+			data-xf-init="select-to-quote"
+			data-message-selector=".js-comment">
+			
+			<h3 class="block-header">Комментарии</h3>
+			<div class="block-body js-replyNewCommentContainer">
+				
+					<div class="blockMessage js-replyNoMessages">Нет комментариев для отображения.</div>
+				
+			</div>
+		</div>
+
+		<div class="block-outer block-outer--after">
+			
+			
+		</div>
+
+		
+	
+	
+
+	</div>
+
+	
+	
+	
+
+	
+
+
+		</div>
+	</div>	
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+</div>
+					
+				</div>
+
+				
+					<div class="p-body-sidebar">
+						
+						
+							<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">Информация о статье</h3>
+			<div class="block-body block-row block-row--minor">
+				<dl class="pairs pairs--justified">
+					<dt>Автор</dt>
+					
+						<dd><a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a></dd>
+					
+				</dl>
+				
+					<dl class="pairs pairs--justified">
+						<dt>Article read time</dt>
+						<dd>14 min read</dd>
+					</dl>
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Просмотры</dt>
+						<dd>184</dd>
+					</dl>
+				
+				
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Последнее обновление</dt>
+						<dd><time  class="u-dt" dir="auto" datetime="2025-06-01T18:11:45+0300" data-timestamp="1748790705" data-date="01.06.2025" data-time="18:11" data-short="1 Июн" title="01.06.2025 в 18:11">01.06.2025</time></dd>
+					</dl>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</div>
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-minorHeader"><a href="../categories/razrabotka-operatsionnykh-sistem.9/index.html">Больше в Разработка операционных систем</a></h3>
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../pochemu-v-linux-vse-fail.73/index.html">Почему в Linux всё — файл?</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				---
+
+## 🔹 Оглавление
+
+[1. Философия UNIX: «Everything is a file»]
+[2. Как работает VFS — Virtual...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../razrabotka-operatsionnykh-sistem-v-2025-shpargalka.19/index.html">Разработка операционных систем в 2025:Шпаргалка</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Почему стоит заняться разработкой ОС прямо сейчас
+
+Linux 6.15 активно внедряет Rust: более 2%...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../zapuskayem-programmu-bez-operatsionnoi-sistemy.9/index.html">Запускаем программу без операционной системы</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В интернете существует огромное количество описаний и туториалов о том как написать собственную...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+			<div class="block-container">
+				
+					<h3 class="block-minorHeader"><a href="../authors/0x42.1/index.html">Больше от 0x42</a></h3>
+				
+
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../o-tom-kak-boryut-sya-s-tor-v-rf.75/index.html">О том как борются с TOR в РФ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Недавно решил поддержать проект TOR, решил поднять middle relay.
+
+Напомню, что для поддержки...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../bezumnyi-maks-skam.74/index.html">Безумный МАКС/СКАМ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				По телевизору передают, что мессенджер МАКС полюбили россияне, зарегистрировалось почти вся...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../obkhod-antivirusov-cherez-uyazvimyi-draiver.71/index.html">Обход антивирусов через уязвимый драйвер</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Пока хакер не прикрыли, из-за дурацких законов, решил скопировать приватную статью.
+
+Вот...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../zashchita-ot-roskomnadzora.70/index.html">Защита от Роскомнадзора</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В связи с тем-что РКН внедрили ботов для автоматического поиска неугодного контента и...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../uyazvimosti-v-bash-skriptakh.69/index.html">Уязвимости в bash скриптах</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Вот кто хоть раз интересовался безопасностью, наверное помнят всякие инъекции в php и не...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+				<div class="block-container">
+					
+						<h3 class="block-minorHeader">Поделиться этой статьей</h3>
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965521"></span>
+
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965521" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965521"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965521" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+								
+							</div>
+						
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-2-1758965521">Копировать BB-код адреса статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[URL=&quot;https://osint42.org/articles/pishem-draiver-yadra-linux-dlya-neizvestnogo-usb-ustroistva.30/&quot;]Пишем драйвер ядра Linux для неизвестного USB-устройства[/URL]" id="_xfUid-2-1758965521" />
+		</div>
+	</div>
+
+									
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-3-1758965521">Копировать BB-код статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[AMS=article, 30][/AMS]" id="_xfUid-3-1758965521" />
+		</div>
+	</div>
+
+									
+								
+							</div>
+						
+					
+				</div>
+			</div>
+						
+						
+					</div>
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/razrabotka-operatsionnykh-sistem.9/index.html" itemprop="item">
+			<span itemprop="name">Разработка операционных систем</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965521%2C447e00ba43bec7697855d07bbd7c4283"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965521%2C447e00ba43bec7697855d07bbd7c4283"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965521%2C447e00ba43bec7697855d07bbd7c4283"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../../threads/pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+    
+    
+        
+        
+            <script type="application/ld+json">
+                {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "@id": "https://osint42.org/articles/pishem-draiver-yadra-linux-dlya-neizvestnogo-usb-ustroistva.30/",
+    "name": "\u041f\u0438\u0448\u0435\u043c \u0434\u0440\u0430\u0439\u0432\u0435\u0440 \u044f\u0434\u0440\u0430 Linux \u0434\u043b\u044f \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e\u0433\u043e USB-\u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430",
+    "headline": "\u041f\u0438\u0448\u0435\u043c \u0434\u0440\u0430\u0439\u0432\u0435\u0440 \u044f\u0434\u0440\u0430 Linux \u0434\u043b\u044f \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e\u0433\u043e USB-\u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430",
+    "alternativeHeadline": "\u041f\u0438\u0448\u0435\u043c \u0434\u0440\u0430\u0439\u0432\u0435\u0440 \u044f\u0434\u0440\u0430 Linux \u0434\u043b\u044f \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e\u0433\u043e USB-\u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430",
+    "description": "\u041d\u0430 \u0445\u0430\u0431\u0440\u0435 \u043d\u0430\u0448\u0451\u043b \u0432\u0435\u0441\u044c\u043c\u0430 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u0443\u044e \u0441\u0442\u0430\u0442\u044c\u044e:\u041f\u0438\u0448\u0435\u043c \u0434\u0440\u0430\u0439\u0432\u0435\u0440 \u044f\u0434\u0440\u0430 Linux \u0434\u043b\u044f \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e\u0433\u043e USB-\u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\n\n\u0412 \u044d\u0442\u043e\u0439 \u0441\u0442\u0430\u0442\u044c\u0435 \u043c\u043e\u0436\u043d\u043e \u043e\u0437\u043d\u0430\u043a\u043e\u043c\u0438\u0442\u0441\u044f \u043a\u0430\u043a \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0442\u044c \u0441\u0438\u043c\u0432\u043e\u043b\u044c\u043d\u044b\u0435 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u0434\u043b\u044f \u041b\u0438\u043d\u0443\u043a\u0441, \u0434\u0430 \u0438 \u043f\u0440\u043e\u0441\u0442\u043e \u043d\u0435 \u043f\u043b\u043e\u0445\u0430\u044f \u0432\u0432\u043e\u0434\u043d\u0430\u044f \u0447\u0430\u0441\u0442\u044c \u043f\u043e \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435 \u0434\u0440\u0430\u0439\u0432\u0435\u0440\u043e\u0432, \u043d\u0435...",
+    "keywords": "",
+    "dateCreated": "2025-06-01T15:11:45+00:00",
+    "dateModified": "2025-06-01T15:11:45+00:00",
+    "author": {
+        "@type": "Person",
+        "name": "0x42"
+    },
+    "thumbnailUrl": "https://osint42.org/data/attachments/0/516-6bf709f317733493e307289e91080d12.jpg?hash=ely8IBPLL-",
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/CommentAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/LikeAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/ViewAction",
+            "userInteractionCount": "184"
+        }
+    ]
+}
+            </script>
+        
+    
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/articles/pishem-draiver-yadra-linux-dlya-neizvestnogo-usb-ustroistva.30/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:41:28 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

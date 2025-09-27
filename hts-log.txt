@@ -1,0 +1,593 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 27 Sep 2025 12:30:18 at https://osint42.org/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar -*latest-activity* -*style-variation* -*members* -*online* +*.fontawesome.com/* +fonts.googleapis.com/* +fonts.gstatic.com/* +*.cdnjs.cloudflare.com/*
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://osint42.org/ -O1 "C:\osint42_archive\osint42_archive" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar -*latest-activity* -*style-variation* -*members* -*online* +*.fontawesome.com/* +fonts.googleapis.com/* +fonts.gstatic.com/* +*.cdnjs.cloudflare.com/* )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+12:31:25	Warning: 	See Other for https://osint42.org/whats-new/ams-articles/
+12:31:25	Warning: 	File has moved from https://osint42.org/whats-new/ams-articles/ to https://osint42.org/whats-new/ams-articles/5786/
+12:31:29	Warning: 	See Other for https://osint42.org/whats-new/posts/
+12:31:29	Warning: 	File has moved from https://osint42.org/whats-new/posts/ to https://osint42.org/whats-new/posts/5787/
+12:31:40	Warning: 	See Other for https://osint42.org/whats-new/media-comments/
+12:31:40	Warning: 	File has moved from https://osint42.org/whats-new/media-comments/ to https://osint42.org/whats-new/media-comments/5788/
+12:31:43	Error: 	"Not Found" (404) at link https://osint42.org/cdn-cgi/l/email-protection (from https://osint42.org/)
+12:32:15	Warning: 	Moved Permanently for https://osint42.org/articles/comments/42/
+12:32:15	Warning: 	File has moved from https://osint42.org/articles/comments/42/ to https://osint42.org/articles/obkhod-windows-defender-10-sposobov.24/#ams-comment-42
+12:32:17	Warning: 	Moved Permanently for https://osint42.org/articles/comments/41/
+12:32:17	Warning: 	File has moved from https://osint42.org/articles/comments/41/ to https://osint42.org/articles/make-firefox-anonymous-again.64/#ams-comment-41
+12:32:19	Warning: 	Moved Permanently for https://osint42.org/articles/comments/40/
+12:32:19	Warning: 	File has moved from https://osint42.org/articles/comments/40/ to https://osint42.org/articles/zapuskayem-programmu-bez-operatsionnoi-sistemy.9/#ams-comment-40
+12:32:19	Warning: 	Moved Permanently for https://osint42.org/articles/comments/39/
+12:32:19	Warning: 	File has moved from https://osint42.org/articles/comments/39/ to https://osint42.org/articles/razrabotka-operatsionnykh-sistem-v-2025-shpargalka.19/#ams-comment-39
+12:32:21	Warning: 	Moved Permanently for https://osint42.org/articles/comments/38/
+12:32:21	Warning: 	File has moved from https://osint42.org/articles/comments/38/ to https://osint42.org/articles/izucheniye-sovremennykh-botnetov.34/#ams-comment-38
+12:32:26	Warning: 	Moved Permanently for https://osint42.org/articles/categories/freimvork-dlya-testirovaniya-antivirusov.2/
+12:32:26	Warning: 	File has moved from https://osint42.org/articles/categories/freimvork-dlya-testirovaniya-antivirusov.2/ to https://osint42.org/articles/categories/uroki-razrabotki-vredonosnogo-softa.2/
+12:32:31	Warning: 	Moved Permanently for https://osint42.org/articles/categories/anonimnyi-messendzher.4/
+12:32:31	Warning: 	File has moved from https://osint42.org/articles/categories/anonimnyi-messendzher.4/ to https://osint42.org/articles/categories/izucheniye-seti.4/
+12:32:38	Warning: 	Moved Permanently for https://osint42.org/articles/categories/o-tom-kak-boryut-sya-s-tor-v-rf.4/
+12:32:38	Warning: 	File has moved from https://osint42.org/articles/categories/o-tom-kak-boryut-sya-s-tor-v-rf.4/ to https://osint42.org/articles/categories/izucheniye-seti.4/
+12:32:45	Warning: 	See Other for https://osint42.org/whats-new/posts/?skip=1
+12:32:45	Warning: 	File has moved from https://osint42.org/whats-new/posts/?skip=1 to https://osint42.org/whats-new/posts/5787/
+12:35:22	Warning: 	Moved Permanently for https://osint42.org/articles/categories/bezumnyi-maks-skam.4/
+12:35:22	Warning: 	File has moved from https://osint42.org/articles/categories/bezumnyi-maks-skam.4/ to https://osint42.org/articles/categories/izucheniye-seti.4/
+12:35:22	Warning: 	Moved Permanently for https://osint42.org/articles/categories/opisaniye-proyekta-osint42-org.1/
+12:35:22	Warning: 	File has moved from https://osint42.org/articles/categories/opisaniye-proyekta-osint42-org.1/ to https://osint42.org/articles/categories/pro-resurs.1/
+12:40:09	Warning: 	See Other for https://osint42.org/whats-new/ams-articles/?skip=1
+12:40:09	Warning: 	File has moved from https://osint42.org/whats-new/ams-articles/?skip=1 to https://osint42.org/whats-new/ams-articles/5789/
+12:40:30	Warning: 	Moved Permanently for https://osint42.org/articles/comments/28/
+12:40:30	Warning: 	File has moved from https://osint42.org/articles/comments/28/ to https://osint42.org/articles/opisaniye-proyekta-osint42-org.1/#ams-comment-28
+12:40:30	Warning: 	Moved Permanently for https://osint42.org/articles/comments/26/
+12:40:30	Warning: 	File has moved from https://osint42.org/articles/comments/26/ to https://osint42.org/articles/opisaniye-proyekta-osint42-org.1/#ams-comment-26
+12:40:30	Warning: 	Moved Permanently for https://osint42.org/articles/comments/19/
+12:40:30	Warning: 	File has moved from https://osint42.org/articles/comments/19/ to https://osint42.org/articles/opisaniye-proyekta-osint42-org.1/#ams-comment-19
+12:40:30	Warning: 	Moved Permanently for https://osint42.org/articles/categories/otkrytaya-gruppa-v-telegram-osint42_go.1/
+12:40:30	Warning: 	File has moved from https://osint42.org/articles/categories/otkrytaya-gruppa-v-telegram-osint42_go.1/ to https://osint42.org/articles/categories/pro-resurs.1/
+12:40:30	Warning: 	Moved Permanently for https://osint42.org/articles/comments/27/
+12:40:30	Warning: 	File has moved from https://osint42.org/articles/comments/27/ to https://osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/#ams-comment-27
+12:40:30	Warning: 	Moved Permanently for https://osint42.org/articles/comments/25/
+12:40:30	Warning: 	File has moved from https://osint42.org/articles/comments/25/ to https://osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/#ams-comment-25
+12:40:30	Warning: 	Moved Permanently for https://osint42.org/articles/categories/tsikl-statei-izucheniye-vredonosnykh-programm.2/
+12:40:30	Warning: 	File has moved from https://osint42.org/articles/categories/tsikl-statei-izucheniye-vredonosnykh-programm.2/ to https://osint42.org/articles/categories/uroki-razrabotki-vredonosnogo-softa.2/
+12:40:34	Warning: 	Moved Permanently for https://osint42.org/articles/comments/35/
+12:40:34	Warning: 	File has moved from https://osint42.org/articles/comments/35/ to https://osint42.org/articles/obkhod-windows-defender-10-sposobov.24/#ams-comment-35
+12:40:35	Warning: 	Moved Permanently for https://osint42.org/articles/comments/33/
+12:40:35	Warning: 	File has moved from https://osint42.org/articles/comments/33/ to https://osint42.org/articles/obkhod-windows-defender-10-sposobov.24/#ams-comment-33
+12:40:36	Warning: 	Moved Permanently for https://osint42.org/articles/comments/30/
+12:40:36	Warning: 	File has moved from https://osint42.org/articles/comments/30/ to https://osint42.org/articles/izucheniye-sovremennykh-botnetov.34/#ams-comment-30
+12:40:44	Warning: 	Moved Permanently for https://osint42.org/articles/comments/37/
+12:40:44	Warning: 	File has moved from https://osint42.org/articles/comments/37/ to https://osint42.org/articles/anonimnyi-messendzher.58/#ams-comment-37
+12:40:46	Warning: 	Moved Permanently for https://osint42.org/articles/comments/36/
+12:40:46	Warning: 	File has moved from https://osint42.org/articles/comments/36/ to https://osint42.org/articles/bez-lokha-i-zhizn-plokha-povest-o-prikomandirovannom-sotrudnike-fsb.54/#ams-comment-36
+12:40:47	Warning: 	Moved Permanently for https://osint42.org/articles/comments/34/
+12:40:47	Warning: 	File has moved from https://osint42.org/articles/comments/34/ to https://osint42.org/articles/anonimnyi-messendzher.58/#ams-comment-34
+12:40:50	Warning: 	Moved Permanently for https://osint42.org/articles/comments/32/
+12:40:50	Warning: 	File has moved from https://osint42.org/articles/comments/32/ to https://osint42.org/articles/banki-i-kredity.52/#ams-comment-32
+12:40:52	Warning: 	Moved Permanently for https://osint42.org/articles/comments/29/
+12:40:52	Warning: 	File has moved from https://osint42.org/articles/comments/29/ to https://osint42.org/articles/spamhaus-protiv-interneta.43/#ams-comment-29
+12:41:11	Warning: 	Moved Permanently for https://osint42.org/articles/comments/31/
+12:41:11	Warning: 	File has moved from https://osint42.org/articles/comments/31/ to https://osint42.org/articles/tsikl-statei-algoritmy-izucheniye-primery-na-c-i-python-nyuansy-ispol-zovaniya.13/#ams-comment-31
+12:41:11	Warning: 	Moved Permanently for https://osint42.org/articles/comments/22/
+12:41:11	Warning: 	File has moved from https://osint42.org/articles/comments/22/ to https://osint42.org/articles/tsikl-statei-algoritmy-izucheniye-primery-na-c-i-python-nyuansy-ispol-zovaniya.13/#ams-comment-22
+12:41:28	Warning: 	Moved Permanently for https://osint42.org/articles/comments/21/
+12:41:28	Warning: 	File has moved from https://osint42.org/articles/comments/21/ to https://osint42.org/articles/zapuskayem-programmu-bez-operatsionnoi-sistemy.9/#ams-comment-21
+12:41:28	Warning: 	Moved Permanently for https://osint42.org/articles/comments/20/
+12:41:28	Warning: 	File has moved from https://osint42.org/articles/comments/20/ to https://osint42.org/articles/zapuskayem-programmu-bez-operatsionnoi-sistemy.9/#ams-comment-20
+12:44:27	Warning: 	Moved Permanently for https://osint42.org/threads/publicdomainregistry-i-regway-avtomaticheski-blokiruyut-domeny.51/
+12:44:27	Warning: 	File has moved from https://osint42.org/threads/publicdomainregistry-i-regway-avtomaticheski-blokiruyut-domeny.51/ to https://osint42.org/threads/publicdomainregistry-i-regway-avtomaticheski-blokiruyut-domeny.50/
+12:46:06	Warning: 	Moved Permanently for https://osint42.org/posts/187/
+12:46:06	Warning: 	File has moved from https://osint42.org/posts/187/ to https://osint42.org/threads/probiv-discord.90/#post-187
+12:46:06	Warning: 	Moved Permanently for https://osint42.org/posts/191/
+12:46:06	Warning: 	File has moved from https://osint42.org/posts/191/ to https://osint42.org/threads/probiv-discord.90/#post-191
+12:46:07	Warning: 	Moved Permanently for https://osint42.org/posts/420/
+12:46:07	Warning: 	File has moved from https://osint42.org/posts/420/ to https://osint42.org/threads/probiv-discord.90/#post-420
+12:46:08	Warning: 	Moved Permanently for https://osint42.org/posts/481/
+12:46:08	Warning: 	File has moved from https://osint42.org/posts/481/ to https://osint42.org/threads/probiv-discord.90/#post-481
+12:46:08	Warning: 	Moved Permanently for https://osint42.org/posts/482/
+12:46:08	Warning: 	File has moved from https://osint42.org/posts/482/ to https://osint42.org/threads/probiv-discord.90/#post-482
+12:46:09	Warning: 	Moved Permanently for https://osint42.org/posts/488/
+12:46:09	Warning: 	File has moved from https://osint42.org/posts/488/ to https://osint42.org/threads/probiv-discord.90/#post-488
+12:46:09	Warning: 	Moved Permanently for https://osint42.org/posts/502/
+12:46:09	Warning: 	File has moved from https://osint42.org/posts/502/ to https://osint42.org/threads/probiv-discord.90/#post-502
+12:47:10	Warning: 	Moved Permanently for https://osint42.org/posts/501/
+12:47:10	Warning: 	File has moved from https://osint42.org/posts/501/ to https://osint42.org/threads/idei-podarkov-dlya-khakerov.192/#post-501
+12:48:37	Warning: 	Moved Permanently for https://osint42.org/posts/234/
+12:48:37	Warning: 	File has moved from https://osint42.org/posts/234/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-234
+12:48:45	Warning: 	Moved Permanently for https://osint42.org/posts/235/
+12:48:45	Warning: 	File has moved from https://osint42.org/posts/235/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-235
+12:48:53	Warning: 	Moved Permanently for https://osint42.org/posts/236/
+12:48:53	Warning: 	File has moved from https://osint42.org/posts/236/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-236
+12:49:01	Warning: 	Moved Permanently for https://osint42.org/posts/237/
+12:49:01	Warning: 	File has moved from https://osint42.org/posts/237/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-237
+12:49:08	Warning: 	Moved Permanently for https://osint42.org/posts/238/
+12:49:08	Warning: 	File has moved from https://osint42.org/posts/238/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-238
+12:49:16	Warning: 	Moved Permanently for https://osint42.org/posts/239/
+12:49:16	Warning: 	File has moved from https://osint42.org/posts/239/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-239
+12:49:24	Warning: 	Moved Permanently for https://osint42.org/posts/262/
+12:49:24	Warning: 	File has moved from https://osint42.org/posts/262/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-262
+12:49:31	Warning: 	Moved Permanently for https://osint42.org/posts/264/
+12:49:31	Warning: 	File has moved from https://osint42.org/posts/264/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-264
+12:49:39	Warning: 	Moved Permanently for https://osint42.org/posts/266/
+12:49:39	Warning: 	File has moved from https://osint42.org/posts/266/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-266
+12:49:47	Warning: 	Moved Permanently for https://osint42.org/posts/267/
+12:49:47	Warning: 	File has moved from https://osint42.org/posts/267/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-267
+12:49:54	Warning: 	Moved Permanently for https://osint42.org/posts/268/
+12:49:54	Warning: 	File has moved from https://osint42.org/posts/268/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-268
+12:50:03	Warning: 	Moved Permanently for https://osint42.org/posts/269/
+12:50:03	Warning: 	File has moved from https://osint42.org/posts/269/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-269
+12:50:11	Warning: 	Moved Permanently for https://osint42.org/posts/270/
+12:50:11	Warning: 	File has moved from https://osint42.org/posts/270/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-270
+12:50:18	Warning: 	Moved Permanently for https://osint42.org/posts/271/
+12:50:18	Warning: 	File has moved from https://osint42.org/posts/271/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-271
+12:50:26	Warning: 	Moved Permanently for https://osint42.org/posts/273/
+12:50:26	Warning: 	File has moved from https://osint42.org/posts/273/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-273
+12:50:34	Warning: 	Moved Permanently for https://osint42.org/posts/274/
+12:50:34	Warning: 	File has moved from https://osint42.org/posts/274/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-274
+12:50:41	Warning: 	Moved Permanently for https://osint42.org/posts/275/
+12:50:41	Warning: 	File has moved from https://osint42.org/posts/275/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-275
+12:50:49	Warning: 	Moved Permanently for https://osint42.org/posts/276/
+12:50:49	Warning: 	File has moved from https://osint42.org/posts/276/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-276
+12:50:57	Warning: 	Moved Permanently for https://osint42.org/posts/277/
+12:50:57	Warning: 	File has moved from https://osint42.org/posts/277/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-277
+12:51:05	Warning: 	Moved Permanently for https://osint42.org/posts/278/
+12:51:05	Warning: 	File has moved from https://osint42.org/posts/278/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-278
+12:51:13	Warning: 	Moved Permanently for https://osint42.org/posts/279/
+12:51:13	Warning: 	File has moved from https://osint42.org/posts/279/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-279
+12:51:20	Warning: 	Moved Permanently for https://osint42.org/posts/280/
+12:51:20	Warning: 	File has moved from https://osint42.org/posts/280/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-280
+12:51:28	Warning: 	Moved Permanently for https://osint42.org/posts/281/
+12:51:28	Warning: 	File has moved from https://osint42.org/posts/281/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-281
+12:51:36	Warning: 	Moved Permanently for https://osint42.org/posts/282/
+12:51:36	Warning: 	File has moved from https://osint42.org/posts/282/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-282
+12:51:43	Warning: 	Moved Permanently for https://osint42.org/posts/283/
+12:51:43	Warning: 	File has moved from https://osint42.org/posts/283/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-283
+12:51:50	Warning: 	Moved Permanently for https://osint42.org/posts/284/
+12:51:50	Warning: 	File has moved from https://osint42.org/posts/284/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-284
+12:51:58	Warning: 	Moved Permanently for https://osint42.org/posts/285/
+12:51:58	Warning: 	File has moved from https://osint42.org/posts/285/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-285
+12:52:06	Warning: 	Moved Permanently for https://osint42.org/posts/286/
+12:52:06	Warning: 	File has moved from https://osint42.org/posts/286/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-286
+12:52:13	Warning: 	Moved Permanently for https://osint42.org/attachments/821/
+12:52:13	Warning: 	File has moved from https://osint42.org/attachments/821/ to https://osint42.org/attachments/1754591027350-png.821/
+12:52:13	Warning: 	Moved Permanently for https://osint42.org/posts/287/
+12:52:13	Warning: 	File has moved from https://osint42.org/posts/287/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-287
+12:52:21	Warning: 	Moved Permanently for https://osint42.org/posts/288/
+12:52:21	Warning: 	File has moved from https://osint42.org/posts/288/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-288
+12:52:28	Warning: 	Moved Permanently for https://osint42.org/posts/289/
+12:52:28	Warning: 	File has moved from https://osint42.org/posts/289/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-289
+12:52:36	Warning: 	Moved Permanently for https://osint42.org/posts/290/
+12:52:36	Warning: 	File has moved from https://osint42.org/posts/290/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-290
+12:52:43	Warning: 	Moved Permanently for https://osint42.org/posts/299/
+12:52:43	Warning: 	File has moved from https://osint42.org/posts/299/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-299
+12:52:50	Warning: 	Moved Permanently for https://osint42.org/posts/300/
+12:52:50	Warning: 	File has moved from https://osint42.org/posts/300/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-300
+12:52:58	Warning: 	Moved Permanently for https://osint42.org/posts/301/
+12:52:58	Warning: 	File has moved from https://osint42.org/posts/301/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-301
+12:53:06	Warning: 	Moved Permanently for https://osint42.org/posts/374/
+12:53:06	Warning: 	File has moved from https://osint42.org/posts/374/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-374
+12:53:13	Warning: 	Moved Permanently for https://osint42.org/posts/376/
+12:53:13	Warning: 	File has moved from https://osint42.org/posts/376/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-376
+12:53:21	Warning: 	Moved Permanently for https://osint42.org/posts/495/
+12:53:21	Warning: 	File has moved from https://osint42.org/posts/495/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-495
+12:53:28	Warning: 	Moved Permanently for https://osint42.org/posts/497/
+12:53:28	Warning: 	File has moved from https://osint42.org/posts/497/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-497
+12:53:35	Warning: 	Moved Permanently for https://osint42.org/posts/499/
+12:53:35	Warning: 	File has moved from https://osint42.org/posts/499/ to https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/#post-499
+12:53:53	Warning: 	Moved Permanently for https://osint42.org/ams/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/
+12:53:53	Warning: 	File has moved from https://osint42.org/ams/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/ to https://osint42.org/articles/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/
+12:53:53	Warning: 	Moved Permanently for https://osint42.org/ams/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/page/kak-sozdat-svoi-chit-treiner-2.46/
+12:53:53	Warning: 	File has moved from https://osint42.org/ams/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/page/kak-sozdat-svoi-chit-treiner-2.46/ to https://osint42.org/articles/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/page/kak-sozdat-svoi-chit-treiner-2.46/
+12:53:53	Warning: 	Moved Permanently for https://osint42.org/ams/natsional-nyi-messendzher-kak-shag-k-tsifrovomu-rabstvu.42/
+12:53:53	Warning: 	File has moved from https://osint42.org/ams/natsional-nyi-messendzher-kak-shag-k-tsifrovomu-rabstvu.42/ to https://osint42.org/articles/natsional-nyi-messendzher-kak-shag-k-tsifrovomu-rabstvu.42/
+12:53:56	Warning: 	Moved Permanently for https://osint42.org/ams/udalennoye-vypolneniye-koda-pri-pomoshchi-dma.37/
+12:53:56	Warning: 	File has moved from https://osint42.org/ams/udalennoye-vypolneniye-koda-pri-pomoshchi-dma.37/ to https://osint42.org/articles/udalennoye-vypolneniye-koda-pri-pomoshchi-dma.37/
+12:54:01	Warning: 	Moved Permanently for https://osint42.org/posts/256/
+12:54:01	Warning: 	File has moved from https://osint42.org/posts/256/ to https://osint42.org/threads/anonimnyi-jabber-osint42-com.115/#post-256
+12:54:02	Warning: 	Moved Permanently for https://osint42.org/posts/257/
+12:54:02	Warning: 	File has moved from https://osint42.org/posts/257/ to https://osint42.org/threads/anonimnyi-jabber-osint42-com.115/#post-257
+12:54:03	Warning: 	Moved Permanently for https://osint42.org/posts/258/
+12:54:03	Warning: 	File has moved from https://osint42.org/posts/258/ to https://osint42.org/threads/anonimnyi-jabber-osint42-com.115/#post-258
+12:54:04	Warning: 	Moved Permanently for https://osint42.org/posts/259/
+12:54:04	Warning: 	File has moved from https://osint42.org/posts/259/ to https://osint42.org/threads/anonimnyi-jabber-osint42-com.115/#post-259
+12:54:36	Warning: 	Moved Permanently for https://osint42.org/threads/v-neironnykh-setyakh-mogut-byt-fishingovyye-ssylki.105/
+12:54:36	Warning: 	File has moved from https://osint42.org/threads/v-neironnykh-setyakh-mogut-byt-fishingovyye-ssylki.105/ to https://osint42.org/threads/v-neironnykh-setyakh-mogut-byt-fishingovyye-ssylki.104/
+12:55:31	Warning: 	Moved Permanently for https://osint42.org/posts/351/
+12:55:31	Warning: 	File has moved from https://osint42.org/posts/351/ to https://osint42.org/threads/razlichnyye-freimvorki-dlya-obkhoda-edr-sistem.41/#post-351
+12:55:31	Warning: 	Moved Permanently for https://osint42.org/attachments/436/
+12:55:31	Warning: 	File has moved from https://osint42.org/attachments/436/ to https://osint42.org/attachments/1747469525715-png.436/
+12:55:31	Warning: 	Moved Permanently for https://osint42.org/posts/370/
+12:55:31	Warning: 	File has moved from https://osint42.org/posts/370/ to https://osint42.org/threads/razlichnyye-freimvorki-dlya-obkhoda-edr-sistem.41/#post-370
+12:55:50	Warning: 	Moved Permanently for https://osint42.org/ams/igry-s-uyazvimostyami.50/
+12:55:50	Warning: 	File has moved from https://osint42.org/ams/igry-s-uyazvimostyami.50/ to https://osint42.org/articles/igry-s-uyazvimostyami.50/
+12:55:50	Warning: 	Moved Permanently for https://osint42.org/posts/197/
+12:55:50	Warning: 	File has moved from https://osint42.org/posts/197/ to https://osint42.org/threads/razmyshleniya-o-binarnykh-uyazvimostyakh-v-2025-stoit-li-pytat-sya.98/#post-197
+12:56:25	Error: 	"Not Found" (404) at link https://osint42.org/proxy.php?image=https%3A%2F%2Fruvds.com%2Fimg%2Fruvds-logo-w.svg%3Fv%3D1&hash=4c702c62bc70884acea542b04e331b27&return_error=1 (from https://osint42.org/threads/delayem-svoi-messendzher-max-so-zvonkami-i-anonimnost-yu-za-5-minut.172/#post-475)
+12:56:25	Warning: 	Moved Permanently for https://osint42.org/posts/475/
+12:56:25	Warning: 	File has moved from https://osint42.org/posts/475/ to https://osint42.org/threads/delayem-svoi-messendzher-max-so-zvonkami-i-anonimnost-yu-za-5-minut.172/#post-475
+12:56:40	Warning: 	Moved Permanently for https://osint42.org/posts/200/
+12:56:40	Warning: 	File has moved from https://osint42.org/posts/200/ to https://osint42.org/threads/abuzoustoichivyye-khostingi.78/#post-200
+12:56:41	Warning: 	Moved Permanently for https://osint42.org/posts/387/
+12:56:41	Warning: 	File has moved from https://osint42.org/posts/387/ to https://osint42.org/threads/abuzoustoichivyye-khostingi.78/#post-387
+12:56:43	Warning: 	Moved Permanently for https://osint42.org/posts/388/
+12:56:43	Warning: 	File has moved from https://osint42.org/posts/388/ to https://osint42.org/threads/abuzoustoichivyye-khostingi.78/#post-388
+12:56:44	Warning: 	Moved Permanently for https://osint42.org/posts/389/
+12:56:44	Warning: 	File has moved from https://osint42.org/posts/389/ to https://osint42.org/threads/abuzoustoichivyye-khostingi.78/#post-389
+12:56:45	Warning: 	Moved Permanently for https://osint42.org/posts/410/
+12:56:45	Warning: 	File has moved from https://osint42.org/posts/410/ to https://osint42.org/threads/abuzoustoichivyye-khostingi.78/#post-410
+12:56:46	Warning: 	Moved Permanently for https://osint42.org/posts/411/
+12:56:46	Warning: 	File has moved from https://osint42.org/posts/411/ to https://osint42.org/threads/abuzoustoichivyye-khostingi.78/#post-411
+12:56:47	Warning: 	Moved Permanently for https://osint42.org/posts/412/
+12:56:47	Warning: 	File has moved from https://osint42.org/posts/412/ to https://osint42.org/threads/abuzoustoichivyye-khostingi.78/#post-412
+12:56:48	Warning: 	Moved Permanently for https://osint42.org/attachments/874/
+12:56:48	Warning: 	File has moved from https://osint42.org/attachments/874/ to https://osint42.org/attachments/1756195339749-png.874/
+12:56:48	Warning: 	Moved Permanently for https://osint42.org/posts/498/
+12:56:48	Warning: 	File has moved from https://osint42.org/posts/498/ to https://osint42.org/threads/abuzoustoichivyye-khostingi.78/#post-498
+12:57:03	Warning: 	Moved Permanently for https://osint42.org/posts/350/
+12:57:03	Warning: 	File has moved from https://osint42.org/posts/350/ to https://osint42.org/threads/obkhod-neironki-deepseek.89/#post-350
+12:57:03	Warning: 	Moved Permanently for https://osint42.org/posts/352/
+12:57:03	Warning: 	File has moved from https://osint42.org/posts/352/ to https://osint42.org/threads/obkhod-neironki-deepseek.89/#post-352
+12:57:03	Warning: 	Moved Permanently for https://osint42.org/posts/367/
+12:57:03	Warning: 	File has moved from https://osint42.org/posts/367/ to https://osint42.org/threads/obkhod-neironki-deepseek.89/#post-367
+12:57:03	Warning: 	Moved Permanently for https://osint42.org/posts/369/
+12:57:03	Warning: 	File has moved from https://osint42.org/posts/369/ to https://osint42.org/threads/obkhod-neironki-deepseek.89/#post-369
+12:57:03	Warning: 	Moved Permanently for https://osint42.org/posts/448/
+12:57:03	Warning: 	File has moved from https://osint42.org/posts/448/ to https://osint42.org/threads/obkhod-neironki-deepseek.89/#post-448
+12:57:12	Warning: 	Moved Permanently for https://osint42.org/posts/242/
+12:57:12	Warning: 	File has moved from https://osint42.org/posts/242/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-242
+12:57:14	Warning: 	Moved Permanently for https://osint42.org/posts/243/
+12:57:14	Warning: 	File has moved from https://osint42.org/posts/243/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-243
+12:57:15	Error: 	"Not Found" (404) at link https://osint42.org/proxy.php?image=https%3A%2F%2Fgit.activated.win%2Fassets%2Fimg%2Ffavicon.svg&hash=a844f32914af6c7b855aa1f95e18176f&return_error=1 (from https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-440)
+12:57:15	Error: 	"Not Found" (404) at link https://osint42.org/proxy.php?image=https%3A%2F%2Fgithub.githubassets.com%2Ffavicons%2Ffavicon.svg&hash=0917ea401af2305136c9e2756a67a6c0&return_error=1 (from https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-440)
+12:57:15	Warning: 	Moved Permanently for https://osint42.org/posts/244/
+12:57:15	Warning: 	File has moved from https://osint42.org/posts/244/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-244
+12:57:16	Warning: 	Moved Permanently for https://osint42.org/posts/245/
+12:57:16	Warning: 	File has moved from https://osint42.org/posts/245/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-245
+12:57:17	Warning: 	Moved Permanently for https://osint42.org/posts/247/
+12:57:17	Warning: 	File has moved from https://osint42.org/posts/247/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-247
+12:57:18	Warning: 	Moved Permanently for https://osint42.org/posts/248/
+12:57:18	Warning: 	File has moved from https://osint42.org/posts/248/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-248
+12:57:19	Warning: 	Moved Permanently for https://osint42.org/posts/249/
+12:57:19	Warning: 	File has moved from https://osint42.org/posts/249/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-249
+12:57:21	Warning: 	Moved Permanently for https://osint42.org/posts/250/
+12:57:21	Warning: 	File has moved from https://osint42.org/posts/250/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-250
+12:57:22	Warning: 	Moved Permanently for https://osint42.org/posts/251/
+12:57:22	Warning: 	File has moved from https://osint42.org/posts/251/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-251
+12:57:23	Warning: 	Moved Permanently for https://osint42.org/posts/253/
+12:57:23	Warning: 	File has moved from https://osint42.org/posts/253/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-253
+12:57:24	Warning: 	Moved Permanently for https://osint42.org/posts/255/
+12:57:24	Warning: 	File has moved from https://osint42.org/posts/255/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-255
+12:57:25	Warning: 	Moved Permanently for https://osint42.org/posts/440/
+12:57:25	Warning: 	File has moved from https://osint42.org/posts/440/ to https://osint42.org/threads/besplatnaya-aktivatsiya-windows-11-windows-11-free.120/#post-440
+12:57:41	Warning: 	Moved Permanently for https://osint42.org/posts/421/
+12:57:41	Warning: 	File has moved from https://osint42.org/posts/421/ to https://osint42.org/threads/moshennichestvo-s-chuzhim-apple-id-na-vashem-ustroistve-kak-rabotayet-skhema-i-kak-zashchitit-sya.159/#post-421
+12:57:41	Warning: 	Moved Permanently for https://osint42.org/posts/425/
+12:57:41	Warning: 	File has moved from https://osint42.org/posts/425/ to https://osint42.org/threads/moshennichestvo-s-chuzhim-apple-id-na-vashem-ustroistve-kak-rabotayet-skhema-i-kak-zashchitit-sya.159/#post-425
+12:57:44	Warning: 	Moved Permanently for https://osint42.org/posts/432/
+12:57:44	Warning: 	File has moved from https://osint42.org/posts/432/ to https://osint42.org/threads/mintsifry-i-chto-delat.169/#post-432
+12:57:46	Warning: 	Moved Permanently for https://osint42.org/posts/433/
+12:57:46	Warning: 	File has moved from https://osint42.org/posts/433/ to https://osint42.org/threads/mintsifry-i-chto-delat.169/#post-433
+12:57:47	Warning: 	Moved Permanently for https://osint42.org/posts/434/
+12:57:47	Warning: 	File has moved from https://osint42.org/posts/434/ to https://osint42.org/threads/mintsifry-i-chto-delat.169/#post-434
+12:57:48	Warning: 	Moved Permanently for https://osint42.org/posts/435/
+12:57:48	Warning: 	File has moved from https://osint42.org/posts/435/ to https://osint42.org/threads/mintsifry-i-chto-delat.169/#post-435
+12:57:52	Error: 	"Not Found" (404) at link https://osint42.org/media/ipcambruter-png.22/IPCamBruter.png (from https://osint42.org/media/ipcambruter-png.22/)
+12:57:53	Warning: 	Moved Permanently for https://osint42.org/media/comments/5/
+12:57:53	Warning: 	File has moved from https://osint42.org/media/comments/5/ to https://osint42.org/media/ipcambruter-png.22/#xfmg-comment-5
+12:57:53	Warning: 	Moved Permanently for https://osint42.org/media/comments/6/
+12:57:53	Warning: 	File has moved from https://osint42.org/media/comments/6/ to https://osint42.org/media/ipcambruter-png.22/#xfmg-comment-6
+12:57:53	Warning: 	Moved Permanently for https://osint42.org/media/comments/7/
+12:57:53	Warning: 	File has moved from https://osint42.org/media/comments/7/ to https://osint42.org/media/ipcambruter-png.22/#xfmg-comment-7
+12:57:53	Warning: 	Moved Permanently for https://osint42.org/media/comments/4/
+12:57:53	Warning: 	File has moved from https://osint42.org/media/comments/4/ to https://osint42.org/media/video-mp4.21/#xfmg-comment-4
+12:57:53	Error: 	"Not Found" (404) at link https://osint42.org/media/danabot-jpg.20/Danabot.jpg (from https://osint42.org/media/danabot-jpg.20/)
+12:57:53	Error: 	"Not Found" (404) at link https://osint42.org/media/xdspy-jpg.18/XDSpy.jpg (from https://osint42.org/media/xdspy-jpg.18/)
+12:57:53	Error: 	"Not Found" (404) at link https://osint42.org/media/payloads-jpg.17/Payloads.jpg (from https://osint42.org/media/payloads-jpg.17/)
+12:57:53	Warning: 	Moved Permanently for https://osint42.org/media/comments/3/
+12:57:53	Warning: 	File has moved from https://osint42.org/media/comments/3/ to https://osint42.org/media/ty-tochno-ne-znayesh-eti-50-khakerskikh-komand-kali-linux-kak-stat-khakerom-v-2025.12/#xfmg-comment-3
+12:57:53	Warning: 	Moved Permanently for https://osint42.org/articles/comments/23/
+12:57:53	Warning: 	File has moved from https://osint42.org/articles/comments/23/ to https://osint42.org/articles/kak-zashchitit-nginx-i-cms-ot-skriptov-i-ddos-ogranicheniye-zaprosov-i-soyedinenii-po-ip.31/#ams-comment-23
+12:58:48	Warning: 	Moved Permanently for https://osint42.org/posts/219/
+12:58:48	Warning: 	File has moved from https://osint42.org/posts/219/ to https://osint42.org/threads/ne-vklyuchaite-kameru-pri-razgovore-s-moshennikami.110/#post-219
+12:58:51	Warning: 	Moved Permanently for https://osint42.org/ams/opisaniye-proyekta-osint42-org.1/
+12:58:51	Warning: 	File has moved from https://osint42.org/ams/opisaniye-proyekta-osint42-org.1/ to https://osint42.org/articles/opisaniye-proyekta-osint42-org.1/
+12:58:51	Warning: 	Moved Permanently for https://osint42.org/posts/39/
+12:58:51	Warning: 	File has moved from https://osint42.org/posts/39/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-39
+12:58:54	Warning: 	Moved Permanently for https://osint42.org/posts/40/
+12:58:54	Warning: 	File has moved from https://osint42.org/posts/40/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-40
+12:58:58	Warning: 	Moved Permanently for https://osint42.org/posts/42/
+12:58:58	Warning: 	File has moved from https://osint42.org/posts/42/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-42
+12:59:01	Warning: 	Moved Permanently for https://osint42.org/posts/43/
+12:59:01	Warning: 	File has moved from https://osint42.org/posts/43/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-43
+12:59:04	Warning: 	Moved Permanently for https://osint42.org/posts/46/
+12:59:04	Warning: 	File has moved from https://osint42.org/posts/46/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-46
+12:59:07	Warning: 	Moved Permanently for https://osint42.org/posts/153/
+12:59:07	Warning: 	File has moved from https://osint42.org/posts/153/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-153
+12:59:10	Warning: 	Moved Permanently for https://osint42.org/posts/154/
+12:59:10	Warning: 	File has moved from https://osint42.org/posts/154/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-154
+12:59:14	Warning: 	Moved Permanently for https://osint42.org/posts/155/
+12:59:14	Warning: 	File has moved from https://osint42.org/posts/155/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-155
+12:59:17	Warning: 	Moved Permanently for https://osint42.org/posts/156/
+12:59:17	Warning: 	File has moved from https://osint42.org/posts/156/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-156
+12:59:20	Warning: 	Moved Permanently for https://osint42.org/posts/157/
+12:59:20	Warning: 	File has moved from https://osint42.org/posts/157/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-157
+12:59:23	Warning: 	Moved Permanently for https://osint42.org/posts/158/
+12:59:23	Warning: 	File has moved from https://osint42.org/posts/158/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-158
+12:59:27	Warning: 	Moved Permanently for https://osint42.org/posts/159/
+12:59:27	Warning: 	File has moved from https://osint42.org/posts/159/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-159
+12:59:30	Error: 	"Forbidden" (403) at link https://osint42.org/forums/vsyakoye-skryto-ot-gostei.25/ (from https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/)
+12:59:30	Warning: 	Moved Permanently for https://osint42.org/posts/161/
+12:59:30	Warning: 	File has moved from https://osint42.org/posts/161/ to https://osint42.org/threads/pozhelaniya-i-otzyvy-o-osint42-org.6/#post-161
+12:59:33	Warning: 	Moved Permanently for https://osint42.org/posts/64/
+12:59:33	Warning: 	File has moved from https://osint42.org/posts/64/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-64
+12:59:35	Warning: 	Moved Permanently for https://osint42.org/posts/90/
+12:59:35	Warning: 	File has moved from https://osint42.org/posts/90/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-90
+12:59:38	Warning: 	Moved Permanently for https://osint42.org/posts/96/
+12:59:38	Warning: 	File has moved from https://osint42.org/posts/96/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-96
+12:59:40	Warning: 	Moved Permanently for https://osint42.org/posts/97/
+12:59:40	Warning: 	File has moved from https://osint42.org/posts/97/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-97
+12:59:43	Warning: 	Moved Permanently for https://osint42.org/posts/99/
+12:59:43	Warning: 	File has moved from https://osint42.org/posts/99/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-99
+12:59:46	Warning: 	Moved Permanently for https://osint42.org/posts/103/
+12:59:46	Warning: 	File has moved from https://osint42.org/posts/103/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-103
+12:59:48	Warning: 	Moved Permanently for https://osint42.org/posts/104/
+12:59:48	Warning: 	File has moved from https://osint42.org/posts/104/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-104
+12:59:51	Warning: 	Moved Permanently for https://osint42.org/posts/108/
+12:59:51	Warning: 	File has moved from https://osint42.org/posts/108/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-108
+12:59:54	Warning: 	Moved Permanently for https://osint42.org/posts/109/
+12:59:54	Warning: 	File has moved from https://osint42.org/posts/109/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-109
+12:59:56	Warning: 	Moved Permanently for https://osint42.org/posts/141/
+12:59:56	Warning: 	File has moved from https://osint42.org/posts/141/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-141
+12:59:59	Warning: 	Moved Permanently for https://osint42.org/posts/142/
+12:59:59	Warning: 	File has moved from https://osint42.org/posts/142/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-142
+13:00:02	Warning: 	Moved Permanently for https://osint42.org/posts/143/
+13:00:02	Warning: 	File has moved from https://osint42.org/posts/143/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-143
+13:00:05	Warning: 	Moved Permanently for https://osint42.org/posts/144/
+13:00:05	Warning: 	File has moved from https://osint42.org/posts/144/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-144
+13:00:08	Warning: 	Moved Permanently for https://osint42.org/posts/145/
+13:00:08	Warning: 	File has moved from https://osint42.org/posts/145/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-145
+13:00:10	Warning: 	Moved Permanently for https://osint42.org/posts/146/
+13:00:10	Warning: 	File has moved from https://osint42.org/posts/146/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-146
+13:00:13	Warning: 	Moved Permanently for https://osint42.org/posts/147/
+13:00:13	Warning: 	File has moved from https://osint42.org/posts/147/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-147
+13:00:16	Warning: 	Moved Permanently for https://osint42.org/posts/148/
+13:00:16	Warning: 	File has moved from https://osint42.org/posts/148/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-148
+13:00:18	Warning: 	Moved Permanently for https://osint42.org/posts/149/
+13:00:18	Warning: 	File has moved from https://osint42.org/posts/149/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-149
+13:00:21	Warning: 	Moved Permanently for https://osint42.org/posts/150/
+13:00:21	Warning: 	File has moved from https://osint42.org/posts/150/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-150
+13:00:24	Warning: 	Moved Permanently for https://osint42.org/posts/166/
+13:00:24	Warning: 	File has moved from https://osint42.org/posts/166/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-166
+13:00:27	Warning: 	Moved Permanently for https://osint42.org/posts/210/
+13:00:27	Warning: 	File has moved from https://osint42.org/posts/210/ to https://osint42.org/threads/kak-vy-nas-nashli.21/#post-210
+13:00:27	Warning: 	Moved Permanently for https://osint42.org/posts/263/
+13:00:27	Warning: 	File has moved from https://osint42.org/posts/263/ to https://osint42.org/threads/sms-zashchita-ne-bezopasna-vashi-den-gi-pod-ugrozoi.122/#post-263
+13:00:28	Warning: 	Moved Permanently for https://osint42.org/posts/265/
+13:00:28	Warning: 	File has moved from https://osint42.org/posts/265/ to https://osint42.org/threads/sms-zashchita-ne-bezopasna-vashi-den-gi-pod-ugrozoi.122/#post-265
+13:00:42	Warning: 	Moved Permanently for https://osint42.org/posts/272/
+13:00:42	Warning: 	File has moved from https://osint42.org/posts/272/ to https://osint42.org/threads/situatsiya-s-xss-is-vzglyad-ot-sbu.116/#post-272
+13:00:43	Warning: 	Moved Permanently for https://osint42.org/posts/224/
+13:00:43	Warning: 	File has moved from https://osint42.org/posts/224/ to https://osint42.org/threads/xss-is-vse-ili-vernut-sya.114/#post-224
+13:00:45	Warning: 	Moved Permanently for https://osint42.org/posts/227/
+13:00:45	Warning: 	File has moved from https://osint42.org/posts/227/ to https://osint42.org/threads/xss-is-vse-ili-vernut-sya.114/#post-227
+13:00:46	Warning: 	Moved Permanently for https://osint42.org/posts/228/
+13:00:46	Warning: 	File has moved from https://osint42.org/posts/228/ to https://osint42.org/threads/xss-is-vse-ili-vernut-sya.114/#post-228
+13:00:48	Warning: 	Moved Permanently for https://osint42.org/posts/240/
+13:00:48	Warning: 	File has moved from https://osint42.org/posts/240/ to https://osint42.org/threads/xss-is-vse-ili-vernut-sya.114/#post-240
+13:00:49	Warning: 	Moved Permanently for https://osint42.org/posts/113/
+13:00:49	Warning: 	File has moved from https://osint42.org/posts/113/ to https://osint42.org/threads/cloudflare-zablokirovali.65/#post-113
+13:00:49	Warning: 	Moved Permanently for https://osint42.org/ams/kak-zashchitit-nginx-i-cms-ot-skriptov-i-ddos-ogranicheniye-zaprosov-i-soyedinenii-po-ip.31/
+13:00:49	Warning: 	File has moved from https://osint42.org/ams/kak-zashchitit-nginx-i-cms-ot-skriptov-i-ddos-ogranicheniye-zaprosov-i-soyedinenii-po-ip.31/ to https://osint42.org/articles/kak-zashchitit-nginx-i-cms-ot-skriptov-i-ddos-ogranicheniye-zaprosov-i-soyedinenii-po-ip.31/
+13:00:50	Warning: 	Moved Permanently for https://osint42.org/posts/472/
+13:00:50	Warning: 	File has moved from https://osint42.org/posts/472/ to https://osint42.org/threads/openai-chatgpt-novyye-funktsii-bezopasnosti.177/#post-472
+13:00:51	Warning: 	Moved Permanently for https://osint42.org/posts/385/
+13:00:51	Warning: 	File has moved from https://osint42.org/posts/385/ to https://osint42.org/threads/google-google-v-sgovore-google-poimali-za-ruku.144/#post-385
+13:00:52	Warning: 	Moved Permanently for https://osint42.org/posts/386/
+13:00:52	Warning: 	File has moved from https://osint42.org/posts/386/ to https://osint42.org/threads/google-google-v-sgovore-google-poimali-za-ruku.144/#post-386
+13:00:53	Warning: 	Moved Permanently for https://osint42.org/posts/384/
+13:00:53	Warning: 	File has moved from https://osint42.org/posts/384/ to https://osint42.org/threads/pochemu-zablokirovali-telegram-i-whatsapp-stala-izvestna-istinnaya-prichina-blokirovki-whatsapp-i-telegram.145/#post-384
+13:00:54	Warning: 	Moved Permanently for https://osint42.org/posts/375/
+13:00:54	Warning: 	File has moved from https://osint42.org/posts/375/ to https://osint42.org/threads/toyota-gotovit-sya-tokenizirovat-avtomobili-dlya-ikh-prodazhi-v-blokcheine.141/#post-375
+13:00:56	Warning: 	Moved Permanently for https://osint42.org/posts/177/
+13:00:56	Warning: 	File has moved from https://osint42.org/posts/177/ to https://osint42.org/threads/trafik-cloudflare-v-rossii-upal-na-30-v-rkn-zayavili-chto-ne-znayut-pochemu.87/#post-177
+13:00:58	Warning: 	Moved Permanently for https://osint42.org/posts/178/
+13:00:58	Warning: 	File has moved from https://osint42.org/posts/178/ to https://osint42.org/threads/trafik-cloudflare-v-rossii-upal-na-30-v-rkn-zayavili-chto-ne-znayut-pochemu.87/#post-178
+13:00:59	Warning: 	Moved Permanently for https://osint42.org/posts/179/
+13:00:59	Warning: 	File has moved from https://osint42.org/posts/179/ to https://osint42.org/threads/trafik-cloudflare-v-rossii-upal-na-30-v-rkn-zayavili-chto-ne-znayut-pochemu.87/#post-179
+13:01:01	Warning: 	Moved Permanently for https://osint42.org/posts/447/
+13:01:01	Warning: 	File has moved from https://osint42.org/posts/447/ to https://osint42.org/threads/chto-takoye-osint-vvedeniye-v-razvedku-iz-otkrytykh-istochnikov.24/#post-447
+13:01:01	Warning: 	Moved Permanently for https://osint42.org/posts/311/
+13:01:01	Warning: 	File has moved from https://osint42.org/posts/311/ to https://osint42.org/threads/parsing-telegi.58/#post-311
+13:01:01	Warning: 	Moved Permanently for https://osint42.org/posts/328/
+13:01:01	Warning: 	File has moved from https://osint42.org/posts/328/ to https://osint42.org/threads/parsing-telegi.58/#post-328
+13:01:02	Warning: 	Moved Permanently for https://osint42.org/posts/94/
+13:01:02	Warning: 	File has moved from https://osint42.org/posts/94/ to https://osint42.org/threads/kak-probit-pol-zovatelya-telegram.57/#post-94
+13:01:04	Warning: 	Moved Permanently for https://osint42.org/posts/308/
+13:01:04	Warning: 	File has moved from https://osint42.org/posts/308/ to https://osint42.org/threads/kak-probit-pol-zovatelya-telegram.57/#post-308
+13:01:05	Warning: 	Moved Permanently for https://osint42.org/posts/310/
+13:01:05	Warning: 	File has moved from https://osint42.org/posts/310/ to https://osint42.org/threads/kak-probit-pol-zovatelya-telegram.57/#post-310
+13:01:07	Warning: 	Moved Permanently for https://osint42.org/posts/314/
+13:01:07	Warning: 	File has moved from https://osint42.org/posts/314/ to https://osint42.org/threads/kak-probit-pol-zovatelya-telegram.57/#post-314
+13:01:08	Warning: 	Moved Permanently for https://osint42.org/posts/320/
+13:01:08	Warning: 	File has moved from https://osint42.org/posts/320/ to https://osint42.org/threads/kak-probit-pol-zovatelya-telegram.57/#post-320
+13:01:08	Warning: 	Moved Permanently for https://osint42.org/attachments/452/
+13:01:08	Warning: 	File has moved from https://osint42.org/attachments/452/ to https://osint42.org/attachments/1748184593724-png.452/
+13:01:09	Warning: 	Moved Permanently for https://osint42.org/posts/203/
+13:01:09	Warning: 	File has moved from https://osint42.org/posts/203/ to https://osint42.org/threads/kak-nachat-svoye-rassledovaniye-chek-list-novichka.53/#post-203
+13:01:10	Warning: 	Moved Permanently for https://osint42.org/posts/202/
+13:01:10	Warning: 	File has moved from https://osint42.org/posts/202/ to https://osint42.org/threads/gugl-dorki-spisok-operatorov.96/#post-202
+13:01:11	Warning: 	Moved Permanently for https://osint42.org/posts/189/
+13:01:11	Warning: 	File has moved from https://osint42.org/posts/189/ to https://osint42.org/threads/registratsiya-v-telegram-bez-sim-karty.88/#post-189
+13:01:12	Warning: 	Moved Permanently for https://osint42.org/posts/190/
+13:01:12	Warning: 	File has moved from https://osint42.org/posts/190/ to https://osint42.org/threads/registratsiya-v-telegram-bez-sim-karty.88/#post-190
+13:01:14	Warning: 	Moved Permanently for https://osint42.org/posts/192/
+13:01:14	Warning: 	File has moved from https://osint42.org/posts/192/ to https://osint42.org/threads/registratsiya-v-telegram-bez-sim-karty.88/#post-192
+13:01:15	Warning: 	Moved Permanently for https://osint42.org/posts/333/
+13:01:15	Warning: 	File has moved from https://osint42.org/posts/333/ to https://osint42.org/threads/kto-i-chem-pol-zuyet-sya-dlya-proverki-kriptovannykh-failov.133/#post-333
+13:01:16	Warning: 	Moved Permanently for https://osint42.org/posts/334/
+13:01:16	Warning: 	File has moved from https://osint42.org/posts/334/ to https://osint42.org/threads/kto-i-chem-pol-zuyet-sya-dlya-proverki-kriptovannykh-failov.133/#post-334
+13:01:17	Warning: 	Moved Permanently for https://osint42.org/posts/207/
+13:01:17	Warning: 	File has moved from https://osint42.org/posts/207/ to https://osint42.org/threads/delayem-http-proksi-dlya-svoyego-saita.100/#post-207
+13:01:17	Warning: 	Moved Permanently for https://osint42.org/posts/195/
+13:01:17	Warning: 	File has moved from https://osint42.org/posts/195/ to https://osint42.org/threads/clamav-besplatnyi-antivirus-dlya-linux.97/#post-195
+13:01:18	Warning: 	Moved Permanently for https://osint42.org/posts/296/
+13:01:18	Warning: 	File has moved from https://osint42.org/posts/296/ to https://osint42.org/threads/darkcodetechnology-ubei-sebya-ob-stenu-ili-khitryi-razvod.125/#post-296
+13:01:18	Warning: 	Moved Permanently for https://osint42.org/posts/297/
+13:01:18	Warning: 	File has moved from https://osint42.org/posts/297/ to https://osint42.org/threads/darkcodetechnology-ubei-sebya-ob-stenu-ili-khitryi-razvod.125/#post-297
+13:01:18	Warning: 	Moved Permanently for https://osint42.org/posts/441/
+13:01:18	Warning: 	File has moved from https://osint42.org/posts/441/ to https://osint42.org/threads/darkcodetechnology-ubei-sebya-ob-stenu-ili-khitryi-razvod.125/#post-441
+13:01:19	Warning: 	Moved Permanently for https://osint42.org/posts/443/
+13:01:19	Warning: 	File has moved from https://osint42.org/posts/443/ to https://osint42.org/threads/darkcodetechnology-ubei-sebya-ob-stenu-ili-khitryi-razvod.125/#post-443
+13:01:20	Warning: 	Moved Permanently for https://osint42.org/posts/366/
+13:01:20	Warning: 	File has moved from https://osint42.org/posts/366/ to https://osint42.org/threads/poluchayet-sya-my-vse-pod-kolpakom.138/#post-366
+13:01:22	Warning: 	Moved Permanently for https://osint42.org/posts/368/
+13:01:22	Warning: 	File has moved from https://osint42.org/posts/368/ to https://osint42.org/threads/poluchayet-sya-my-vse-pod-kolpakom.138/#post-368
+13:01:25	Warning: 	Moved Permanently for https://osint42.org/posts/304/
+13:01:25	Warning: 	File has moved from https://osint42.org/posts/304/ to https://osint42.org/threads/damagelib-protiv-sbu-kto-pobedit.123/#post-304
+13:01:28	Warning: 	Moved Permanently for https://osint42.org/posts/305/
+13:01:28	Warning: 	File has moved from https://osint42.org/posts/305/ to https://osint42.org/threads/damagelib-protiv-sbu-kto-pobedit.123/#post-305
+13:01:31	Warning: 	Moved Permanently for https://osint42.org/posts/312/
+13:01:31	Warning: 	File has moved from https://osint42.org/posts/312/ to https://osint42.org/threads/damagelib-protiv-sbu-kto-pobedit.123/#post-312
+13:01:34	Warning: 	Moved Permanently for https://osint42.org/posts/313/
+13:01:34	Warning: 	File has moved from https://osint42.org/posts/313/ to https://osint42.org/threads/damagelib-protiv-sbu-kto-pobedit.123/#post-313
+13:01:35	Warning: 	Moved Permanently for https://osint42.org/posts/294/
+13:01:35	Warning: 	File has moved from https://osint42.org/posts/294/ to https://osint42.org/threads/khakery-importozameshchayut-sya-ili-illyuziya-bezopasnosti.124/#post-294
+13:01:37	Warning: 	Moved Permanently for https://osint42.org/posts/98/
+13:01:37	Warning: 	File has moved from https://osint42.org/posts/98/ to https://osint42.org/threads/0-day-poc-cve-2025-29966-29967-zero-click-rdp-client-rce-windows-11-10-server-2022.52/#post-98
+13:01:39	Warning: 	Moved Permanently for https://osint42.org/posts/100/
+13:01:39	Warning: 	File has moved from https://osint42.org/posts/100/ to https://osint42.org/threads/0-day-poc-cve-2025-29966-29967-zero-click-rdp-client-rce-windows-11-10-server-2022.52/#post-100
+13:01:40	Warning: 	Moved Permanently for https://osint42.org/posts/101/
+13:01:40	Warning: 	File has moved from https://osint42.org/posts/101/ to https://osint42.org/threads/0-day-poc-cve-2025-29966-29967-zero-click-rdp-client-rce-windows-11-10-server-2022.52/#post-101
+13:01:42	Warning: 	Moved Permanently for https://osint42.org/posts/492/
+13:01:42	Warning: 	File has moved from https://osint42.org/posts/492/ to https://osint42.org/threads/0-day-poc-cve-2025-29966-29967-zero-click-rdp-client-rce-windows-11-10-server-2022.52/#post-492
+13:01:43	Warning: 	Moved Permanently for https://osint42.org/posts/451/
+13:01:43	Warning: 	File has moved from https://osint42.org/posts/451/ to https://osint42.org/threads/funpay-avto-arenda-steam.175/#post-451
+13:01:44	Warning: 	Moved Permanently for https://osint42.org/posts/452/
+13:01:44	Warning: 	File has moved from https://osint42.org/posts/452/ to https://osint42.org/threads/funpay-avto-arenda-steam.175/#post-452
+13:01:45	Warning: 	Moved Permanently for https://osint42.org/posts/438/
+13:01:45	Warning: 	File has moved from https://osint42.org/posts/438/ to https://osint42.org/threads/izucheniye-antifrod-sistem.171/#post-438
+13:01:46	Error: 	"Not Found" (404) at link https://osint42.org/proxy.php?image=https%3A%2F%2Fjournalofbigdata.springeropen.com%2Fstatic%2Fimg%2Ffavicons%2Fdarwin%2Fandroid-chrome-192x192.png&hash=0f4e64504cf9f8153e27a669928d83d7&return_error=1 (from https://osint42.org/threads/izucheniye-antifrod-sistem.171/)
+13:01:46	Warning: 	Moved Permanently for https://osint42.org/posts/439/
+13:01:46	Warning: 	File has moved from https://osint42.org/posts/439/ to https://osint42.org/threads/izucheniye-antifrod-sistem.171/#post-439
+13:01:47	Warning: 	Moved Permanently for https://osint42.org/posts/381/
+13:01:47	Warning: 	File has moved from https://osint42.org/posts/381/ to https://osint42.org/threads/tut-budet-garant-servis-avto-garant.143/#post-381
+13:01:48	Warning: 	Moved Permanently for https://osint42.org/posts/105/
+13:01:48	Warning: 	File has moved from https://osint42.org/posts/105/ to https://osint42.org/threads/obkhod-sanktsii.55/#post-105
+13:01:49	Warning: 	Moved Permanently for https://osint42.org/posts/346/
+13:01:49	Warning: 	File has moved from https://osint42.org/posts/346/ to https://osint42.org/threads/obkhod-sanktsii.55/#post-346
+13:01:51	Warning: 	Moved Permanently for https://osint42.org/posts/319/
+13:01:51	Warning: 	File has moved from https://osint42.org/posts/319/ to https://osint42.org/threads/pochty-v-tor-i-za-yego-predelami.130/#post-319
+13:01:51	Warning: 	Moved Permanently for https://osint42.org/posts/254/
+13:01:51	Warning: 	File has moved from https://osint42.org/posts/254/ to https://osint42.org/threads/kto-kakimi-anonimnymi-servisami-pol-zuyet-sya-katalogi-jabber-matrix-i-t-d.117/#post-254
+13:01:51	Warning: 	Moved Permanently for https://osint42.org/posts/330/
+13:01:51	Warning: 	File has moved from https://osint42.org/posts/330/ to https://osint42.org/threads/pro-admina-arestovannogo-xss-is.131/#post-330
+13:01:51	Warning: 	Moved Permanently for https://osint42.org/articles/comments/17/
+13:01:51	Warning: 	File has moved from https://osint42.org/articles/comments/17/ to https://osint42.org/articles/kak-zashchitit-resurs-ot-ddos-pri-pomoshchi-cloudflare.5/#ams-comment-17
+13:01:51	Warning: 	Moved Permanently for https://osint42.org/articles/comments/18/
+13:01:51	Warning: 	File has moved from https://osint42.org/articles/comments/18/ to https://osint42.org/articles/kak-zashchitit-resurs-ot-ddos-pri-pomoshchi-cloudflare.5/#ams-comment-18
+13:01:53	Warning: 	Moved Permanently for https://osint42.org/posts/417/
+13:01:53	Warning: 	File has moved from https://osint42.org/posts/417/ to https://osint42.org/threads/kak-izolirovat-togo-samogo-v-pesochnitse-androida-ili-apple.161/#post-417
+13:01:55	Warning: 	Moved Permanently for https://osint42.org/attachments/876/
+13:01:55	Warning: 	File has moved from https://osint42.org/attachments/876/ to https://osint42.org/attachments/1756229809170-png.876/
+13:01:55	Warning: 	Moved Permanently for https://osint42.org/posts/418/
+13:01:55	Warning: 	File has moved from https://osint42.org/posts/418/ to https://osint42.org/threads/kak-izolirovat-togo-samogo-v-pesochnitse-androida-ili-apple.161/#post-418
+13:01:57	Warning: 	Moved Permanently for https://osint42.org/posts/419/
+13:01:57	Warning: 	File has moved from https://osint42.org/posts/419/ to https://osint42.org/threads/kak-izolirovat-togo-samogo-v-pesochnitse-androida-ili-apple.161/#post-419
+13:01:59	Warning: 	Moved Permanently for https://osint42.org/posts/426/
+13:01:59	Warning: 	File has moved from https://osint42.org/posts/426/ to https://osint42.org/threads/kak-izolirovat-togo-samogo-v-pesochnitse-androida-ili-apple.161/#post-426
+13:01:59	Warning: 	Moved Permanently for https://osint42.org/posts/152/
+13:01:59	Warning: 	File has moved from https://osint42.org/posts/152/ to https://osint42.org/threads/publicdomainregistry-i-regway-avtomaticheski-blokiruyut-domeny.50/#post-152
+13:01:59	Warning: 	Moved Permanently for https://osint42.org/posts/165/
+13:01:59	Warning: 	File has moved from https://osint42.org/posts/165/ to https://osint42.org/threads/ipcambruter-testirovaniye-bezopasnosti-veb-kamer.76/#post-165
+13:02:01	Warning: 	Moved Permanently for https://osint42.org/posts/408/
+13:02:01	Warning: 	File has moved from https://osint42.org/posts/408/ to https://osint42.org/threads/vera-i-konteiner-chast-ya-ustal-kopirovat-trebovaniya-bezopasnosti-i-mery-predostorozhnosti-kasayushchiyesya-skrytykh-tomov.155/#post-408
+13:02:02	Warning: 	Moved Permanently for https://osint42.org/posts/413/
+13:02:02	Warning: 	File has moved from https://osint42.org/posts/413/ to https://osint42.org/threads/vera-i-konteiner-chast-ya-ustal-kopirovat-trebovaniya-bezopasnosti-i-mery-predostorozhnosti-kasayushchiyesya-skrytykh-tomov.155/#post-413
+13:02:03	Warning: 	Moved Permanently for https://osint42.org/posts/400/
+13:02:03	Warning: 	File has moved from https://osint42.org/posts/400/ to https://osint42.org/threads/vera-i-konteiner-chast-4-chto-govorit-i-delat-kogda-pressuyut.152/#post-400
+13:02:04	Warning: 	Moved Permanently for https://osint42.org/posts/407/
+13:02:04	Warning: 	File has moved from https://osint42.org/posts/407/ to https://osint42.org/threads/vera-i-konteiner-chast-4-chto-govorit-i-delat-kogda-pressuyut.152/#post-407
+13:02:05	Warning: 	Moved Permanently for https://osint42.org/posts/406/
+13:02:05	Warning: 	File has moved from https://osint42.org/posts/406/ to https://osint42.org/threads/vera-i-konteiner-chast-uzhe-sbilsya-so-schetu-ne-lenimsya-delat-rezervnoye-kopirovaniye-berezhem-svoi-nervy-pri-ispol-zovanii-kaskadnogo-shifrovaniya.157/#post-406
+13:02:09	Warning: 	Moved Permanently for https://osint42.org/posts/340/
+13:02:09	Warning: 	File has moved from https://osint42.org/posts/340/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-340
+13:02:13	Warning: 	Moved Permanently for https://osint42.org/posts/342/
+13:02:13	Warning: 	File has moved from https://osint42.org/posts/342/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-342
+13:02:17	Warning: 	Moved Permanently for https://osint42.org/posts/344/
+13:02:17	Warning: 	File has moved from https://osint42.org/posts/344/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-344
+13:02:21	Warning: 	Moved Permanently for https://osint42.org/posts/353/
+13:02:21	Warning: 	File has moved from https://osint42.org/posts/353/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-353
+13:02:25	Warning: 	Moved Permanently for https://osint42.org/posts/354/
+13:02:25	Warning: 	File has moved from https://osint42.org/posts/354/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-354
+13:02:29	Warning: 	Moved Permanently for https://osint42.org/posts/355/
+13:02:29	Warning: 	File has moved from https://osint42.org/posts/355/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-355
+13:02:33	Warning: 	Moved Permanently for https://osint42.org/posts/356/
+13:02:33	Warning: 	File has moved from https://osint42.org/posts/356/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-356
+13:02:37	Warning: 	Moved Permanently for https://osint42.org/posts/357/
+13:02:37	Warning: 	File has moved from https://osint42.org/posts/357/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-357
+13:02:42	Warning: 	Moved Permanently for https://osint42.org/posts/358/
+13:02:42	Warning: 	File has moved from https://osint42.org/posts/358/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-358
+13:02:46	Warning: 	Moved Permanently for https://osint42.org/posts/359/
+13:02:46	Warning: 	File has moved from https://osint42.org/posts/359/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-359
+13:02:50	Warning: 	Moved Permanently for https://osint42.org/posts/360/
+13:02:50	Warning: 	File has moved from https://osint42.org/posts/360/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-360
+13:02:54	Warning: 	Moved Permanently for https://osint42.org/posts/361/
+13:02:54	Warning: 	File has moved from https://osint42.org/posts/361/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-361
+13:02:58	Warning: 	Moved Permanently for https://osint42.org/posts/362/
+13:02:58	Warning: 	File has moved from https://osint42.org/posts/362/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-362
+13:03:02	Warning: 	Moved Permanently for https://osint42.org/posts/364/
+13:03:02	Warning: 	File has moved from https://osint42.org/posts/364/ to https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/#post-364
+13:03:03	Warning: 	Moved Permanently for https://osint42.org/posts/215/
+13:03:03	Warning: 	File has moved from https://osint42.org/posts/215/ to https://osint42.org/threads/dostavka-malvari-tekhnika-clickfix.108/#post-215
+13:03:03	Warning: 	Moved Permanently for https://osint42.org/threads/povysheniye-privilegii-poisk-suid-i-cron-uyazvimostei.94/
+13:03:03	Warning: 	File has moved from https://osint42.org/threads/povysheniye-privilegii-poisk-suid-i-cron-uyazvimostei.94/ to https://osint42.org/threads/put-etichnogo-khakera-chast-6-povysheniye-privilegii-poisk-suid-i-cron-uyazvimostei.94/
+13:03:03	Warning: 	Moved Permanently for https://osint42.org/posts/172/
+13:03:03	Warning: 	File has moved from https://osint42.org/posts/172/ to https://osint42.org/threads/put-etichnogo-khakera-chast-4-prodvinutyye-ataki-i-analiz-okruzheniya.83/#post-172
+13:03:04	Warning: 	Moved Permanently for https://osint42.org/posts/167/
+13:03:04	Warning: 	File has moved from https://osint42.org/posts/167/ to https://osint42.org/threads/put-etichnogo-khakera-chast-1-vvedeniye-v-etichnyi-khaking-i-osnovy-pentesta.80/#post-167
+13:03:05	Warning: 	Moved Permanently for https://osint42.org/posts/325/
+13:03:05	Warning: 	File has moved from https://osint42.org/posts/325/ to https://osint42.org/threads/damp-rabochei-stantsii-severokoreiskoi-apt-gruppy-kimsuky.129/#post-325
+13:03:06	Warning: 	Moved Permanently for https://osint42.org/posts/326/
+13:03:06	Warning: 	File has moved from https://osint42.org/posts/326/ to https://osint42.org/threads/damp-rabochei-stantsii-severokoreiskoi-apt-gruppy-kimsuky.129/#post-326
+13:03:08	Warning: 	Moved Permanently for https://osint42.org/posts/336/
+13:03:08	Warning: 	File has moved from https://osint42.org/posts/336/ to https://osint42.org/threads/damp-rabochei-stantsii-severokoreiskoi-apt-gruppy-kimsuky.129/#post-336
+13:03:10	Warning: 	Moved Permanently for https://osint42.org/posts/199/
+13:03:10	Warning: 	File has moved from https://osint42.org/posts/199/ to https://osint42.org/threads/kak-svyazany-ddos-i-zhaloba-s-drugogo-servera-i-kak-dokazat-nevinovnost.99/#post-199
+13:03:11	Warning: 	Moved Permanently for https://osint42.org/posts/309/
+13:03:11	Warning: 	File has moved from https://osint42.org/posts/309/ to https://osint42.org/threads/kak-svyazany-ddos-i-zhaloba-s-drugogo-servera-i-kak-dokazat-nevinovnost.99/#post-309
+13:03:12	Warning: 	Moved Permanently for https://osint42.org/posts/393/
+13:03:12	Warning: 	File has moved from https://osint42.org/posts/393/ to https://osint42.org/threads/avtomaticheskaya-i-planovaya-proverka-saita-na-virustotal-s-otpravkoi-otcheta-na-pochtu-i-telegram.148/#post-393
+13:03:13	Warning: 	Moved Permanently for https://osint42.org/posts/394/
+13:03:13	Warning: 	File has moved from https://osint42.org/posts/394/ to https://osint42.org/threads/avtomaticheskaya-i-planovaya-proverka-saita-na-virustotal-s-otpravkoi-otcheta-na-pochtu-i-telegram.148/#post-394
+13:03:14	Warning: 	Moved Permanently for https://osint42.org/posts/395/
+13:03:14	Warning: 	File has moved from https://osint42.org/posts/395/ to https://osint42.org/threads/avtomaticheskaya-i-planovaya-proverka-saita-na-virustotal-s-otpravkoi-otcheta-na-pochtu-i-telegram.148/#post-395
+13:03:16	Warning: 	Moved Permanently for https://osint42.org/posts/391/
+13:03:16	Warning: 	File has moved from https://osint42.org/posts/391/ to https://osint42.org/threads/sozdayem-svoi-sait-blog-na-github.61/#post-391
+13:03:16	Warning: 	Moved Permanently for https://osint42.org/attachments/521/
+13:03:16	Warning: 	File has moved from https://osint42.org/attachments/521/ to https://osint42.org/attachments/1748790818001-png.521/
+13:03:16	Warning: 	Moved Permanently for https://osint42.org/ams/spamhaus-protiv-interneta.43/
+13:03:16	Warning: 	File has moved from https://osint42.org/ams/spamhaus-protiv-interneta.43/ to https://osint42.org/articles/spamhaus-protiv-interneta.43/
+13:03:16	Warning: 	Moved Permanently for https://osint42.org/posts/88/
+13:03:16	Warning: 	File has moved from https://osint42.org/posts/88/ to https://osint42.org/threads/otzyvy-eternityproject.54/#post-88
+13:03:17	Warning: 	Moved Permanently for https://osint42.org/posts/449/
+13:03:17	Warning: 	File has moved from https://osint42.org/posts/449/ to https://osint42.org/threads/otzyvy-eternityproject.54/#post-449
+13:03:17	Warning: 	Moved Permanently for https://osint42.org/posts/209/
+13:03:17	Warning: 	File has moved from https://osint42.org/posts/209/ to https://osint42.org/threads/v-neironnykh-setyakh-mogut-byt-fishingovyye-ssylki.104/#post-209
+13:03:19	Warning: 	Moved Permanently for https://osint42.org/posts/348/
+13:03:19	Warning: 	File has moved from https://osint42.org/posts/348/ to https://osint42.org/threads/obzor-neirosetevykh-servisov-dlya-raznykh-zadach.18/#post-348
+13:03:19	Warning: 	Moved Permanently for https://osint42.org/posts/168/
+13:03:19	Warning: 	File has moved from https://osint42.org/posts/168/ to https://osint42.org/threads/top-10-open-source-neirosetevykh-tulov-dlya-osint-i-ib.73/#post-168
+13:03:20	Warning: 	Moved Permanently for https://osint42.org/posts/67/
+13:03:20	Warning: 	File has moved from https://osint42.org/posts/67/ to https://osint42.org/threads/vovsoft-sitemap-generator-pozhiznennaya-litsenziya.29/#post-67
+13:03:21	Warning: 	Moved Permanently for https://osint42.org/posts/323/
+13:03:21	Warning: 	File has moved from https://osint42.org/posts/323/ to https://osint42.org/threads/moshennichestvo-v-messendzhere-maks.127/#post-323
+13:03:23	Warning: 	Moved Permanently for https://osint42.org/posts/331/
+13:03:23	Warning: 	File has moved from https://osint42.org/posts/331/ to https://osint42.org/threads/moshennichestvo-v-messendzhere-maks.127/#post-331
+13:03:24	Warning: 	Moved Permanently for https://osint42.org/posts/341/
+13:03:24	Warning: 	File has moved from https://osint42.org/posts/341/ to https://osint42.org/threads/sleepwalk-ataka-na-programmy-shifrovaniya.136/#post-341
+13:03:25	Warning: 	Moved Permanently for https://osint42.org/posts/343/
+13:03:25	Warning: 	File has moved from https://osint42.org/posts/343/ to https://osint42.org/threads/sleepwalk-ataka-na-programmy-shifrovaniya.136/#post-343
+
+HTTrack Website Copier/3.49-2 mirror complete in 33 minutes 7 seconds : 3324 links scanned, 3027 files written (457656501 bytes overall) [370642141 bytes received at 186533 bytes/sec], 115192357 bytes transferred using HTTP compression in 1303 files, ratio 18%, 42.8 requests per connection
+(10 errors, 572 warnings, 0 messages)

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Медиа</title>
+    <description>RSS канал для всех медиа в категории Хакерские картинки</description>
+    <pubDate>Sat, 27 Sep 2025 09:40:14 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:40:14 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/media/categories/khakerskiye-kartinki.2/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/media/categories/khakerskiye-kartinki.2/index.rss"/>
+    <item>
+      <title>IPCamBruter.png</title>
+      <pubDate>Thu, 21 Aug 2025 07:08:28 +0000</pubDate>
+      <link>https://osint42.org/media/ipcambruter-png.22/</link>
+      <guid isPermaLink="false">22</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskiye-kartinki.2/"><![CDATA[Хакерские картинки]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<img src="https://osint42.org/media/ipcambruter-png.22/full" alt="IPCamBruter.png" width="500" />
+		
+	</p>
+	
+	<p>
+		<a href="https://osint42.org/media/ipcambruter-png.22/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>3</slash:comments>
+    </item>
+    <item>
+      <title>Danabot.jpg</title>
+      <pubDate>Sat, 05 Jul 2025 01:09:49 +0000</pubDate>
+      <link>https://osint42.org/media/danabot-jpg.20/</link>
+      <guid isPermaLink="false">20</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskiye-kartinki.2/"><![CDATA[Хакерские картинки]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<img src="https://osint42.org/media/danabot-jpg.20/full" alt="Danabot.jpg" width="500" />
+		
+	</p>
+	
+	<p>
+		<a href="https://osint42.org/media/danabot-jpg.20/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Payloads.jpg</title>
+      <pubDate>Fri, 04 Jul 2025 18:08:48 +0000</pubDate>
+      <link>https://osint42.org/media/payloads-jpg.17/</link>
+      <guid isPermaLink="false">17</guid>
+      <author>invalid@example.com (HMCoba)</author>
+      <category domain="https://osint42.org/media/categories/khakerskiye-kartinki.2/"><![CDATA[Хакерские картинки]]></category>
+      <dc:creator>HMCoba</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<img src="https://osint42.org/media/payloads-jpg.17/full" alt="Payloads.jpg" width="500" />
+		
+	</p>
+	
+	<p>
+		<a href="https://osint42.org/media/payloads-jpg.17/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Osint42 - Безопасность и код</title>
+      <pubDate>Sat, 31 May 2025 13:24:57 +0000</pubDate>
+      <link>https://osint42.org/media/osint42-bezopasnost-i-kod.7/</link>
+      <guid isPermaLink="false">7</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/media/categories/khakerskiye-kartinki.2/"><![CDATA[Хакерские картинки]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<img src="https://osint42.org/media/osint42-bezopasnost-i-kod.7/full" alt="Osint42 - Безопасность и код" width="500" />
+		
+	</p>
+	
+	<p>
+		<a href="https://osint42.org/media/osint42-bezopasnost-i-kod.7/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>

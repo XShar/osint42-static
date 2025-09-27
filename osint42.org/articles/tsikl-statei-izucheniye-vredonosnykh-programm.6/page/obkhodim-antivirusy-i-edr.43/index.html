@@ -1,0 +1,3382 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="xa_ams_article_page_view"
+	data-container-key="amsCategory-2"
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965543,7c5a197f9cf3a828774c759b029eae68"
+	class="has-no-js template-xa_ams_article_page_view"
+	>
+
+<!-- Mirrored from osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/obkhodim-antivirusy-i-edr.43/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:43:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Цикл статей &quot;Изучение вредоносных программ&quot; | Обходим антивирусы и EDR | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta property="og:title" content="Обходим антивирусы и EDR | Цикл статей &quot;Изучение вредоносных программ&quot;" />
+		<meta property="twitter:title" content="Обходим антивирусы и EDR | Цикл статей &quot;Изучение вредоносных программ&quot;" />
+	
+	
+		
+		<meta name="description" content="Оригинал:SensePost |   Filter-mute operation: investigating edr internal communication
+
+Для нашей ежегодной внутренней хакерской конференции, которую мы..." />
+		<meta property="og:description" content="Оригинал:SensePost |   Filter-mute operation: investigating edr internal communication
+
+Для нашей ежегодной внутренней хакерской конференции, которую мы назвали SenseCon в 2023 году, я решил изучить взаимодействие между драйвером Windows и его..." />
+		<meta property="twitter:description" content="Оригинал:SensePost |   Filter-mute operation: investigating edr internal communication
+
+Для нашей ежегодной внутренней хакерской конференции, которую мы назвали SenseCon в 2023 году, я решил..." />
+	
+	
+		<meta property="og:type" content="article" />
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+		
+		<meta property="og:image" content="1746796764519.png" />
+		<meta property="twitter:image" content="1746796764519.png" />
+		<meta property="twitter:card" content="summary_large_image" />
+	
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../../../cssc330.css?css=public%3Aalnb_navigation.less%2Cpublic%3Aattachments.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Axa_ams.less%2Cpublic%3Axa_ams_comment.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=d1f6ff62da15119b189b40e624d365c368ecffff" />
+
+
+	
+		<script data-cfasync="false" src="../../../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965543,7c5a197f9cf3a828774c759b029eae68',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/xf\/code_block-compiled.js?_v=01eb82fa":true,"\/js\/copycode\/copycode.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:attachments.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:xa_ams.less":true,"public:xa_ams_comment.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965543,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../../../js/xf/code_block-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../../../js/copycode/copycode.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="xa_ams_article_page_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965543%2C7c5a197f9cf3a828774c759b029eae68"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965543%2C7c5a197f9cf3a828774c759b029eae68"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965543%2C7c5a197f9cf3a828774c759b029eae68"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;}">Статьи</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;,&quot;c&quot;:{&quot;categories&quot;:[2],&quot;child_categories&quot;:1}}">Эта категория</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965543,7c5a197f9cf3a828774c759b029eae68" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../../../whats-new/ams-articles/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+1"
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../../../whats-new/ams-comments/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+2"
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../../authors/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+3"
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../../../cdn-cgi/l/email-protection.html#3b52555d547b544852554f0f0915585456" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="92fbfcf4fdd2fde1fbfce6a6a0bcf1fdff">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../../categories/uroki-razrabotki-vredonosnogo-softa.2/index.html" itemprop="item">
+			<span itemprop="name">Уроки разработки вредоносного софта</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							
+							Цикл статей &quot;Изучение вредоносных программ&quot;
+						
+					</h1>
+				</div>
+				
+					<div class="p-description">
+						
+							<ul class="listInline listInline--bullet">
+								<li>
+									<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+									<span class="u-srOnly">Автор</span>
+									
+										<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+									
+								</li>
+								
+								<li>
+									<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата публикации</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+									<span class="u-srOnly">Дата публикации</span>
+
+									<a href="../../index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-05-08T13:54:22+0300" data-timestamp="1746701662" data-date="08.05.2025" data-time="13:54" data-short="8 Май" title="08.05.2025 в 13:54">08.05.2025</time></a>
+								</li>
+																
+									<li>
+										<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Последнее обновление</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+										<span class="u-concealed">Обновлено</span>
+
+										<time  class="u-dt" dir="auto" datetime="2025-05-09T16:44:30+0300" data-timestamp="1746798270" data-date="09.05.2025" data-time="16:44" data-short="9 Май" title="09.05.2025 в 16:44">09.05.2025</time>
+									</li>
+								
+																
+									<li>
+										<i class="fa--xf far fa-hourglass "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Article read time</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#hourglass"></use></svg></i>
+										<span class="u-srOnly">Article read time</span>
+
+										398 min read
+									</li>
+								
+								
+								
+									<li><span class="label label--accent">Рекомендуемые</span></li>
+								
+							</ul>
+						
+					</div>
+				
+
+				
+
+	
+		
+	
+
+			</div>
+		</div>
+	
+				</div>
+				
+
+			<div class="p-body-main p-body-main--withSidebar ">
+				
+				<div class="p-body-contentCol"></div>
+				
+					<div class="p-body-sidebarCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+<div class="block">
+	
+		<div class="block-outer">
+			<div class="block-outer-opposite">
+			
+				
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		<div class="buttonGroup">
+		
+			
+
+			
+			
+			
+			
+
+	
+
+			
+			
+				<div class="buttonGroup-buttonWrapper">
+					<button type="button" class="button button--link menuTrigger" data-xf-click="menu" aria-expanded="false" aria-haspopup="true" title="Навигация по страницам"><span class="button-text">
+						ОГЛАВЛЕНИЕ
+					</span></button>
+					<div class="menu" data-menu="menu" aria-hidden="true">
+						<div class="menu-content">
+							<h4 class="menu-header">Выберите страницу</h4>
+
+							<a href="../../index.html" class="menu-linkRow ">
+								
+									Зачем изучать разработку вредоносных программ ?
+								
+							</a>
+
+							
+								
+									<a href="../instrumenty.1/index.html" class="menu-linkRow ">
+									 Инструменты</a>
+								
+									<a href="../tak-kakoi-zhe-yazyk-vybrat.2/index.html" class="menu-linkRow ">
+									 Так какой-же язык выбрать !?</a>
+								
+									<a href="../shpargalka-po-arkhitekture-vindy.3/index.html" class="menu-linkRow ">
+									 Шпаргалка по архитектуре винды</a>
+								
+									<a href="../chto-takoye-payload-i-shell-code.5/index.html" class="menu-linkRow ">
+									 Что такое payload и shell code</a>
+								
+									<a href="../izuchayem-dinamicheskiye-biblioteki.6/index.html" class="menu-linkRow ">
+									 Изучаем динамические библиотеки</a>
+								
+									<a href="../protsessy-windows.7/index.html" class="menu-linkRow ">
+									 Процессы Windows</a>
+								
+									<a href="../vidy-detektov.8/index.html" class="menu-linkRow ">
+									 Виды детектов</a>
+								
+									<a href="../kuda-klast-nagruzku.9/index.html" class="menu-linkRow ">
+									 Куда класть нагрузку ?</a>
+								
+									<a href="../shifruyem-payload.10/index.html" class="menu-linkRow ">
+									 Шифруем Payload</a>
+								
+									<a href="../obfuskatsiya-payload.11/index.html" class="menu-linkRow ">
+									 Обфускация Payload</a>
+								
+									<a href="../lokal-nyi-zapusk-payload.12/index.html" class="menu-linkRow ">
+									 Локальный запуск Payload</a>
+								
+									<a href="../in-yektsiya-v-protsess.13/index.html" class="menu-linkRow ">
+									 Иньекция в процесс</a>
+								
+									<a href="../in-yektsiya-shell-koda-v-protsess.14/index.html" class="menu-linkRow ">
+									 Инъекция шелл-кода в процесс</a>
+								
+									<a href="../razmeshchayem-payload-udalenno-na-servere.15/index.html" class="menu-linkRow ">
+									 Размещаем Payload удаленно на сервере</a>
+								
+									<a href="../pryachem-payload-v-reyestre.16/index.html" class="menu-linkRow ">
+									 Прячем Payload в реестре</a>
+								
+									<a href="../razborka-s-tsifrovoi-podpis-yu-zver-ka.17/index.html" class="menu-linkRow ">
+									 Разборка с цифровой подписью зверька</a>
+								
+									<a href="../izuchayem-tekhniku-thread-hijacking.18/index.html" class="menu-linkRow ">
+									 Изучаем технику Thread Hijacking</a>
+								
+									<a href="../opredeleniye-pid-nuzhnogo-protsessa-ili-perechisleniya-protsessov.19/index.html" class="menu-linkRow ">
+									 Определение PID нужного процесса, или перечисления процессов</a>
+								
+									<a href="../izuchayem-tekhniku-apc-injection.20/index.html" class="menu-linkRow ">
+									 Изучаем технику APC Injection</a>
+								
+									<a href="../vyzov-koda-cherez-funktsii-obratnogo-vyzova.21/index.html" class="menu-linkRow ">
+									 Вызов кода через функции обратного вызова</a>
+								
+									<a href="../in-yektsiya-otobrazhayemoi-pamyati.22/index.html" class="menu-linkRow ">
+									 Инъекция отображаемой памяти</a>
+								
+									<a href="../izuchayem-tekhniku-stomping-injection.23/index.html" class="menu-linkRow ">
+									 Изучаем технику Stomping Injection</a>
+								
+									<a href="../kontrol-vypolneniya-poleznoi-nagruzki.24/index.html" class="menu-linkRow ">
+									 Контроль выполнения полезной нагрузки</a>
+								
+									<a href="../izuchayem-tekhniku-spoofing.25/index.html" class="menu-linkRow ">
+									 Изучаем технику Spoofing</a>
+								
+									<a href="../skrytiye-strok.26/index.html" class="menu-linkRow ">
+									 Скрытие строк</a>
+								
+									<a href="../izuchayem-kungfu-1-skrytiye-tablitsy-importa.27/index.html" class="menu-linkRow ">
+									 Изучаем кунгфу-1. Скрытие таблицы импорта</a>
+								
+									<a href="../kungfu-2-izuchayem-api-hooking.28/index.html" class="menu-linkRow ">
+									 Кунгфу-2.Изучаем API Hooking</a>
+								
+									<a href="../predel-naya-tekhnika-razborka-s-siskolami.29/index.html" class="menu-linkRow ">
+									 Предельная техника. Разборка с сисколами</a>
+								
+									<a href="../predel-naya-tekhnika-2-praktika-realizuyem-tekhniki-in-yektsii-cherez-siskoly.30/index.html" class="menu-linkRow ">
+									 Предельная техника-2. Практика. Реализуем техники инъекции через сисколы</a>
+								
+									<a href="../cherpayem-sily-v-antiotladke.31/index.html" class="menu-linkRow ">
+									 Черпаем силы в антиотладке</a>
+								
+									<a href="../obkhod-virtual-nykh-mashin.32/index.html" class="menu-linkRow ">
+									 Обход виртуальных машин</a>
+								
+									<a href="../otkryvayem-vrata-ada.33/index.html" class="menu-linkRow ">
+									 Открываем врата ада</a>
+								
+									<a href="../umen-sheniye-veroyatnosti-detekta-zver-ka.34/index.html" class="menu-linkRow ">
+									 Уменьшение вероятности детекта зверька</a>
+								
+									<a href="../obkhod-windows-defender.35/index.html" class="menu-linkRow ">
+									 Обход Windows defender</a>
+								
+									<a href="../pro-endpoint-detection-and-response-edr.36/index.html" class="menu-linkRow ">
+									 Про Endpoint Detection and Response (EDR)</a>
+								
+									<a href="../pro-detekt-v-pamyati-nichego-ne-podelayesh-i-eto-neizbezhno.37/index.html" class="menu-linkRow ">
+									 Про детект в памяти. Ничего не поделаешь и это неизбежно)</a>
+								
+									<a href="../ogromnaya-baza-iskhodnikov-sovremennykh-virusov-dlya-raznykh-platform.38/index.html" class="menu-linkRow ">
+									 Огромная база исходников современных вирусов для разных платформ</a>
+								
+									<a href="../kak-rootkit-zagruzit-ili-zhe-kak-zagruzit-draiver-bez-podpisi.39/index.html" class="menu-linkRow ">
+									 Как RootKit загрузить или же как загрузить драйвер без подписи</a>
+								
+									<a href="../obkhod-amsi.40/index.html" class="menu-linkRow ">
+									 Обход AMSI</a>
+								
+									<a href="../obkhod-amsi-pri-pomoshchi-khardvarnykh-tochek-ostanova.41/index.html" class="menu-linkRow ">
+									 Обход AMSI при помощи хардварных точек останова</a>
+								
+									<a href="../uklonyayemsya-ot-povedencheskogo-detekta-antivirusa-i-edr.42/index.html" class="menu-linkRow ">
+									 Уклоняемся от поведенческого детекта антивируса и EDR</a>
+								
+									<a href="index.html" class="menu-linkRow is-selected">
+									 Обходим антивирусы и EDR</a>
+								
+									<a href="../mutationgate-novyi-podkhod-raboty-s-siskolami.44/index.html" class="menu-linkRow ">
+									 MutationGate - Новый подход работы с сисколами</a>
+								
+									<a href="../razrabotka-nastoyashchego-virusa-v-2024-godu.45/index.html" class="menu-linkRow ">
+									 Разработка настоящего вируса в 2024 году</a>
+								
+							
+							
+								<a href="../../index9401.html?full=1" class="menu-linkRow ">Просмотреть всю статью</a>
+							
+						</div>
+					</div>
+				</div>
+			
+
+			
+
+			
+		
+		</div>
+	
+
+			
+			</div>
+		</div>
+	
+
+	
+	
+	
+	
+		
+
+	<div class="block-container">
+		<div class="block-body lbContainer js-articleBody"
+			data-xf-init="lightbox"
+			data-lb-id="article-6"
+			data-lb-caption-desc="0x42 &middot; 08.05.2025 в 13:54"
+			id="js-articleBody-6">
+
+			<div class="articleBody">
+				<article class="articleBody-main js-lbContainer">
+					
+					
+
+					<h2>Обходим антивирусы и EDR</h2>
+
+					
+
+						
+
+					<div class="bbWrapper">Оригинал:<a href="https://sensepost.com/blog/2023/filter-mute-operation-investigating-edr-internal-communication/" target="_blank" class="link link--external" rel="noopener">SensePost |   Filter-mute operation: investigating edr internal communication</a><br />
+<br />
+Для нашей ежегодной внутренней хакерской конференции, которую мы назвали SenseCon в 2023 году, я решил изучить взаимодействие между драйвером Windows и его процессом в пользовательском режиме.<br />
+<br />
+<b>Вот некоторые подробности об этом путешествии:</b><br />
+<br />
+Атакующие могут использовать примитив эксплойта чтения/записи ядра Windows, чтобы избежать взаимодействия между EDR_Driver.sys и его EDR_process.exe. В результате некоторые механизмы обнаружения EDR будут отключены, что сделает его (частично) слепым к злонамеренным полезным нагрузкам.<br />
+<br />
+<b><u>Этот блог описывает альтернативный подход, который не удаляет колбэки ядра и дает некоторые рекомендации по защите от этой атаки &quot;заглушения фильтра&quot;. </u><br />
+<br />
+Обзор ролей EDR_process.exe и EDR_Driver.sys</b><br />
+<br />
+Первый вопрос, который приходит на ум, это как приложение EDR (EDR_Process.exe) общается со своим драйвером EDR (EDR_Driver.sys)?<br />
+<br />
+Прежде чем проводить исследование, нам необходимо знать некоторые основы EDR; как агент EDR внедряет свою собственную DLL в процесс при его создании?<br />
+Схема внедрения процесса через колбэки, взятая из наблюдений EDR, <a href="https://signal-labs.com/edr-observations/" target="_blank" class="link link--external" rel="noopener">сделанных Кристофером Веллой, является хорошим резюме.</a><br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746796764519.png"
+		data-src="https://osint42.org/attachments/1746796764519-png.327/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746796764519-png.327/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746796764519.png"
+			title="1746796764519.png"
+			width="981" height="814" loading="lazy" />
+	</div><br />
+<br />
+Я добавил некоторые комментарии о том, что происходит:<br />
+<ul>
+<li data-xf-list-type="ul">EDR_Driver.sys может подписаться на несколько типов уведомлений ядра. Можно представить, что эти уведомления похожи на &quot;рассылки&quot;, на которые вы подписываетесь в Интернете и получаете по электронной почте от веб-сайта. Например, EDR_Driver.sys может подписаться на службу уведомлений о &quot;создании нового процесса&quot;, используя API Windows, названный PsSetCreateProcessNotifyRoutine, после чего, для каждого процесса, созданного системой, драйвер будет получать информацию о нем (родительский PID, командную строку и т.д.)</li>
+<li data-xf-list-type="ul">Пользователь дважды кликает по malware.exe</li>
+<li data-xf-list-type="ul">Windows вызывает API CreateProcessW для загрузки malware.exe в память</li>
+<li data-xf-list-type="ul">EDR_Driver.sys получает уведомление о том, что будет запущен malware.exe.</li>
+<li data-xf-list-type="ul">EDR_Driver.sys отправляет лог в EDR_Process.exe с сообщением: &quot;Эй! Скоро будет запущен новый процесс под названием malware.exe.&quot;</li>
+<li data-xf-list-type="ul">EDR_process.exe может выбрать действие (или не действовать): &quot;Окей, я буду мониторить этот процесс, создавая хуки в его ntdll.dll&quot;</li>
+<li data-xf-list-type="ul">Когда malware.exe запускается, он вызывает API Windows. Благодаря установленным хукам, EDR_Process.exe знает, какие API вызываются, и может выяснить, что делает malware.exe</li>
+</ul>В качестве примера malware.exe мы могли бы взять следующий фрагмент кода <a href="https://www.ired.team/offensive-security/code-injection-process-injection/process-injection" target="_blank" class="link link--external" rel="noopener">с сайта ired.team.</a><br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746796775302.png"
+		data-src="https://osint42.org/attachments/1746796775302-png.328/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746796775302-png.328/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746796775302.png"
+			title="1746796775302.png"
+			width="1024" height="695" loading="lazy" />
+	</div><br />
+<br />
+Как только хуки установлены, агент EDR (EDR_process.exe) может мониторить / анализировать malware.exe. Вот пример действий, которые он может предпринять:<br />
+<ol>
+<li data-xf-list-type="ol">EDR_Process.exe видит следующие вызовы Windows API, которые делает malware.exe:<br />
+OpenProcess VirtualAllocEx WriteProcessMemory CreateRemoteThread</li>
+<li data-xf-list-type="ol">EDR_Process.exe классифицирует эту последовательность вызовов API как &quot;вредоносную&quot; и блокирует (убивает) процесс.</li>
+<li data-xf-list-type="ol">EDR_Process.exe отправляет лог на EDR_C2 (консоль безопасности) с сообщением: &quot;Эй, процесс malware.exe запущен и классифицирован как вредоносный&quot;.</li>
+</ol>Примечание: это обычный поток EDR и не единственный способ его работы, например, EDR_Process.exe может отправлять только данные телеметрии и позволять EDR_C2 решить, является ли это вредоносным и какие действия применять (блокировать или нет).<br />
+Если поставщик EDR или операторы команды безопасности (известные как blueteam) настроили правило &quot;блокировать, если вредоносно&quot; в Консоли Безопасности EDR, то процесс malware.exe убивается EDR_Process.exe (или EDR_Driver.sys). Также доступны другие контрмеры, например:<br />
+<ul>
+<li data-xf-list-type="ul">Windows-хост может быть удаленно изолирован от сети</li>
+<li data-xf-list-type="ul">файл malware.exe или дамп памяти может быть загружен для анализа / реверсинга</li>
+<li data-xf-list-type="ul">аналитик безопасности может выполнять команды на Windows-хосте (из консоли безопасности) для целей расследования</li>
+<li data-xf-list-type="ul">…</li>
+</ul>Этот момент важен; чем более опытна команда blueteam в создании пользовательских правил, тем сложнее атакующим избежать обнаружения или перемещаться по сети боковым образом без попадания в ловушку!<br />
+Теперь, прежде чем углубляться во внутреннее общение, я хочу сделать шаг назад и упростить поведение EDR. Внутреннее общение (синие стрелки) и внешнее общение (желтые стрелки) EDR_Process.exe можно визуализировать с помощью простого обзора:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746796787570.png"
+		data-src="https://osint42.org/attachments/1746796787570-png.329/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746796787570-png.329/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746796787570.png"
+			title="1746796787570.png"
+			width="1024" height="480" loading="lazy" />
+	</div><br />
+<br />
+<b>Исследование внутреннего общения EDR</b><br />
+<br />
+Из пространства памяти ядра Windows, EDR_Driver.sys может использовать несколько API ядра Windows (колбэки) для мониторинга, а затем блокировки вредоносных системных активностей.<br />
+<br />
+Например, API-функция PsSetCreateProcessNotifyRoutine может быть использована для генерации следующих сообщений &quot;журналов мониторинга&quot; благодаря механизму колбэка ядра:<br />
+– Журнал = создан новый процесс (PID 5376) с командной строкой C:\notepad.exe<br />
+<br />
+Из пользовательского пространства памяти, EDR_Process.exe может отправлять запросы на действия драйверу и получать от него информацию. Например, &quot;Запрос на действие&quot;, поступающий из консоли безопасности EDR, может быть:<br />
+<br />
+– Действие = добавить в черный список C:\notepad.exe<br />
+<br />
+На рисунке ниже я попытался отобразить общие колбэки ядра Windows, используемые в целях мониторинга.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746796797631.png"
+		data-src="https://osint42.org/attachments/1746796797631-png.330/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746796797631-png.330/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746796797631.png"
+			title="1746796797631.png"
+			width="1024" height="606" loading="lazy" />
+	</div><br />
+<br />
+Вопрос, который возникает после создания этого резюме, заключается в том, как избежать взаимодействия между EDR_process.exe и EDR_driver.sys? Ослепление EDR с использованием известных техник<br />
+<br />
+<b><u>Наиболее распространенные техники ослепления датчиков EDR включают в себя:</u></b><br />
+<ul>
+<li data-xf-list-type="ul">Удаление хуков DLL (пространство пользователя)</li>
+<li data-xf-list-type="ul">Удаление колбэков ядра (пространство ядра)</li>
+</ul>Поскольку мы сосредоточены только на части EDR, работающей в ядре, вот визуализация того, что происходит, когда вы удаляете колбэки ядра:<br />
+<br />
+ДО обнуления адреса колбэка EDR:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746796807305.png"
+		data-src="https://osint42.org/attachments/1746796807305-png.331/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746796807305-png.331/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746796807305.png"
+			title="1746796807305.png"
+			width="568" height="264" loading="lazy" />
+	</div><br />
+<br />
+ПОСЛЕ обнуления адреса колбэка EDR:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746796814683.png"
+		data-src="https://osint42.org/attachments/1746796814683-png.332/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746796814683-png.332/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746796814683.png"
+			title="1746796814683.png"
+			width="499" height="338" loading="lazy" />
+	</div><br />
+<br />
+Мы не будем углубляться в детали по этой теме, она рассмотрена в Дополнительно: Уклоняемся от поведенческого детекта антивируса и EDR | Цикл статей &quot;Изучение вредоносных программ&quot;<br />
+<br />
+Но вы можете заметить на рисунке ниже, что каждый раз, когда вы обнуляете адрес колбэка EDR, это означает, что больше никаких уведомлений (нет &quot;рассылки&quot;) не будет отправлено от Windows к EDR_Driver.sys. В итоге, никакие журналы событий не будут отправлены в EDR_Process.exe (и на консоль аналитика безопасности) больше!<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746797240133.png"
+		data-src="https://osint42.org/attachments/1746797240133-png.336/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797240133-png.336/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797240133.png"
+			title="1746797240133.png"
+			width="1024" height="606" loading="lazy" />
+	</div><br />
+<br />
+<b>Ослепление EDR с использованием альтернативного подхода</b><br />
+<br />
+В ходе моих исследований по этой теме я задавался вопросом, как избежать взаимодействия между EDR_process.exe и EDR_driver.sys без каких-либо изменений колбэков? Можем ли мы предотвратить обмен &quot;сообщениями&quot; между EDR_process.exe и EDR_Driver.sys?<br />
+<br />
+Мы могли бы представить другой подход, используя эту графическую иллюстрацию:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746797250650.png"
+		data-src="https://osint42.org/attachments/1746797250650-png.337/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797250650-png.337/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797250650.png"
+			title="1746797250650.png"
+			width="1024" height="606" loading="lazy" />
+	</div><br />
+<br />
+Пока я пытался исследовать с использованием Windbg, Ярден Шафир написал замечательный блог<a href="https://windows-internals.com/investigating-filter-communication-ports/" target="_blank" class="link link--external" rel="noopener"> о Исследовании Портов Коммуникационных Фильтров</a>, который действительно помог.<br />
+<br />
+Я обнаружил некоторые структуры данных Windows, которые манипулируются во время настройки связи между приложением и драйвером.<br />
+Структура данных с названием FLT_SERVER_PORT_OBJECT привлекла мое внимание, потому что, похоже, содержала интересные поля, посмотрите, согласны ли вы:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746797259754.png"
+		data-src="https://osint42.org/attachments/1746797259754-png.338/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797259754-png.338/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797259754.png"
+			title="1746797259754.png"
+			width="719" height="432" loading="lazy" />
+	</div><br />
+<br />
+Когда я увидел это, первый вопрос, который пришел мне в голову, был о том, что может произойти, если мы установим MaxConnections равным нулю?<br />
+<br />
+Эта структура данных инициализируется с использованием API драйверов Windows под названием FltCreateCommunicationPort:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>NTSTATUS FLTAPI FltCreateCommunicationPort(
+  [in]           PFLT_FILTER            Filter,
+  [out]          PFLT_PORT              *ServerPort,
+  [in]           POBJECT_ATTRIBUTES     ObjectAttributes,
+  [in, optional] PVOID                  ServerPortCookie,
+  [in]           PFLT_CONNECT_NOTIFY    ConnectNotifyCallback,
+  [in]           PFLT_DISCONNECT_NOTIFY DisconnectNotifyCallback,
+  [in, optional] PFLT_MESSAGE_NOTIFY    MessageNotifyCallback,
+  [in]           LONG                   MaxConnections
+);</code></pre>
+	</div>
+</div><br />
+<a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/fltkernel/nf-fltkernel-fltcreatecommunicationport" target="_blank" class="link link--external" rel="noopener">Microsoft documentation</a> вот-что говорит:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746797271132.png"
+		data-src="https://osint42.org/attachments/1746797271132-png.339/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797271132-png.339/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797271132.png"
+			title="1746797271132.png"
+			width="1024" height="269" loading="lazy" />
+	</div><br />
+<br />
+Что мы можем вывести? Если нам удастся сбросить MaxConnections до нуля, это только предотвратит возникновение новых соединений. Давайте приступим к следующему плану атаки:<br />
+<br />
+Шаг 1: сброс значения MaxConnections<br />
+Шаг 2: заставить EDR_Process.exe перезапуститься (вероятно, потребуются высокие привилегии, скорее всего NT SYSTEM)<br />
+Шаг 3: наблюдать за поведением EDR<br />
+<br />
+<b>Шаг 1: сброс значения MaxConnections</b><br />
+<br />
+Первое необходимое условие для этого шага - наличие примитива чтения/записи в режиме ядра, который мы можем использовать для установки значения в 0. Для этого мы будем использовать технику BYOVD (Bring Your Own Vulnerable Driver - Принеси свой уязвимый драйвер) - Техника описана здесь. В качестве второго условия нам нужно найти адрес поля MaxConnections в памяти ядра, верно? Давайте посмотрим, как мы можем получить этот адрес!<br />
+<br />
+Структура fltmgr!_FLT_SERVER_PORT_OBJECT, о которой мы говорили ранее, может быть достигнута через структуру fltmgr!_FLT_FILTER, которая, в свою очередь, может быть достигнута через структуру fltmgr!_FLTP_FRAME, которая может быть достигнута через структуру FLTMGR!_GLOBALS, к которой можно добраться через драйвер FltMgr.sys.<br />
+<br />
+Базовый адрес этого модуля ядра можно получить из пользовательского режима, используя Windows API NtQuerySystemInformation.<br />
+<br />
+Мы можем найти адрес MaxConnections, проходя через структуры данных ядра Windows,<b><u> начиная от драйвера FltMgr.sys до этого поля!</u></b><br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746797280601.png"
+		data-src="https://osint42.org/attachments/1746797280601-png.340/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797280601-png.340/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797280601.png"
+			title="1746797280601.png"
+			width="1024" height="283" loading="lazy" />
+	</div><br />
+<br />
+<b><u>Вот как это выглядит, когда вы хотите взглянуть на детали, касающиеся драйвера ядра Windows Defender:</u></b><br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746797287371.png"
+		data-src="https://osint42.org/attachments/1746797287371-png.341/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797287371-png.341/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797287371.png"
+			title="1746797287371.png"
+			width="871" height="286" loading="lazy" />
+	</div><br />
+<br />
+Имея знания о расположении памяти MaxConnections, мы можем использовать примитив чтения в режиме ядра, чтобы получить текущее значение, и используя примитив записи в режиме ядра, мы можем установить значение в 0.<br />
+<br />
+<b><u>Шаг 2: заставить EDR перезапуститься</u></b><br />
+<br />
+Эта фаза может быть сложной, поскольку EDR_Process.exe делает все возможное, чтобы защитить себя. Обычно эта программа запускается как служба и будет перезапускаться после ее сбоя, но это нас не беспокоит, поскольку никакое соединение не разрешено EDR_Driver.sys благодаря шагу 1 ;-)<br />
+<br />
+Лично я делаю эту операцию, используя свой собственный инструмент (неподписанный зловредный драйвер), который позволяет нам убивать процесс, даже если он защищен, но также возможно использовать Process Hacker (если он не в черном списке) или, что еще лучше, любые эксплуатируемые &quot;драйверы убийцы процессов&quot;.<br />
+<br />
+Я настоятельно рекомендую блогпост Алисы Климент-Поммере (@AliceCliment)<a href="https://alice.climent-pommeret.red/posts/process-killer-driver/" target="_blank" class="link link--external" rel="noopener"> &quot;Находка и эксплуатация драйверов убийц процессов с LOL за 3000$&quot;</a>, который охватывает эту тему!<br />
+<br />
+<b><u>Шаг 3: наблюдение за поведением EDR</u></b><br />
+<br />
+Давайте создадим вредоносное ПО (исходный код доступен на <a href="https://www.ired.team/offensive-security/code-injection-process-injection/executing-shellcode-with-createfiber" target="_blank" class="link link--external" rel="noopener">ired.team</a>) с именем iwanttobeflag.exe, которое блокируется Windows Defender:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1746797297138.png"
+		data-src="https://osint42.org/attachments/1746797297138-png.342/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797297138-png.342/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797297138.png"
+			title="1746797297138.png"
+			width="882" height="681" loading="lazy" />
+	</div><br />
+<br />
+Затем мы можем проверить стандартную реакцию на наше вредоносное ПО, копируя вредоносную полезную нагрузку из общей папки на локальный диск. Это вызывает тревогу и блокируется Windows Defender, как и ожидалось: отлично!<br />
+copy z:\iwanttobeflag.exe c:\<br />
+<br />
+Теперь у нас есть что-то, что в общем случае должно вызвать тревогу, и мы можем использовать это, чтобы проверить, заглушает ли наша техника EDR.<br />
+<br />
+<b>Реализация плана</b><br />
+<br />
+Давайте объединим все это в инструмент и проверим, могут ли наши шаги 1 и 2 нарушить оповещение, вызванное на шаге 3.<br />
+<br />
+Вот инструмент (EDRSnowblast):<a href="https://v1k1ngfr.github.io/edrsnowblast/" target="_blank" class="link link--external" rel="noopener">EDRSnowblast - blizzard on EDR drivers</a><br />
+<br />
+Давайте пройдемся по шагам на живой машине и посмотрим, что произойдет!<br />
+<br />
+1) перечислить драйверы (фильтры), которые загружены в память ядра и идентифицировать Windows Defender: WdFilter находится на 9-й позиции на рисунке ниже<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>EDRSnowblast.exe filter-enum --kernelmode</code></pre>
+	</div>
+</div><br />
+<div class="bbImageWrapper  js-lbImage" title="1746797311292.png"
+		data-src="https://osint42.org/attachments/1746797311292-png.343/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797311292-png.343/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797311292.png"
+			title="1746797311292.png"
+			width="1024" height="387" loading="lazy" />
+	</div><br />
+<br />
+2) получить детали о фильтре WdFilter: например, MaxConnections &amp; NumberOfConnections<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>EDRSnowblast.exe filter-enum --kernelmode --filter-index 9</code></pre>
+	</div>
+</div><br />
+<div class="bbImageWrapper  js-lbImage" title="1746797320957.png"
+		data-src="https://osint42.org/attachments/1746797320957-png.344/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797320957-png.344/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797320957.png"
+			title="1746797320957.png"
+			width="1024" height="776" loading="lazy" />
+	</div><br />
+<br />
+3) заглушить WdFilter: установить MaxConnections в ноль<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>EDRSnowblast.exe filter-mute --kernelmode --filter-index 9</code></pre>
+	</div>
+</div><br />
+<div class="bbImageWrapper  js-lbImage" title="1746797331968.png"
+		data-src="https://osint42.org/attachments/1746797331968-png.345/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797331968-png.345/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797331968.png"
+			title="1746797331968.png"
+			width="1024" height="353" loading="lazy" />
+	</div><br />
+<br />
+4. (опционально) проверить значение MaxConnections, используя опцию --filter-enum, как было показано ранее<br />
+5. определить PID процесса Windows Defender в пользовательском режиме и убить его<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>tasklist | findstr MsMpEng.exe MsMpEng.exe 2956 Services 0 206,788 K c:\pimpmypid_clt.exe /kill 2956</code></pre>
+	</div>
+</div>6. скопировать нашу вредоносную полезную нагрузку, созданную на шаге 3, и выполнить<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>copy z:\iwanttobeflag.exe c:
+c:\iwanttobeflag.exe</code></pre>
+	</div>
+</div><br />
+<div class="bbImageWrapper  js-lbImage" title="1746797347621.png"
+		data-src="https://osint42.org/attachments/1746797347621-png.346/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../../../attachments/1746797347621-png.346/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1746797347621.png"
+			title="1746797347621.png"
+			width="528" height="284" loading="lazy" />
+	</div><br />
+<br />
+8.наслаждаться нашим успехом<br />
+<br />
+Если хотите, вы можете посмотреть видео демонстрации ниже.<br />
+<br />
+<div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="PakPq-83IEE">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/PakPq-83IEE?wmode=opaque"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div><br />
+Эта техника была успешно протестирована против Windows Defender и двух других поставщиков EDR.<br />
+<br />
+<b>Как защититься / обнаружить?</b><br />
+<br />
+Мы должны начать с вопроса, какие предпосылки для &quot;заглушения фильтра&quot;?<br />
+<ul>
+<li data-xf-list-type="ul">вы должны использовать примитив эксплойта чтения/записи ядра Windows – если вы хотите использовать BYOVD (Принеси Свой Уязвимый Драйвер), вы должны иметь SeLoadDriverPrivilege, необходимый для загрузки / выгрузки драйверов (например, локальный администратор, администратор домена, оператор печати домена)</li>
+<li data-xf-list-type="ul">вы должны быть способны убивать (или перезапускать) пользовательское приложение EDR</li>
+</ul>Теперь мы могли бы задаться вопросом, возможно ли для пользователей Windows защитить себя? И да, существуют некоторые меры предосторожности. Вот некоторые рекомендации:<br />
+<ul>
+<li data-xf-list-type="ul">применять патчи Windows: это устраняет уязвимости из ядра Windows и драйверов</li>
+<li data-xf-list-type="ul">использовать Microsoft VBS (включить HVCI): как вы могли заметить, используемый вектор атаки - BYOVD. Этот вектор известен давно, и Microsoft проделала большую работу, чтобы смягчить это с помощью функций безопасности на основе виртуализации (VBS), доступных в Windows 10, Windows 11, Windows Server 2016 и более поздних версиях. Больше деталей о VBS в документации Microsoft: Безопасность на основе виртуализации (VBS)</li>
+<li data-xf-list-type="ul">использовать рекомендованные Microsoft правила блокировки драйверов, <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/design/microsoft-recommended-driver-block-rules" target="_blank" class="link link--external" rel="noopener">доступные здесь</a></li>
+<li data-xf-list-type="ul">использовать Sysmon или правила Sigma: огромный список известно уязвимых драйверов доступен на <a href="http://www.loldrivers.io/" target="_blank" class="link link--external" rel="noopener">www.loldrivers.io</a>, и этот проект предоставляет такого рода правила</li>
+</ul><b>Другой вопрос:</b> могут ли поставщики EDR защитить свои драйверы от этой атаки? Да, они могут!<br />
+<br />
+Самое быстрое решение может быть добавление в черный список известно уязвимых драйверов, избегая их загрузки. Но у этого метода те же ограничения, что и у сигнатур AV; неизвестные уязвимые драйверы не будут блокироваться.<br />
+<br />
+<b>Лучшая защита может быть реализованы разработчиками (Проверка коннкета с EDR):</b><br />
+<br />
+- Всегда проверять, что EDR_process.exe может подключиться к порту связи EDR_driver.sys. Пример кода, который может достичь этого:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>HANDLE hPort;
+HRESULT hr = ::FilterConnectCommunicationPort(L&quot;\\secureEDR&quot;,0, nullptr, 0, nullptr, &amp;hPort);
+
+if (FAILED(hr)) {
+   printf(&quot;Error connecting to EDR_driver.sys ! (HR=0x%08X)\n&quot;, hr);
+   if (hr == 0x800704D6) {
+      printf(&quot;ERROR_CONNECTION_COUNT_LIMIT : A connection to the server could not be made because the limit on the number of concurrent connections for this account has been reached.\n&quot;);
+   }
+}
+// Other common errors you should check are
+// ERROR_BAD_PATHNAME (HR=0x800700A1)
+// E_FILE_NOT_FOUND (HR=0x80070002)
+// E_ACCESSDENIED (HR=0x80070005)
+// ERROR_INVALID_NAME (HR=0x8007007B)</code></pre>
+	</div>
+</div><br />
+- Статический KDP: драйвер EDR должен вызвать API MmProtectDriverSection для защиты секции своего образа<br />
+<br />
+- Динамический KDP: позволяет драйверу выделять и инициализировать память только для чтения, используя услуги, предоставляемые защищенным пулом, который управляется защищенным ядром, используя API ExAllocatePool3.<br />
+Больше деталей о KDP в посте Андреа Аллиеви: <a href="https://www.microsoft.com/en-us/security/blog/2020/07/08/" target="_blank" class="link link--external" rel="noopener">Введение в защиту данных ядра</a>.</div>
+					
+										
+
+					
+						<div style="padding-top: 10px;">
+							
+														
+									<dl class="blockStatus blockStatus--info blockStatus--standalone">
+										<dt></dt>
+										<dd class="blockStatus-message amsNextPage">
+											<span class="">Следующая страница цикла:</span>
+											<a href="../mutationgate-novyi-podkhod-raboty-s-siskolami.44/index.html" class="" title="MutationGate - Новый подход работы с сисколами">MutationGate - Новый подход работы с сисколами</a>
+										</dd>
+									</dl>
+								
+
+								
+
+														
+									<dl class="blockStatus blockStatus--info blockStatus--standalone">
+										<dt></dt>
+										<dd class="blockStatus-message amsPreviousPage">
+											<span class="">Предыдущая статья цикла:</span>
+											<a href="../uklonyayemsya-ot-povedencheskogo-detekta-antivirusa-i-edr.42/index.html" class="" title="Уклоняемся от поведенческого детекта антивируса и EDR">Уклоняемся от поведенческого детекта антивируса и EDR</a>
+										</dd>
+									</dl>
+								
+							
+
+							
+						</div>
+					
+
+					
+						
+							
+							<ul class="attachmentList articleBody-attachments">
+								
+									
+										
+											
+	<li class="file file--linked">
+		<a class="u-anchorTarget" id="attachment-333"></a>
+		
+			
+	
+		
+		
+
+		
+		
+	
+
+
+			
+<a class="file-preview js-lbImage" data-lb-sidebar-href="" data-lb-caption-extra-html="" href="../../../../attachments/1746796853061-png.333/index.html" target="_blank">
+				<img src="../../../../data/attachments/0/333-5c86fea7ecac3495d0e2bc46552793959c1a.jpg?hash=w5ofgLlKqG" alt="1746796853061.png"
+					width="254" height="150" loading="lazy" />
+			</a>
+		
+
+		<div class="file-content">
+			<div class="file-info">
+				<span class="file-name" title="1746796853061.png">1746796853061.png</span>
+				<div class="file-meta">
+					382,8 КБ
+					
+					&middot; Просмотры: 14
+					
+				</div>
+			</div>
+		</div>
+	</li>
+
+										
+									
+								
+							</ul>
+						
+
+						
+					
+
+					
+
+					<div class="reactionsBar js-reactionsList ">
+						
+					</div>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</article>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+	<div class="columnContainer"
+		data-xf-init="lightbox"
+		data-lb-id="article-6"
+		data-lb-universal="0">
+
+		<span class="u-anchorTarget" id="comments"></span>
+
+		<div class="columnContainer-comments">
+			
+	
+	
+
+	<div class="block block--messages"
+		data-xf-init=""
+		data-type="ams_comment"
+		data-href="/inline-mod/">
+
+		
+	
+	
+
+
+		<div class="block-outer"></div>
+		
+		<div class="block-container"
+			data-xf-init="select-to-quote"
+			data-message-selector=".js-comment">
+			
+			<h3 class="block-header">Комментарии</h3>
+			<div class="block-body js-replyNewCommentContainer">
+				
+					<span class="u-anchorTarget" id="comments"></span>
+					
+						
+							
+	
+	
+
+	<article class="message message--simple message--comment js-comment js-inlineModContainer"
+		data-author="vivty"
+		data-content="ams-comment-25"
+		id="js-comment-25">
+
+		<span class="u-anchorTarget" id="ams-comment-25"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+	<header class="message-user"
+		
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/vivty.94/">
+
+		
+			<meta itemprop="name" content="vivty" />
+			
+				<meta itemprop="url" content="https://osint42.org/members/vivty.94/" />
+			
+		
+
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/vivty.94/" class="avatar avatar--s avatar--default avatar--default--dynamic" data-user-id="94" data-xf-init="member-tooltip" style="background-color: #3d0f3d; color: #cc33cc">
+			<span class="avatar-u94-s" role="img" aria-label="vivty">V</span> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="js-quickEditTarget">
+					<div class="message-content js-messageContent">
+						<header class="message-attribution message-attribution--plain">
+							<ul class="listInline listInline--bullet">
+								<li class="message-attribution-user">
+									<a href="https://osint42.org/members/vivty.94/" class="avatar avatar--xxs avatar--default avatar--default--dynamic" data-user-id="94" data-xf-init="member-tooltip" style="background-color: #3d0f3d; color: #cc33cc">
+			<span class="avatar-u94-s" role="img" aria-label="vivty">V</span> 
+		</a>
+									<h4 class="attribution"><a href="https://osint42.org/members/vivty.94/" class="username " dir="auto" data-user-id="94" data-xf-init="member-tooltip"><span class="username--style2">vivty</span></a></h4>
+								</li>
+								<li>
+									<a href="../../../comments/25/index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-06-12T18:12:34+0300" data-timestamp="1749741154" data-date="12.06.2025" data-time="18:12" data-short="12 Июн" title="12.06.2025 в 18:12">12.06.2025</time></a>
+								</li>
+							</ul>
+						</header>
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer"
+							data-lb-id="ams-comment-25"
+							data-lb-caption-desc="vivty &middot; 12.06.2025 в 18:12">
+
+							<article class="message-body js-selectToQuote">
+								<div class="bbWrapper">Отличные статьи.<br />
+Спасибо!</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+							</article>
+
+							
+						</div>
+
+						
+
+						
+							
+	
+
+						
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="reactionsBar js-reactionsList ">
+							
+						</div>
+					</footer>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+						
+					
+						
+							
+	
+	
+
+	<article class="message message--simple message--comment js-comment js-inlineModContainer"
+		data-author="HMCoba"
+		data-content="ams-comment-27"
+		id="js-comment-27">
+
+		<span class="u-anchorTarget" id="ams-comment-27"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+	<header class="message-user"
+		
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/hmcoba.102/">
+
+		
+			<meta itemprop="name" content="HMCoba" />
+			
+				<meta itemprop="url" content="https://osint42.org/members/hmcoba.102/" />
+			
+		
+
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/hmcoba.102/" class="avatar avatar--s" data-user-id="102" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1026af6.jpg?1756734897" srcset="/data/avatars/m/0/102.jpg?1756734897 2x" alt="HMCoba" class="avatar-u102-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="js-quickEditTarget">
+					<div class="message-content js-messageContent">
+						<header class="message-attribution message-attribution--plain">
+							<ul class="listInline listInline--bullet">
+								<li class="message-attribution-user">
+									<a href="https://osint42.org/members/hmcoba.102/" class="avatar avatar--xxs" data-user-id="102" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1026af6.jpg?1756734897"  alt="HMCoba" class="avatar-u102-s" width="48" height="48" loading="lazy" /> 
+		</a>
+									<h4 class="attribution"><a href="https://osint42.org/members/hmcoba.102/" class="username " dir="auto" data-user-id="102" data-xf-init="member-tooltip"><span class="username--style2">HMCoba</span></a></h4>
+								</li>
+								<li>
+									<a href="../../../comments/27/index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-06-16T14:27:08+0300" data-timestamp="1750073228" data-date="16.06.2025" data-time="14:27" data-short="16 Июн" title="16.06.2025 в 14:27">16.06.2025</time></a>
+								</li>
+							</ul>
+						</header>
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer"
+							data-lb-id="ams-comment-27"
+							data-lb-caption-desc="HMCoba &middot; 16.06.2025 в 14:27">
+
+							<article class="message-body js-selectToQuote">
+								<div class="bbWrapper">Отличный заход в тему Red Team. <br />
+Такие статьи важны для практического понимания атакующих техник. <br />
+Акцент на MDLC и реальное применение - то, чего часто не хватает. <br />
+Буду следить за серией.</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+							</article>
+
+							
+						</div>
+
+						
+
+						
+							
+	
+		
+			<aside class="message-signature">
+			
+				<div class="bbWrapper">HMCoba</div>
+			
+			</aside>
+		
+	
+
+						
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="reactionsBar js-reactionsList is-active">
+							
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../../comments/27/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>Marat</bdi></a>
+						</div>
+					</footer>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+						
+					
+				
+			</div>
+		</div>
+
+		<div class="block-outer block-outer--after">
+			
+			
+		</div>
+
+		
+	
+	
+
+	</div>
+
+	
+	
+	
+
+	
+
+
+		</div>
+	</div>	
+
+
+
+	
+
+
+
+		
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+</div>
+					
+				</div>
+
+				
+					<div class="p-body-sidebar">
+						
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-header">ОГЛАВЛЕНИЕ</h3>
+				<div class="block-body">
+					<a class="blockLink " href="../../index.html">
+						
+							Зачем изучать разработку вредоносных программ ?
+						
+					</a>
+
+					
+						<a href="../instrumenty.1/index.html" class="blockLink ">
+							 Инструменты</a>
+					
+						<a href="../tak-kakoi-zhe-yazyk-vybrat.2/index.html" class="blockLink ">
+							 Так какой-же язык выбрать !?</a>
+					
+						<a href="../shpargalka-po-arkhitekture-vindy.3/index.html" class="blockLink ">
+							 Шпаргалка по архитектуре винды</a>
+					
+						<a href="../chto-takoye-payload-i-shell-code.5/index.html" class="blockLink ">
+							 Что такое payload и shell code</a>
+					
+						<a href="../izuchayem-dinamicheskiye-biblioteki.6/index.html" class="blockLink ">
+							 Изучаем динамические библиотеки</a>
+					
+						<a href="../protsessy-windows.7/index.html" class="blockLink ">
+							 Процессы Windows</a>
+					
+						<a href="../vidy-detektov.8/index.html" class="blockLink ">
+							 Виды детектов</a>
+					
+						<a href="../kuda-klast-nagruzku.9/index.html" class="blockLink ">
+							 Куда класть нагрузку ?</a>
+					
+						<a href="../shifruyem-payload.10/index.html" class="blockLink ">
+							 Шифруем Payload</a>
+					
+						<a href="../obfuskatsiya-payload.11/index.html" class="blockLink ">
+							 Обфускация Payload</a>
+					
+						<a href="../lokal-nyi-zapusk-payload.12/index.html" class="blockLink ">
+							 Локальный запуск Payload</a>
+					
+						<a href="../in-yektsiya-v-protsess.13/index.html" class="blockLink ">
+							 Иньекция в процесс</a>
+					
+						<a href="../in-yektsiya-shell-koda-v-protsess.14/index.html" class="blockLink ">
+							 Инъекция шелл-кода в процесс</a>
+					
+						<a href="../razmeshchayem-payload-udalenno-na-servere.15/index.html" class="blockLink ">
+							 Размещаем Payload удаленно на сервере</a>
+					
+						<a href="../pryachem-payload-v-reyestre.16/index.html" class="blockLink ">
+							 Прячем Payload в реестре</a>
+					
+						<a href="../razborka-s-tsifrovoi-podpis-yu-zver-ka.17/index.html" class="blockLink ">
+							 Разборка с цифровой подписью зверька</a>
+					
+						<a href="../izuchayem-tekhniku-thread-hijacking.18/index.html" class="blockLink ">
+							 Изучаем технику Thread Hijacking</a>
+					
+						<a href="../opredeleniye-pid-nuzhnogo-protsessa-ili-perechisleniya-protsessov.19/index.html" class="blockLink ">
+							 Определение PID нужного процесса, или перечисления процессов</a>
+					
+						<a href="../izuchayem-tekhniku-apc-injection.20/index.html" class="blockLink ">
+							 Изучаем технику APC Injection</a>
+					
+						<a href="../vyzov-koda-cherez-funktsii-obratnogo-vyzova.21/index.html" class="blockLink ">
+							 Вызов кода через функции обратного вызова</a>
+					
+						<a href="../in-yektsiya-otobrazhayemoi-pamyati.22/index.html" class="blockLink ">
+							 Инъекция отображаемой памяти</a>
+					
+						<a href="../izuchayem-tekhniku-stomping-injection.23/index.html" class="blockLink ">
+							 Изучаем технику Stomping Injection</a>
+					
+						<a href="../kontrol-vypolneniya-poleznoi-nagruzki.24/index.html" class="blockLink ">
+							 Контроль выполнения полезной нагрузки</a>
+					
+						<a href="../izuchayem-tekhniku-spoofing.25/index.html" class="blockLink ">
+							 Изучаем технику Spoofing</a>
+					
+						<a href="../skrytiye-strok.26/index.html" class="blockLink ">
+							 Скрытие строк</a>
+					
+						<a href="../izuchayem-kungfu-1-skrytiye-tablitsy-importa.27/index.html" class="blockLink ">
+							 Изучаем кунгфу-1. Скрытие таблицы импорта</a>
+					
+						<a href="../kungfu-2-izuchayem-api-hooking.28/index.html" class="blockLink ">
+							 Кунгфу-2.Изучаем API Hooking</a>
+					
+						<a href="../predel-naya-tekhnika-razborka-s-siskolami.29/index.html" class="blockLink ">
+							 Предельная техника. Разборка с сисколами</a>
+					
+						<a href="../predel-naya-tekhnika-2-praktika-realizuyem-tekhniki-in-yektsii-cherez-siskoly.30/index.html" class="blockLink ">
+							 Предельная техника-2. Практика. Реализуем техники инъекции через сисколы</a>
+					
+						<a href="../cherpayem-sily-v-antiotladke.31/index.html" class="blockLink ">
+							 Черпаем силы в антиотладке</a>
+					
+						<a href="../obkhod-virtual-nykh-mashin.32/index.html" class="blockLink ">
+							 Обход виртуальных машин</a>
+					
+						<a href="../otkryvayem-vrata-ada.33/index.html" class="blockLink ">
+							 Открываем врата ада</a>
+					
+						<a href="../umen-sheniye-veroyatnosti-detekta-zver-ka.34/index.html" class="blockLink ">
+							 Уменьшение вероятности детекта зверька</a>
+					
+						<a href="../obkhod-windows-defender.35/index.html" class="blockLink ">
+							 Обход Windows defender</a>
+					
+						<a href="../pro-endpoint-detection-and-response-edr.36/index.html" class="blockLink ">
+							 Про Endpoint Detection and Response (EDR)</a>
+					
+						<a href="../pro-detekt-v-pamyati-nichego-ne-podelayesh-i-eto-neizbezhno.37/index.html" class="blockLink ">
+							 Про детект в памяти. Ничего не поделаешь и это неизбежно)</a>
+					
+						<a href="../ogromnaya-baza-iskhodnikov-sovremennykh-virusov-dlya-raznykh-platform.38/index.html" class="blockLink ">
+							 Огромная база исходников современных вирусов для разных платформ</a>
+					
+						<a href="../kak-rootkit-zagruzit-ili-zhe-kak-zagruzit-draiver-bez-podpisi.39/index.html" class="blockLink ">
+							 Как RootKit загрузить или же как загрузить драйвер без подписи</a>
+					
+						<a href="../obkhod-amsi.40/index.html" class="blockLink ">
+							 Обход AMSI</a>
+					
+						<a href="../obkhod-amsi-pri-pomoshchi-khardvarnykh-tochek-ostanova.41/index.html" class="blockLink ">
+							 Обход AMSI при помощи хардварных точек останова</a>
+					
+						<a href="../uklonyayemsya-ot-povedencheskogo-detekta-antivirusa-i-edr.42/index.html" class="blockLink ">
+							 Уклоняемся от поведенческого детекта антивируса и EDR</a>
+					
+						<a href="index.html" class="blockLink is-selected">
+							 Обходим антивирусы и EDR</a>
+					
+						<a href="../mutationgate-novyi-podkhod-raboty-s-siskolami.44/index.html" class="blockLink ">
+							 MutationGate - Новый подход работы с сисколами</a>
+					
+						<a href="../razrabotka-nastoyashchego-virusa-v-2024-godu.45/index.html" class="blockLink ">
+							 Разработка настоящего вируса в 2024 году</a>
+					
+
+					
+						<a href="../../index9401.html?full=1" class="blockLink ">Просмотреть всю статью</a>
+					
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">Информация о статье</h3>
+			<div class="block-body block-row block-row--minor">
+				<dl class="pairs pairs--justified">
+					<dt>Автор</dt>
+					
+						<dd><a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a></dd>
+					
+				</dl>
+				
+					<dl class="pairs pairs--justified">
+						<dt>Просмотры</dt>
+						<dd>9 577</dd>
+					</dl>
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Комментарии</dt>
+						<dd>2</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Последнее обновление</dt>
+						<dd><time  class="u-dt" dir="auto" datetime="2025-05-09T16:44:30+0300" data-timestamp="1746798270" data-date="09.05.2025" data-time="16:44" data-short="9 Май" title="09.05.2025 в 16:44">09.05.2025</time></dd>
+					</dl>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</div>
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-minorHeader"><a href="../../../categories/uroki-razrabotki-vredonosnogo-softa.2/index.html">Больше в Уроки разработки вредоносного софта</a></h3>
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../obkhod-antivirusov-cherez-uyazvimyi-draiver.71/index.html">Обход антивирусов через уязвимый драйвер</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Пока хакер не прикрыли, из-за дурацких законов, решил скопировать приватную статью.
+
+Вот...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../unichtozhayem-signaturnyye-antivirusy.57/index.html">Уничтожаем сигнатурные антивирусы</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Когда-то давно такие тулзы были популярны, возможно и сейчас будет находкой, кто занимается...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../skrytoye-upravleniye-komp-yuterom-na-windows-adovaya-stat-ya.56/index.html">Скрытое управление компьютером на Windows, адовая статья</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Статья не новая, нашел на старом форуме, но не плохо описано всё.
+
+Возможно какие-то команды...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../memorymodule-zagruzka-dll-iz-ozu.22/index.html">MemoryModule - Загрузка DLL из ОЗУ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Когда-то давно писал свой загрузчик DLL, но сейчас на гитхабе наткнулся на более взрослый...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../pro-botnet-i-kak-delat-nel-zya.16/index.html">Про ботнет и как делать нельзя</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Когда-то давно участвовал в конкурсе статей на xss.is, мы решили для конкурса сделать ботнет...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+			<div class="block-container">
+				
+					<h3 class="block-minorHeader"><a href="../../../authors/0x42.1/index.html">Больше от 0x42</a></h3>
+				
+
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../o-tom-kak-boryut-sya-s-tor-v-rf.75/index.html">О том как борются с TOR в РФ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Недавно решил поддержать проект TOR, решил поднять middle relay.
+
+Напомню, что для поддержки...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../bezumnyi-maks-skam.74/index.html">Безумный МАКС/СКАМ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				По телевизору передают, что мессенджер МАКС полюбили россияне, зарегистрировалось почти вся...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../pochemu-v-linux-vse-fail.73/index.html">Почему в Linux всё — файл?</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				---
+
+## 🔹 Оглавление
+
+[1. Философия UNIX: «Everything is a file»]
+[2. Как работает VFS — Virtual...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../zashchita-ot-roskomnadzora.70/index.html">Защита от Роскомнадзора</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В связи с тем-что РКН внедрили ботов для автоматического поиска неугодного контента и...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../../../uyazvimosti-v-bash-skriptakh.69/index.html">Уязвимости в bash скриптах</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Вот кто хоть раз интересовался безопасностью, наверное помнят всякие инъекции в php и не...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+				<div class="block-container">
+					
+						<h3 class="block-minorHeader">Поделиться этой страницей статьи</h3>
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965543"></span>
+
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965543" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965543"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965543" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+								
+							</div>
+						
+						
+							<div class="block-body block-row block-row--separated">
+								
+																		
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-2-1758965543">Копировать BB-код адреса статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[URL=&quot;https://osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/obkhodim-antivirusy-i-edr.43/&quot;]Обходим антивирусы и EDR[/URL]" id="_xfUid-2-1758965543" />
+		</div>
+	</div>
+
+									
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-3-1758965543">Копировать BB-код статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[AMS=page, 43][/AMS]" id="_xfUid-3-1758965543" />
+		</div>
+	</div>
+
+																		
+								
+							</div>
+						
+					
+				</div>
+			</div>
+						
+						
+					</div>
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../../categories/uroki-razrabotki-vredonosnogo-softa.2/index.html" itemprop="item">
+			<span itemprop="name">Уроки разработки вредоносного софта</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965543%2C7c5a197f9cf3a828774c759b029eae68"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965543%2C7c5a197f9cf3a828774c759b029eae68"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965543%2C7c5a197f9cf3a828774c759b029eae68"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../../../../threads/pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+    
+    
+        
+        
+            <script type="application/ld+json">
+                {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "@id": "https://osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/obkhodim-antivirusy-i-edr.43/",
+    "name": "\u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439 \"\u0418\u0437\u0443\u0447\u0435\u043d\u0438\u0435 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0445 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\" | \u041e\u0431\u0445\u043e\u0434\u0438\u043c \u0430\u043d\u0442\u0438\u0432\u0438\u0440\u0443\u0441\u044b \u0438 EDR",
+    "headline": "\u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439 \"\u0418\u0437\u0443\u0447\u0435\u043d\u0438\u0435 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0445 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\" | \u041e\u0431\u0445\u043e\u0434\u0438\u043c \u0430\u043d\u0442\u0438\u0432\u0438\u0440\u0443\u0441\u044b \u0438 EDR",
+    "alternativeHeadline": "\u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439 \"\u0418\u0437\u0443\u0447\u0435\u043d\u0438\u0435 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u044b\u0445 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\" | \u041e\u0431\u0445\u043e\u0434\u0438\u043c \u0430\u043d\u0442\u0438\u0432\u0438\u0440\u0443\u0441\u044b \u0438 EDR",
+    "description": "\u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b:SensePost |   Filter-mute operation: investigating edr internal communication\n\n\u0414\u043b\u044f \u043d\u0430\u0448\u0435\u0439 \u0435\u0436\u0435\u0433\u043e\u0434\u043d\u043e\u0439 \u0432\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u0435\u0439 \u0445\u0430\u043a\u0435\u0440\u0441\u043a\u043e\u0439 \u043a\u043e\u043d\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0438, \u043a\u043e\u0442\u043e\u0440\u0443\u044e \u043c\u044b \u043d\u0430\u0437\u0432\u0430\u043b\u0438 SenseCon \u0432 2023 \u0433\u043e\u0434\u0443, \u044f \u0440\u0435\u0448\u0438\u043b \u0438\u0437\u0443\u0447\u0438\u0442\u044c \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u043c\u0435\u0436\u0434\u0443 \u0434\u0440\u0430\u0439\u0432\u0435\u0440\u043e\u043c Windows \u0438 \u0435\u0433\u043e...",
+    "dateCreated": "2025-05-09T13:29:56+00:00",
+    "dateModified": "2025-05-11T09:30:32+00:00",
+    "author": {
+        "@type": "Person",
+        "name": "0x42"
+    },
+    "thumbnailUrl": "https://osint42.org/data/attachments/0/327-fb083aafceebcdda8da3cafb92d79bf6.jpg?hash=AvQpaZcb8_",
+    "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/LikeAction",
+        "userInteractionCount": "0"
+    }
+}
+            </script>
+        
+    
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/obkhodim-antivirusy-i-edr.43/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:43:10 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

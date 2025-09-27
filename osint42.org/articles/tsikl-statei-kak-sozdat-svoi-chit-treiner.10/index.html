@@ -1,0 +1,3268 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="xa_ams_article_view"
+	data-container-key="amsCategory-10"
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965525,7eee12c6b39210c110f23b8fdcf71bf1"
+	class="has-no-js template-xa_ams_article_view"
+	>
+
+<!-- Mirrored from osint42.org/articles/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:41:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Цикл статей. Как создать свой чит/трейнер | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta property="og:title" content="Цикл статей. Как создать свой чит/трейнер" />
+		<meta property="twitter:title" content="Цикл статей. Как создать свой чит/трейнер" />
+	
+	
+		
+		<meta name="description" content="Приватная статья, часть первая:Чит своими руками. Вскрываем компьютерную игру и пишем трейнер на C++
+
+Играть в игры любят все, но это гораздо интереснее..." />
+		<meta property="og:description" content="Приватная статья, часть первая:Чит своими руками. Вскрываем компьютерную игру и пишем трейнер на C++
+
+Играть в игры любят все, но это гораздо интереснее, когда у тебя имеется нескончаемый запас патронов и здоровья. Чтобы обзавестись и тем и..." />
+		<meta property="twitter:description" content="Приватная статья, часть первая:Чит своими руками. Вскрываем компьютерную игру и пишем трейнер на C++
+
+Играть в игры любят все, но это гораздо интереснее, когда у тебя имеется нескончаемый запас..." />
+	
+	
+		<meta property="og:type" content="article" />
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+		<meta property="og:image" content="../../data/assets/logo/192192.png" />
+		<meta property="twitter:image" content="../../data/assets/logo/192192.png" />
+		<meta property="twitter:card" content="summary" />
+	
+
+
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../css002d.css?css=public%3Aalnb_navigation.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Axa_ams.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=f5241ce3061674c4a2bfd77343d9ccd4f3736920" />
+
+
+	
+		<script data-cfasync="false" src="../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965525,7eee12c6b39210c110f23b8fdcf71bf1',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/xf\/code_block-compiled.js?_v=01eb82fa":true,"\/js\/copycode\/copycode.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:xa_ams.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965525,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/xf/code_block-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/copycode/copycode.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="xa_ams_article_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965525%2C7eee12c6b39210c110f23b8fdcf71bf1"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965525%2C7eee12c6b39210c110f23b8fdcf71bf1"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965525%2C7eee12c6b39210c110f23b8fdcf71bf1"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;}">Статьи</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;,&quot;c&quot;:{&quot;categories&quot;:[10],&quot;child_categories&quot;:1}}">Эта категория</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965525,7eee12c6b39210c110f23b8fdcf71bf1" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+1"
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+2"
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../authors/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+3"
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../cdn-cgi/l/email-protection.html#c2abaca4ad82adb1abacb6f6f0eca1adaf" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="640d0a020b240b170d0a1050564a070b09">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/gamehacking.10/index.html" itemprop="item">
+			<span itemprop="name">GameHacking</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							
+							Цикл статей. Как создать свой чит/трейнер
+						
+					</h1>
+				</div>
+				
+					<div class="p-description">
+						
+							<ul class="listInline listInline--bullet">
+								<li>
+									<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+									<span class="u-srOnly">Автор</span>
+									
+										<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+									
+								</li>
+								
+								<li>
+									<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата публикации</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+									<span class="u-srOnly">Дата публикации</span>
+
+									<a href="index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-05-10T09:26:29+0300" data-timestamp="1746858389" data-date="10.05.2025" data-time="09:26" data-short="10 Май" title="10.05.2025 в 09:26">10.05.2025</time></a>
+								</li>
+																
+									<li>
+										<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Последнее обновление</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+										<span class="u-concealed">Обновлено</span>
+
+										<time  class="u-dt" dir="auto" datetime="2025-05-10T09:38:50+0300" data-timestamp="1746859130" data-date="10.05.2025" data-time="09:38" data-short="10 Май" title="10.05.2025 в 09:38">10.05.2025</time>
+									</li>
+								
+																
+									<li>
+										<i class="fa--xf far fa-hourglass "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Article read time</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#hourglass"></use></svg></i>
+										<span class="u-srOnly">Article read time</span>
+
+										43 min read
+									</li>
+								
+								
+								
+							</ul>
+						
+					</div>
+				
+
+				
+
+	
+		
+	
+
+			</div>
+		</div>
+	
+				</div>
+				
+
+			<div class="p-body-main p-body-main--withSidebar ">
+				
+				<div class="p-body-contentCol"></div>
+				
+					<div class="p-body-sidebarCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+<div class="block">
+	
+		<div class="block-outer">
+			<div class="block-outer-opposite">
+			
+				
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		<div class="buttonGroup">
+		
+			
+
+			
+			
+			
+			
+
+	
+
+			
+			
+				<div class="buttonGroup-buttonWrapper">
+					<button type="button" class="button button--link menuTrigger" data-xf-click="menu" aria-expanded="false" aria-haspopup="true" title="Навигация по страницам"><span class="button-text">
+						ОГЛАВЛЕНИЕ
+					</span></button>
+					<div class="menu" data-menu="menu" aria-hidden="true">
+						<div class="menu-content">
+							<h4 class="menu-header">Выберите страницу</h4>
+
+							<a href="index.html" class="menu-linkRow is-selected">
+								
+									Как создать свой чит/трейнер
+								
+							</a>
+
+							
+								
+									<a href="page/kak-sozdat-svoi-chit-treiner-2.46/index.html" class="menu-linkRow ">
+									 Как создать свой чит/трейнер - 2</a>
+								
+									<a href="page/kak-sozdat-svoi-chit-treiner-3.47/index.html" class="menu-linkRow ">
+									 Как создать свой чит/трейнер - 3</a>
+								
+							
+							
+								<a href="index9401.html?full=1" class="menu-linkRow ">Просмотреть всю статью</a>
+							
+						</div>
+					</div>
+				</div>
+			
+
+			
+
+			
+		
+		</div>
+	
+				
+			
+			</div>
+		</div>
+	
+
+	
+	
+		
+	
+	
+	
+	<div class="block-container">
+		<div class="block-body lbContainer js-articleBody"
+			data-xf-init="lightbox"
+			data-lb-id="article-10"
+			data-lb-caption-desc="0x42 &middot; 10.05.2025 в 09:26"
+			id="js-articleBody-10">
+
+			<div class="articleBody">
+				<article class="articleBody-main js-lbContainer">
+					
+					
+					
+					
+						
+
+	
+		
+	
+
+					
+
+					
+						
+							<h2>Как создать свой чит/трейнер</h2>
+						
+
+						<div class="bbWrapper"><div class="bbImageWrapper  js-lbImage" title="2_windowed.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F2_windowed.png&amp;hash=c8c1fc666564ca54704424230e414f4a" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../2_windowed2f29.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F2_windowed.png&amp;hash=c8c1fc666564ca54704424230e414f4a"
+			data-url="https://xakep.ru/wp-content/uploads/2022/03/378874/2_windowed.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="2_windowed.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Приватная статья, часть первая:<a href="https://xakep.ru/2022/03/22/diy-trainer/" target="_blank" class="link link--external" rel="noopener">Чит своими руками. Вскрываем компьютерную игру и пишем трейнер на C++</a><br />
+<br />
+Играть в игры любят все, но это гораздо интереснее, когда у тебя имеется нескончаемый запас патронов и здоровья. Чтобы обзавестись и тем и другим, можно погуглить читы и трейнеры для твоей любимой игры. Но как быть, если их еще не разработали? Написать самому! Обладая навыками реверс‑инжиниринга и программирования, сделать это намного проще, чем кажется.<br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-vybor-igry"></a>ВЫБОР ИГРЫ&#8203;<a class="hoverLink" href="#-vybor-igry" title="Постоянная ссылка"></a></h2>Для начала определимся с игрой. Мой выбор пал на <a href="https://www.pcgamingwiki.com/wiki/Hyper_Light_Drifter" target="_blank" class="link link--external" rel="noopener">Hyper Light Drifter</a> (далее HLD). Если ты планируешь поэкспериментировать с коммерческой игрой, обрати внимание на сайт <a href="https://www.pcgamingwiki.com/wiki/Home" target="_blank" class="link link--external" rel="noopener">pcgamingwiki</a>, а также на игры <a href="https://en.wikipedia.org/wiki/List_of_open-source_video_games" target="_blank" class="link link--external" rel="noopener">с открытым исходным кодом</a>.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Так как для написания этой статьи я буду использовать коммерческую игру, мне нужно удостовериться, что лицензионное соглашение (EULA) позволяет это делать.<br />
+<br />
+Начав установку и внимательно прочитав текст EULA, я убедился, что в нем явно запрещается написание и распространение только тех читов и трейнеров,<b> которые мешают работе сервиса</b>, а в нашем случае ничего подобного не планируется. Поэтому смело продолжаем установку.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<div class="bbImageWrapper  js-lbImage" title="1_EULA.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F1_EULA.png&amp;hash=8d9fd175d8dc67ccffe3dcd6aa210d56" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../1_EULA952a.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F1_EULA.png&amp;hash=8d9fd175d8dc67ccffe3dcd6aa210d56"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/1_EULA.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1_EULA.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-poisk-znachenii"></a>ПОИСК ЗНАЧЕНИЙ&#8203;<a class="hoverLink" href="#-poisk-znachenii" title="Постоянная ссылка"></a></h2>Для поиска значений, которые будет изменять чит, мы станем использовать <a href="https://www.cheatengine.org/downloads.php" target="_blank" class="link link--external" rel="noopener">Cheat Engine</a> (далее CE).<br />
+<br />
+Запустим игру и в настройках игры выберем оконный режим — нам нужно, чтобы на экране помещалось еще что‑то, кроме игры.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="2_windowed.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F2_windowed.png&amp;hash=c8c1fc666564ca54704424230e414f4a" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../2_windowed2f29.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F2_windowed.png&amp;hash=c8c1fc666564ca54704424230e414f4a"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/2_windowed.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="2_windowed.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Как видим, в оконном режиме отсутствует панель заголовка, с помощью которой мы могли бы перетаскивать окно игры по экрану. Чтобы исправить эту неприятность, откроем отладчик <a href="https://sourceforge.net/projects/x64dbg/files/snapshots/" target="_blank" class="link link--external" rel="noopener">x64dbg</a>, а именно его 32-битную версию (x32dbg) и запустим под ним HLD.<br />
+<br />
+Поставим брейк‑пойнты на функции CreateWindowExA и CreateWindowExW, которые отвечают за создание окна. Найти их можно на вкладке Symbols, выбрав библиотеку user32.dll.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="3_symbols.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F3_symbols.png&amp;hash=96ed33a2521963d3ca97acb53b17b848" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../3_symbolsd9e4.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F3_symbols.png&amp;hash=96ed33a2521963d3ca97acb53b17b848"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/3_symbols.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="3_symbols.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Видим, что наше окно создается с параметром dwStyle, имеющим значение WS_POPUP = 0x80000000.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="4_WS_POPUP.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F4_WS_POPUP.png&amp;hash=e64d2bceecb1e40825bef6ef042855f6" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../4_WS_POPUP48e2.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F4_WS_POPUP.png&amp;hash=e64d2bceecb1e40825bef6ef042855f6"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/4_WS_POPUP.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="4_WS_POPUP.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Поменяем это значение на WS_OVERLAPPED = 0x00000000.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="5_WS_OVERLAPPED.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F5_WS_OVERLAPPED.png&amp;hash=cba82df9038441807764cd7aac5d57fd" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../5_WS_OVERLAPPED3d49.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F5_WS_OVERLAPPED.png&amp;hash=cba82df9038441807764cd7aac5d57fd"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/5_WS_OVERLAPPED.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="5_WS_OVERLAPPED.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+И вот результат: теперь мы можем перемещать окно.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="6_windowed.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F6_windowed.png&amp;hash=0ef15bb196bb1dd59e8304ad6aaa3adc" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../6_windowedf645.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F6_windowed.png&amp;hash=0ef15bb196bb1dd59e8304ad6aaa3adc"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/6_windowed.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="6_windowed.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+После того как мы настроили окно игры с помощью отладчика, ненадолго отложим его. Чтобы найти нужные нам значения в Cheat Engine, разберемся с теорией.<br />
+<br />
+ <br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-chto-takoye-staticheskii-adres"></a>ЧТО ТАКОЕ СТАТИЧЕСКИЙ АДРЕС&#8203;<a class="hoverLink" href="#-chto-takoye-staticheskii-adres" title="Постоянная ссылка"></a></h2>Статический адрес — это адрес, который изменяется предсказуемо по отношению к модулю, которому он принадлежит. Если переменная глобальная, то можно найти ее в сегменте данных.<br />
+<br />
+Статические адреса указываются в формате [module+offset]. Например, в library.dll мы могли обнаружить значение по адресу 0x700004C0 (base = 0x70000000, offset = 0x4C0). Поскольку library.dll может перемещаться и ее базовый адрес загрузки будет меняться, чтобы получить доступ к нашему значению, мы не используем этот адрес напрямую. Вместо этого возьмем адрес [library.dll + 0x4C0]. Следовательно, когда library.dll загружается по базовому адресу 0x10000000, [library.dll + 0x4C0] дает нам 0x100004C0 и у нас появится доступ к нашему значению.<br />
+<br />
+Если же переменная локальная, то искать нужно в стеке. Для этого получаем TebBaseAddress определенного потока, а затем второй указатель из этой структуры (FS:[0x04] или GS:[0x08], в зависимости от разрядности процесса), которая содержит вершину стека. TebBasePointer может быть получен с помощью NtQueryInformationThread (если это 64-битный процесс) или же с помощью Wow64GetThreadSelectorEntry (если это 32-битный процесс в 64-битной системе).<br />
+<br />
+ <br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-poisk-pokazatelei-zdorov-ya"></a>ПОИСК ПОКАЗАТЕЛЕЙ ЗДОРОВЬЯ&#8203;<a class="hoverLink" href="#-poisk-pokazatelei-zdorov-ya" title="Постоянная ссылка"></a></h2>Запускаем Cheat Engine и подключаемся к процессу игры.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="7_pl.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F7_pl.png&amp;hash=4d88b8a924768ce8a215e4e2ef6f30ec" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../7_plba2c.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F7_pl.png&amp;hash=4d88b8a924768ce8a215e4e2ef6f30ec"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/7_pl.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="7_pl.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Так как мы не знаем, в каком типе хранится показатель здоровья, выставляем следующие параметры для первого сканирования.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="8_fs.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F8_fs.png&amp;hash=07a95dd830fd7e831df65a4a1da7cb8c" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../8_fsfaba.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F8_fs.png&amp;hash=07a95dd830fd7e831df65a4a1da7cb8c"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/8_fs.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="8_fs.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Далее продолжаем сканирование, не забывая при этом терять hp (показатель здоровья) в игре. Делаем мы это для того, чтобы отслеживать изменения значения hp в памяти игры через CE, а также уменьшать значение в поиске для следующих сканирований. Делать мы это будем до тех пор, пока не будет достигнуто адекватное количество значений в окне CE. Адекватное количество значений в данном случае — это такое количество адресов, проверка которых займет максимум минут пять.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="9_search_hp.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F9_search_hp.png&amp;hash=583103a490e40d0580e7f12305b98a20" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../9_search_hp802c.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F9_search_hp.png&amp;hash=583103a490e40d0580e7f12305b98a20"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/9_search_hp.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="9_search_hp.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Мне приглянулись вот эти два адреса, которые я добавил в нижнее окно двойным щелчком мыши на них. Приглянулись они мне в первую очередь потому, что значения по этим адресам среди всех остальных имеют наибольший тип — double. Всегда нужно проверять от большего типа к меньшему. То есть сначала проверяем адреса, хранящие тип double, затем float, после integer и так далее. Более подробно о размере типов данных можно прочитать в <a href="https://docs.microsoft.com/en-us/cpp/cpp/fundamental-types-cpp?view=msvc-170" target="_blank" class="link link--external" rel="noopener">документации Microsoft</a>.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="10_add_ct.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F10_add_ct.png&amp;hash=7a3c8991629cfd6bc802b944c1fcd005" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../10_add_ct59e2.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F10_add_ct.png&amp;hash=7a3c8991629cfd6bc802b944c1fcd005"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/10_add_ct.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="10_add_ct.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Если мы поменяем значение по адресу 0x36501940, то на экране появится полоса здоровья, но его количество не поменяется.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="11_hp_bar.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F11_hp_bar.png&amp;hash=7ef18b554e8c8b41c9f5ee9a02d3bc6d" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../11_hp_bar06ef.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F11_hp_bar.png&amp;hash=7ef18b554e8c8b41c9f5ee9a02d3bc6d"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/11_hp_bar.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="11_hp_bar.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Если теперь мы поменяем значение по адресу 0x36501A30, то на экране появится полоса hp и значение изменится. Это значит, что мы нашли адрес, в котором хранится значение здоровья в игре. Значение хранится в формате double (стандарт <a href="https://en.wikipedia.org/wiki/IEEE_754" target="_blank" class="link link--external" rel="noopener">IEEE 754</a>).<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="12_hp.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F12_hp.png&amp;hash=9af45c09fec378baf49d05af69e32e7b" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../12_hp2c09.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F12_hp.png&amp;hash=9af45c09fec378baf49d05af69e32e7b"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/12_hp.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="12_hp.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Дадим название найденным нами адресам: hp_bar и hp соответственно. Однако, как я уже рассказывал в разделе, посвященном статическим адресам, найденный нами адрес будет бесполезен после того, как мы выйдем в меню или перезапустим игру.<br />
+<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-poisk-staticheskogo-adresa-dlya-indikatora-zdorov-ya"></a>Поиск статического адреса для индикатора здоровья&#8203;<a class="hoverLink" href="#-poisk-staticheskogo-adresa-dlya-indikatora-zdorov-ya" title="Постоянная ссылка"></a></h3>Для дальнейшего поиска статического адреса вернемся к отладчику. В окне дампа переходим по ранее полученному адресу 0x36501A30, в котором хранится значение hp.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="13_hp_addr.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F13_hp_addr.png&amp;hash=fe77b393920f8c58691ca1f9b8580e3d" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../13_hp_addrfcac.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F13_hp_addr.png&amp;hash=fe77b393920f8c58691ca1f9b8580e3d"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/13_hp_addr.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="13_hp_addr.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Ставим по адресу 0x36501A34 аппаратный брейк‑пойнт на запись и теряем в игре здоровье. Брейк‑пойнт срабатывает, и мы видим, что новое значение hp берется из регистра EDI. Это значение является первым параметром текущей функции.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="14_static_addr.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F14_static_addr.png&amp;hash=d45588fd8d38f6e6f312875b3e7f7188" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../14_static_addr83e9.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F14_static_addr.png&amp;hash=d45588fd8d38f6e6f312875b3e7f7188"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/14_static_addr.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="14_static_addr.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Выйдя из этой функции, проследим, откуда она получает свой первый параметр. Мы увидим, что передаваемый параметр — это возвращаемое значение функции по адресу 0x003EFCE9.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="15_static_addr.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F15_static_addr.png&amp;hash=a0b56d1db226414bee36031f85109e52" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../15_static_addrd7c0.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F15_static_addr.png&amp;hash=a0b56d1db226414bee36031f85109e52"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/15_static_addr.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="15_static_addr.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Поставим брейк‑пойнт на вызов функции по адресу 0x003EFCE9, а дальше продолжим отладку, пока не остановимся на ее вызове. Зайдя внутрь функции, выполняем ее до конца. Как только мы достигнем адреса 0x00F88E19, мы увидим, что регистр EAX хранит адрес значения hp. Очевидно, что в этой функции происходит доступ к нашему адресу через арифметику с указателями для структур, а именно через прибавление к указателю смещений и дальнейшего его разыменования. Более подробно об этом можно прочитать <a href="https://turing.ubishops.ca/home/cs318/03-point.pdf" target="_blank" class="link link--external" rel="noopener">здесь</a>. Нам нужно будет повторно пройтись по этой функции, чтобы узнать, через какой адрес и смещения она получает адрес значения hp.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="16_static_addr.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F16_static_addr.png&amp;hash=a0cab25021f8e2be95548062a1925063" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../16_static_addr3e7b.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F16_static_addr.png&amp;hash=a0cab25021f8e2be95548062a1925063"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/16_static_addr.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="16_static_addr.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+После того как мы узнали адрес 0x353F9BB0, из которого получается адрес значения hp, начинаем выходить из функций. При этом внимательно отслеживаем, что передается им в качестве параметров. Спустя пару выходов мы наткнемся на следующее.<br />
+<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="17_final_static_addr.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F17_final_static_addr.png&amp;hash=9e2d41ed753077109e368d9925101793" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../17_final_static_addr2925.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F17_final_static_addr.png&amp;hash=9e2d41ed753077109e368d9925101793"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/17_final_static_addr.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="17_final_static_addr.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Мы нашли статический адрес! Если посмотреть его расположение в памяти, он находится в секции .data.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="18_final_static_addr_memory_map.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F18_final_static_addr_memory_map.png&amp;hash=8e2db47e9b79c4103d86d077ff1db811" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../18_final_static_addr_memory_mapa095.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F18_final_static_addr_memory_map.png&amp;hash=8e2db47e9b79c4103d86d077ff1db811"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/18_final_static_addr_memory_map.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="18_final_static_addr_memory_map.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Зная все смещения, добавим их в CE, нажав Add Address Manually.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="19_static_addr_ct.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F19_static_addr_ct.png&amp;hash=a5ae6b479cf7b62827e34a01869acb2b" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../19_static_addr_ct49c5.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F19_static_addr_ct.png&amp;hash=a5ae6b479cf7b62827e34a01869acb2b"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/19_static_addr_ct.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="19_static_addr_ct.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-poisk-znacheniya-chisla-patronov"></a>ПОИСК ЗНАЧЕНИЯ ЧИСЛА ПАТРОНОВ&#8203;<a class="hoverLink" href="#-poisk-znacheniya-chisla-patronov" title="Постоянная ссылка"></a></h2>Теперь приступим к поиску значения числа патронов (ammo). Первое сканирование делаем с такими же параметрами поиска, как когда мы искали здоровье.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="20_ammo_fs.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F20_ammo_fs.png&amp;hash=5e16d3541f6954096a13bbd9f68318de" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../20_ammo_fs1d1c.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F20_ammo_fs.png&amp;hash=5e16d3541f6954096a13bbd9f68318de"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/20_ammo_fs.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="20_ammo_fs.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+В данном случае мы смогли найти лишь одно значение, и это значение полосы, которая показывает число боеприпасов.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="21_ammo_bar.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F21_ammo_bar.png&amp;hash=8897b183008ff7170837163cd60c7750" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../21_ammo_bar790b.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F21_ammo_bar.png&amp;hash=8897b183008ff7170837163cd60c7750"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/21_ammo_bar.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="21_ammo_bar.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+В игре этот индикатор не появился. В отличие от полосы здоровья, он отображается только после нажатия на кнопку E или во время выстрелов.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="22_show_ammo_bar.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F22_show_ammo_bar.png&amp;hash=d0ce905264e7e5fa0c7aa3850fa9f03a" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../22_show_ammo_bar256f.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F22_show_ammo_bar.png&amp;hash=d0ce905264e7e5fa0c7aa3850fa9f03a"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/22_show_ammo_bar.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="22_show_ammo_bar.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-poisk-staticheskogo-adresa-dlya-ammo"></a>Поиск статического адреса для ammo&#8203;<a class="hoverLink" href="#-poisk-staticheskogo-adresa-dlya-ammo" title="Постоянная ссылка"></a></h3>Мы понимаем, что показания индикаторов в игре всегда сравниваются с фактическими. Если одна из полос показывает не то, что нужно, ее длина изменяется. Поэтому возвращаемся к отладчику и начинаем с аппаратного брейк‑пойнта на запись по адресу 0x365014С4. Как видим по комментариям, эта функция уже нам встречалась.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="23_ammo.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F23_ammo.png&amp;hash=3f757ddefa8b4c73f279cff1556c9655" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../23_ammo2f31.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F23_ammo.png&amp;hash=3f757ddefa8b4c73f279cff1556c9655"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/23_ammo.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="23_ammo.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+По аналогии с поиском hp, выходим из функции.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="24_ammo.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F24_ammo.png&amp;hash=90fad126bde217420de92d7967cd90ad" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../24_ammoa1be.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F24_ammo.png&amp;hash=90fad126bde217420de92d7967cd90ad"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/24_ammo.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="24_ammo.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Так как мы уже знаем, что индикатор должен получать значение где‑то раньше, нам придется пролистать окно дизассемблера выше, пока мы не увидим функцию, предположительно получающую фактическое значение ammo.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="25_ammo.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F25_ammo.png&amp;hash=33e87967c519f6a776bd87b4f68eef68" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../25_ammof385.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F25_ammo.png&amp;hash=33e87967c519f6a776bd87b4f68eef68"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/25_ammo.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="25_ammo.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Мы видим, что в этой функции мы уже были, а это значит, что она тоже получает значение, но уже ammo — 365014E0. Только какое‑то оно странное.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="26_ammo.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F26_ammo.png&amp;hash=b5cc6eb1e08b68059877cf4c32b12f72" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../26_ammodeaa.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F26_ammo.png&amp;hash=b5cc6eb1e08b68059877cf4c32b12f72"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/26_ammo.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="26_ammo.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Добавив это «странное» значение в Cheat Engine, а потом изменив его, к примеру, на 100, мы увидим, что на экране появится индикатор патронов и его значение поменяется. Значит, мы нашли адрес, в котором хранится значение ammo в игре.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="27_ammo.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F27_ammo.png&amp;hash=8c0daa2703261e96d4460ba84c30b631" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../27_ammodc71.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F27_ammo.png&amp;hash=8c0daa2703261e96d4460ba84c30b631"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/27_ammo.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="27_ammo.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Зная все смещения от статического адреса к адресу значений ammo, добавим их в CE, нажав Add Address Manually.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="28_static_addr_ct.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F28_static_addr_ct.png&amp;hash=6af63891bf7ff85cad051c893c77f1bb" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../28_static_addr_ct890c.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F28_static_addr_ct.png&amp;hash=6af63891bf7ff85cad051c893c77f1bb"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/28_static_addr_ct.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="28_static_addr_ct.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Скорее всего, боеприпасы в HLD представляют собой заряд энергии и поэтому хранятся в процентах, ведь при их поиске через отладчик можно было увидеть строки, содержащие слово energy. Которое намекает на то, как будет выглядеть значение в памяти. Например, игра от одной небезызвестной польской компании хранила патроны в памяти вместе, а для игрока показывала раздельно: как рожок, так и количество оставшихся патронов, поэтому при их поиске не удавалось найти каждое из значений, а нужно было искать их сумму.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-proverka-poluchennogo-staticheskogo-adresa"></a>ПРОВЕРКА ПОЛУЧЕННОГО СТАТИЧЕСКОГО АДРЕСА&#8203;<a class="hoverLink" href="#-proverka-poluchennogo-staticheskogo-adresa" title="Постоянная ссылка"></a></h2>Чтобы проверить, правильно ли мы определили адреса, нужно выйти в меню игры и вернуться к игровому процессу или же перезапустить игру.<br />
+<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-proverka-dlya-hp"></a>Проверка для HP&#8203;<a class="hoverLink" href="#-proverka-dlya-hp" title="Постоянная ссылка"></a></h3>Так выглядит наша cheat table для hp.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="29_hp.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F29_hp.png&amp;hash=4a2fbe504fcb9549ebbe07f8596e411d" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../29_hpfbb9.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F29_hp.png&amp;hash=4a2fbe504fcb9549ebbe07f8596e411d"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/29_hp.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="29_hp.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+А вот так она выглядит после перезапуска игры.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="30_hp.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F30_hp.png&amp;hash=fab1e96189ec7e0e8c685690b643781d" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../30_hp27d0.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F30_hp.png&amp;hash=fab1e96189ec7e0e8c685690b643781d"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/30_hp.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="30_hp.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-proverka-dlya-ammo"></a>Проверка для ammo&#8203;<a class="hoverLink" href="#-proverka-dlya-ammo" title="Постоянная ссылка"></a></h3>Так выглядит наша cheat table для ammo.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="31_ammo.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F31_ammo.png&amp;hash=370c4d0c8000870d7278b103d4a24225" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../31_ammod071.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F31_ammo.png&amp;hash=370c4d0c8000870d7278b103d4a24225"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/31_ammo.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="31_ammo.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+А вот так она выглядит после перезапуска игры.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="32_ammo.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F32_ammo.png&amp;hash=3e6c1fedc4cee6885a6acfe6e2133e34" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../32_ammo62e3.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F32_ammo.png&amp;hash=3e6c1fedc4cee6885a6acfe6e2133e34"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/32_ammo.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="32_ammo.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-kak-budet-vyglyadet-nash-ukazatel-v-c"></a>КАК БУДЕТ ВЫГЛЯДЕТЬ НАШ УКАЗАТЕЛЬ В C++&#8203;<a class="hoverLink" href="#-kak-budet-vyglyadet-nash-ukazatel-v-c" title="Постоянная ссылка"></a></h2>В нашем чите доступ к найденным адресам значений будет таким.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C++:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="cpp"><code>static_addr = (DWORD)GetModuleHandle(0);
+static_addr = *(DWORD*)(static_addr + 0x255AF150);
+static_addr = *(DWORD*)(static_addr);
+static_addr = *(DWORD*)(static_addr + 0xD48);
+static_addr = *(DWORD*)(static_addr + 0x0C);
+static_addr = (DWORD*)(static_addr + 0xC4);
+static_addr = *(DWORD*)(*static_addr + 0x08);
+static_addr = *(DWORD*)(static_addr + 0x44);
+static_addr = *(DWORD*)(static_addr + 0x10);
+drifter_hp = (double*)(DWORD*)*(DWORD*)(static_addr + 0x1FD8);
+drifter_ammo = (double*)(DWORD*)*(DWORD*)(static_addr + 0x268C);</code></pre>
+	</div>
+</div><br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-napisaniye-treinera"></a>НАПИСАНИЕ ТРЕЙНЕРА&#8203;<a class="hoverLink" href="#-napisaniye-treinera" title="Постоянная ссылка"></a></h2>По принципу действия читы можно разделить на две группы: внутренние и внешние. Внешние читы — это отдельное приложение, запущенное в системе в виде процесса. Внутренние читы обычно реализованы как динамическая библиотека, внедряемая в процесс игры.<br />
+<br />
+Мы будем писать внутренний чит, поэтому нам понадобится не только сама библиотека, но и инжектор, который внедрит нашу библиотеку в процесс игры. Инжектор получит список процессов, найдет процесс игры, выделит в ней память, в которую запишет наш внутренний чит, а после создаст удаленный поток внутри игры для выполнения кода нашего чита.<br />
+ <br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-injector"></a>Injector&#8203;<a class="hoverLink" href="#-injector" title="Постоянная ссылка"></a></h3>Код нашего инжектора выглядит следующим образом.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C++:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="cpp"><code>#include &lt;windows.h&gt;
+#include &lt;tlhelp32.h&gt;
+// Имя внедряемой dll
+const char* dll_path = &quot;internal_trainer_hld.dll&quot;;
+int main(void) {
+    HANDLE process;
+    void* alloc_base_addr;
+    HMODULE kernel32_base;
+    LPTHREAD_START_ROUTINE LoadLibraryA_addr;
+    HANDLE thread;
+    HANDLE snapshot = 0;
+    PROCESSENTRY32 pe32 = { 0 };
+    DWORD exitCode = 0;
+    pe32.dwSize = sizeof(PROCESSENTRY32);
+    // Получение снапшота текущих процессов
+    snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+    Process32First(snapshot, &amp;pe32);
+    do {
+        // Мы хотим работать только с процессом HyperLightDrifter
+        if (wcscmp(pe32.szExeFile, L&quot;HyperLightDrifter.exe&quot;) == 0) {
+            // Во-первых, нам нужно получить дескриптор процесса, чтобы использовать его для следующих вызовов
+            process = OpenProcess(PROCESS_ALL_ACCESS, true, pe32.th32ProcessID);
+            // Чтобы не повредить память, выделим дополнительную память для хранения нашего пути к DLL
+            alloc_base_addr = VirtualAllocEx(process, NULL, strlen(dll_path) + 1, MEM_COMMIT, PAGE_READWRITE);
+            // Записываем путь к нашей DLL в память, которую мы только что выделили внутри игры
+            WriteProcessMemory(process, alloc_base_addr, dll_path, strlen(dll_path) + 1, NULL);
+            // Создаем удаленный поток внутри игры, который будет выполнять LoadLibraryA
+            // К этому вызову LoadLibraryA мы передадим полный путь к нашей DLL, которую мы прописали в игру
+            kernel32_base = GetModuleHandle(L&quot;kernel32.dll&quot;);
+            LoadLibraryA_addr = (LPTHREAD_START_ROUTINE)GetProcAddress(kernel32_base, &quot;LoadLibraryA&quot;);
+            thread = CreateRemoteThread(process, NULL, 0, LoadLibraryA_addr, alloc_base_addr, 0, NULL);
+            // Чтобы убедиться, что наша DLL внедрена, мы можем использовать следующие два вызова для синхронизации
+            WaitForSingleObject(thread, INFINITE);
+            GetExitCodeThread(thread, &amp;exitCode);
+            // Наконец, освобождаем память и очищаем дескрипторы процесса
+            VirtualFreeEx(process, alloc_base_addr, 0, MEM_RELEASE);
+            CloseHandle(thread);
+            CloseHandle(process);
+            break;
+        }
+    // Перебор процессов из снапшота
+    } while (Process32Next(snapshot, &amp;pe32));
+    return 0;
+}</code></pre>
+	</div>
+</div><br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-dll"></a>DLL&#8203;<a class="hoverLink" href="#-dll" title="Постоянная ссылка"></a></h3>Наша библиотека будет состоять из следующих модулей:<br />
+<ul>
+<li data-xf-list-type="ul">главный модуль (dllmain.cpp);</li>
+<li data-xf-list-type="ul">модуль хуков (directx_hook.cpp и directx_hook.h);</li>
+<li data-xf-list-type="ul">модуль обратных вызовов (directx_hook_callbacks.h);</li>
+<li data-xf-list-type="ul">модуль работы с памятью (memory.h).</li>
+</ul><h4 class="bbHeading"><a class="u-anchorTarget" name="-glavnyi-modul"></a>Главный модуль&#8203;<a class="hoverLink" href="#-glavnyi-modul" title="Постоянная ссылка"></a></h4>При загрузке нашей библиотеки через функцию LoadLibraryA создаетcя поток, в котором будет происходить вызов двух функций. Первая установит хук, а вторая отрисует меню нашего чита и изменит ранее найденные значения через нажатие клавиш.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C++:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="cpp"><code>#include &quot;directx_hook.h&quot;
+double full_health = 6;
+double full_ammo = 100;
+DWORD static_addr = 0;
+DWORD *drifter = 0;
+// Получаем player class
+void get_player_class() {
+    if (drifter == NULL) {
+        static_addr = (DWORD)GetModuleHandle(0);
+        static_addr = *(DWORD*)(static_addr + 0x255AF150);
+        static_addr = *(DWORD*)static_addr;
+        static_addr = *(DWORD*)(static_addr + 0xD48);
+        static_addr = *(DWORD*)(static_addr + 0x0C);
+        drifter = (DWORD*)(static_addr + 0xC4);
+    }
+}
+// Отрисовываем наше меню
+void draw_menu(directx_hook* hook) {
+    hook-&gt;draw_text(10, 70, D3DCOLOR_ARGB(255, 255, 255, 255), &quot;Full health press F1&quot;);
+    hook-&gt;draw_text(10, 90, D3DCOLOR_ARGB(255, 255, 255, 255), &quot;Full ammo press F2&quot;);
+}
+// Изменяем по нажатию клавиш значения hp и ammo
+void run(directx_hook* hook) {
+    double* drifter_hp;
+    double* drifter_ammo;
+    draw_menu(hook);
+    get_player_class();
+    if (*drifter) {
+        static_addr = *(DWORD*)(*drifter + 0x08);
+        static_addr = *(DWORD*)(static_addr + 0x44);
+        static_addr = *(DWORD*)(static_addr + 0x10);
+        drifter_hp = (double*)(DWORD*)*(DWORD*)(static_addr + 0x1FD8);
+        drifter_ammo = (double*)(DWORD*)*(DWORD*)(static_addr + 0x268C);
+        if (GetAsyncKeyState(VK_F1) &amp; 1) {
+            *drifter_hp = full_health;
+        }
+        if (GetAsyncKeyState(VK_F2) &amp; 1) {
+            *drifter_ammo = full_ammo;
+        }
+    }
+}
+void injected_thread() {
+    // Добавляем нашу функцию, которая будет вызываться при inline hook
+    directx_hook::get_instance()-&gt;add_callback(&amp;run);
+    // Начинаем работу по установке inline hook
+    directx_hook::get_instance()-&gt;initialize();
+}
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved) {
+    switch (ul_reason_for_call) {
+        case DLL_PROCESS_ATTACH:
+            CreateThread(0, 0, (LPTHREAD_START_ROUTINE)injected_thread, 0, 0, 0);
+        case DLL_THREAD_ATTACH:
+        case DLL_THREAD_DETACH:
+        case DLL_PROCESS_DETACH:
+            break;
+    }
+    return TRUE;
+}</code></pre>
+	</div>
+</div><br />
+<h4 class="bbHeading"><a class="u-anchorTarget" name="-modul-khukov"></a>Модуль хуков&#8203;<a class="hoverLink" href="#-modul-khukov" title="Постоянная ссылка"></a></h4>Это модуль, в котором будет выполняться перехват функции <a href="https://docs.microsoft.com/en-us/windows/win32/api/d3d9/nf-d3d9-idirect3ddevice9-endscene" target="_blank" class="link link--external" rel="noopener">EndScene</a> — она отвечает за отрисовку сцен. Это необходимо для того, чтобы отрисовывать наше меню.<br />
+<br />
+<h4 class="bbHeading"><a class="u-anchorTarget" name="-khuki"></a>Хуки&#8203;<a class="hoverLink" href="#-khuki" title="Постоянная ссылка"></a></h4>Есть множество <a href="https://www.unknowncheats.me/forum/general-programming-and-reversing/154643-different-ways-hooking.html" target="_blank" class="link link--external" rel="noopener">видов хуков</a>, но мы будем использовать самый простой из этого списка — byte patching/inline hook. Выбор объясняется просто: наша игра поддерживает только одиночный режим, а другие хуки служат для обхода античитов в многопользовательских играх и нам попросту не нужны.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C++:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="cpp"><code>#pragma once
+#include &lt;windows.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;d3d9.h&gt;
+#include &lt;d3dx9.h&gt;
+#pragma comment(lib, &quot;d3d9.lib&quot;)
+#pragma comment(lib, &quot;d3dx9.lib&quot;)
+typedef HRESULT(WINAPI* _endscene)(LPDIRECT3DDEVICE9 pDevice);
+class directx_hook;
+typedef void (*_callback_run)(directx_hook* hook);
+class directx_hook {
+private:
+    static directx_hook* instance;
+    static uint8_t* orig_endscene_code;
+    static uint32_t endscene_addr;
+    static LPDIRECT3DDEVICE9 hooked_device;
+    static bool hook_ready_pre, hook_ready;
+    _callback_run callback_run;
+    LPD3DXFONT font;
+    void set_hooks();
+    uint32_t locate_endscene();
+public:
+    static _endscene orig_endscene;
+    static directx_hook* get_instance() {
+        if (!directx_hook::instance) {
+            directx_hook::instance = new directx_hook();
+        }
+        return directx_hook::instance;
+    }
+    static void delete_instance() {
+        if (directx_hook::instance) {
+            delete directx_hook::instance;
+            directx_hook::instance = NULL;
+        }
+    }
+    void initialize();
+    void add_callback(_callback_run cb);
+    void draw_text(uint32_t x, uint32_t y, D3DCOLOR color, const char* text);
+    uint32_t init_hook_callback(LPDIRECT3DDEVICE9 device);
+    HRESULT WINAPI endscene_hook_callback(LPDIRECT3DDEVICE9 pDevice);
+};</code></pre>
+	</div>
+</div><br />
+В остальных модулях мы выполним следующие действия:<br />
+<ul>
+<li data-xf-list-type="ul">создадим временное устройство Direct3D и получим его таблицы VF, чтобы найти адрес функции EndScene;</li>
+<li data-xf-list-type="ul">установим временный хук на функцию EndScene;</li>
+<li data-xf-list-type="ul">при выполнении хука выполним обратный вызов и передадим ему адрес устройства, которое использовалось для вызова функции EndScene. Затем удалим хук и восстановим нормальное выполнение функции EndScene;</li>
+<li data-xf-list-type="ul">выполним нашу функцию run;</li>
+<li data-xf-list-type="ul">вернемся ко второму пункту.</li>
+</ul>Все это делается, чтобы написанный нами код отрисовывал меню чита и по нажатию кнопок изменялись значения hp и ammo.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C++:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="cpp"><code>#include &quot;directx_hook.h&quot;
+#include &quot;directx_hook_callbacks.h&quot;
+#include &quot;memory.h&quot;
+directx_hook* directx_hook::instance = NULL;
+uint8_t* directx_hook::orig_endscene_code = NULL;
+uint32_t directx_hook::endscene_addr = NULL;
+LPDIRECT3DDEVICE9 directx_hook::hooked_device = NULL;
+_endscene directx_hook::orig_endscene = NULL;
+bool directx_hook::hook_ready = false;
+bool directx_hook::hook_ready_pre = false;
+void directx_hook::initialize() {
+    // Проверяем, находится ли в адресном пространстве d3d9.dll
+    while (!GetModuleHandleA(&quot;d3d9.dll&quot;)) {
+        Sleep(10);
+    }
+    // Получаем адрес функции endscene
+    directx_hook::endscene_addr = this-&gt;locate_endscene();
+    // Проверяем, успешно ли получен адрес EndScene
+    // Если да, то устанавливаем наш inline hook
+    if (directx_hook::endscene_addr) {
+        directx_hook::orig_endscene_code = hook_jmp(directx_hook::endscene_addr, (uint32_t)&amp;endscene_trampoline);
+    }
+    // Ждем
+    while (!directx_hook::hook_ready_pre) {
+        Sleep(10);
+    }
+    // Сигнализируем, что наш хук готов
+    directx_hook::hook_ready = true;
+}
+// Заменить присвоением
+// Как только наш хук будет установлен
+void directx_hook::add_callback(_callback_run cb) {
+    if (!directx_hook::hook_ready)
+        callback_run = cb;
+}
+// Обертка для отрисовки текста
+void directx_hook::draw_text(uint32_t x, uint32_t y, D3DCOLOR color, const char* text) {
+    RECT rect;
+    rect.left = x + 1;
+    rect.top = y + 1;
+    rect.right = rect.left + 1000;
+    rect.bottom = rect.top + 1000;
+    this-&gt;font-&gt;DrawTextA(NULL, text, -1, &amp;rect, 0, color);
+}
+uint32_t directx_hook::init_hook_callback(LPDIRECT3DDEVICE9 device) {
+    directx_hook::hooked_device = device;
+    while (directx_hook::orig_endscene_code == NULL) {}
+    unhook_jmp(directx_hook::endscene_addr, orig_endscene_code);
+    D3DXCreateFont(directx_hook::hooked_device, 15, 0, FW_BOLD, 1, 0, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, ANTIALIASED_QUALITY, DEFAULT_PITCH | FF_DONTCARE, L&quot;Arial&quot;, &amp;this-&gt;font);
+    this-&gt;set_hooks();
+    directx_hook::hook_ready_pre = true;
+    return directx_hook::endscene_addr;
+}
+HRESULT WINAPI directx_hook::endscene_hook_callback(LPDIRECT3DDEVICE9 pDevice) {
+    HRESULT result;
+    callback_run(this);
+    result = orig_endscene(pDevice);
+    this-&gt;set_hooks();
+    return result;
+}
+void directx_hook::set_hooks() {
+    uint32_t ret;
+    // Устанавливаем хук
+    ret = hook_vf((uint32_t)directx_hook::hooked_device, 42, (uint32_t)&amp;my_endscene);
+    if (ret != (uint32_t)&amp;my_endscene) {
+        *(uint32_t*)&amp;directx_hook::orig_endscene = ret;
+    }
+}
+uint32_t directx_hook::locate_endscene() {
+    LPDIRECT3D9 pD3D;
+    D3DPRESENT_PARAMETERS d3dpp;
+    LPDIRECT3DDEVICE9 pd3dDevice;
+    uint32_t endscene_addr;
+    // Cоздаем временный объект D3D9 и проходимся по виртуальной таблице, чтобы получить адрес метода EndScene
+    pD3D = Direct3DCreate9(D3D_SDK_VERSION);
+    if (!pD3D) {
+        return 0;
+    }
+    ZeroMemory(&amp;d3dpp, sizeof(d3dpp));
+    d3dpp.Windowed = TRUE;
+    d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
+    d3dpp.hDeviceWindow = GetForegroundWindow();
+    HRESULT result = pD3D-&gt;CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, d3dpp.hDeviceWindow, D3DCREATE_SOFTWARE_VERTEXPROCESSING, &amp;d3dpp, &amp;pd3dDevice);
+    if (FAILED(result) || !pd3dDevice) {
+        pD3D-&gt;Release();
+        return 0;
+    }
+    // Получаем адрес, который хранится в rdata
+    endscene_addr = get_vf((uint32_t)pd3dDevice, 42);
+    // Очищаем
+    pD3D-&gt;Release();
+    pd3dDevice-&gt;Release();
+    return endscene_addr;
+}</code></pre>
+	</div>
+</div><br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-modul-obratnykh-vyzovov"></a>Модуль обратных вызовов&#8203;<a class="hoverLink" href="#-modul-obratnykh-vyzovov" title="Постоянная ссылка"></a></h3>Это модуль, в котором реализована функция inline hook — endscene_trampoline, a также функции init_endscene, на которую хук передаст управление. Она, в свою очередь, запустит функцию init_hook_callback для установки хука. А функция my_endscene вызовет функцию endscene_hook_callback, которая отвечает за запуск функции run.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C++:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="cpp"><code>#include &quot;directx_hook.h&quot;
+DWORD WINAPI init_endscene(LPDIRECT3DDEVICE9 device_addr) {
+    return directx_hook::get_instance()-&gt;init_hook_callback(device_addr);
+}
+HRESULT WINAPI my_endscene(LPDIRECT3DDEVICE9 pDevice) {
+    return directx_hook::get_instance()-&gt;endscene_hook_callback(pDevice);
+}
+// Наш inline hook
+__declspec(naked) void endscene_trampoline() {
+    __asm {
+        MOV EAX, DWORD PTR SS:[ESP + 0x4]
+        PUSH EAX
+        CALL init_endscene
+        JMP EAX
+    }
+}</code></pre>
+	</div>
+</div><br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-modul-raboty-s-pamyat-yu"></a>Модуль работы с памятью&#8203;<a class="hoverLink" href="#-modul-raboty-s-pamyat-yu" title="Постоянная ссылка"></a></h3>Функция Direct3DCreate9 возвращает указатель на интерфейс IDirect3D9, который содержит таблицу виртуальных функций (далее VMT). Среди них по индексу 42 располагается нужная нам функция EndScene. Поэтому напишем несколько функций, которые позволят получить VMT, а также писать, читать и изменять права доступа памяти. Более подробно о таблице виртуальных функций рассказано <a href="https://ru.wikipedia.org/wiki/Таблица_виртуальных_методов" target="_blank" class="link link--external" rel="noopener">в Википедии</a>.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C++:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="cpp"><code>#pragma once
+#include &lt;windows.h&gt;
+#include &lt;stdint.h&gt;
+// Чтение из памяти
+template&lt;typename T&gt;
+T read_memory(uint32_t address) {
+    return *((T*)address);
+}
+// Запись в память
+template&lt;typename T&gt;
+void write_memory(uint32_t address, T value) {
+    *((T*)address) = value;
+}
+template&lt;typename T&gt;
+uint32_t protect_memory(uint32_t address, uint32_t prot) {
+    DWORD old_prot;
+    VirtualProtect((LPVOID)address, sizeof(T), prot, &amp;old_prot);
+    return old_prot;
+}
+// Получение адреса EndScene в VMT
+uint32_t get_vf(uint32_t class_inst, uint32_t func_idx) {
+    uint32_t vf_table;
+    uint32_t hook_addr;
+    vf_table = read_memory&lt;uint32_t&gt;(class_inst);
+    hook_addr = vf_table + func_idx * sizeof(uint32_t);
+    return read_memory&lt;uint32_t&gt;(hook_addr);
+}
+// Получение адреса EndScene из VMT
+uint32_t hook_vf(uint32_t class_inst, uint32_t func_idx, uint32_t new_func) {
+    uint32_t vf_table;
+    uint32_t hook_addr;
+    uint32_t old_prot;
+    uint32_t orig_func;
+    vf_table = read_memory&lt;uint32_t&gt;(class_inst);
+    hook_addr = vf_table + func_idx * sizeof(uint32_t);
+    old_prot = protect_memory&lt;uint32_t&gt;(hook_addr, PAGE_READWRITE);
+    orig_func = read_memory&lt;uint32_t&gt;(hook_addr);
+    write_memory&lt;uint32_t&gt;(hook_addr, new_func);
+    protect_memory&lt;uint32_t&gt;(hook_addr, old_prot);
+    return orig_func;
+}
+// Установка хука
+unsigned char* hook_jmp(uint32_t hook, uint32_t new_func) {
+    uint32_t new_offest;
+    uint32_t old_prot;
+    uint8_t* originals = new uint8_t[5];
+    // Вычисляем смещение до нашего inline hook
+    new_offest = new_func - hook - 5;
+    // Чтобы не произошло краша, так как все виртуальные функции
+    // хранятся в rdata, изменяем права доступа по адресу функции
+    old_prot = protect_memory&lt;uint8_t[5]&gt;(hook, PAGE_EXECUTE_READWRITE);
+    // Сохраняем оригинальный адрес
+    for (uint8_t i = 0; i &lt; 5; i++) {
+        originals[i] = read_memory&lt;uint8_t&gt;(hook + i);
+    }
+    // Перезаписываем нашим кодом
+    write_memory&lt;uint8_t&gt;(hook, 0xE9);
+    write_memory&lt;uint32_t&gt;(hook + 1, new_offest);
+    // Восстанавливаем прежние права
+    protect_memory&lt;uint8_t[5]&gt;(hook + 1, old_prot);
+    return originals;
+}
+// Снимаем хук
+void unhook_jmp(uint32_t hook, uint8_t* originals) {
+    uint32_t old_prot;
+    // Чтобы не произошло краша, изменяем права доступа по адресу функции
+    old_prot = protect_memory&lt;uint8_t[5]&gt;(hook, PAGE_EXECUTE_READWRITE);
+    // Записываем прежний адрес
+    for (unsigned int i = 0; i &lt; 5; i++) {
+        write_memory&lt;uint8_t&gt;(hook + i, originals[i]);
+    }
+    // Восстанавливаем прежние права
+    protect_memory&lt;uint8_t[5]&gt;(hook + 1, old_prot);
+    delete[] originals;
+}</code></pre>
+	</div>
+</div><br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-proverka-rabotosposobnosti"></a>ПРОВЕРКА РАБОТОСПОСОБНОСТИ&#8203;<a class="hoverLink" href="#-proverka-rabotosposobnosti" title="Постоянная ссылка"></a></h2>Запускаем наш чит, получаем урон, тратим боезапас, нажимаем F1-F2 и видим, как значения hp и ammo становятся максимальными. Значит, чит работает!<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="33_check.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F33_check.png&amp;hash=bbe1adf58efc1bdf86f5b2ce3af4c79b" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../33_check1065.png?image=https%3A%2F%2Fxakep.ru%2Fwp-content%2Fuploads%2F2022%2F03%2F378874%2F33_check.png&amp;hash=bbe1adf58efc1bdf86f5b2ce3af4c79b"
+			data-url="../../../xakep.ru/wp-content/uploads/2022/03/378874/33_check.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="33_check.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-vyvody"></a>ВЫВОДЫ&#8203;<a class="hoverLink" href="#-vyvody" title="Постоянная ссылка"></a></h2>С помощью Cheat Engine мы научились искать фактическое значение той переменной, которую мы хотим модифицировать. Затем с помощью отладчика мы нашли статические адреса для значений, определенных с помощью CE, при этом разобрались, как работает игровой движок. Например, есть общая функция для получения значений игрока, таких как hp и ammo, есть общая функция для записи изменений этих значений. С этими знаниями поиск других значений будет гораздо проще и быстрее. А написанный нами код можно использовать как основу, базу для читов к другим играм.<br />
+<br />
+Несколько полезных ссылок по теме взлома игр и написанию читов:<br />
+<ul>
+<li data-xf-list-type="ul"><a href="https://github.com/dsasmblr/game-hacking" target="_blank" class="link link--external" rel="noopener">github.com/dsasmblr/game-hacking</a></li>
+<li data-xf-list-type="ul"><a href="https://github.com/dsasmblr/hacking-online-games" target="_blank" class="link link--external" rel="noopener">github.com/dsasmblr/hacking-online-games</a></li>
+</ul><b><u>Классная статья!</u></b></div>
+					
+
+					
+						
+
+	
+		
+	
+
+					
+					
+										
+
+					
+						<div style="padding-top: 10px;">
+							
+								<dl class="blockStatus blockStatus--info blockStatus--standalone">
+									<dt></dt>
+									<dd class="blockStatus-message amsNextPage">
+										<span class="">Следующая страница цикла:</span>
+										<a href="page/kak-sozdat-svoi-chit-treiner-2.46/index.html" class="" title="Как создать свой чит/трейнер - 2">Как создать свой чит/трейнер - 2</a>
+									</dd>
+								</dl>
+							
+
+							
+						</div>				
+					
+
+					
+						
+					
+
+					
+
+					
+
+					<div class="reactionsBar js-reactionsList is-active">
+						
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>ЗашелТолькоПосмотреть</bdi> и <bdi>HMCoba</bdi></a>
+					</div>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</article>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+</div>
+					
+				</div>
+
+				
+					<div class="p-body-sidebar">
+						
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-header">ОГЛАВЛЕНИЕ</h3>
+				<div class="block-body">
+					<a class="blockLink is-selected" href="index.html">
+						
+							Как создать свой чит/трейнер
+						
+					</a>
+
+					
+						<a href="page/kak-sozdat-svoi-chit-treiner-2.46/index.html" class="blockLink">
+							 Как создать свой чит/трейнер - 2</a>
+					
+						<a href="page/kak-sozdat-svoi-chit-treiner-3.47/index.html" class="blockLink">
+							 Как создать свой чит/трейнер - 3</a>
+					
+
+					
+						<a href="index9401.html?full=1" class="blockLink ">Просмотреть всю статью</a>
+					
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">Информация о статье</h3>
+			<div class="block-body block-row block-row--minor">
+				<dl class="pairs pairs--justified">
+					<dt>Автор</dt>
+					
+						<dd><a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a></dd>
+					
+				</dl>
+				
+					<dl class="pairs pairs--justified">
+						<dt>Article read time</dt>
+						<dd>43 min read</dd>
+					</dl>
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Просмотры</dt>
+						<dd>866</dd>
+					</dl>
+				
+				
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Последнее обновление</dt>
+						<dd><time  class="u-dt" dir="auto" datetime="2025-05-10T09:38:50+0300" data-timestamp="1746859130" data-date="10.05.2025" data-time="09:38" data-short="10 Май" title="10.05.2025 в 09:38">10.05.2025</time></dd>
+					</dl>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</div>
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-minorHeader"><a href="../categories/gamehacking.10/index.html">Больше в GameHacking</a></h3>
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../kak-sozdat-svoi-chit-kovyryayem-android.51/index.html">Как создать свой чит. Ковыряем андроид</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Автор выложил продолжение крутого цикла статей:Как создать свой чит/трейнер
+
+Оригинал:Чит своими...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../udalennoye-vypolneniye-koda-pri-pomoshchi-dma.37/index.html">Удаленное выполнение кода при помощи DMA</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Перевод оригинала<img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f600.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":D" title="Big grin    :D"  data-smilie="8"data-shortname=":D" />MA Code Execution – Lystic&#039;s Blog
+
+При использовании устройства DMA атакующий...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+			<div class="block-container">
+				
+					<h3 class="block-minorHeader"><a href="../authors/0x42.1/index.html">Больше от 0x42</a></h3>
+				
+
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../o-tom-kak-boryut-sya-s-tor-v-rf.75/index.html">О том как борются с TOR в РФ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Недавно решил поддержать проект TOR, решил поднять middle relay.
+
+Напомню, что для поддержки...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../bezumnyi-maks-skam.74/index.html">Безумный МАКС/СКАМ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				По телевизору передают, что мессенджер МАКС полюбили россияне, зарегистрировалось почти вся...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../pochemu-v-linux-vse-fail.73/index.html">Почему в Linux всё — файл?</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				---
+
+## 🔹 Оглавление
+
+[1. Философия UNIX: «Everything is a file»]
+[2. Как работает VFS — Virtual...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../obkhod-antivirusov-cherez-uyazvimyi-draiver.71/index.html">Обход антивирусов через уязвимый драйвер</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Пока хакер не прикрыли, из-за дурацких законов, решил скопировать приватную статью.
+
+Вот...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../zashchita-ot-roskomnadzora.70/index.html">Защита от Роскомнадзора</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В связи с тем-что РКН внедрили ботов для автоматического поиска неугодного контента и...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+				<div class="block-container">
+					
+						<h3 class="block-minorHeader">Поделиться этой статьей</h3>
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965525"></span>
+
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965525" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965525"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965525" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+								
+							</div>
+						
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-2-1758965525">Копировать BB-код адреса статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[URL=&quot;https://osint42.org/articles/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/&quot;]Цикл статей. Как создать свой чит/трейнер[/URL]" id="_xfUid-2-1758965525" />
+		</div>
+	</div>
+
+									
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-3-1758965525">Копировать BB-код статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[AMS=article, 10][/AMS]" id="_xfUid-3-1758965525" />
+		</div>
+	</div>
+
+									
+								
+							</div>
+						
+					
+				</div>
+			</div>
+						
+						
+					</div>
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/gamehacking.10/index.html" itemprop="item">
+			<span itemprop="name">GameHacking</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965525%2C7eee12c6b39210c110f23b8fdcf71bf1"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965525%2C7eee12c6b39210c110f23b8fdcf71bf1"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965525%2C7eee12c6b39210c110f23b8fdcf71bf1"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../../threads/pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+    
+    
+        
+        
+            <script type="application/ld+json">
+                {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "@id": "https://osint42.org/articles/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/",
+    "name": "\u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439. \u041a\u0430\u043a \u0441\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u0432\u043e\u0439 \u0447\u0438\u0442/\u0442\u0440\u0435\u0439\u043d\u0435\u0440",
+    "headline": "\u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439. \u041a\u0430\u043a \u0441\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u0432\u043e\u0439 \u0447\u0438\u0442/\u0442\u0440\u0435\u0439\u043d\u0435\u0440",
+    "alternativeHeadline": "\u0426\u0438\u043a\u043b \u0441\u0442\u0430\u0442\u0435\u0439. \u041a\u0430\u043a \u0441\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u0432\u043e\u0439 \u0447\u0438\u0442/\u0442\u0440\u0435\u0439\u043d\u0435\u0440",
+    "description": "\u041f\u0440\u0438\u0432\u0430\u0442\u043d\u0430\u044f \u0441\u0442\u0430\u0442\u044c\u044f, \u0447\u0430\u0441\u0442\u044c \u043f\u0435\u0440\u0432\u0430\u044f:\u0427\u0438\u0442 \u0441\u0432\u043e\u0438\u043c\u0438 \u0440\u0443\u043a\u0430\u043c\u0438. \u0412\u0441\u043a\u0440\u044b\u0432\u0430\u0435\u043c \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u043d\u0443\u044e \u0438\u0433\u0440\u0443 \u0438 \u043f\u0438\u0448\u0435\u043c \u0442\u0440\u0435\u0439\u043d\u0435\u0440 \u043d\u0430 C++\n\n\u0418\u0433\u0440\u0430\u0442\u044c \u0432 \u0438\u0433\u0440\u044b \u043b\u044e\u0431\u044f\u0442 \u0432\u0441\u0435, \u043d\u043e \u044d\u0442\u043e \u0433\u043e\u0440\u0430\u0437\u0434\u043e \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u0435\u0435, \u043a\u043e\u0433\u0434\u0430 \u0443 \u0442\u0435\u0431\u044f \u0438\u043c\u0435\u0435\u0442\u0441\u044f \u043d\u0435\u0441\u043a\u043e\u043d\u0447\u0430\u0435\u043c\u044b\u0439 \u0437\u0430\u043f\u0430\u0441 \u043f\u0430\u0442\u0440\u043e\u043d\u043e\u0432 \u0438 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f. \u0427\u0442\u043e\u0431\u044b \u043e\u0431\u0437\u0430\u0432\u0435\u0441\u0442\u0438\u0441\u044c \u0438 \u0442\u0435\u043c \u0438...",
+    "keywords": "",
+    "dateCreated": "2025-05-10T06:26:29+00:00",
+    "dateModified": "2025-05-10T06:38:50+00:00",
+    "author": {
+        "@type": "Person",
+        "name": "0x42"
+    },
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/CommentAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/LikeAction",
+            "userInteractionCount": "2"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/ViewAction",
+            "userInteractionCount": "866"
+        }
+    ]
+}
+            </script>
+        
+    
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/articles/tsikl-statei-kak-sozdat-svoi-chit-treiner.10/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:41:48 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

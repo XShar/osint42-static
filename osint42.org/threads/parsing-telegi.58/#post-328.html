@@ -1,0 +1,2803 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="thread_view"
+	data-container-key="node-15"
+	data-content-key="thread-58"
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965607,ebf7c62578eccf380dfd326829664cc7"
+	class="has-no-js template-thread_view"
+	>
+
+<!-- Mirrored from osint42.org/threads/parsing-telegi.58/#post-328 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:46:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Заметка - Парсинг телеги | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta name="description" content="Вот в этой статье:Заметка - Как пробить пользователя Telegram
+
+Была отсылка на приватную статью с Хакера:Парсим телегу. Как собирать имена участников чатов..." />
+		<meta property="og:description" content="Вот в этой статье:Заметка - Как пробить пользователя Telegram
+
+Была отсылка на приватную статью с Хакера:Парсим телегу. Как собирать имена участников чатов в Telegram
+
+Решил перепостить, в целом интересно...)
+
+Как известно, в «Телеграме» есть чаты и каналы, куда, бывает, набивается множество..." />
+		<meta property="twitter:description" content="Вот в этой статье:Заметка - Как пробить пользователя Telegram
+
+Была отсылка на приватную статью с Хакера:Парсим телегу. Как собирать имена участников чатов в Telegram
+
+Решил перепостить, в целом..." />
+	
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+		
+	
+	
+	<meta property="og:type" content="website" />
+
+
+	
+	
+		
+	
+	
+	
+		<meta property="og:title" content="Заметка - Парсинг телеги" />
+		<meta property="twitter:title" content="Заметка - Парсинг телеги" />
+	
+
+
+	
+	
+	
+	
+		
+	
+	
+	
+		<meta property="og:image" content="../../data/assets/logo/192192.png" />
+		<meta property="twitter:image" content="../../data/assets/logo/192192.png" />
+		<meta property="twitter:card" content="summary" />
+	
+
+
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../css4b5c.css?css=public%3Aalnb_navigation.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Amessage.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=2ed7579772272a11665b195f4b692b2e15158024" />
+
+
+	
+		<script data-cfasync="false" src="../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965607,ebf7c62578eccf380dfd326829664cc7',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/xf\/code_block-compiled.js?_v=01eb82fa":true,"\/js\/copycode\/copycode.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:message.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965607,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/xf/code_block-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/copycode/copycode.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="thread_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../articles/authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965607%2Cebf7c62578eccf380dfd326829664cc7"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965607%2Cebf7c62578eccf380dfd326829664cc7"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965607%2Cebf7c62578eccf380dfd326829664cc7"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;}">Темы</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;,&quot;c&quot;:{&quot;nodes&quot;:[15],&quot;child_nodes&quot;:1}}">Этот раздел</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;,&quot;c&quot;:{&quot;thread&quot;:58}}">Эта тема</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965607,ebf7c62578eccf380dfd326829664cc7" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/posts/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+1"
+	data-nav-id="newPosts">Новые сообщения</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../search/index4009.html?type=post"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+2"
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../cdn-cgi/l/email-protection.html#e881868e87a8879b81869cdcdac68b8785" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="d8b1b6beb798b7abb1b6aceceaf6bbb7b5">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html" itemprop="item">
+			<span itemprop="name">Форум</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html#tekhniki-atak-i-ekspluatatsiya.19" itemprop="item">
+			<span itemprop="name">Техники атак и эксплуатация</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/osint-forum.15/index.html" itemprop="item">
+			<span itemprop="name">OSINT форум</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+						
+							<div class="p-title ">
+								
+									
+										<h1 class="p-title-value"><span class="label label--lightGreen" dir="auto">Заметка</span><span class="label-append">&nbsp;</span>Парсинг телеги</h1>
+									
+									
+								
+							</div>
+						
+
+						
+							<div class="p-description">
+	<ul class="listInline listInline--bullet">
+		<li>
+			<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор темы</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+			<span class="u-srOnly">Автор темы</span>
+
+			<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+		</li>
+		<li>
+			<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата начала</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+			<span class="u-srOnly">Дата начала</span>
+
+			<a href="index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-05-25T18:12:37+0300" data-timestamp="1748185957" data-date="25.05.2025" data-time="18:12" data-short="25 Май" title="25.05.2025 в 18:12">25.05.2025</time></a>
+		</li>
+		
+		
+	</ul>
+</div>
+						
+					
+				</div>
+			
+
+			<div class="p-body-main  ">
+				
+				<div class="p-body-contentCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="block block--messages" data-xf-init="" data-type="post" data-href="/inline-mod/" data-search-target="*">
+
+	<span class="u-anchorTarget" id="posts"></span>
+
+	
+		
+	
+
+	
+
+	<div class="block-outer"></div>
+
+	
+
+	
+		
+	<div class="block-outer js-threadStatusField"></div>
+
+	
+
+	<div class="block-container lbContainer"
+		data-xf-init="lightbox select-to-quote"
+		data-message-selector=".js-post"
+		data-lb-id="thread-58"
+		data-lb-universal="0">
+
+		<div class="block-body js-replyNewMessageContainer">
+			
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="0x42"
+		data-content="post-93"
+		id="js-post-93"
+		>
+
+		
+
+		<span class="u-anchorTarget" id="post-93"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		
+		
+		>
+
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--m dcom-lc-avaOffline" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/m/0/1b812.jpg?1746634773" srcset="/data/avatars/l/0/1.jpg?1746634773 2x" alt="0x42" class="avatar-u1-m" width="96" height="96" loading="lazy" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--style3 username--moderator username--admin">0x42</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>05.05.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>198</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>137</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-93.html" rel="nofollow" >
+					<time  class="u-dt" dir="auto" datetime="2025-05-25T18:12:37+0300" data-timestamp="1748185957" data-date="25.05.2025" data-time="18:12" data-short="25 Май" title="25.05.2025 в 18:12">25.05.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-93.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/93/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-93.html" rel="nofollow">
+						#1
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-93"
+		data-lb-caption-desc="0x42 &middot; 25.05.2025 в 18:12">
+
+		
+			
+
+	
+		
+	
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div >
+				
+					<div class="bbWrapper">Вот в этой статье:<a href="../kak-probit-pol-zovatelya-telegram.57/index.html" class="link link--internal">Заметка - Как пробить пользователя Telegram</a><br />
+<br />
+Была отсылка на приватную статью с Хакера:<a href="https://xakep.ru/2022/07/18/telegram-parsing/" target="_blank" class="link link--external" rel="noopener">Парсим телегу. Как собирать имена участников чатов в Telegram</a><br />
+<br />
+Решил перепостить, в целом интересно...)<br />
+<br />
+Как известно, в «Телеграме» есть чаты и каналы, куда, бывает, набивается множество пользователей. Иногда весьма полезно иметь их список, например для каких‑то рассылок и приглашений.<br />
+<br />
+Обычно под словом «парсинг» в контексте телеги понимается именно получение списка пользователей канала или чата. Реже — получение еще и списка сообщений.<br />
+ <br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-kanaly"></a>Каналы&#8203;<a class="hoverLink" href="#-kanaly" title="Постоянная ссылка"></a></h2>Начнем с каналов. Канал — это некий ресурс в «Телеграме», где юзеры только читают сообщения владельца канала. Сами они ничего писать не могут за исключением тех случаев, когда к каналу привязан чат для комментариев. Тогда у подписчиков появляется возможность комментировать сообщения владельца.<br />
+<br />
+Получить список подписчиков канала без привязанного к нему чата с комментариями можно, только если это твой канал и у него меньше 200 подписчиков. Если хотя бы одно из этих условий не выполняется, парсинг недоступен чисто технически и никто не сможет его провести, что бы тебе ни обещали. Возможно, в будущем появятся какие‑то новые способы — легальные или с использованием дыр, но пока рабочих способов нет.<br />
+<br />
+Если же чат с комментариями существует, то спарсить пользователей ты можешь точно так же, как в случае с любым другим чатом.<br />
+<br />
+Что касается списка сообщений в канале, то его можно получить как программно, через API «Телеграма», так и вручную, экспортировав список сообщений с помощью штатного клиента.<br />
+<br />
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="1748185561844.png"
+		data-src="https://osint42.org/attachments/1748185561844-png.458/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1748185561844-png.458/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1748185561844.png"
+			title="1748185561844.png"
+			width="592" height="953" loading="lazy" />
+	</div><br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1748185586058.png"
+		data-src="https://osint42.org/attachments/1748185586058-png.459/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1748185586058-png.459/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1748185586058.png"
+			title="1748185586058.png"
+			width="980" height="782" loading="lazy" />
+	</div><br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-chaty"></a>Чаты&#8203;<a class="hoverLink" href="#-chaty" title="Постоянная ссылка"></a></h2>С чатами гораздо интереснее. Вручную вытащить список юзеров через стандартный клиент не получится, разве что сидеть с блокнотом и ручкой и выписывать всю интересующую информацию. Способ не очень, так что придется посмотреть в сторону родного <a href="https://core.telegram.org/#tdlib-build-your-own-telegram" target="_blank" class="link link--external" rel="noopener">API Telegram</a> или, если хочешь упростить себе жизнь, на какую‑нибудь библиотеку, например <a href="https://github.com/LonamiWebs/Telethon" target="_blank" class="link link--external" rel="noopener">Telethon</a>.<br />
+<br />
+В <a href="https://github.com/LonamiWebs/Telethon" target="_blank" class="link link--external" rel="noopener">Telethon</a> есть функция <a href="https://tl.telethon.dev/methods/channels/get_participants.html" target="_blank" class="link link--external" rel="noopener">GetParticipantsRequest</a>, которая получает на вход некую сущность (<a href="https://docs.telethon.dev/en/stable/concepts/entities.html" target="_blank" class="link link--external" rel="noopener">entity</a>), а на выходе выдает список пользователей.<br />
+<br />
+Давай попробуем скормить ей какой‑нибудь чат.<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>async def test1(client):
+    chat_id = &#039;https://t.me/kakoy-to-chat&#039;
+    chat_entity =  await client.get_entity(chat_id)
+    participants =  await client(GetParticipantsRequest(
+        chat_entity, ChannelParticipantsSearch(&#039;&#039;), offset=0, limit=200, hash=0))
+    for user in participants.users:
+        print(user)
+    return</code></pre>
+	</div>
+</div><br />
+И посмотрим, что можно получить с помощью этой функции:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>User(id=306742xxx,
+    is_self=False,
+    contact=False,
+    mutual_contact=False,
+    deleted=False,
+    bot=False,
+    bot_chat_history=False,
+    bot_nochats=False,
+    verified=False,
+    restricted=False,
+    min=False,
+    bot_inline_geo=False,
+    support=False,
+    scam=False,
+    apply_min_photo=True,
+    fake=False,
+    access_hash=669983103xxxxx,
+    first_name=&#039;??\u200d&gt;?&#039;,
+    last_name=None,
+    username=&#039;prosto_user_name&#039;,
+    phone=None,
+    photo=UserProfilePhoto(photo_id=13174487829112xxxx,
+    dc_id=2,
+    has_video=False,
+    stripped_thumb=b&#039;\x01\x08\x08\x04\xe0\xaa\xe0\x8f\x9b\x8cQE\x14\x90\xcf&#039;),
+    status=UserStatusRecently(),
+    bot_info_version=None,
+    restriction_reason=[],
+    bot_inline_placeholder=None,
+    lang_code=None)</code></pre>
+	</div>
+</div><br />
+Чаще всего требуются поля id, username, first_name и last_name, phone. Кроме того, здесь еще и куча признаков: bot, verified, scam, fake, photo, status и другие.<br />
+<br />
+Как видишь, информация самая разная. Некоторые специалисты по парсингу Telegram при этом умудряются заявлять, что им удалось получить только ID, а юзернеймы с телефонами — за отдельные деньги. Ловко, ничего не скажешь!<br />
+<br />
+Телефоны, конечно, в этом списке будут отображаться только в том случае, если пользователь в настройках не отключил показ телефона всем.<br />
+<br />
+Кстати, иногда предлагают определять еще и пол пользователя. Таких данных Telegram не предоставляет и не имеет. Мне известно только два способа получать эту информацию:<br />
+<ul>
+<li data-xf-list-type="ul">анализировать юзернеймы и имена, прогонять их по заранее созданной базе и делать, если возможно, какие‑то выводы. Если имя пользователя, например, Карина, Юля или Алёна, можно считать его женщиной;</li>
+<li data-xf-list-type="ul">скачивать все сообщения из чата для каждого пользователя, вытаскивать оттуда глаголы и смотреть, насколько часто они заканчиваются на букву «а». Логично предположить, что у женщин таких случаев будет гораздо больше, чем у мужчин.</li>
+</ul>Очевидно, что оба способа не дают никаких гарантий и позволяют определять пол лишь с некоторой вероятностью и к тому же требуют дополнительных усилий.<br />
+<br />
+Внимательно присмотревшись к результату работы GetParticipantsRequest, мы увидим, что независимо от числа участников чата и от параметра limit нам выдают максимум 200 пользователей. Когда в группе меньше 200 участников, этого достаточно, но если их больше, то придется еще поднапрячься.<br />
+<br />
+Мои эксперименты с параметром offset показали, что он нужен, чтобы указывать смещение в списке пользователей. По умолчанию это смещение равно нулю, но если организовать цикл, на каждой итерации которого увеличивать offset, то будет скачиваться по 200 юзеров и можно парсить до бесконечности (ну или пока не закончатся все юзеры). Например, так:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>offset = 0
+        while True:
+            participants = await client(GetParticipantsRequest(
+                channel, ChannelParticipantsSearch(&#039;&#039;), offset, limit, hash=0))
+            if not participants.users:
+                break
+            #...
+                        # Тут делаем что-то с юзерами из списка participants.users
+            #...
+            offset += len(participants.users)</code></pre>
+	</div>
+</div><br />
+Однако довольно быстро выясняется, что функция GetParticipantsRequest возвращает максимум 10 тысяч юзеров. Как увеличить этот лимит, выяснить пока не удалось. Есть мнение, что это невозможно.<br />
+<br />
+Параметр filter позволяет задать критерии, которым должны соответствовать возвращаемые результаты.<br />
+<br />
+Есть следующие варианты:<br />
+<ul>
+<li data-xf-list-type="ul">ChannelParticipantsAdmins;</li>
+<li data-xf-list-type="ul">ChannelParticipantsBanned;</li>
+<li data-xf-list-type="ul">ChannelParticipantsBots;</li>
+<li data-xf-list-type="ul">ChannelParticipantsContacts;</li>
+<li data-xf-list-type="ul">ChannelParticipantsKicked;</li>
+<li data-xf-list-type="ul">ChannelParticipantsMentions;</li>
+<li data-xf-list-type="ul">ChannelParticipantsRecent;</li>
+<li data-xf-list-type="ul">ChannelParticipantsSearch.</li>
+</ul>Тут уже можно экспериментировать: попробовать получить список всех админов, например, или всех, кто онлайн. Парсить пользователей в онлайне — вообще хорошая идея. Если делать это регулярно, то можно отсеять неактивных участников, которые добавились в группку и забыли о ней.<br />
+<br />
+Нас больше всего должен заинтересовать параметр ChannelParticipantsSearch, позволяющий искать пользователей по юзернейму или его части. Давай попробуем замутить цикл:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code> chat_id = &#039;https://t.me/stepnru&#039;
+    chat_entity =  await client.get_entity(chat_id)
+    keys = [&#039;A&#039;, &#039;B&#039;, &#039;C&#039;, &#039;D&#039;, &#039;E&#039;, &#039;F&#039;, &#039;G&#039;, &#039;H&#039;, &#039;I&#039;, &#039;J&#039;, &#039;K&#039;, &#039;L&#039;, &#039;M&#039;, &#039;N&#039;, &#039;O&#039;, &#039;P&#039;, &#039;Q&#039;, &#039;R&#039;, &#039;S&#039;, &#039;T&#039;, &#039;U&#039;,
+            &#039;V&#039;, &#039;W&#039;, &#039;X&#039;, &#039;Y&#039;, &#039;Z&#039;]
+    for key in keys:
+        offset = 0
+        participants = await client(GetParticipantsRequest(
+                chat_entity, ChannelParticipantsSearch(key), offset, limit=200, hash=0))
+        print(key + &quot;: &quot; + str(participants.count))</code></pre>
+	</div>
+</div><br />
+Поясняю: мы взяли весь алфавит и перебрали буквы, пытаясь найти юзеров, в user_name которых она есть.<br />
+<br />
+Смотрим, что получилось:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1748185855488.png"
+		data-src="https://osint42.org/attachments/1748185855488-png.460/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1748185855488-png.460/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1748185855488.png"
+			title="1748185855488.png"
+			width="872" height="654" loading="lazy" />
+	</div><br />
+Как видно, иногда список результатов содержит меньше 10 тысяч, и тогда мы можем вытащить его полностью, иногда — больше, и тогда мы опять получим только первые 10 тысяч. Однако тест на группе со 190 тысячами юзеров позволил узнать данные о 140 тысячах, а это уже немало!<br />
+<br />
+Наверняка существуют и другие способы поиграть с фильтрами и вытащить еще больше людей из чата. Пусть это будет тебе домашним заданием.<br />
+<br />
+Обрати внимание: этот способ работает намного дольше, и парсинг группы с несколькими десятками юзеров может занимать до нескольких десятков минут.<br />
+<br />
+Сохранять результаты я рекомендую не в текстовый файл, а в какую‑нибудь базу данных, например <a href="https://digitology.tech/posts/uchebnik-po-sqlite3-v-python/" target="_blank" class="link link--external" rel="noopener">SQLite</a>:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>def add_users_in_base(bd_name, users):
+    sqlite_connection = sqlite3.connect(bd_name)
+    cursor = sqlite_connection.cursor()
+    for user in users:
+        sqlite_insert_query = &quot;INSERT INTO users (id, deleted, bot, bot_chat_history .....  phone) VALUES (?,?,?,?,?,?,?,?) &quot;
+        data_tuple = (
+            user.id, user.deleted, user.bot, user.bot_chat_history, .... user.phone)
+        try:
+            cursor.execute(sqlite_insert_query, data_tuple)
+        except sqlite3.Error as er:
+            pass
+        sqlite_connection.commit()
+    cursor.close()
+    sqlite_connection.close()</code></pre>
+	</div>
+</div><br />
+Так сразу отсеиваются дубликаты, и потом будет намного удобнее работать с полученными данными: искать, сортировать, конвертировать.<br />
+<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-vyvody"></a>Выводы&#8203;<a class="hoverLink" href="#-vyvody" title="Постоянная ссылка"></a></h2>Итак, я показал тебе, как извлекать из чата информацию о 10 тысячах его участников, а с применением фильтров — гораздо больше. Немного поэкспериментировав, ты сможешь написать скрипты, которые соберут нужную тебе информацию в удобном виде.<br />
+<br />
+Если вдруг знаешь еще какие‑то интересные трюки по этой теме, не забудь поделиться в комментариях!</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+			
+
+	
+		
+	
+
+		
+
+		
+			
+	
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+		
+			<aside class="message-signature">
+			
+				<div class="bbWrapper">В районе богачей, если нет оружия и не таишь злобу, главное это деньги, а не любовь.<br />
+<b><img class="smilie smilie--emoji" alt="💰" src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4b0.png" title="Money bag    :moneybag:" data-shortname=":moneybag:" loading="lazy" width="64" height="64" /> Donate (BTC):bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz</b></div>
+			
+			</aside>
+		
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="../../posts/93/reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>Anton</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="eqwepepepe"
+		data-content="post-311"
+		id="js-post-311"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/311/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #2" />
+		
+
+		<span class="u-anchorTarget" id="post-311"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/eqwepepepe.230/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/eqwepepepe.230/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/eqwepepepe.230/" class="avatar avatar--m dcom-lc-avaOffline avatar--default avatar--default--dynamic" data-user-id="230" data-xf-init="member-tooltip" style="background-color: #ccebad; color: #73b82e">
+			<span class="avatar-u230-m" role="img" aria-label="eqwepepepe">E</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/eqwepepepe.230/" class="username " dir="auto" data-user-id="230" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">eqwepepepe</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>15.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>2</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>0</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-311.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-15T16:31:07+0300" data-timestamp="1755264667" data-date="15.08.2025" data-time="16:31" data-short="15 Авг" title="15.08.2025 в 16:31" itemprop="datePublished">15.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-311.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/311/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-311.html" rel="nofollow">
+						#2
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-311"
+		data-lb-caption-desc="eqwepepepe &middot; 15.08.2025 в 16:31">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper">Спасибо!</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="0" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="PoliRabakar"
+		data-content="post-328"
+		id="js-post-328"
+		itemscope itemtype="https://schema.org/Comment" itemid="../../posts/328/index.html">
+
+		
+			<meta itemprop="parentItem" itemscope itemid="index.html" />
+			<meta itemprop="name" content="Сообщение #3" />
+		
+
+		<span class="u-anchorTarget" id="post-328"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section class="message-user"
+		itemprop="author"
+		itemscope itemtype="https://schema.org/Person"
+		itemid="https://osint42.org/members/polirabakar.247/">
+
+		
+			<meta itemprop="url" content="https://osint42.org/members/polirabakar.247/" />
+		
+
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://osint42.org/members/polirabakar.247/" class="avatar avatar--m dcom-lc-avaOffline avatar--default avatar--default--dynamic" data-user-id="247" data-xf-init="member-tooltip" style="background-color: #33cc33; color: #0f3d0f">
+			<span class="avatar-u247-m" role="img" aria-label="PoliRabakar">P</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name">      	
+        <a href="https://osint42.org/members/polirabakar.247/" class="username " dir="auto" data-user-id="247" data-xf-init="member-tooltip"><span class="username--style2" itemprop="name">PoliRabakar</span></a>
+      </h4>
+			
+			<div class="userBanner userBanner userBanner--primary message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Форумчанин</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+				<div class="message-userExtras">
+				
+					
+						<dl class="pairs pairs--justified">
+							<dt>Регистрация</dt>
+							<dd>19.08.2025</dd>
+						</dl>
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Сообщения</dt>
+							<dd>1</dd>
+						</dl>
+					
+					
+					
+						<dl class="pairs pairs--justified">
+							<dt>Реакции</dt>
+							<dd>0</dd>
+						</dl>
+					
+					
+					
+					
+					
+					
+				
+				</div>
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="%23post-328.html" rel="nofollow" itemprop="url">
+					<time  class="u-dt" dir="auto" datetime="2025-08-19T00:50:28+0300" data-timestamp="1755553828" data-date="19.08.2025" data-time="00:50" data-short="18 Авг" title="19.08.2025 в 00:50" itemprop="datePublished">19.08.2025</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="%23post-328.html"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/posts/328/share"
+					aria-label="Поделиться"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+				</a>
+			</li>
+			
+			
+			
+				<li>
+					<a href="%23post-328.html" rel="nofollow">
+						#3
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+	
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-328"
+		data-lb-caption-desc="PoliRabakar &middot; 19.08.2025 в 00:50">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+
+			<div itemprop="text">
+				
+					<div class="bbWrapper">спасибо</div>
+				
+			</div>
+
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	
+
+	<footer class="message-footer">
+		
+			<div class="message-microdata" itemprop="interactionStatistic" itemtype="https://schema.org/InteractionCounter" itemscope>
+				<meta itemprop="userInteractionCount" content="0" />
+				<meta itemprop="interactionType" content="https://schema.org/LikeAction" />
+			</div>
+		
+
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+			
+		</div>
+	</div>
+
+	
+		<div class="block-outer block-outer--after">
+			
+				
+
+				
+				
+					<div class="block-outer-opposite">
+						
+							<a href="../../login/index.html" class="button button--link button--wrap" data-xf-click="overlay"><span class="button-text">
+								Для ответа нужно войти/зарегистрироваться
+							</span></a>
+						
+					</div>
+				
+			
+		</div>
+	
+
+	
+	
+
+</div>
+
+
+
+
+
+
+
+	<div class="dcom-lc-online-block">
+		
+	</div>
+
+
+
+
+
+
+
+	
+
+<div class="blockMessage blockMessage--none">
+	
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965607"></span>
+
+			
+				<span class="shareButtons-label">Поделиться:</span>
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965607" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965607"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965607" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+</div>
+
+
+
+
+
+
+
+</div>
+					
+				</div>
+
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html" itemprop="item">
+			<span itemprop="name">Форум</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/index.html#tekhniki-atak-i-ekspluatatsiya.19" itemprop="item">
+			<span itemprop="name">Техники атак и эксплуатация</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../../forums/osint-forum.15/index.html" itemprop="item">
+			<span itemprop="name">OSINT форум</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965607%2Cebf7c62578eccf380dfd326829664cc7"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965607%2Cebf7c62578eccf380dfd326829664cc7"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965607%2Cebf7c62578eccf380dfd326829664cc7"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+	
+	
+		
+		
+			<script type="application/ld+json">
+				{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://osint42.org/threads/parsing-telegi.58/",
+    "mainEntity": {
+        "@type": "DiscussionForumPosting",
+        "@id": "https://osint42.org/threads/parsing-telegi.58/",
+        "headline": "\u041f\u0430\u0440\u0441\u0438\u043d\u0433 \u0442\u0435\u043b\u0435\u0433\u0438",
+        "datePublished": "2025-05-25T15:12:37+00:00",
+        "url": "https://osint42.org/threads/parsing-telegi.58/",
+        "articleSection": "OSINT \u0444\u043e\u0440\u0443\u043c",
+        "author": {
+            "@type": "Person",
+            "@id": "https://osint42.org/members/0x42.1/",
+            "name": "0x42",
+            "url": "https://osint42.org/members/0x42.1/"
+        },
+        "interactionStatistic": [
+            {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/ViewAction",
+                "userInteractionCount": 296
+            },
+            {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": 2
+            },
+            {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": 1
+            }
+        ],
+        "image": "https://osint42.org/attachments/1748185561844-png.458/",
+        "text": "\u0412\u043e\u0442 \u0432 \u044d\u0442\u043e\u0439 \u0441\u0442\u0430\u0442\u044c\u0435:\u0417\u0430\u043c\u0435\u0442\u043a\u0430 - \u041a\u0430\u043a \u043f\u0440\u043e\u0431\u0438\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f Telegram\n\n\u0411\u044b\u043b\u0430 \u043e\u0442\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u0443\u044e \u0441\u0442\u0430\u0442\u044c\u044e \u0441 \u0425\u0430\u043a\u0435\u0440\u0430:\u041f\u0430\u0440\u0441\u0438\u043c \u0442\u0435\u043b\u0435\u0433\u0443. \u041a\u0430\u043a \u0441\u043e\u0431\u0438\u0440\u0430\u0442\u044c \u0438\u043c\u0435\u043d\u0430 \u0443\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u043e\u0432 \u0447\u0430\u0442\u043e\u0432 \u0432 Telegram\n\n\u0420\u0435\u0448\u0438\u043b \u043f\u0435\u0440\u0435\u043f\u043e\u0441\u0442\u0438\u0442\u044c, \u0432 \u0446\u0435\u043b\u043e\u043c \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u043e...)\n\n\u041a\u0430\u043a \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e, \u0432 \u00ab\u0422\u0435\u043b\u0435\u0433\u0440\u0430\u043c\u0435\u00bb \u0435\u0441\u0442\u044c \u0447\u0430\u0442\u044b \u0438 \u043a\u0430\u043d\u0430\u043b\u044b, \u043a\u0443\u0434\u0430, \u0431\u044b\u0432\u0430\u0435\u0442, \u043d\u0430\u0431\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u043c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439. \u0418\u043d\u043e\u0433\u0434\u0430 \u0432\u0435\u0441\u044c\u043c\u0430 \u043f\u043e\u043b\u0435\u0437\u043d\u043e \u0438\u043c\u0435\u0442\u044c \u0438\u0445 \u0441\u043f\u0438\u0441\u043e\u043a, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440 \u0434\u043b\u044f \u043a\u0430\u043a\u0438\u0445\u2011\u0442\u043e \u0440\u0430\u0441\u0441\u044b\u043b\u043e\u043a \u0438 \u043f\u0440\u0438\u0433\u043b\u0430\u0448\u0435\u043d\u0438\u0439.\n\n\u041e\u0431\u044b\u0447\u043d\u043e \u043f\u043e\u0434 \u0441\u043b\u043e\u0432\u043e\u043c \u00ab\u043f\u0430\u0440\u0441\u0438\u043d\u0433\u00bb \u0432 \u043a\u043e\u043d\u0442\u0435\u043a\u0441\u0442\u0435 \u0442\u0435\u043b\u0435\u0433\u0438 \u043f\u043e\u043d\u0438\u043c\u0430\u0435\u0442\u0441\u044f \u0438\u043c\u0435\u043d\u043d\u043e \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u0435 \u0441\u043f\u0438\u0441\u043a\u0430 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439 \u043a\u0430\u043d\u0430\u043b\u0430 \u0438\u043b\u0438 \u0447\u0430\u0442\u0430. \u0420\u0435\u0436\u0435 \u2014 \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u0435 \u0435\u0449\u0435 \u0438 \u0441\u043f\u0438\u0441\u043a\u0430 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439.\n \n\u041a\u0430\u043d\u0430\u043b\u044b\n\u041d\u0430\u0447\u043d\u0435\u043c \u0441 \u043a\u0430\u043d\u0430\u043b\u043e\u0432. \u041a\u0430\u043d\u0430\u043b \u2014 \u044d\u0442\u043e \u043d\u0435\u043a\u0438\u0439 \u0440\u0435\u0441\u0443\u0440\u0441 \u0432 \u00ab\u0422\u0435\u043b\u0435\u0433\u0440\u0430\u043c\u0435\u00bb, \u0433\u0434\u0435 \u044e\u0437\u0435\u0440\u044b \u0442\u043e\u043b\u044c\u043a\u043e \u0447\u0438\u0442\u0430\u044e\u0442 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u0432\u043b\u0430\u0434\u0435\u043b\u044c\u0446\u0430 \u043a\u0430\u043d\u0430\u043b\u0430. \u0421\u0430\u043c\u0438 \u043e\u043d\u0438 \u043d\u0438\u0447\u0435\u0433\u043e \u043f\u0438\u0441\u0430\u0442\u044c \u043d\u0435 \u043c\u043e\u0433\u0443\u0442 \u0437\u0430 \u0438\u0441\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435\u043c \u0442\u0435\u0445 \u0441\u043b\u0443\u0447\u0430\u0435\u0432, \u043a\u043e\u0433\u0434\u0430 \u043a \u043a\u0430\u043d\u0430\u043b\u0443 \u043f\u0440\u0438\u0432\u044f\u0437\u0430\u043d \u0447\u0430\u0442 \u0434\u043b\u044f \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0435\u0432. \u0422\u043e\u0433\u0434\u0430 \u0443 \u043f\u043e\u0434\u043f\u0438\u0441\u0447\u0438\u043a\u043e\u0432 \u043f\u043e\u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u0432\u043b\u0430\u0434\u0435\u043b\u044c\u0446\u0430.\n\n\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441\u043f\u0438\u0441\u043e\u043a \u043f\u043e\u0434\u043f\u0438\u0441\u0447\u0438\u043a\u043e\u0432 \u043a\u0430\u043d\u0430\u043b\u0430 \u0431\u0435\u0437 \u043f\u0440\u0438\u0432\u044f\u0437\u0430\u043d\u043d\u043e\u0433\u043e \u043a \u043d\u0435\u043c\u0443 \u0447\u0430\u0442\u0430 \u0441 \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u044f\u043c\u0438 \u043c\u043e\u0436\u043d\u043e, \u0442\u043e\u043b\u044c\u043a\u043e \u0435\u0441\u043b\u0438 \u044d\u0442\u043e \u0442\u0432\u043e\u0439 \u043a\u0430\u043d\u0430\u043b \u0438 \u0443 \u043d\u0435\u0433\u043e \u043c\u0435\u043d\u044c\u0448\u0435 200 \u043f\u043e\u0434\u043f\u0438\u0441\u0447\u0438\u043a\u043e\u0432. \u0415\u0441\u043b\u0438 \u0445\u043e\u0442\u044f \u0431\u044b \u043e\u0434\u043d\u043e \u0438\u0437 \u044d\u0442\u0438\u0445 \u0443\u0441\u043b\u043e\u0432\u0438\u0439 \u043d\u0435 \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u0435\u0442\u0441\u044f, \u043f\u0430\u0440\u0441\u0438\u043d\u0433 \u043d\u0435\u0434\u043e\u0441\u0442\u0443\u043f\u0435\u043d \u0447\u0438\u0441\u0442\u043e \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438 \u0438 \u043d\u0438\u043a\u0442\u043e \u043d\u0435 \u0441\u043c\u043e\u0436\u0435\u0442 \u0435\u0433\u043e \u043f\u0440\u043e\u0432\u0435\u0441\u0442\u0438, \u0447\u0442\u043e \u0431\u044b \u0442\u0435\u0431\u0435 \u043d\u0438 \u043e\u0431\u0435\u0449\u0430\u043b\u0438. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0432 \u0431\u0443\u0434\u0443\u0449\u0435\u043c \u043f\u043e\u044f\u0432\u044f\u0442\u0441\u044f \u043a\u0430\u043a\u0438\u0435\u2011\u0442\u043e \u043d\u043e\u0432\u044b\u0435 \u0441\u043f\u043e\u0441\u043e\u0431\u044b \u2014 \u043b\u0435\u0433\u0430\u043b\u044c\u043d\u044b\u0435 \u0438\u043b\u0438 \u0441 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435\u043c \u0434\u044b\u0440, \u043d\u043e \u043f\u043e\u043a\u0430 \u0440\u0430\u0431\u043e\u0447\u0438\u0445 \u0441\u043f\u043e\u0441\u043e\u0431\u043e\u0432 \u043d\u0435\u0442.\n\n\u0415\u0441\u043b\u0438 \u0436\u0435 \u0447\u0430\u0442 \u0441 \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u044f\u043c\u0438 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442, \u0442\u043e \u0441\u043f\u0430\u0440\u0441\u0438\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439 \u0442\u044b \u043c\u043e\u0436\u0435\u0448\u044c \u0442\u043e\u0447\u043d\u043e \u0442\u0430\u043a \u0436\u0435, \u043a\u0430\u043a \u0432 \u0441\u043b\u0443\u0447\u0430\u0435 \u0441 \u043b\u044e\u0431\u044b\u043c \u0434\u0440\u0443\u0433\u0438\u043c \u0447\u0430\u0442\u043e\u043c.\n\n\u0427\u0442\u043e \u043a\u0430\u0441\u0430\u0435\u0442\u0441\u044f \u0441\u043f\u0438\u0441\u043a\u0430 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439 \u0432 \u043a\u0430\u043d\u0430\u043b\u0435, \u0442\u043e \u0435\u0433\u043e \u043c\u043e\u0436\u043d\u043e \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u043a\u0430\u043a \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u043d\u043e, \u0447\u0435\u0440\u0435\u0437 API \u00ab\u0422\u0435\u043b\u0435\u0433\u0440\u0430\u043c\u0430\u00bb, \u0442\u0430\u043a \u0438 \u0432\u0440\u0443\u0447\u043d\u0443\u044e, \u044d\u043a\u0441\u043f\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u0430\u0432 \u0441\u043f\u0438\u0441\u043e\u043a \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u0448\u0442\u0430\u0442\u043d\u043e\u0433\u043e \u043a\u043b\u0438\u0435\u043d\u0442\u0430.\n\n\n\n\n\n\u0427\u0430\u0442\u044b\n\u0421 \u0447\u0430\u0442\u0430\u043c\u0438 \u0433\u043e\u0440\u0430\u0437\u0434\u043e \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u0435\u0435. \u0412\u0440\u0443\u0447\u043d\u0443\u044e \u0432\u044b\u0442\u0430\u0449\u0438\u0442\u044c \u0441\u043f\u0438\u0441\u043e\u043a \u044e\u0437\u0435\u0440\u043e\u0432 \u0447\u0435\u0440\u0435\u0437 \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u044b\u0439 \u043a\u043b\u0438\u0435\u043d\u0442 \u043d\u0435 \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u0441\u044f, \u0440\u0430\u0437\u0432\u0435 \u0447\u0442\u043e \u0441\u0438\u0434\u0435\u0442\u044c \u0441 \u0431\u043b\u043e\u043a\u043d\u043e\u0442\u043e\u043c \u0438 \u0440\u0443\u0447\u043a\u043e\u0439 \u0438 \u0432\u044b\u043f\u0438\u0441\u044b\u0432\u0430\u0442\u044c \u0432\u0441\u044e \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u0443\u044e\u0449\u0443\u044e \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e. \u0421\u043f\u043e\u0441\u043e\u0431 \u043d\u0435 \u043e\u0447\u0435\u043d\u044c, \u0442\u0430\u043a \u0447\u0442\u043e \u043f\u0440\u0438\u0434\u0435\u0442\u0441\u044f \u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0432 \u0441\u0442\u043e\u0440\u043e\u043d\u0443 \u0440\u043e\u0434\u043d\u043e\u0433\u043e API Telegram \u0438\u043b\u0438, \u0435\u0441\u043b\u0438 \u0445\u043e\u0447\u0435\u0448\u044c \u0443\u043f\u0440\u043e\u0441\u0442\u0438\u0442\u044c \u0441\u0435\u0431\u0435 \u0436\u0438\u0437\u043d\u044c, \u043d\u0430 \u043a\u0430\u043a\u0443\u044e\u2011\u043d\u0438\u0431\u0443\u0434\u044c \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0443, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440 Telethon.\n\n\u0412 Telethon \u0435\u0441\u0442\u044c \u0444\u0443\u043d\u043a\u0446\u0438\u044f GetParticipantsRequest, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442 \u043d\u0430 \u0432\u0445\u043e\u0434 \u043d\u0435\u043a\u0443\u044e \u0441\u0443\u0449\u043d\u043e\u0441\u0442\u044c (entity), \u0430 \u043d\u0430 \u0432\u044b\u0445\u043e\u0434\u0435 \u0432\u044b\u0434\u0430\u0435\u0442 \u0441\u043f\u0438\u0441\u043e\u043a \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439.\n\n\u0414\u0430\u0432\u0430\u0439 \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0435\u043c \u0441\u043a\u043e\u0440\u043c\u0438\u0442\u044c \u0435\u0439 \u043a\u0430\u043a\u043e\u0439\u2011\u043d\u0438\u0431\u0443\u0434\u044c \u0447\u0430\u0442.\n\nasync def test1(client):\n    chat_id = 'https://t.me/kakoy-to-chat'\n    chat_entity =  await client.get_entity(chat_id)\n    participants =  await client(GetParticipantsRequest(\n        chat_entity, ChannelParticipantsSearch(''), offset=0, limit=200, hash=0))\n    for user in participants.users:\n        print(user)\n    return\n\n\u0418 \u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0438\u043c, \u0447\u0442\u043e \u043c\u043e\u0436\u043d\u043e \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u044d\u0442\u043e\u0439 \u0444\u0443\u043d\u043a\u0446\u0438\u0438:\n\nUser(id=306742xxx,\n    is_self=False,\n    contact=False,\n    mutual_contact=False,\n    deleted=False,\n    bot=False,\n    bot_chat_history=False,\n    bot_nochats=False,\n    verified=False,\n    restricted=False,\n    min=False,\n    bot_inline_geo=False,\n    support=False,\n    scam=False,\n    apply_min_photo=True,\n    fake=False,\n    access_hash=669983103xxxxx,\n    first_name='??\\u200d>?',\n    last_name=None,\n    username='prosto_user_name',\n    phone=None,\n    photo=UserProfilePhoto(photo_id=13174487829112xxxx,\n    dc_id=2,\n    has_video=False,\n    stripped_thumb=b'\\x01\\x08\\x08\\x04\\xe0\\xaa\\xe0\\x8f\\x9b\\x8cQE\\x14\\x90\\xcf'),\n    status=UserStatusRecently(),\n    bot_info_version=None,\n    restriction_reason=[],\n    bot_inline_placeholder=None,\n    lang_code=None)\n\n\u0427\u0430\u0449\u0435 \u0432\u0441\u0435\u0433\u043e \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u043f\u043e\u043b\u044f id, username, first_name \u0438 last_name, phone. \u041a\u0440\u043e\u043c\u0435 \u0442\u043e\u0433\u043e, \u0437\u0434\u0435\u0441\u044c \u0435\u0449\u0435 \u0438 \u043a\u0443\u0447\u0430 \u043f\u0440\u0438\u0437\u043d\u0430\u043a\u043e\u0432: bot, verified, scam, fake, photo, status \u0438 \u0434\u0440\u0443\u0433\u0438\u0435.\n\n\u041a\u0430\u043a \u0432\u0438\u0434\u0438\u0448\u044c, \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u0441\u0430\u043c\u0430\u044f \u0440\u0430\u0437\u043d\u0430\u044f. \u041d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u044b \u043f\u043e \u043f\u0430\u0440\u0441\u0438\u043d\u0433\u0443 Telegram \u043f\u0440\u0438 \u044d\u0442\u043e\u043c \u0443\u043c\u0443\u0434\u0440\u044f\u044e\u0442\u0441\u044f \u0437\u0430\u044f\u0432\u043b\u044f\u0442\u044c, \u0447\u0442\u043e \u0438\u043c \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0442\u043e\u043b\u044c\u043a\u043e ID, \u0430 \u044e\u0437\u0435\u0440\u043d\u0435\u0439\u043c\u044b \u0441 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430\u043c\u0438 \u2014 \u0437\u0430 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0435\u043d\u044c\u0433\u0438. \u041b\u043e\u0432\u043a\u043e, \u043d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u0441\u043a\u0430\u0436\u0435\u0448\u044c!\n\n\u0422\u0435\u043b\u0435\u0444\u043e\u043d\u044b, \u043a\u043e\u043d\u0435\u0447\u043d\u043e, \u0432 \u044d\u0442\u043e\u043c \u0441\u043f\u0438\u0441\u043a\u0435 \u0431\u0443\u0434\u0443\u0442 \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u0442\u044c\u0441\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u0432 \u0442\u043e\u043c \u0441\u043b\u0443\u0447\u0430\u0435, \u0435\u0441\u043b\u0438 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u0432 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\u0445 \u043d\u0435 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u043b \u043f\u043e\u043a\u0430\u0437 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430 \u0432\u0441\u0435\u043c.\n\n\u041a\u0441\u0442\u0430\u0442\u0438, \u0438\u043d\u043e\u0433\u0434\u0430 \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u044e\u0442 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u044f\u0442\u044c \u0435\u0449\u0435 \u0438 \u043f\u043e\u043b \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f. \u0422\u0430\u043a\u0438\u0445 \u0434\u0430\u043d\u043d\u044b\u0445 Telegram \u043d\u0435 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442 \u0438 \u043d\u0435 \u0438\u043c\u0435\u0435\u0442. \u041c\u043d\u0435 \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e \u0442\u043e\u043b\u044c\u043a\u043e \u0434\u0432\u0430 \u0441\u043f\u043e\u0441\u043e\u0431\u0430 \u043f\u043e\u043b\u0443\u0447\u0430\u0442\u044c \u044d\u0442\u0443 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e:\n\n\u0430\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u044e\u0437\u0435\u0440\u043d\u0435\u0439\u043c\u044b \u0438 \u0438\u043c\u0435\u043d\u0430, \u043f\u0440\u043e\u0433\u043e\u043d\u044f\u0442\u044c \u0438\u0445 \u043f\u043e \u0437\u0430\u0440\u0430\u043d\u0435\u0435 \u0441\u043e\u0437\u0434\u0430\u043d\u043d\u043e\u0439 \u0431\u0430\u0437\u0435 \u0438 \u0434\u0435\u043b\u0430\u0442\u044c, \u0435\u0441\u043b\u0438 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u043a\u0430\u043a\u0438\u0435\u2011\u0442\u043e \u0432\u044b\u0432\u043e\u0434\u044b. \u0415\u0441\u043b\u0438 \u0438\u043c\u044f \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u041a\u0430\u0440\u0438\u043d\u0430, \u042e\u043b\u044f \u0438\u043b\u0438 \u0410\u043b\u0451\u043d\u0430, \u043c\u043e\u0436\u043d\u043e \u0441\u0447\u0438\u0442\u0430\u0442\u044c \u0435\u0433\u043e \u0436\u0435\u043d\u0449\u0438\u043d\u043e\u0439;\n\u0441\u043a\u0430\u0447\u0438\u0432\u0430\u0442\u044c \u0432\u0441\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u0438\u0437 \u0447\u0430\u0442\u0430 \u0434\u043b\u044f \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f, \u0432\u044b\u0442\u0430\u0441\u043a\u0438\u0432\u0430\u0442\u044c \u043e\u0442\u0442\u0443\u0434\u0430 \u0433\u043b\u0430\u0433\u043e\u043b\u044b \u0438 \u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c, \u043d\u0430\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0447\u0430\u0441\u0442\u043e \u043e\u043d\u0438 \u0437\u0430\u043a\u0430\u043d\u0447\u0438\u0432\u0430\u044e\u0442\u0441\u044f \u043d\u0430 \u0431\u0443\u043a\u0432\u0443 \u00ab\u0430\u00bb. \u041b\u043e\u0433\u0438\u0447\u043d\u043e \u043f\u0440\u0435\u0434\u043f\u043e\u043b\u043e\u0436\u0438\u0442\u044c, \u0447\u0442\u043e \u0443 \u0436\u0435\u043d\u0449\u0438\u043d \u0442\u0430\u043a\u0438\u0445 \u0441\u043b\u0443\u0447\u0430\u0435\u0432 \u0431\u0443\u0434\u0435\u0442 \u0433\u043e\u0440\u0430\u0437\u0434\u043e \u0431\u043e\u043b\u044c\u0448\u0435, \u0447\u0435\u043c \u0443 \u043c\u0443\u0436\u0447\u0438\u043d.\n\n\u041e\u0447\u0435\u0432\u0438\u0434\u043d\u043e, \u0447\u0442\u043e \u043e\u0431\u0430 \u0441\u043f\u043e\u0441\u043e\u0431\u0430 \u043d\u0435 \u0434\u0430\u044e\u0442 \u043d\u0438\u043a\u0430\u043a\u0438\u0445 \u0433\u0430\u0440\u0430\u043d\u0442\u0438\u0439 \u0438 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0442 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u044f\u0442\u044c \u043f\u043e\u043b \u043b\u0438\u0448\u044c \u0441 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c\u044e \u0438 \u043a \u0442\u043e\u043c\u0443 \u0436\u0435 \u0442\u0440\u0435\u0431\u0443\u044e\u0442 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0445 \u0443\u0441\u0438\u043b\u0438\u0439.\n\n\u0412\u043d\u0438\u043c\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u043f\u0440\u0438\u0441\u043c\u043e\u0442\u0440\u0435\u0432\u0448\u0438\u0441\u044c \u043a \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u0443 \u0440\u0430\u0431\u043e\u0442\u044b GetParticipantsRequest, \u043c\u044b \u0443\u0432\u0438\u0434\u0438\u043c, \u0447\u0442\u043e \u043d\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e \u043e\u0442 \u0447\u0438\u0441\u043b\u0430 \u0443\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u043e\u0432 \u0447\u0430\u0442\u0430 \u0438 \u043e\u0442 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0430 limit \u043d\u0430\u043c \u0432\u044b\u0434\u0430\u044e\u0442 \u043c\u0430\u043a\u0441\u0438\u043c\u0443\u043c 200 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439. \u041a\u043e\u0433\u0434\u0430 \u0432 \u0433\u0440\u0443\u043f\u043f\u0435 \u043c\u0435\u043d\u044c\u0448\u0435 200 \u0443\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u043e\u0432, \u044d\u0442\u043e\u0433\u043e \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e, \u043d\u043e \u0435\u0441\u043b\u0438 \u0438\u0445 \u0431\u043e\u043b\u044c\u0448\u0435, \u0442\u043e \u043f\u0440\u0438\u0434\u0435\u0442\u0441\u044f \u0435\u0449\u0435 \u043f\u043e\u0434\u043d\u0430\u043f\u0440\u044f\u0447\u044c\u0441\u044f.\n\n\u041c\u043e\u0438 \u044d\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442\u044b \u0441 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u043c offset \u043f\u043e\u043a\u0430\u0437\u0430\u043b\u0438, \u0447\u0442\u043e \u043e\u043d \u043d\u0443\u0436\u0435\u043d, \u0447\u0442\u043e\u0431\u044b \u0443\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u0441\u043c\u0435\u0449\u0435\u043d\u0438\u0435 \u0432 \u0441\u043f\u0438\u0441\u043a\u0435 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439. \u041f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e \u044d\u0442\u043e \u0441\u043c\u0435\u0449\u0435\u043d\u0438\u0435 \u0440\u0430\u0432\u043d\u043e \u043d\u0443\u043b\u044e, \u043d\u043e \u0435\u0441\u043b\u0438 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u043e\u0432\u0430\u0442\u044c \u0446\u0438\u043a\u043b, \u043d\u0430 \u043a\u0430\u0436\u0434\u043e\u0439 \u0438\u0442\u0435\u0440\u0430\u0446\u0438\u0438 \u043a\u043e\u0442\u043e\u0440\u043e\u0433\u043e \u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0442\u044c offset, \u0442\u043e \u0431\u0443\u0434\u0435\u0442 \u0441\u043a\u0430\u0447\u0438\u0432\u0430\u0442\u044c\u0441\u044f \u043f\u043e 200 \u044e\u0437\u0435\u0440\u043e\u0432 \u0438 \u043c\u043e\u0436\u043d\u043e \u043f\u0430\u0440\u0441\u0438\u0442\u044c \u0434\u043e \u0431\u0435\u0441\u043a\u043e\u043d\u0435\u0447\u043d\u043e\u0441\u0442\u0438 (\u043d\u0443 \u0438\u043b\u0438 \u043f\u043e\u043a\u0430 \u043d\u0435 \u0437\u0430\u043a\u043e\u043d\u0447\u0430\u0442\u0441\u044f \u0432\u0441\u0435 \u044e\u0437\u0435\u0440\u044b). \u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0442\u0430\u043a:\n\noffset = 0\n        while True:\n            participants = await client(GetParticipantsRequest(\n                channel, ChannelParticipantsSearch(''), offset, limit, hash=0))\n            if not participants.users:\n                break\n            #...\n                        # \u0422\u0443\u0442 \u0434\u0435\u043b\u0430\u0435\u043c \u0447\u0442\u043e-\u0442\u043e \u0441 \u044e\u0437\u0435\u0440\u0430\u043c\u0438 \u0438\u0437 \u0441\u043f\u0438\u0441\u043a\u0430 participants.users\n            #...\n            offset += len(participants.users)\n\n\u041e\u0434\u043d\u0430\u043a\u043e \u0434\u043e\u0432\u043e\u043b\u044c\u043d\u043e \u0431\u044b\u0441\u0442\u0440\u043e \u0432\u044b\u044f\u0441\u043d\u044f\u0435\u0442\u0441\u044f, \u0447\u0442\u043e \u0444\u0443\u043d\u043a\u0446\u0438\u044f GetParticipantsRequest \u0432\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u043c\u0430\u043a\u0441\u0438\u043c\u0443\u043c 10 \u0442\u044b\u0441\u044f\u0447 \u044e\u0437\u0435\u0440\u043e\u0432. \u041a\u0430\u043a \u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0442\u044c \u044d\u0442\u043e\u0442 \u043b\u0438\u043c\u0438\u0442, \u0432\u044b\u044f\u0441\u043d\u0438\u0442\u044c \u043f\u043e\u043a\u0430 \u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c. \u0415\u0441\u0442\u044c \u043c\u043d\u0435\u043d\u0438\u0435, \u0447\u0442\u043e \u044d\u0442\u043e \u043d\u0435\u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e.\n\n\u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440 filter \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0437\u0430\u0434\u0430\u0442\u044c \u043a\u0440\u0438\u0442\u0435\u0440\u0438\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u043c \u0434\u043e\u043b\u0436\u043d\u044b \u0441\u043e\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u043e\u0432\u0430\u0442\u044c \u0432\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u043c\u044b\u0435 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b.\n\n\u0415\u0441\u0442\u044c \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0435 \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u044b:\n\nChannelParticipantsAdmins;\nChannelParticipantsBanned;\nChannelParticipantsBots;\nChannelParticipantsContacts;\nChannelParticipantsKicked;\nChannelParticipantsMentions;\nChannelParticipantsRecent;\nChannelParticipantsSearch.\n\n\u0422\u0443\u0442 \u0443\u0436\u0435 \u043c\u043e\u0436\u043d\u043e \u044d\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c: \u043f\u043e\u043f\u0440\u043e\u0431\u043e\u0432\u0430\u0442\u044c \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441\u043f\u0438\u0441\u043e\u043a \u0432\u0441\u0435\u0445 \u0430\u0434\u043c\u0438\u043d\u043e\u0432, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0438\u043b\u0438 \u0432\u0441\u0435\u0445, \u043a\u0442\u043e \u043e\u043d\u043b\u0430\u0439\u043d. \u041f\u0430\u0440\u0441\u0438\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439 \u0432 \u043e\u043d\u043b\u0430\u0439\u043d\u0435 \u2014 \u0432\u043e\u043e\u0431\u0449\u0435 \u0445\u043e\u0440\u043e\u0448\u0430\u044f \u0438\u0434\u0435\u044f. \u0415\u0441\u043b\u0438 \u0434\u0435\u043b\u0430\u0442\u044c \u044d\u0442\u043e \u0440\u0435\u0433\u0443\u043b\u044f\u0440\u043d\u043e, \u0442\u043e \u043c\u043e\u0436\u043d\u043e \u043e\u0442\u0441\u0435\u044f\u0442\u044c \u043d\u0435\u0430\u043a\u0442\u0438\u0432\u043d\u044b\u0445 \u0443\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0434\u043e\u0431\u0430\u0432\u0438\u043b\u0438\u0441\u044c \u0432 \u0433\u0440\u0443\u043f\u043f\u043a\u0443 \u0438 \u0437\u0430\u0431\u044b\u043b\u0438 \u043e \u043d\u0435\u0439.\n\n\u041d\u0430\u0441 \u0431\u043e\u043b\u044c\u0448\u0435 \u0432\u0441\u0435\u0433\u043e \u0434\u043e\u043b\u0436\u0435\u043d \u0437\u0430\u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043e\u0432\u0430\u0442\u044c \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440 ChannelParticipantsSearch, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0449\u0438\u0439 \u0438\u0441\u043a\u0430\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439 \u043f\u043e \u044e\u0437\u0435\u0440\u043d\u0435\u0439\u043c\u0443 \u0438\u043b\u0438 \u0435\u0433\u043e \u0447\u0430\u0441\u0442\u0438. \u0414\u0430\u0432\u0430\u0439 \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0435\u043c \u0437\u0430\u043c\u0443\u0442\u0438\u0442\u044c \u0446\u0438\u043a\u043b:\n\n chat_id = 'https://t.me/stepnru'\n    chat_entity =  await client.get_entity(chat_id)\n    keys = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',\n            'V', 'W', 'X', 'Y', 'Z']\n    for key in keys:\n        offset = 0\n        participants = await client(GetParticipantsRequest(\n                chat_entity, ChannelParticipantsSearch(key), offset, limit=200, hash=0))\n        print(key + \": \" + str(participants.count))\n\n\u041f\u043e\u044f\u0441\u043d\u044f\u044e: \u043c\u044b \u0432\u0437\u044f\u043b\u0438 \u0432\u0435\u0441\u044c \u0430\u043b\u0444\u0430\u0432\u0438\u0442 \u0438 \u043f\u0435\u0440\u0435\u0431\u0440\u0430\u043b\u0438 \u0431\u0443\u043a\u0432\u044b, \u043f\u044b\u0442\u0430\u044f\u0441\u044c \u043d\u0430\u0439\u0442\u0438 \u044e\u0437\u0435\u0440\u043e\u0432, \u0432 user_name \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u043e\u043d\u0430 \u0435\u0441\u0442\u044c.\n\n\u0421\u043c\u043e\u0442\u0440\u0438\u043c, \u0447\u0442\u043e \u043f\u043e\u043b\u0443\u0447\u0438\u043b\u043e\u0441\u044c:\n\n\n\u041a\u0430\u043a \u0432\u0438\u0434\u043d\u043e, \u0438\u043d\u043e\u0433\u0434\u0430 \u0441\u043f\u0438\u0441\u043e\u043a \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u043e\u0432 \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u0442 \u043c\u0435\u043d\u044c\u0448\u0435 10 \u0442\u044b\u0441\u044f\u0447, \u0438 \u0442\u043e\u0433\u0434\u0430 \u043c\u044b \u043c\u043e\u0436\u0435\u043c \u0432\u044b\u0442\u0430\u0449\u0438\u0442\u044c \u0435\u0433\u043e \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e, \u0438\u043d\u043e\u0433\u0434\u0430 \u2014 \u0431\u043e\u043b\u044c\u0448\u0435, \u0438 \u0442\u043e\u0433\u0434\u0430 \u043c\u044b \u043e\u043f\u044f\u0442\u044c \u043f\u043e\u043b\u0443\u0447\u0438\u043c \u0442\u043e\u043b\u044c\u043a\u043e \u043f\u0435\u0440\u0432\u044b\u0435 10 \u0442\u044b\u0441\u044f\u0447. \u041e\u0434\u043d\u0430\u043a\u043e \u0442\u0435\u0441\u0442 \u043d\u0430 \u0433\u0440\u0443\u043f\u043f\u0435 \u0441\u043e 190 \u0442\u044b\u0441\u044f\u0447\u0430\u043c\u0438 \u044e\u0437\u0435\u0440\u043e\u0432 \u043f\u043e\u0437\u0432\u043e\u043b\u0438\u043b \u0443\u0437\u043d\u0430\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0435 \u043e 140 \u0442\u044b\u0441\u044f\u0447\u0430\u0445, \u0430 \u044d\u0442\u043e \u0443\u0436\u0435 \u043d\u0435\u043c\u0430\u043b\u043e!\n\n\u041d\u0430\u0432\u0435\u0440\u043d\u044f\u043a\u0430 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044e\u0442 \u0438 \u0434\u0440\u0443\u0433\u0438\u0435 \u0441\u043f\u043e\u0441\u043e\u0431\u044b \u043f\u043e\u0438\u0433\u0440\u0430\u0442\u044c \u0441 \u0444\u0438\u043b\u044c\u0442\u0440\u0430\u043c\u0438 \u0438 \u0432\u044b\u0442\u0430\u0449\u0438\u0442\u044c \u0435\u0449\u0435 \u0431\u043e\u043b\u044c\u0448\u0435 \u043b\u044e\u0434\u0435\u0439 \u0438\u0437 \u0447\u0430\u0442\u0430. \u041f\u0443\u0441\u0442\u044c \u044d\u0442\u043e \u0431\u0443\u0434\u0435\u0442 \u0442\u0435\u0431\u0435 \u0434\u043e\u043c\u0430\u0448\u043d\u0438\u043c \u0437\u0430\u0434\u0430\u043d\u0438\u0435\u043c.\n\n\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u043d\u0438\u043c\u0430\u043d\u0438\u0435: \u044d\u0442\u043e\u0442 \u0441\u043f\u043e\u0441\u043e\u0431 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043d\u0430\u043c\u043d\u043e\u0433\u043e \u0434\u043e\u043b\u044c\u0448\u0435, \u0438 \u043f\u0430\u0440\u0441\u0438\u043d\u0433 \u0433\u0440\u0443\u043f\u043f\u044b \u0441 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u043c\u0438 \u0434\u0435\u0441\u044f\u0442\u043a\u0430\u043c\u0438 \u044e\u0437\u0435\u0440\u043e\u0432 \u043c\u043e\u0436\u0435\u0442 \u0437\u0430\u043d\u0438\u043c\u0430\u0442\u044c \u0434\u043e \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u0434\u0435\u0441\u044f\u0442\u043a\u043e\u0432 \u043c\u0438\u043d\u0443\u0442.\n\n\u0421\u043e\u0445\u0440\u0430\u043d\u044f\u0442\u044c \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u044f \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u044e \u043d\u0435 \u0432 \u0442\u0435\u043a\u0441\u0442\u043e\u0432\u044b\u0439 \u0444\u0430\u0439\u043b, \u0430 \u0432 \u043a\u0430\u043a\u0443\u044e\u2011\u043d\u0438\u0431\u0443\u0434\u044c \u0431\u0430\u0437\u0443 \u0434\u0430\u043d\u043d\u044b\u0445, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440 SQLite:\n\ndef add_users_in_base(bd_name, users):\n    sqlite_connection = sqlite3.connect(bd_name)\n    cursor = sqlite_connection.cursor()\n    for user in users:\n        sqlite_insert_query = \"INSERT INTO users (id, deleted, bot, bot_chat_history .....  phone) VALUES (?,?,?,?,?,?,?,?) \"\n        data_tuple = (\n            user.id, user.deleted, user.bot, user.bot_chat_history, .... user.phone)\n        try:\n            cursor.execute(sqlite_insert_query, data_tuple)\n        except sqlite3.Error as er:\n            pass\n        sqlite_connection.commit()\n    cursor.close()\n    sqlite_connection.close()\n\n\u0422\u0430\u043a \u0441\u0440\u0430\u0437\u0443 \u043e\u0442\u0441\u0435\u0438\u0432\u0430\u044e\u0442\u0441\u044f \u0434\u0443\u0431\u043b\u0438\u043a\u0430\u0442\u044b, \u0438 \u043f\u043e\u0442\u043e\u043c \u0431\u0443\u0434\u0435\u0442 \u043d\u0430\u043c\u043d\u043e\u0433\u043e \u0443\u0434\u043e\u0431\u043d\u0435\u0435 \u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c \u0441 \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u043d\u044b\u043c\u0438 \u0434\u0430\u043d\u043d\u044b\u043c\u0438: \u0438\u0441\u043a\u0430\u0442\u044c, \u0441\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c, \u043a\u043e\u043d\u0432\u0435\u0440\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c.\n\n\u0412\u044b\u0432\u043e\u0434\u044b\n\u0418\u0442\u0430\u043a, \u044f \u043f\u043e\u043a\u0430\u0437\u0430\u043b \u0442\u0435\u0431\u0435, \u043a\u0430\u043a \u0438\u0437\u0432\u043b\u0435\u043a\u0430\u0442\u044c \u0438\u0437 \u0447\u0430\u0442\u0430 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043e 10 \u0442\u044b\u0441\u044f\u0447\u0430\u0445 \u0435\u0433\u043e \u0443\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u043e\u0432, \u0430 \u0441 \u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u0435\u043c \u0444\u0438\u043b\u044c\u0442\u0440\u043e\u0432 \u2014 \u0433\u043e\u0440\u0430\u0437\u0434\u043e \u0431\u043e\u043b\u044c\u0448\u0435. \u041d\u0435\u043c\u043d\u043e\u0433\u043e \u043f\u043e\u044d\u043a\u0441\u043f\u0435\u0440\u0438\u043c\u0435\u043d\u0442\u0438\u0440\u043e\u0432\u0430\u0432, \u0442\u044b \u0441\u043c\u043e\u0436\u0435\u0448\u044c \u043d\u0430\u043f\u0438\u0441\u0430\u0442\u044c \u0441\u043a\u0440\u0438\u043f\u0442\u044b, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0441\u043e\u0431\u0435\u0440\u0443\u0442 \u043d\u0443\u0436\u043d\u0443\u044e \u0442\u0435\u0431\u0435 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u0432 \u0443\u0434\u043e\u0431\u043d\u043e\u043c \u0432\u0438\u0434\u0435.\n\n\u0415\u0441\u043b\u0438 \u0432\u0434\u0440\u0443\u0433 \u0437\u043d\u0430\u0435\u0448\u044c \u0435\u0449\u0435 \u043a\u0430\u043a\u0438\u0435\u2011\u0442\u043e \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0435 \u0442\u0440\u044e\u043a\u0438 \u043f\u043e \u044d\u0442\u043e\u0439 \u0442\u0435\u043c\u0435, \u043d\u0435 \u0437\u0430\u0431\u0443\u0434\u044c \u043f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0432 \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u044f\u0445!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Osint42.Org - \u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0438 \u043a\u043e\u0434",
+        "alternateName": "Osint42.Org - \u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0438 \u043a\u043e\u0434",
+        "description": "Osint42.Org - \u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0438 \u043a\u043e\u0434",
+        "url": "https://osint42.org",
+        "logo": "https://osint42.org/data/assets/logo/192192.png"
+    }
+}
+			</script>
+		
+	
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/threads/parsing-telegi.58/#post-328 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:46:16 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

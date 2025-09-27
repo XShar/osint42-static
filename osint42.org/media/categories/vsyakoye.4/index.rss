@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Медиа</title>
+    <description>RSS канал для всех медиа в категории Всякое</description>
+    <pubDate>Sat, 27 Sep 2025 09:40:16 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:40:16 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/media/categories/vsyakoye.4/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/media/categories/vsyakoye.4/index.rss"/>
+    <item>
+      <title>Нейросеть правит картинку</title>
+      <description><![CDATA[Лаги ChatGPT]]></description>
+      <pubDate>Thu, 29 May 2025 11:45:06 +0000</pubDate>
+      <link>https://osint42.org/media/neiroset-pravit-kartinku.6/</link>
+      <guid isPermaLink="false">6</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/media/categories/vsyakoye.4/"><![CDATA[Всякое]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[
+	<p>
+		
+			<video controls poster="/data/xfmg/poster/0/6-0ebd5e307beaf4626b598ace4079d597.jpg?1748519170" width="500">
+				<source src="https://osint42.org/data/xfmg/video/0/464-9a7bc5006bddda16e6a6d96a8c7e7ca1.mp4" type="video/mp4" />
+			</video>
+		
+	</p>
+	
+		<p>Лаги ChatGPT</p>
+	
+	<p>
+		<a href="https://osint42.org/media/neiroset-pravit-kartinku.6/" target="_blank">Посмотреть это медиа</a>
+	</p>
+]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>

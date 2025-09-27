@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Обсуждение средств защиты (Антивирусы и т.д.)</title>
+    <description>Обсуждение средств защиты (Антивирусы и т.д.)</description>
+    <pubDate>Sat, 27 Sep 2025 09:38:05 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:38:05 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/index.rss"/>
+    <item>
+      <title>Пять основных способов защиты персональных данных</title>
+      <pubDate>Mon, 01 Sep 2025 08:33:00 +0000</pubDate>
+      <link>https://osint42.org/threads/pyat-osnovnykh-sposobov-zashchity-personal-nykh-dannykh.174/</link>
+      <guid isPermaLink="false">174</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1756715030715-png.905/"
+			class="bbImage "
+			style=""
+			alt="1756715030715.png"
+			title="1756715030715.png"
+			width="636" height="337" loading="lazy" /><br />
+<br />
+Для обеспечения конфиденциальности и безопасности в интернете не нужно быть профессиональным программистом. Достаточно выполнять несложные советы экспертов.<br />
+<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-1-slozhnyi-parol-v-lichnom-kabinete"></a>1. Сложный пароль в личном кабинете&#8203;<a class="hoverLink" href="#-1-slozhnyi-parol-v-lichnom-kabinete" title="Постоянная ссылка"></a></h3>Совет очевидный, но многие им пренебрегают и используют в качестве пароля даты рождения, номера телефонов, комбинации типа QWERTY. Необходимо использовать разные пароли для разных аккаунтов: если у вас везде одинаковый пароль и злоумышленник его узнает, он получит доступ ко всем вашим...<br />
+<br />
+<a href="https://osint42.org/threads/pyat-osnovnykh-sposobov-zashchity-personal-nykh-dannykh.174/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Как изолировать того-самого в песочнице Андроида или Apple</title>
+      <pubDate>Thu, 28 Aug 2025 07:10:46 +0000</pubDate>
+      <link>https://osint42.org/threads/kak-izolirovat-togo-samogo-v-pesochnitse-androida-ili-apple.161/</link>
+      <guid isPermaLink="false">161</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1756229809170-png.876/"
+			class="bbImage "
+			style=""
+			alt="1756229809170.png"
+			title="1756229809170.png"
+			width="512" height="768" loading="lazy" /><br />
+<br />
+Вот вы счастливый работник на заводе, учитель или ох-ёпрст депутат...)<br />
+<br />
+Вам настоятельно попросили установить того-самого, кого не называют и отказаться нельзя...<img src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f641.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":(" title="Frown    :("  data-smilie="3"data-shortname=":(" /><br />
+<br />
+Что делать, покупать отдельный телефон ?<br />
+Хороший вариант, но есть менее радикальный, предлагаю установить песочницу на телефон, также такую песочницу можно использовать и для других программ...)<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-zachem-nuzhna-izolyatsiya-messendzhera"></a>Зачем нужна изоляция мессенджера?&#8203;<a class="hoverLink" href="#-zachem-nuzhna-izolyatsiya-messendzhera" title="Постоянная ссылка"></a></h2>Мессенджеры, включая <b>Max</b>, получают широкий доступ к данным устройства:<br />
+<ul>
+<li data-xf-list-type="ul">...</li>
+</ul><br />
+<a href="https://osint42.org/threads/kak-izolirovat-togo-samogo-v-pesochnitse-androida-ili-apple.161/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>Вера и контейнер (Часть "Я устал копировать").  Требования безопасности и меры предосторожности, касающиеся скрытых томов.</title>
+      <pubDate>Tue, 26 Aug 2025 10:56:45 +0000</pubDate>
+      <link>https://osint42.org/threads/vera-i-konteiner-chast-ya-ustal-kopirovat-trebovaniya-bezopasnosti-i-mery-predostorozhnosti-kasayushchiyesya-skrytykh-tomov.155/</link>
+      <guid isPermaLink="false">155</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h3 class="bbHeading"><a class="u-anchorTarget" name="-trebovaniya-bezopasnosti-i-mery-predostorozhnosti-kasayushchiyesya-skrytykh-tomov"></a>Требования безопасности и меры предосторожности, касающиеся скрытых томов&#8203;<a class="hoverLink" href="#-trebovaniya-bezopasnosti-i-mery-predostorozhnosti-kasayushchiyesya-skrytykh-tomov" title="Постоянная ссылка"></a></h3><br />
+Если вы используете <a href="https://veracrypt.io/ru/Hidden%20Volume.html" target="_blank" class="link link--external" rel="nofollow ugc noopener">скрытый том VeraCrypt</a>, то обязаны соблюдать описанные здесь требования безопасности и меры предосторожности.<br />
+Отказ от ответственности: мы не гарантируем, что эта глава содержит список<i>всех</i> проблем, связанных с безопасностью, и атак, которые может предпринять вашнеприятель, чтобы получить доступ к данным, хранящимся в скрытом томе TrueCrypt, или ограничить возможность...<br />
+<br />
+<a href="https://osint42.org/threads/vera-i-konteiner-chast-ya-ustal-kopirovat-trebovaniya-bezopasnosti-i-mery-predostorozhnosti-kasayushchiyesya-skrytykh-tomov.155/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Вера и контейнер (Часть 4). Что говорить и делать, когда прессуют.</title>
+      <pubDate>Tue, 26 Aug 2025 07:06:39 +0000</pubDate>
+      <link>https://osint42.org/threads/vera-i-konteiner-chast-4-chto-govorit-i-delat-kogda-pressuyut.152/</link>
+      <guid isPermaLink="false">152</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h3 class="bbHeading"><a class="u-anchorTarget" name="-pravdopodobnoye-otritsaniye-nalichiya-shifrovaniya"></a>Правдоподобное отрицание наличия шифрования&#8203;<a class="hoverLink" href="#-pravdopodobnoye-otritsaniye-nalichiya-shifrovaniya" title="Постоянная ссылка"></a></h3><br />
+На случай, если злоумышленник вынудит вас сообщить пароль, в VeraCrypt предусмотрено два вида правдоподобногоотрицания наличия шифрования:<br />
+<br />
+<ol>
+<li data-xf-list-type="ol">Скрытые тома (см. раздел <a href="https://veracrypt.io/ru/Hidden%20Volume.html" target="_blank" class="link link--external" rel="nofollow ugc noopener">Скрытый том</a>) и скрытые операционные системы (см. раздел <a href="https://veracrypt.io/ru/Hidden%20Operating%20System.html" target="_blank" class="link link--external" rel="nofollow ugc noopener"><b>Скрытая операционная система</b></a>).</li>
+<li data-xf-list-type="ol">Пока не будет выполнено дешифрование, раздел/устройство VeraCrypt выглядит как содержащее случайные данные(в нём нет никаких &quot;сигнатур&quot;). Поэтому должно быть...</li>
+</ol><br />
+<a href="https://osint42.org/threads/vera-i-konteiner-chast-4-chto-govorit-i-delat-kogda-pressuyut.152/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Вера и контейнер (Часть "Уже сбился со счету"). Не ленимся делать резервное копирование, бережем свои нервы при использовании каскадного шифрования :)</title>
+      <pubDate>Tue, 26 Aug 2025 07:05:13 +0000</pubDate>
+      <link>https://osint42.org/threads/vera-i-konteiner-chast-uzhe-sbilsya-so-schetu-ne-lenimsya-delat-rezervnoye-kopirovaniye-berezhem-svoi-nervy-pri-ispol-zovanii-kaskadnogo-shifrovaniya.157/</link>
+      <guid isPermaLink="false">157</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h2 class="bbHeading"><a class="u-anchorTarget" name="-o-bezopasnom-rezervnom-kopirovanii"></a>О безопасном резервном копировании&#8203;<a class="hoverLink" href="#-o-bezopasnom-rezervnom-kopirovanii" title="Постоянная ссылка"></a></h2>Из-за аппаратных или программных ошибок/сбоев файлы в томе VeraCrypt могут оказаться повреждёнными. Поэтомумы настоятельно рекомендуем регулярно делать резервные копии всех важных файлов (разумеется, это относится клюбым важным данным, а не только к зашифрованным в томах VeraCrypt).<br />
+<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-nesistemnyye-toma"></a>Несистемные тома&#8203;<a class="hoverLink" href="#-nesistemnyye-toma" title="Постоянная ссылка"></a></h3>Чтобы безопасно создать резервную копию несистемного тома VeraCrypt, рекомендуем следующую последовательность действий:<br />
+<br />
+<ol>
+<li data-xf-list-type="ol">Создайте новый том...</li>
+</ol><br />
+<a href="https://osint42.org/threads/vera-i-konteiner-chast-uzhe-sbilsya-so-schetu-ne-lenimsya-delat-rezervnoye-kopirovaniye-berezhem-svoi-nervy-pri-ispol-zovanii-kaskadnogo-shifrovaniya.157/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Вера и контейнер (Часть "Она должна была быть под #1, но кому нужны эти правила предосторожности?"). Требования безопасности и меры предосторожности.</title>
+      <pubDate>Tue, 26 Aug 2025 06:56:32 +0000</pubDate>
+      <link>https://osint42.org/threads/vera-i-konteiner-chast-ona-dolzhna-byla-byt-pod-1-no-komu-nuzhny-eti-pravila-predostorozhnosti-trebovaniya-bezopasnosti-i-mery-predostorozhnosti.156/</link>
+      <guid isPermaLink="false">156</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h2 class="bbHeading"><a class="u-anchorTarget" name="-trebovaniya-bezopasnosti-i-mery-predostorozhnosti"></a>Требования безопасности и меры предосторожности&#8203;<a class="hoverLink" href="#-trebovaniya-bezopasnosti-i-mery-predostorozhnosti" title="Постоянная ссылка"></a></h2><span style="font-family: 'Verdana'"><span style="font-size: 11px"><div style="text-align: left"><div class="bbTable">
+<table style='width: 100%'></table>
+<div style="text-align: left">[TR]<br />
+<span style="color: #ff0000"><span style="font-family: 'Verdana'"><span style="font-size: 11px"><div style="text-align: left">[td]<span style="color: #ff0000"><span style="font-family: 'Verdana'"><span style="font-size: 11px"><div style="text-align: left"><b><div style="text-align: left">ВАЖНО&#8203;</div></b>: Если вы хотите пользоваться VeraCrypt, то обязаны соблюдать описанные в этой главе требования безопасности и меры предосторожности.&#8203;</div></span></span></span>[/td]&#8203;</div></span></span></span>[/TR]&#8203;</div></div></div></span></span><div style="text-align: left">В этой главе описаны требования безопасности при использовании VeraCrypt и дана информация о том, как неприятель может повлиять на возможности (или ограничить их)...&#8203;</div><br />
+<a href="https://osint42.org/threads/vera-i-konteiner-chast-ona-dolzhna-byla-byt-pod-1-no-komu-nuzhny-eti-pravila-predostorozhnosti-trebovaniya-bezopasnosti-i-mery-predostorozhnosti.156/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Вера и контейнер (Часть 6). Защита скрытых томов от повреждений.</title>
+      <pubDate>Tue, 26 Aug 2025 06:52:50 +0000</pubDate>
+      <link>https://osint42.org/threads/vera-i-konteiner-chast-6-zashchita-skrytykh-tomov-ot-povrezhdenii.154/</link>
+      <guid isPermaLink="false">154</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h3 class="bbHeading"><a class="u-anchorTarget" name="-zashchita-skrytykh-tomov-ot-povrezhdenii"></a>Защита скрытых томов от повреждений&#8203;<a class="hoverLink" href="#-zashchita-skrytykh-tomov-ot-povrezhdenii" title="Постоянная ссылка"></a></h3><br />
+Если вы монтируете том VeraCrypt, внутри которого находится<a href="https://veracrypt.io/ru/Hidden%20Volume.html" target="_blank" class="link link--external" rel="nofollow ugc noopener">скрытый том</a>, то можете <i>считывать</i> данные из (внешнего) тома без всякого риска. Однако если вам(или операционной системе) потребуется <i>записать</i> данные во внешний том, есть риск повредить(перезаписать) скрытый том. Чтобы избежать этого, скрытый том следует защитить, о чём и пойдёт здесь речь.<br />
+<br />
+При монтировании внешнего тома введите его пароль, но прежде чем нажать <i>OK,</i>...<br />
+<br />
+<a href="https://osint42.org/threads/vera-i-konteiner-chast-6-zashchita-skrytykh-tomov-ot-povrezhdenii.154/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Вера и контейнер (Часть 5). Скрытый том.</title>
+      <pubDate>Tue, 26 Aug 2025 06:51:49 +0000</pubDate>
+      <link>https://osint42.org/threads/vera-i-konteiner-chast-5-skrytyi-tom.153/</link>
+      <guid isPermaLink="false">153</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h3 class="bbHeading"><a class="u-anchorTarget" name="-skrytyi-tom"></a>Скрытый том&#8203;<a class="hoverLink" href="#-skrytyi-tom" title="Постоянная ссылка"></a></h3><br />
+Возможны ситуации, когда кто-то заставит вас сообщить пароль от зашифрованного тома. В ряде случаев вы простоне сможете отказаться это сделать (например, при вымогательстве). Благополучно выходить из таких ситуаций, не сообщаяпароль от тома с вашими данными, позволяет так называемый скрытый том.<br />
+<br />
+<img src="https://veracrypt.io/ru/Beginner%27s Tutorial_Image_024.png" data-url="https://veracrypt.io/ru/Beginner%27s Tutorial_Image_024.png" class="bbImage " loading="lazy"
+		alt="Макет стандартного тома VeraCrypt до и после создания в нём скрытого тома." title="Макет стандартного тома VeraCrypt до и после создания в нём скрытого тома." style="" width="606" height="412" /><br />
+<br />
+<i>Схема обычного тома VeraCrypt до и после создания внутри него скрытого тома.</i><br />
+<br />
+<br />
+Принцип такой: том...<br />
+<br />
+<a href="https://osint42.org/threads/vera-i-konteiner-chast-5-skrytyi-tom.153/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Вера и контейнер (Часть 3). Скрытая операционная система</title>
+      <pubDate>Tue, 26 Aug 2025 06:41:42 +0000</pubDate>
+      <link>https://osint42.org/threads/vera-i-konteiner-chast-3-skrytaya-operatsionnaya-sistema.151/</link>
+      <guid isPermaLink="false">151</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h3 class="bbHeading"><a class="u-anchorTarget" name="-skrytaya-operatsionnaya-sistema"></a>Скрытая операционная система&#8203;<a class="hoverLink" href="#-skrytaya-operatsionnaya-sistema" title="Постоянная ссылка"></a></h3><br />
+Если системный раздел или системный диск зашифрован с помощью VeraCrypt, то при каждом включении или прикаждой перезагрузке компьютера требуется вводить<a href="https://veracrypt.io/ru/System%20Encryption.html" target="_blank" class="link link--external" rel="nofollow ugc noopener">предзагрузочной аутентификации</a> на экране загрузчика VeraCrypt. Может случиться, что кто-то вынудитвас расшифровать операционную систему или сообщить пароль от предзагрузочной аутентификации. Во многихситуациях вы просто не сможете отказаться это сделать (например, при вымогательстве). VeraCrypt...<br />
+<br />
+<a href="https://osint42.org/threads/vera-i-konteiner-chast-3-skrytaya-operatsionnaya-sistema.151/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Вера и контейнер (Часть 2). Шифрование системы.</title>
+      <pubDate>Tue, 26 Aug 2025 06:40:28 +0000</pubDate>
+      <link>https://osint42.org/threads/vera-i-konteiner-chast-2-shifrovaniye-sistemy.150/</link>
+      <guid isPermaLink="false">150</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h3 class="bbHeading"><a class="u-anchorTarget" name="-shifrovaniye-sistemy"></a>Шифрование системы&#8203;<a class="hoverLink" href="#-shifrovaniye-sistemy" title="Постоянная ссылка"></a></h3><br />
+VeraCrypt позволяет &quot;на лету&quot; шифровать системный раздел или весь системный диск, то есть раздел или диск,где установлена Windows и с которого она загружается.<br />
+<br />
+Шифрование системы обеспечивает наивысший уровень надёжности и безопасности, так как все файлы, включая любыевременные файлы, создаваемые Windows и приложениями в системном разделе (как правило, без вашего ведома исогласия), файлы гибернации, файлы подкачки и т. д., всегда остаются зашифрованными (даже при...<br />
+<br />
+<a href="https://osint42.org/threads/vera-i-konteiner-chast-2-shifrovaniye-sistemy.150/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Вера и контейнер (Часть 1). Руководство для начинающих пользователей. Как создать и использовать контейнер VeraCrypt</title>
+      <pubDate>Tue, 26 Aug 2025 06:33:53 +0000</pubDate>
+      <link>https://osint42.org/threads/vera-i-konteiner-chast-1-rukovodstvo-dlya-nachinayushchikh-pol-zovatelei-kak-sozdat-i-ispol-zovat-konteiner-veracrypt.149/</link>
+      <guid isPermaLink="false">149</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><a href="https://veracrypt.io/ru/Documentation.html" target="_blank" class="link link--external" rel="nofollow ugc noopener"><img src="https://veracrypt.io/ru/VeraCrypt128x128.png" data-url="https://veracrypt.io/ru/VeraCrypt128x128.png" class="bbImage " loading="lazy"
+		alt="VeraCrypt" title="VeraCrypt" style="" width="100" height="100" /></a><br />
+<br />
+  <br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-rukovodstvo-dlya-nachinayushchikh-pol-zovatelei"></a>Руководство для начинающих пользователей&#8203;<a class="hoverLink" href="#-rukovodstvo-dlya-nachinayushchikh-pol-zovatelei" title="Постоянная ссылка"></a></h3><h3 class="bbHeading"><a class="u-anchorTarget" name="-kak-sozdat-i-ispol-zovat-konteiner-veracrypt"></a>Как создать и использовать контейнер VeraCrypt&#8203;<a class="hoverLink" href="#-kak-sozdat-i-ispol-zovat-konteiner-veracrypt" title="Постоянная ссылка"></a></h3>В этой главе содержатся пошаговые инструкции о том, как создавать, монтировать и использовать том VeraCrypt.Настоятельно рекомендуем вам ознакомиться и с другими разделами данного руководства, так как они содержат важную информацию.<br />
+<br />
+<h4 class="bbHeading"><a class="u-anchorTarget" name="-shag-1"></a>ШАГ 1:&#8203;<a class="hoverLink" href="#-shag-1" title="Постоянная ссылка"></a></h4>Если вы этого ещё не сделали, загрузите и установите программу VeraCrypt. Затем...<br />
+<br />
+<a href="https://osint42.org/threads/vera-i-konteiner-chast-1-rukovodstvo-dlya-nachinayushchikh-pol-zovatelei-kak-sozdat-i-ispol-zovat-konteiner-veracrypt.149/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>ClamAV - Бесплатный антивирус для Linux</title>
+      <pubDate>Wed, 02 Jul 2025 07:59:08 +0000</pubDate>
+      <link>https://osint42.org/threads/clamav-besplatnyi-antivirus-dlya-linux.97/</link>
+      <guid isPermaLink="false">97</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h2 class="bbHeading"><a class="u-anchorTarget" name="-"></a><img src="https://osint42.org/attachments/1751190749976-png.705/"
+			class="bbImage "
+			style=""
+			alt="1751190749976.png"
+			title="1751190749976.png"
+			width="512" height="512" loading="lazy" />&#8203;<a class="hoverLink" href="#-" title="Постоянная ссылка"></a></h2><h2 class="bbHeading"><a class="u-anchorTarget" name="-clamav-eto-besplatnyi-antivirus-s-otkrytym-iskhodnym-kodom-razrabotannyi-cisco-on-rabotayet-v-linux-unix-srede-i-ispol-zuyet-sya-dlya-obnaruzheniya"></a>ClamAV — это <b>бесплатный антивирус с открытым исходным кодом</b>, разработанный Cisco. Он работает в Linux/Unix-среде и используется для обнаружения:&#8203;<a class="hoverLink" href="#-clamav-eto-besplatnyi-antivirus-s-otkrytym-iskhodnym-kodom-razrabotannyi-cisco-on-rabotayet-v-linux-unix-srede-i-ispol-zuyet-sya-dlya-obnaruzheniya" title="Постоянная ссылка"></a></h2><ul>
+<li data-xf-list-type="ul">вирусов, троянов и червей;</li>
+<li data-xf-list-type="ul">вредоносных PHP/JS-инъекций в сайтах;</li>
+<li data-xf-list-type="ul">backdoor-скриптов;</li>
+<li data-xf-list-type="ul">вредоносных вложений в архивах, PDF, офисных документах.</li>
+</ul>ClamAV особенно полезен для <b>веб-серверов</b> с пользовательскими загрузками и при работе в среде без стандартной антивирусной защиты.<br />
+<br />
+<hr /><br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-package"></a><img class="smilie smilie--emoji" alt="📦" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4e6.png" title="Package    :package:" data-shortname=":package:" loading="lazy" width="64" height="64" />...&#8203;<a class="hoverLink" href="#-package" title="Постоянная ссылка"></a></h3><br />
+<a href="https://osint42.org/threads/clamav-besplatnyi-antivirus-dlya-linux.97/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>TMAC</title>
+      <pubDate>Mon, 23 Jun 2025 09:19:32 +0000</pubDate>
+      <link>https://osint42.org/threads/tmac.92/</link>
+      <guid isPermaLink="false">92</guid>
+      <author>invalid@example.com (Ftftren)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>Ftftren</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Всем привет делюсь программой который меняет MAC адреса <br />
+<br />
+Вот и она: <a href="https://technitium.com/tmac/" target="_blank" class="link link--external" rel="nofollow ugc noopener">Technitium MAC Address Changer | A Freeware Utility To Spoof MAC Address Instantly</a><br />
+<br />
+<b>Инструкция с сайта: Запуск смены MAC-адреса выведет список всех доступных сетевых адаптеров. Выберите адаптер, для которого вы хотите изменить MAC-адрес. Под вашей выборкой появится информация о выбранном адаптере. На вкладке Информация найдите рамку Изменить MAC-адрес. Введите новый MAC-адрес в поле и нажмите кнопку Изменить...</b><br />
+<br />
+<a href="https://osint42.org/threads/tmac.92/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Miner Search - Поиск и уничтожение скрытых майнеров</title>
+      <pubDate>Sat, 17 May 2025 08:27:58 +0000</pubDate>
+      <link>https://osint42.org/threads/miner-search-poisk-i-unichtozheniye-skrytykh-mainerov.44/</link>
+      <guid isPermaLink="false">44</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1747470452585-png.443/"
+			class="bbImage "
+			style=""
+			alt="1747470452585.png"
+			title="1747470452585.png"
+			width="800" height="461" loading="lazy" /><br />
+<br />
+Программа разработанная для поиска и уничтожения скрытых майнеров. <br />
+Является вспомогательным инструментом для поиска подозрительных файлов, каталогов, процессов и тд. и <b><u>НЕ является антивирусом.</u></b><br />
+<br />
+Обнаруживает и приостанавливает вредоносные процессы. Запускает удаление заблокированных папок через список контроля доступа на вкладке безопасность. При нахождении каких либо подозрительных или вредоносных объектов требуется подтверждение на запуск автоматической очистки...<br />
+<br />
+<a href="https://osint42.org/threads/miner-search-poisk-i-unichtozheniye-skrytykh-mainerov.44/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Как хакеры могут обойти детект антивирусов</title>
+      <pubDate>Sun, 11 May 2025 09:53:38 +0000</pubDate>
+      <link>https://osint42.org/threads/kak-khakery-mogut-oboiti-detekt-antivirusov.20/</link>
+      <guid isPermaLink="false">20</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Как хакеры могут обойти детект антивирусов. <br />
+Статья предназначена для ознакомления и для того, чтобы вы смогли правильно настроить антивирусное ПО у себя на ПК.<br />
+<h2 class="bbHeading"><a class="u-anchorTarget" name="-itak-dlya-nachala-kakoi-byvayet-detekt-u-antivirusov"></a>Итак для начала, какой бывает детект у антивирусов&#8203;<a class="hoverLink" href="#-itak-dlya-nachala-kakoi-byvayet-detekt-u-antivirusov" title="Постоянная ссылка"></a></h2>Детекты бывают статические и динамические.<br />
+<br />
+<b>Рассмотрим статические детекты:</b><br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-1-detekt-po-signature"></a><b>1.Детект по сигнатуре</b>&#8203;<a class="hoverLink" href="#-1-detekt-po-signature" title="Постоянная ссылка"></a></h3>Тут всё просто, антивирусные лаборатории добавляют хеш вредоносного кода, причём хеш может-быть как на файл целиком, так и на его части, например, какие-то...<br />
+<br />
+<a href="https://osint42.org/threads/kak-khakery-mogut-oboiti-detekt-antivirusov.20/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Какие существуют угрозы для мобильных устройств</title>
+      <pubDate>Sun, 11 May 2025 09:45:28 +0000</pubDate>
+      <link>https://osint42.org/threads/kakiye-sushchestvuyut-ugrozy-dlya-mobil-nykh-ustroistv.19/</link>
+      <guid isPermaLink="false">19</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-sredstv-zashchity-antivirusy-i-t-d.12/"><![CDATA[Обсуждение средств защиты (Антивирусы и т.д.)]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1746956615199-png.408/"
+			class="bbImage "
+			style=""
+			alt="1746956615199.png"
+			title="1746956615199.png"
+			width="520" height="376" loading="lazy" /><br />
+Многие говорят &quot;Антивирус для мобильников не нужен !&quot;, может-быть, но тем не менее давайте рассмотрим, а какие угрозы вообще существуют для мобильников:<br />
+<br />
+Итак основные угрозы, которые выделяют специалисты:<br />
+<br />
+<b>1)SMS-троянцы:</b><br />
+Такие программы отправляют текстовые сообщения с мобильного устройства на платные телефонные номера с повышенным тарифом, тратя ваши деньги.<br />
+<br />
+<b>2)Рекламные модули:</b><br />
+После установки таких программ, они начинают собирать у вас якобы анонимную информацию...<br />
+<br />
+<a href="https://osint42.org/threads/kakiye-sushchestvuyut-ugrozy-dlya-mobil-nykh-ustroistv.19/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>

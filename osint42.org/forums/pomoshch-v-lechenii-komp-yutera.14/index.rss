@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Помощь в лечении компьютера</title>
+    <description>Помощь в лечении компьютера</description>
+    <pubDate>Sat, 27 Sep 2025 09:38:15 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:38:15 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/pomoshch-v-lechenii-komp-yutera.14/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/pomoshch-v-lechenii-komp-yutera.14/index.rss"/>
+    <item>
+      <title>Лечим track point на Lenovo от произвольного движения</title>
+      <pubDate>Tue, 26 Aug 2025 05:58:24 +0000</pubDate>
+      <link>https://osint42.org/threads/lechim-track-point-na-lenovo-ot-proizvol-nogo-dvizheniya.147/</link>
+      <guid isPermaLink="false">147</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/pomoshch-v-lechenii-komp-yutera.14/"><![CDATA[Помощь в лечении компьютера]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/f2ei6ayhlvg51-gif.873/"
+			class="bbImage "
+			style="width: 792px"
+			alt="f2ei6ayhlvg51.gif"
+			title="f2ei6ayhlvg51.gif"
+			width="320" height="180" loading="lazy" /><br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Трекпойнт постоянно перекалибрует своё нейтральное положение, поэтому если пользователь несколько секунд давит с постоянной силой в одном направлении, можно заметить, что мышь сама по себе движется в противоположном направлении примерно секунду, с той же скоростью, с которой на неё давили. Это логично, и я могу это стабильно воспроизвести: нажимаю в одном направлении, отпускаю, мышь движется в противоположном направлении секунду, а потом останавливается, как только трекпойнт...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://osint42.org/threads/lechim-track-point-na-lenovo-ot-proizvol-nogo-dvizheniya.147/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Спящая красавица в расширениях браузера</title>
+      <pubDate>Mon, 09 Jun 2025 14:18:21 +0000</pubDate>
+      <link>https://osint42.org/threads/spyashchaya-krasavitsa-v-rasshireniyakh-brauzera.70/</link>
+      <guid isPermaLink="false">70</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/pomoshch-v-lechenii-komp-yutera.14/"><![CDATA[Помощь в лечении компьютера]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1749478710626-png.564/"
+			class="bbImage "
+			style=""
+			alt="1749478710626.png"
+			title="1749478710626.png"
+			width="768" height="323" loading="lazy" /><br />
+<br />
+<a href="https://layerxsecurity.com/blog/sleeper-sound-layerx-uncovers-malicious-sleeper-sound-management-extensions-with-nearly-1-5-million-users-worldwide/" target="_blank" class="link link--external" rel="noopener">ИБ-компания LayerX опубликовала исследование</a>, где раскрывает подробно информацию о сети вредоносных расширений для браузера Google Chrome. <br />
+<br />
+Расширения маскируются под безобидные инструменты, например, для управления звуком и скачаны почти у 1,5 миллионов пользователей по всему миру. <br />
+Действуют они по принципу &quot;спящих агентов&quot; в духе сказки «Спящая красавица», готовые в час Х проснуться и выполнить вредоносные команды.<br />
+<br />
+Самое крупное из них, <img class="smilie smilie--emoji" alt="🦠" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f9a0.png" title="Microbe    :microbe:" data-shortname=":microbe:" loading="lazy" width="64" height="64" />«Volume Max – <img class="smilie smilie--emoji" alt="⚠️" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/26a0.png" title="Warning    :warning:" data-shortname=":warning:" loading="lazy" width="64" height="64" />Ultimate Sound...<br />
+<br />
+<a href="https://osint42.org/threads/spyashchaya-krasavitsa-v-rasshireniyakh-brauzera.70/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Майнеры в веб-сайтах: что это такое и как защититься</title>
+      <pubDate>Fri, 06 Jun 2025 17:09:36 +0000</pubDate>
+      <link>https://osint42.org/threads/mainery-v-veb-saitakh-chto-eto-takoye-i-kak-zashchitit-sya.67/</link>
+      <guid isPermaLink="false">67</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/pomoshch-v-lechenii-komp-yutera.14/"><![CDATA[Помощь в лечении компьютера]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">______________________________________<br />
+| Веб-страница: |<br />
+| [Скрытый майнер] |<br />
+|_____________________________________|<br />
+| ^<br />
+| |<br />
+v |<br />
+.----------------------------------. |<br />
+| Процессор (CPU) загружен | &lt;------+<br />
+| на 80–100% без ведома юзера |<br />
+&#039;----------------------------------&#039;<br />
+|<br />
+| Шум кулера ↑↑↑<br />
+v<br />
+(Быстро садится батарея, растут счета за электричество)<br />
+<br />
+[Пользователь]<br />
+«Почему всё тормозит?!»<br />
+<br />
+В последние годы всё чаще можно услышать о скрытых майнерах, которые используют мощности вашего...<br />
+<br />
+<a href="https://osint42.org/threads/mainery-v-veb-saitakh-chto-eto-takoye-i-kak-zashchitit-sya.67/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Эпидемия майнеров в РФ, что и как</title>
+      <pubDate>Sat, 17 May 2025 08:24:59 +0000</pubDate>
+      <link>https://osint42.org/threads/epidemiya-mainerov-v-rf-chto-i-kak.43/</link>
+      <guid isPermaLink="false">43</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/pomoshch-v-lechenii-komp-yutera.14/"><![CDATA[Помощь в лечении компьютера]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1747470205126-png.438/"
+			class="bbImage "
+			style=""
+			alt="1747470205126.png"
+			title="1747470205126.png"
+			width="512" height="512" loading="lazy" /><br />
+<br />
+<b>Анализ Лаборатории Касперского:</b><br />
+<br />
+На прошлой неделе эксперты «Лаборатории Касперского» <a href="https://securelist.ru/miner-campaign-misuses-open-source-siem-agent/110717/" target="_blank" class="link link--external" rel="noopener">опубликовали</a> подробный разбор вредоносной кампании, направленной в основном на русскоязычных пользователей.<br />
+<br />
+<b>Ссылки на вредоносные программы продвигаются в результатах поиска,</b> результатом установки такого ПО является полный перехват контроля над системой злоумышленниками. Хотя подобные атаки никак нельзя назвать новыми, данная кампания представляет интерес как локализацией...<br />
+<br />
+<a href="https://osint42.org/threads/epidemiya-mainerov-v-rf-chto-i-kak.43/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Как найти и удалить скрытые майнеры и другие вредоносные программы на Windows</title>
+      <pubDate>Sun, 11 May 2025 19:02:57 +0000</pubDate>
+      <link>https://osint42.org/threads/kak-naiti-i-udalit-skrytyye-mainery-i-drugiye-vredonosnyye-programmy-na-windows.23/</link>
+      <guid isPermaLink="false">23</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/pomoshch-v-lechenii-komp-yutera.14/"><![CDATA[Помощь в лечении компьютера]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h2 class="bbHeading"><a class="u-anchorTarget" name="-shield-udaleniye-skrytykh-mainerov-i-vredonosnykh-programm-poshagovoye-rukovodstvo"></a><img class="smilie smilie--emoji" alt="🛡️" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f6e1.png" title="Shield    :shield:" data-shortname=":shield:" loading="lazy" width="64" height="64" /> Удаление скрытых майнеров и вредоносных программ: пошаговое руководство&#8203;<a class="hoverLink" href="#-shield-udaleniye-skrytykh-mainerov-i-vredonosnykh-programm-poshagovoye-rukovodstvo" title="Постоянная ссылка"></a></h2><br />
+<div style="text-align: justify">Эта инструкция поможет вам выявить и удалить скрытые криптомайнеры (<b>XMRig</b>, <b>CoinMiner</b>), стилеры (<b>RedLine</b>, <b>AgentTesla</b>), трояны с автозапуском и персистентностью (<b>AsyncRAT</b>, <b>Pennywise</b>), мешающие нормальной работе Windows.<br />
+<br />
+Здесь собраны все этапы: от распознавания симптомов заражения и запуска в безопасный режим — до ручного анализа системы и запуска антивирусных...&#8203;</div><br />
+<a href="https://osint42.org/threads/kak-naiti-i-udalit-skrytyye-mainery-i-drugiye-vredonosnyye-programmy-na-windows.23/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>

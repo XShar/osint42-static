@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Обсуждение вредоносного софта</title>
+    <description>Обсуждение вредоносного софта</description>
+    <pubDate>Sat, 27 Sep 2025 09:38:20 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:38:20 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/obsuzhdeniye-vredonosnogo-softa.4/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/obsuzhdeniye-vredonosnogo-softa.4/index.rss"/>
+    <item>
+      <title>Различные фреймворки для обхода EDR систем</title>
+      <pubDate>Sat, 23 Aug 2025 15:27:25 +0000</pubDate>
+      <link>https://osint42.org/threads/razlichnyye-freimvorki-dlya-obkhoda-edr-sistem.41/</link>
+      <guid isPermaLink="false">41</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-vredonosnogo-softa.4/"><![CDATA[Обсуждение вредоносного софта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1747469525715-png.436/"
+			class="bbImage "
+			style=""
+			alt="1747469525715.png"
+			title="1747469525715.png"
+			width="1229" height="282" loading="lazy" /><br />
+<br />
+Предлагаю в этой теме выкладывать различные фреймворки для обхода и тестирования EDR систем.<br />
+<br />
+Вот что получилось найти на гитхабе (Более-менее новые).<br />
+<br />
+<b>1)TerraLdr:<a href="https://github.com/NUL0x4C/TerraLdr/tree/main" target="_blank" class="link link--external" rel="noopener">GitHub - NUL0x4C/TerraLdr: A Payload Loader Designed With Advanced Evasion Features</a></b><br />
+<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-details"></a>Details:&#8203;<a class="hoverLink" href="#-details" title="Постоянная ссылка"></a></h3><ul>
+<li data-xf-list-type="ul">no crt functions imported</li>
+<li data-xf-list-type="ul">syscall unhooking using <a href="https://github.com/ORCx41/KnownDllUnhook" target="_blank" class="link link--external" rel="noopener">KnownDllUnhook</a></li>
+<li data-xf-list-type="ul">api hashing using Rotr32 hashing algo</li>
+<li data-xf-list-type="ul">payload encryption using rc4 - payload is saved in .rsrc</li>
+<li data-xf-list-type="ul">process injection -...</li>
+</ul><br />
+<a href="https://osint42.org/threads/razlichnyye-freimvorki-dlya-obkhoda-edr-sistem.41/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Подборки сэмплов, исходников вредоносного софта и вирусов</title>
+      <pubDate>Sat, 23 Aug 2025 12:50:57 +0000</pubDate>
+      <link>https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/</link>
+      <guid isPermaLink="false">137</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-vredonosnogo-softa.4/"><![CDATA[Обсуждение вредоносного софта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1755868103285-png.857/"
+			class="bbImage "
+			style=""
+			alt="1755868103285.png"
+			title="1755868103285.png"
+			width="512" height="768" loading="lazy" /><br />
+<br />
+Для исследования вредоносного софта, либо тестирование защиты часто необходимы сэмплы зверьков, так просто в поиске их не найти.<br />
+<br />
+Поэтому существуют готовые репозитории и базы сэмплов где их можно скачать.<br />
+<br />
+Также для изучения зверьков существуют и базы исходников, одну из таких баз я уже выкладывал здесь:<a href="https://osint42.org/articles/tsikl-statei-izucheniye-vredonosnykh-programm.6/page/ogromnaya-baza-iskhodnikov-sovremennykh-virusov-dlya-raznykh-platform.38/" class="link link--internal">Огромная база исходников современных вирусов для разных платформ | Цикл статей &quot;Изучение вредоносных программ&quot;</a><br />
+<br />
+Под хайдом подборка ссылок на сэмплы, исходники и т.д.:<br />
+<br />
+[POSTS=3]...<br />
+<br />
+<a href="https://osint42.org/threads/podborki-s-emplov-iskhodnikov-vredonosnogo-softa-i-virusov.137/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>14</slash:comments>
+    </item>
+    <item>
+      <title>Курсы maldev оригинал</title>
+      <pubDate>Thu, 21 Aug 2025 06:08:51 +0000</pubDate>
+      <link>https://osint42.org/threads/kursy-maldev-original.135/</link>
+      <guid isPermaLink="false">135</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-vredonosnogo-softa.4/"><![CDATA[Обсуждение вредоносного софта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Слитый курс maldev.<br />
+<br />
+Слит достаточно давно, но может кому нужно будет.<br />
+<br />
+[HIDE]
+	
+
+	<div class="bbCodeBlock bbCodeBlock--unfurl    js-unfurl fauxBlockLink"
+		data-unfurl="true" data-result-id="535" data-url="https://mega.nz/file/q5piFTJA#3WHoqo1RHckP9fDtd8fUwsz3lAgLNEwaFqbI0mi3qHU" data-host="mega.nz" data-pending="false">
+		<div class="contentRow">
+			
+				<div class="contentRow-figure contentRow-figure--fixedSmall js-unfurl-figure">
+					
+						<img src="https://mega.nz/rich-file.png" loading="lazy" alt="mega.nz" class="bbCodeBlockUnfurl-image" data-onerror="hide-parent"/>
+					
+				</div>
+			
+			<div class="contentRow-main">
+				<h3 class="contentRow-header js-unfurl-title">
+					<a href="https://mega.nz/file/q5piFTJA#3WHoqo1RHckP9fDtd8fUwsz3lAgLNEwaFqbI0mi3qHU"
+						class="link link--external fauxBlockLink-blockLink"
+						target="_blank"
+						rel="noopener"
+						data-proxy-href="">
+						146.68 MB file on MEGA
+					</a>
+				</h3>
+
+				<div class="contentRow-snippet js-unfurl-desc"></div>
+
+				<div class="contentRow-minor contentRow-minor--hideLinks">
+					<span class="js-unfurl-favicon">
+						
+							<img src="https://mega.nz/favicon.ico?v=3" loading="lazy" alt="mega.nz" class="bbCodeBlockUnfurl-icon"
+								data-onerror="hide-parent"/>
+						
+					</span>
+					mega.nz
+				</div>
+			</div>
+		</div>
+	</div>
+[/HIDE]</div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Как вирусы закрепляются в системе</title>
+      <pubDate>Tue, 22 Jul 2025 14:32:23 +0000</pubDate>
+      <link>https://osint42.org/threads/kak-virusy-zakreplyayut-sya-v-sisteme.112/</link>
+      <guid isPermaLink="false">112</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-vredonosnogo-softa.4/"><![CDATA[Обсуждение вредоносного софта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">В общем под закреплением в систему я понимаю повторный запуск зверька, после например перезапуска системы.<br />
+<br />
+<b>Способов на самом деле много, да и возможно такая тема тут уже была, но перечислю что знаю, с возможными плюсами/минусами каждого способа:</b><br />
+<br />
+1)Копирование в папку &quot;Автозагрузка&quot;, простой способ, но минус что &quot;жертва&quot; может это всё дело увидеть, просто просмотрев папку автозагрузки.<br />
+Также из плюса данного способа, что не нужно теребить UAC.<br />
+<br />
+Из минусов ещё, то-что часто такое...<br />
+<br />
+<a href="https://osint42.org/threads/kak-virusy-zakreplyayut-sya-v-sisteme.112/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Доставка малвари. Техника ClickFix</title>
+      <pubDate>Wed, 16 Jul 2025 13:53:37 +0000</pubDate>
+      <link>https://osint42.org/threads/dostavka-malvari-tekhnika-clickfix.108/</link>
+      <guid isPermaLink="false">108</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-vredonosnogo-softa.4/"><![CDATA[Обсуждение вредоносного софта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><b>Атаки ClickFix</b> построены на социальной инженерии. В последнее время различные вариации этих атак встречаются часто.<br />
+Обычно жертв заманивают на мошеннические сайты и там обманом заставляют скопировать в буфер и выполнить вредоносные команды PowerShell.<br />
+<br />
+<b>То есть вручную заразить свою систему вредоносным ПО.</b><br />
+<br />
+Злоумышленники объясняют необходимость выполнения неких команд решением проблем с отображением <a href="https://xakep.ru/2024/10/22/clickfix/" target="_blank" class="link link--external" rel="noopener">контента в браузере</a> или требуют, чтобы пользователь <a href="https://xakep.ru/2024/12/17/fake-lumma-captcha/" target="_blank" class="link link--external" rel="noopener">решил фальшивую...</a><br />
+<br />
+<a href="https://osint42.org/threads/dostavka-malvari-tekhnika-clickfix.108/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Когда ИИ атакует: адаптивные малвари-2025</title>
+      <pubDate>Tue, 27 May 2025 12:00:18 +0000</pubDate>
+      <link>https://osint42.org/threads/kogda-ii-atakuyet-adaptivnyye-malvari-2025.60/</link>
+      <guid isPermaLink="false">60</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-vredonosnogo-softa.4/"><![CDATA[Обсуждение вредоносного софта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><h2 class="bbHeading"><a class="u-anchorTarget" name="-tl-dr"></a>TL;DR&#8203;<a class="hoverLink" href="#-tl-dr" title="Постоянная ссылка"></a></h2>ИИ уже не просто генерирует фишинговые письма — <b>он управляет жизненным циклом атаки: </b>пишет код, меняет поведение по ходу кампании и даже ведёт переговоры о выкупе.<br />
+<hr /><h2 class="bbHeading"><a class="u-anchorTarget" name="-1-arkhitektura-ai-malvari-kak-ona-rabotayet-pod-kapotom"></a>1. Архитектура AI-малвари: как она работает под капотом&#8203;<a class="hoverLink" href="#-1-arkhitektura-ai-malvari-kak-ona-rabotayet-pod-kapotom" title="Постоянная ссылка"></a></h2>Малварь нового поколения опирается не только на скомпилированные бинарники и обфускацию, но и на <b>машинное обучение</b> (обычно LLM или специализированные ML-модели) для адаптации своей стратегии в реальном времени. Ниже разберём ключевые...<br />
+<br />
+<a href="https://osint42.org/threads/kogda-ii-atakuyet-adaptivnyye-malvari-2025.60/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Обсуждение цикла статей "Изучение вредоносных программ"</title>
+      <pubDate>Fri, 09 May 2025 15:00:15 +0000</pubDate>
+      <link>https://osint42.org/threads/obsuzhdeniye-tsikla-statei-izucheniye-vredonosnykh-programm.14/</link>
+      <guid isPermaLink="false">14</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/obsuzhdeniye-vredonosnogo-softa.4/"><![CDATA[Обсуждение вредоносного софта]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1746802800486-png.368/"
+			class="bbImage "
+			style=""
+			alt="1746802800486.png"
+			title="1746802800486.png"
+			width="512" height="512" loading="lazy" /><br />
+<br />
+Решил восстановить цикл статей &quot;Изучение вредоносных программ&quot; + дополнительные статьи, перенес с форума сферы.<br />
+<br />
+К сожалению восстанавливать пришлось в полуручном режиме, особенно что касается картинок.<img src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f641.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":(" title="Frown    :("  data-smilie="3"data-shortname=":(" /><br />
+<br />
+Если увидете ошибки, то пишите либо здесь, либо в топике конкретной статьи.<br />
+<br />
+Вот сами статьи оформленные в новом формате:<br />
+[EMBED content=&quot;ams_article-6&quot;]https://osint42.org/ams/tsikl-statei-izucheniye-vredonosnykh-programm.6/[/EMBED]<br />
+Вот оглавление статей...<br />
+<br />
+<a href="https://osint42.org/threads/obsuzhdeniye-tsikla-statei-izucheniye-vredonosnykh-programm.14/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>

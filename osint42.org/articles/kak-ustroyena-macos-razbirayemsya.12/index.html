@@ -1,0 +1,2850 @@
+<!DOCTYPE html>
+<html id="XF" lang="ru-RU" dir="LTR"
+	data-xf="2.3"
+	data-app="public"
+	data-variation="alternate"
+	data-color-scheme="dark"
+	data-template="xa_ams_article_view"
+	data-container-key="amsCategory-8"
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1758965518,8db6b19ab843392c414e97c3f6ec0747"
+	class="has-no-js template-xa_ams_article_view"
+	>
+
+<!-- Mirrored from osint42.org/articles/kak-ustroyena-macos-razbirayemsya.12/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:41:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	
+	
+	
+
+	<meta charset="utf-8" />
+	<title>Как устроена macOS. Разбираемся | Osint42.Org - Безопасность и код</title>
+	<link rel="manifest" crossorigin="use-credentials" href="../../webmanifest.php">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	
+		
+			<meta name="theme-color" content="#0a1c29" />
+		
+	
+
+	<meta name="apple-mobile-web-app-title" content="Osint42.Org - Безопасность и код">
+	
+		<link rel="apple-touch-icon" href="../../data/assets/logo/192192.png">
+		
+
+	
+		
+		<meta property="og:title" content="Как устроена macOS. Разбираемся" />
+		<meta property="twitter:title" content="Как устроена macOS. Разбираемся" />
+	
+	
+		
+		<meta name="description" content="Всем привет!
+
+!Отличная статья!
+
+Оригинал на Хакере:Ликбез по macOS. Разбираем в подробностях, как устроена macOS
+
+Предположим, ты недавно приобрел «мак»..." />
+		<meta property="og:description" content="Всем привет!
+
+!Отличная статья!
+
+Оригинал на Хакере:Ликбез по macOS. Разбираем в подробностях, как устроена macOS
+
+Предположим, ты недавно приобрел «мак» или раздумываешь, не сделать ли это. Но macOS кажется чуждой и непонятной, да и вообще ходят..." />
+		<meta property="twitter:description" content="Всем привет!
+
+!Отличная статья!
+
+Оригинал на Хакере:Ликбез по macOS. Разбираем в подробностях, как устроена macOS
+
+Предположим, ты недавно приобрел «мак» или раздумываешь, не сделать ли это. Но..." />
+	
+	
+		<meta property="og:type" content="article" />
+	
+		<meta property="og:url" content="index.html" />
+	
+		<link rel="canonical" href="index.html" />
+	
+		
+		<meta property="og:image" content="%d0%91%d0%b5%d0%b7%d1%8b%d0%bc%d1%8f%d0%bd%d0%bd%d1%8b%d0%b9.png_%3b%20filename_%3dUTF-8%27%27%25D0%2591%25D0%25B5%25D0%25B7%25D1%258B%25D0%25BC%25D1%258F%25D0%25BD%25D0%25BD%25D1%258B%25D0%25B9.png" />
+		<meta property="twitter:image" content="%d0%91%d0%b5%d0%b7%d1%8b%d0%bc%d1%8f%d0%bd%d0%bd%d1%8b%d0%b9.png_%3b%20filename_%3dUTF-8%27%27%25D0%2591%25D0%25B5%25D0%25B7%25D1%258B%25D0%25BC%25D1%258F%25D0%25BD%25D0%25BD%25D1%258B%25D0%25B9.png" />
+		<meta property="twitter:card" content="summary_large_image" />
+	
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="Osint42.Org - Безопасность и код" />
+
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+		
+	
+	
+
+	<link rel="stylesheet" href="../../cssf1bd.css?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Avariations.less%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=650febe17d52673553ff8fcab924bc52ae7c26c5" />
+
+	<link rel="stylesheet" href="../../cssfe66.css?css=public%3Aalnb_navigation.less%2Cpublic%3Aattachments.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Axa_ams.less%2Cpublic%3Aextra.less&amp;s=1&amp;l=2&amp;d=1758392320&amp;k=45a471778bd6b322fd7d18854c660acaf70c67b9" />
+
+
+	
+		<script data-cfasync="false" src="../../js/xf/preamble.minf74f.js?_v=01eb82fa"></script>
+	
+
+	
+	<script data-cfasync="false" src="../../js/vendor/vendor-compiledf74f.js?_v=01eb82fa" defer></script>
+	<script data-cfasync="false" src="../../js/xf/core-compiledf74f.js?_v=01eb82fa" defer></script>
+
+	<script data-cfasync="false">
+		XF.ready(() =>
+		{
+			XF.extendObject(true, XF.config, {
+				// 
+				userId: 0,
+				enablePush: true,
+				pushAppServerKey: 'BA479YFsUh5Dh5bOkTEWM7LoORrEgUroE2adYpgA6_NLt6AmfJFBdCBxt_i9NhpAIXJviINVU4JDqWxez0NnB-w',
+				url: {
+					fullBase: 'https://osint42.org/',
+					basePath: '/',
+					css: '/css.php?css=__SENTINEL__&s=1&l=2&d=1758392320',
+					js: '/js/__SENTINEL__?_v=01eb82fa',
+					icon: '/data/local/icons/__VARIANT__.svg?v=1757401797#__NAME__',
+					iconInline: '/styles/fa/__VARIANT__/__NAME__.svg?v=5.15.3',
+					keepAlive: '/login/keep-alive'
+				},
+				cookie: {
+					path: '/',
+					domain: '',
+					prefix: 'xf_',
+					secure: true,
+					consentMode: 'disabled',
+					consented: ["optional","_third_party"]
+				},
+				cacheKey: '60356f7aa4f82ca98e605b4e87a0a057',
+				csrf: '1758965518,8db6b19ab843392c414e97c3f6ec0747',
+				js: {"\/js\/xf\/lightbox-compiled.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/4.4.1\/socket.io.min.js?_v=01eb82fa":true,"\/js\/DCom\/LiveContent\/socket-conv.min.js?_v=01eb82fa":true},
+				fullJs: false,
+				css: {"public:alnb_navigation.less":true,"public:attachments.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:xa_ams.less":true,"public:extra.less":true},
+				time: {
+					now: 1758965518,
+					today: 1758920400,
+					todayDow: 6,
+					tomorrow: 1759006800,
+					yesterday: 1758834000,
+					week: 1758402000,
+					month: 1756674000,
+					year: 1735678800
+				},
+				style: {
+					light: 'default',
+					dark: 'alternate',
+					defaultColorScheme: 'light'
+				},
+				borderSizeFeature: '3px',
+				fontAwesomeWeight: 'r',
+				enableRtnProtect: true,
+				
+				enableFormSubmitSticky: true,
+				imageOptimization: '0',
+				imageOptimizationQuality: 0.85,
+				uploadMaxFilesize: 3145728,
+				uploadMaxWidth: 0,
+				uploadMaxHeight: 0,
+				allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+				allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+				shortcodeToEmoji: true,
+				visitorCounts: {
+					conversations_unread: '0',
+					alerts_unviewed: '0',
+					total_unread: '0',
+					title_count: true,
+					icon_indicator: true
+				},
+				jsMt: {"xf\/action.js":"dc2375bf","xf\/embed.js":"d3d00259","xf\/form.js":"d3d00259","xf\/structure.js":"dc2375bf","xf\/tooltip.js":"d3d00259"},
+				jsState: {},
+				publicMetadataLogoUrl: 'https://osint42.org/data/assets/logo/192192.png',
+				publicPushBadgeUrl: 'https://osint42.org/styles/default/xenforo/bell.png'
+			})
+
+			XF.extendObject(XF.phrases, {
+				// 
+"svStandardLib_time.day": "{count} day",
+"svStandardLib_time.days": "{count} дней",
+"svStandardLib_time.hour": "{count} hour",
+"svStandardLib_time.hours": "{count} часов",
+"svStandardLib_time.minute": "{count} минут",
+"svStandardLib_time.minutes": "{count} минут",
+"svStandardLib_time.month": "{count} month",
+"svStandardLib_time.months": "{count} месяцев",
+"svStandardLib_time.second": "{count} second",
+"svStandardLib_time.seconds": "{count} секунд",
+"svStandardLib_time.week": "time.week",
+"svStandardLib_time.weeks": "{count} недель",
+"svStandardLib_time.year": "{count} year",
+"svStandardLib_time.years": "{count} лет",
+copy_to_clipboard: "Скопировать в буфер обмена",
+text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				date_x_at_time_y:     "{date} в {time}",
+				day_x_at_time_y:      "{day} в {time}",
+				yesterday_at_x:       "Вчера в {time}",
+				x_minutes_ago:        "{minutes} мин. назад",
+				one_minute_ago:       "Минуту назад",
+				a_moment_ago:         "Только что",
+				today_at_x:           "Сегодня в {time}",
+				in_a_moment:          "Через секунду",
+				in_a_minute:          "Через минуту",
+				in_x_minutes:         "Через {minutes} мин.",
+				later_today_at_x:     "Сегодня в {time}",
+				tomorrow_at_x:        "Завтра в {time}",
+				short_date_x_minutes: "{minutes} м.",
+				short_date_x_hours:   "{hours} ч.",
+				short_date_x_days:    "{days} д.",
+
+				day0: "Воскресенье",
+				day1: "Понедельник",
+				day2: "Вторник",
+				day3: "Среда",
+				day4: "Четверг",
+				day5: "Пятница",
+				day6: "Суббота",
+
+				dayShort0: "Вс",
+				dayShort1: "Пн",
+				dayShort2: "Вт",
+				dayShort3: "Ср",
+				dayShort4: "Чт",
+				dayShort5: "Пт",
+				dayShort6: "Сб",
+
+				month0: "Январь",
+				month1: "Февраль",
+				month2: "Март",
+				month3: "Апрель",
+				month4: "Май",
+				month5: "Июнь",
+				month6: "Июль",
+				month7: "Август",
+				month8: "Сентябрь",
+				month9: "Октябрь",
+				month10: "Ноябрь",
+				month11: "Декабрь",
+
+				active_user_changed_reload_page: "Ваша сессия истекла. Перезагрузите страницу.",
+				server_did_not_respond_in_time_try_again: "Сервер не ответил вовремя. Пожалуйста, попробуйте снова.",
+				oops_we_ran_into_some_problems: "Упс! Мы столкнулись с некоторыми проблемами.",
+				oops_we_ran_into_some_problems_more_details_console: "Упс! Мы столкнулись с некоторыми проблемами. Пожалуйста, попробуйте позже. Более детальную информацию об ошибке Вы можете посмотреть в консоли браузера",
+				file_too_large_to_upload: "Файл слишком большой для загрузки.",
+				uploaded_file_is_too_large_for_server_to_process: "Загружаемый файл слишком большой для обработки сервером.",
+				files_being_uploaded_are_you_sure: "Файлы ещё загружаются. Вы уверены, что хотите отправить эту форму?",
+				attach: "Прикрепить файлы",
+				rich_text_box: "Текстовое поле с поддержкой форматирования",
+				close: "Закрыть",
+				link_copied_to_clipboard: "Ссылка скопирована в буфер обмена.",
+				text_copied_to_clipboard: "Текст скопирован в буфер обмена.",
+				loading: "Загрузка...",
+				you_have_exceeded_maximum_number_of_selectable_items: "Вы превысили максимальное количество выбираемых элементов.",
+
+				processing: "Обработка",
+				'processing...': "Обработка...",
+
+				showing_x_of_y_items: "Показано {count} из {total} элементов",
+				showing_all_items: "Показаны все элементы",
+				no_items_to_display: "Нет элементов для отображения",
+
+				number_button_up: "Увеличить",
+				number_button_down: "Уменьшить",
+
+				push_enable_notification_title: "Push-уведомления для сайта Osint42.Org - Безопасность и код успешно включены",
+				push_enable_notification_body: "Спасибо за включение push-уведомлений!",
+
+				pull_down_to_refresh: "Потяните вниз для обновления",
+				release_to_refresh: "Отпустите для обновления",
+				refreshing: "Обновление..."
+			})
+		})
+	
+
+window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionParent=XF.Push.updateUserSubscription;XF.Push.updateUserSubscription=function(b,a){"unsubscribe"===a&&XF.browser.safari&&XF.Push.setPushHistoryUserIds({});XF.Push.updateUserSubscriptionParent(b,a)}});
+</script>
+
+	<script data-cfasync="false" src="../../js/xf/lightbox-compiledf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/4.4.1/socket.io.minf74f.js?_v=01eb82fa" defer></script>
+<script data-cfasync="false" src="../../js/DCom/LiveContent/socket-conv.minf74f.js?_v=01eb82fa" defer></script>
+
+
+
+	
+		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
+	
+
+	
+	
+</head>
+<body data-template="xa_ams_article_view">
+
+<div class="p-pageWrapper" id="top">
+
+	
+
+	<header class="p-header" id="header">
+		<div class="p-header-inner">
+			<div class="p-header-content">
+				<div class="p-header-logo p-header-logo--image">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png" srcset="/data/assets/logo_alternate/osint4242.png 2x" width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				
+			</div>
+		</div>
+	</header>
+
+	
+	
+
+	
+		<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+			
+		<nav class="p-nav">
+			<div class="p-nav-inner">
+				<button type="button" class="button button--plain p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" tabindex="0" aria-label="Меню"><span class="button-text">
+					<i aria-hidden="true"></i>
+				</span></button>
+
+				<div class="p-nav-smallLogo">
+					<a href="../../forums/index.html">
+						
+
+	
+
+	
+		
+		
+
+		
+	
+		
+		
+
+		
+	
+
+	
+
+	<picture data-variations="{&quot;default&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_default\/osint4242.png&quot;,&quot;2&quot;:null},&quot;alternate&quot;:{&quot;1&quot;:&quot;\/data\/assets\/logo_alternate\/osint4242.png&quot;,&quot;2&quot;:null}}">
+		
+		
+		
+
+		
+
+		<img src="../../data/assets/logo_alternate/osint4242.png"  width="100" height="36" alt="Osint42.Org - Безопасность и код"  />
+	</picture>
+
+
+					</a>
+				</div>
+
+				<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+					<div class="hScroller-scroll">
+						<ul class="p-nav-list js-offCanvasNavSource">
+							
+								<li>
+									
+	<div class="p-navEl is-selected" data-has-children="true">
+	
+
+		
+	
+	<a href="../../index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xa_ams">Статьи</a>
+
+
+		<a data-xf-key="1"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../authors/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../forums/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="forums">Форум</a>
+
+
+		<a data-xf-key="2"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="newPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4009.html?type=post"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="searchForums">Поиск по форуму</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../whats-new/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="whatsNew">Что нового</a>
+
+
+		<a data-xf-key="3"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/posts/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="whatsNewPosts">Новые сообщения</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewNewArticles">Новые статьи</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgWhatsNewNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xaAmsWhatsNewArticleComments">Новые комментарии к статье</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="../../media/index.html"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="xfmg">Медиа</a>
+
+
+		<a data-xf-key="4"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="../../whats-new/media/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewMedia">Новые медиа</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../whats-new/media-comments/index.html"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	 rel="nofollow"
+	
+	data-nav-id="xfmgNewComments">Новые комментарии</a>
+
+	
+
+				
+					
+	
+	
+	<a href="../../search/index4784.html?type=xfmg_media"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="xfmgSearchMedia">Поиск медиа</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " data-has-children="true">
+	
+
+		
+	
+	<a href="https://osint42.org/members/"
+	class="p-navEl-link p-navEl-link--splitMenu "
+	
+	
+	data-nav-id="members">Пользователи</a>
+
+
+		<a data-xf-key="5"
+			data-xf-click="menu"
+			data-menu-pos-ref="< .p-navEl"
+			class="p-navEl-splitTrigger"
+			role="button"
+			tabindex="0"
+			aria-label="Переключатель раскрытия"
+			aria-expanded="false"
+			aria-haspopup="true"></a>
+
+		
+	
+		<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+			<div class="menu-content">
+				
+					
+	
+	
+	<a href="https://osint42.org/online/"
+	class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+	
+	
+	data-nav-id="currentVisitors">Сейчас на форуме</a>
+
+	
+
+				
+			</div>
+		</div>
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-nav-opposite">
+					<div class="p-navgroup p-account p-navgroup--guest">
+						
+							<a href="../../login/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Вход</span>
+							</a>
+							
+								<a href="../../register/index.html" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+									data-xf-click="overlay" data-follow-redirects="on">
+									<span class="p-navgroup-linkText">Регистрация</span>
+								</a>
+							
+						
+					</div>
+					
+					
+    <a href="https://osint42.org/misc/style-variation"
+       class="p-navgroup-link p-navgroup-link--iconic js-styleVariationsLink"
+       data-xf-click="menu"
+       data-menu-pos-ref="< .p-navgroup"
+       aria-label=" Выбор стиля"
+       aria-expanded="false"
+       aria-haspopup="true"
+       title=" Выбор стиля">
+        <i aria-hidden="true">
+            <i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+        </i>
+        <span class="p-navgroup-linkText"> Выбор стиля</span>
+    </a>
+
+    <div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+        <div class="menu-content js-styleVariationsMenu">
+            
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965518%2C8db6b19ab843392c414e97c3f6ec0747"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965518%2C8db6b19ab843392c414e97c3f6ec0747"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965518%2C8db6b19ab843392c414e97c3f6ec0747"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+        </div>
+    </div>
+
+
+
+					<div class="p-navgroup p-discovery">
+						<a href="../../whats-new/index.html"
+							
+
+	class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+
+							aria-label="Что нового"
+							title="Что нового">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Что нового</span>
+						</a>
+
+						
+							<a href="../../search/index.html"
+								class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+								data-xf-click="menu"
+								data-xf-key="/"
+								aria-label="Поиск"
+								aria-expanded="false"
+								aria-haspopup="true"
+								title="Поиск">
+								<i aria-hidden="true"></i>
+								<span class="p-navgroup-linkText">Поиск</span>
+							</a>
+							<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+								<form action="https://osint42.org/search/search" method="post"
+									class="menu-content"
+									data-xf-init="quick-search">
+
+									<h3 class="menu-header">Поиск</h3>
+									
+									<div class="menu-row">
+										
+											<div class="inputGroup inputGroup--joined">
+												<input type="text" class="input" name="keywords" data-acurl="/search/auto-complete" placeholder="Поиск..." aria-label="Поиск" data-menu-autofocus="true" />
+												
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Поиск в">
+				<option value="">Везде</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;}">Статьи</option>
+<option value="{&quot;search_type&quot;:&quot;ams_article&quot;,&quot;c&quot;:{&quot;categories&quot;:[8],&quot;child_categories&quot;:1}}">Эта категория</option>
+
+			</select>
+		
+											</div>
+										
+									</div>
+
+									
+									<div class="menu-row">
+										<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Искать только в заголовках
+
+													
+													<span tabindex="0" role="button"
+														data-xf-init="tooltip" data-trigger="hover focus click" title="Теги также будут учитываться">
+
+														<i class="fa--xf far fa-question-circle  u-muted u-smaller"><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Примечание</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#question-circle"></use></svg></i>
+													</span></span></label>
+
+									</div>
+									
+									<div class="menu-row">
+										<div class="inputGroup">
+											<span class="inputGroup-text" id="ctrl_search_menu_by_member">Автор:</span>
+											<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Пользователь" aria-labelledby="ctrl_search_menu_by_member" />
+										</div>
+									</div>
+									<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button button--icon button--icon--search button--primary"><i class="fa--xf far fa-search "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#search"></use></svg></i><span class="button-text">Найти</span></button>
+										<button type="submit" class="button " name="from_search_menu"><span class="button-text">Расширенный поиск...</span></button>
+									</span>
+									</div>
+
+									<input type="hidden" name="_xfToken" value="1758965518,8db6b19ab843392c414e97c3f6ec0747" />
+								</form>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+		
+		
+			<div class="p-sectionLinks">
+				<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+					<div class="hScroller-scroll">
+						<ul class="p-sectionLinks-list">
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-articles/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+1"
+	data-nav-id="xa_amsNewArticles">Новые статьи</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../../whats-new/ams-comments/index.html"
+	class="p-navEl-link "
+	 rel="nofollow"
+	data-xf-key="alt+2"
+	data-nav-id="xa_amsNewComments">Новые комментарии</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+								<li>
+									
+	<div class="p-navEl " >
+	
+
+		
+	
+	<a href="../authors/index.html"
+	class="p-navEl-link "
+	
+	data-xf-key="alt+3"
+	data-nav-id="xa_amsAuthorList">Список авторов</a>
+
+
+		
+
+		
+	
+	</div>
+
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	
+		
+
+	<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+		<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+		<div class="offCanvasMenu-content">
+			<div class="offCanvasMenu-header">
+				Меню
+				<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Закрыть"></a>
+			</div>
+			
+				<div class="p-offCanvasRegisterLink">
+					<div class="offCanvasMenu-linkHolder">
+						<a href="../../login/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Вход
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+					
+						<div class="offCanvasMenu-linkHolder">
+							<a href="../../register/index.html" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+								Регистрация
+							</a>
+						</div>
+						<hr class="offCanvasMenu-separator" />
+					
+				</div>
+			
+			<div class="js-offCanvasNavTarget"></div>
+			<div class="offCanvasMenu-installBanner js-installPromptContainer" style="display: none;" data-xf-init="install-prompt">
+				<div class="offCanvasMenu-installBanner-header">Установить приложение</div>
+				<button type="button" class="button js-installPromptButton"><span class="button-text">Установить</span></button>
+				<template class="js-installTemplateIOS">
+					<div class="js-installTemplateContent">
+						<div class="overlay-title">Как установить приложение на iOS</div>
+						<div class="block-body">
+							<div class="block-row">
+								<p>
+									Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства.
+								</p>
+								<p style="text-align: center">
+									<video src="../../styles/default/xenforo/add_to_home_new.mp4"
+										width="280" height="480" autoplay loop muted playsinline></video>
+								</p>
+								<p>
+									<small><strong>Примечание:</strong> Эта функция может быть недоступна в некоторых браузерах.</small>
+								</p>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-body">
+		<div class="p-body-inner">
+			<!--XF:EXTRA_OUTPUT-->
+
+
+			
+				
+	
+		
+		
+
+		<ul class="notices notices--block  js-notices"
+			data-xf-init="notices"
+			data-type="block"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--hasImage"
+		data-notice-id="1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss=""
+		data-visibility="">
+
+		
+			<div class="notice-image"><img src="../../data/assets/notice_images/c7eb1746-6291-4d37-b72b-8e3b5cfd1303.png" alt="" /></div>
+		
+		<div class="notice-content">
+			
+			<div class="block"
+     style="border:1px solid #ccc;
+            border-radius:8px;
+            padding:min(4vw,15px);
+            background:var(--xf-contentBg);
+            box-shadow:0 0 8px rgba(0,0,0,.1);
+            width:100%;
+            max-width:clamp(480px,90vw,1200px);
+            margin:0 auto;
+            box-sizing:border-box;
+            overflow:hidden;">
+
+  <div class="block-container">
+    <h3 class="block-header"
+        style="font-size:clamp(1rem,4vw,1.125rem);
+               margin:0 0 10px 0;">
+      📡 Наши контакты
+    </h3>
+
+    <div class="block-body" style="line-height:1.4;">
+
+      <!-- Email -->
+      <p style="margin:8px 0;">
+        ✉️ Email:
+        <a href="../../cdn-cgi/l/email-protection.html#2e474048416e415d47405a1a1c004d4143" style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          <span class="__cf_email__" data-cfemail="d9b0b7bfb699b6aab0b7adedebf7bab6b4">[email&#160;protected]</span>
+        </a>
+      </p>
+
+      <!-- TOR Mirror -->
+      <p style="margin:8px 0;">
+        🧅 TOR зеркало:
+        <a href="http://oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          oiiph5yud65awuv7vyzknbihyuumv5q2etcrgh6z4xmgnsul3chnigyd.onion
+        </a>
+      </p>
+
+      <!-- Donate -->
+      <p style="margin:8px 0;">
+        💰 Donate (BTC):
+        <a href="bitcoin:bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz"
+           style="color:#2ecc71;
+                  font-weight:bold;
+                  overflow-wrap:anywhere;
+                  text-decoration:none;">
+          bc1qm3mmvdp05d0q0y4ea3tw8rvrn2e0cpcmmmwxgz
+        </a>
+      </p>
+
+      <!-- Notice -->
+      <p style="margin:15px 0 0;
+                padding:10px;
+                border-radius:6px;
+                background:#ffeaea;
+                color:#c0392b;
+                font-weight:bold;
+                text-align:center;">
+        ⚠️ Это архив форума, в ближайшее время поддержка ресурса не планируется!
+      </p>
+
+    </div>
+  </div>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+			
+
+			
+
+			
+			
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/issledovaniye-zashchity-operatsionnykh-sistem.8/index.html" itemprop="item">
+			<span itemprop="name">Исследование защиты операционных систем</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+
+			
+	<noscript class="js-jsWarning"><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript отключён. Для полноценно использования нашего сайта, пожалуйста, включите JavaScript в своём браузере.</div></noscript>
+
+			
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">Вы используете устаревший браузер. Этот и другие сайты могут отображаться в нем неправильно.<br />Необходимо обновить браузер или попробовать использовать <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">другой</a>.</div>
+
+
+			
+				<div class="p-body-header">
+					
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							
+							Как устроена macOS. Разбираемся
+						
+					</h1>
+				</div>
+				
+					<div class="p-description">
+						
+							<ul class="listInline listInline--bullet">
+								<li>
+									<i class="fa--xf far fa-user "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Автор</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#user"></use></svg></i>
+									<span class="u-srOnly">Автор</span>
+									
+										<a href="https://osint42.org/members/0x42.1/" class="username  u-concealed" dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a>
+									
+								</li>
+								
+								<li>
+									<i class="fa--xf far fa-clock "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Дата публикации</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#clock"></use></svg></i>
+									<span class="u-srOnly">Дата публикации</span>
+
+									<a href="index.html" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2025-05-10T16:53:40+0300" data-timestamp="1746885220" data-date="10.05.2025" data-time="16:53" data-short="10 Май" title="10.05.2025 в 16:53">10.05.2025</time></a>
+								</li>
+								
+																
+									<li>
+										<i class="fa--xf far fa-hourglass "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Article read time</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#hourglass"></use></svg></i>
+										<span class="u-srOnly">Article read time</span>
+
+										16 min read
+									</li>
+								
+								
+								
+							</ul>
+						
+					</div>
+				
+
+				
+
+	
+		
+	
+
+			</div>
+		</div>
+	
+				</div>
+				
+
+			<div class="p-body-main p-body-main--withSidebar ">
+				
+				<div class="p-body-contentCol"></div>
+				
+					<div class="p-body-sidebarCol"></div>
+				
+
+				
+
+				<div class="p-body-content">
+					
+					<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Закрыть",
+				"lightbox_next": "Следующая",
+				"lightbox_previous": "Предыдущая",
+				"lightbox_error": "Запрошенный контент не может быть загружен. Пожалуйста, попробуйте позже.",
+				"lightbox_start_slideshow": "Запустить слайд-шоу",
+				"lightbox_stop_slideshow": "Остановить слайд-шоу",
+				"lightbox_full_screen": "Полный экран",
+				"lightbox_thumbnails": "Миниатюры",
+				"lightbox_download": "Скачать",
+				"lightbox_share": "Поделиться",
+				"lightbox_zoom": "Увеличить",
+				"lightbox_new_window": "Новое окно",
+				"lightbox_toggle_sidebar": "Переключить боковую панель"
+			}
+			</script>
+		
+		
+	
+
+
+<div class="block">
+	
+
+	
+	
+		
+	
+	
+	
+	<div class="block-container">
+		<div class="block-body lbContainer js-articleBody"
+			data-xf-init="lightbox"
+			data-lb-id="article-12"
+			data-lb-caption-desc="0x42 &middot; 10.05.2025 в 16:53"
+			id="js-articleBody-12">
+
+			<div class="articleBody">
+				<article class="articleBody-main js-lbContainer">
+					
+					
+					
+					
+						
+
+	
+		
+	
+
+					
+
+					
+						
+
+						<div class="bbWrapper">Всем привет!<br />
+<br />
+<b><u>!Отличная статья!</u></b><br />
+<br />
+Оригинал на Хакере:<a href="https://xakep.ru/2022/10/31/macos-tech-overview/" target="_blank" class="link link--external" rel="noopener">Ликбез по macOS. Разбираем в подробностях, как устроена macOS</a><br />
+<br />
+Предположим, ты недавно приобрел «мак» или раздумываешь, не сделать ли это. Но macOS кажется чуждой и непонятной, да и вообще ходят слухи о том, что там чихнуть нельзя без разрешения Тима Кука. Другая распространенная небылица — что macOS всего лишь чуть‑чуть переделанный Linux. В этой статье мы пройдемся по всем основным механизмам macOS и заодно поговорим о том, какие в реальности есть ограничения и можно ли их обойти.<br />
+<br />
+<span style="font-size: 22px"><b>Краткая история macOS</b></span><br />
+<br />
+История macOS, как и в целом история Apple, увлекательна и полна захватывающих перипетий. Здесь я перескажу ее в очень сокращенном и упрощенном виде.<br />
+<br />
+Все началось в далекие восьмидесятые годы с компьютеров Apple II. Операционной системы в современном понимании этого слова у них, по сути, не было: сейчас их ОС мы бы назвали прошивкой. Как и в случае с другими домашними компьютерами той эпохи, в нее входил интерпретатор BASIC, служивший для выполнения пользовательских команд.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Никакого заметного наследия Apple II и III в macOS сейчас не найти, однако желающие прикоснуться к истории могут запустить <a href="https://www.scullinsteel.com/apple2/" target="_blank" class="link link--external" rel="nofollow ugc noopener">эмулятор Apple II</a> прямо в браузере.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+Компьютер Apple Macintosh, вышедший на рынок в 1984 году, разительно отличался от этих машин. Его операционная система сразу включала в себя графический пользовательский интерфейс с поддержкой мыши. <b>Оконный интерфейс по тем временам считался удивительной новинкой</b> — до этого его не было ни у одного серийно производимого компьютера (Windows 1.0 появился через два года после Macintosh и многое у него позаимствовал).<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="Одна из первых версий MacOS"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28257%2Fmacos-classic-1.png&amp;hash=4553f5d44175ed6b0f64d76151f63a70" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../macos-classic-1a3bc.png?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28257%2Fmacos-classic-1.png&amp;hash=4553f5d44175ed6b0f64d76151f63a70"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28257/macos-classic-1.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="Одна из первых версий MacOS"
+			title="Одна из первых версий MacOS"
+			width="" height="" loading="lazy" />
+	</div>Одна из первых версий MacOS<br />
+<br />
+Классическая Mac OS активно развивалась до 1996 года, а последний ее релиз вышел в 2001 году. И если для конца восьмидесятых она считалась передовой, то в девяностые ее архитектура с устаревшей моделью разделения памяти постепенно стала преградой для развития Apple. В качестве экстренной меры руководство компании решило приобрести стартап NeXT, основанный ранее вытесненным из Apple Стивом Джобсом.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="Mac OS 9 — последний большой релиз «классики»"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28256%2Fmacos-classic-9.png&amp;hash=b7c67581dd734569faccbab4fa751f87" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../macos-classic-9ab7d.png?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28256%2Fmacos-classic-9.png&amp;hash=b7c67581dd734569faccbab4fa751f87"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28256/macos-classic-9.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="Mac OS 9 — последний большой релиз «классики»"
+			title="Mac OS 9 — последний большой релиз «классики»"
+			width="" height="" loading="lazy" />
+	</div>Mac OS 9 — последний большой релиз «классики»<br />
+<br />
+Главной разработкой NeXT была графическая операционная система NeXTSTEP, в основе которой — Unix-образное ядро и окружение, продвинутый графический движок и набор объектно ориентированных фреймворков. Последний позволял разработчикам легко создавать оконные приложения на продвинутом по тем временам языке Objective-C. На компьютерах NeXT, к примеру, был создан прототип первого веб‑браузера.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="NeXTSTEP"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28265%2Fnextstep.png&amp;hash=9523d70349057a27db7f3c653976e2c8" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../nextstep90bb.png?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28265%2Fnextstep.png&amp;hash=9523d70349057a27db7f3c653976e2c8"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28265/nextstep.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="NeXTSTEP"
+			title="NeXTSTEP"
+			width="" height="" loading="lazy" />
+	</div><br />
+NeXTSTEP<br />
+<br />
+После того как команда разработчиков NeXT перешла в Apple, совместными усилиями была создана новая система — Mac OS X. Позднее ее переименовали в OS X, а затем в macOS (отдел маркетинга в Apple никогда не сидит сложа руки). Технически Mac OS X основана на NeXTSTEP, однако ее интерфейс многое почерпнул из классической Mac OS.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="MacOS X 10.1 Cheetah"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28255%2Fmac-os-x-10-0-cheetah.jpg&amp;hash=7ea730f4b89ba8758c52e9868b684408" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../mac-os-x-10-0-cheetah8117.jpg?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28255%2Fmac-os-x-10-0-cheetah.jpg&amp;hash=7ea730f4b89ba8758c52e9868b684408"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28255/mac-os-x-10-0-cheetah.jpg"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="MacOS X 10.1 Cheetah"
+			title="MacOS X 10.1 Cheetah"
+			width="" height="" loading="lazy" />
+	</div><br />
+MacOS X 10.1 Cheetah<br />
+<br />
+В переходный период «макинтоши» поддерживали как классическую Mac OS, так и Mac OS X. С 2002 года все компьютеры Apple стали выходить с предустановленной Mac OS X, а Mac OS 9 еще несколько лет можно было запускать в режиме совместимости.<br />
+<br />
+<span style="font-size: 22px"><b>Ядро XNU</b></span><br />
+<br />
+В основе macOS, как и в основе любой другой ОС, лежит ядро. Оно отвечает за выделение процессорного времени, управление оперативной памятью и кешем, взаимодействием с устройствами и сетью. В то же время оно обрабатывает системные вызовы приложений и обеспечивает взаимодействие процессов.<br />
+<br />
+Современная macOS работает на ядре XNU, которое пришло из NeXTSTEP. За основу его кода в свое время был взят проект Match — ответвление от ядра FreeBSD.<br />
+<br />
+XNU означает X is Not Unix, «X — не Unix». Эта расшифровка — давно утерявший актуальность программистский юмор: macOS все же по большому счету считается одной из разновидностей Unix. Однако XNU не имеет бинарной совместимости с FreeBSD, то есть программы для FreeBSD в macOS нельзя запустить без изменений и перекомпиляции.<br />
+<br />
+Ядро XNU — гибридное. Это значит, что в отличие от микроядер оно может быть дополнено расширениями, но при этом не является монолитным, как ядро Linux, где все функции собраны в один гигантский бинарный файл.<br />
+<br />
+До macOS 10.15 основным способом расширения ядра были модули kext. Поскольку «кексты» работают в пространстве ядра, сбои в них могут приводить к нестабильной работе компьютера. К тому же они открывали большие возможности для недобросовестных разработчиков.<br />
+<br />
+Сейчас «кексты» считаются устаревшим методом, и со временем он будет отключен. Вместо этого в Apple предлагают разработчикам использовать фреймворки DriverKit и SystemExtension, которые позволяют создавать драйверы и расширения, работающие в пространстве пользователя.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="Архитектура macOS"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28264%2Farchitecture.jpg&amp;hash=fb4398994b42ed231d90b5c0b6d51c1a" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../architectured452.jpg?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28264%2Farchitecture.jpg&amp;hash=fb4398994b42ed231d90b5c0b6d51c1a"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28264/architecture.jpg"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="Архитектура macOS"
+			title="Архитектура macOS"
+			width="" height="" loading="lazy" />
+	</div><br />
+Архитектура macOS<br />
+ <br />
+<span style="font-size: 22px"><b>Darwin</b></span><br />
+<br />
+Операционная система — это не только ядро. Вместе с Match в NeXTSTEP, а затем и в Mac OS X перекочевал набор библиотек и исполняемых файлов, которые вместе с XNU обеспечивают поддержку POSIX — Portable Operating System Interface, «портируемого интерфейса операционной системы». Это стандарт, которому в той или иной мере соответствуют все Unix-образные операционные системы и который обеспечивает низкоуровневую совместимость между ними.<br />
+<br />
+В macOS этот слой называется Darwin и по сути представляет собой самостоятельную операционную систему. Сюда не входят графическая среда и библиотеки, нужные для работы оконных приложений, но входят ядро, драйверы, сетевой стек, набор системных и пользовательских утилит командной строки, а также система запуска служб и приложений launchd.<br />
+<br />
+При желании Darwin можно установить как самостоятельную минималистичную ОС с текстовым интерпретатором команд. Код Darwin с самого начала был открыт, однако со временем в нем появилось множество закрытых компонентов, включая специфичные для «маков» драйверы.<br />
+<br />
+Последние версии Darwin уже было невозможно собрать и заставить работать без средств, доступных только программистам Apple. Получилось, что публикация исходников в таком виде стала не нужна ни Apple, ни сообществу, и ее просто прекратили. Код XNU тем временем по‑прежнему <a href="https://github.com/apple/darwin-xnu" target="_blank" class="link link--external" rel="noopener">доступен</a> на GitHub и продолжает обновляться.<br />
+<br />
+Сейчас силами сообщества поддерживается проект <a href="http://www.puredarwin.org/" target="_blank" class="link link--external" rel="noopener">PureDarwin</a> — по‑настоящему открытая реализация Darwin.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Долгое время среди продвинутых маководов был популярен набор утилит MacPorts, также основанный на Darwin, но дополненный и расширенный современными версиями программ для Linux. MacPorts продолжают поддерживать, однако сейчас его почти полностью вытеснил пакетный менеджер brew.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<span style="font-size: 22px"><b>Графическая система</b></span><br />
+<br />
+Графический слой в macOS обычно называют Quartz, хотя подразумевается под этим набор библиотек Core Graphics. Две его важнейшие части — это Quartz 2D и Quartz Compositor.<br />
+ <br />
+<span style="font-size: 18px"><b>Quartz 2D</b></span><br />
+<br />
+Quartz 2D отвечает за все, что связано с двумерной графикой. В его основные задачи входит отрисовка текста и превращение графических примитивов, описанных в формате PostScript, в растровые изображения, которые затем передаются в Quartz Compositor.<br />
+<br />
+Формат PostScript изначально был разработан в компании Adobe и предназначался для вывода документов на печать. Также PostScript лег в основу формата PDF и, что важно для нас, использовался в компьютерах NeXT для описания выводимой на экран графики. Оттуда он и пришел в macOS. Благодаря такому близкому родству PostScript и PDF «маки» и айфоны прекрасно справляются с отображением PDF без установки Adobe Acrobat или другого просмотрщика.<br />
+<br />
+<span style="font-size: 18px"><b>Quartz Compositor</b></span><br />
+<br />
+Quartz Compositor одновременно играет роль графического сервера и композитного оконного менеджера. С одной стороны, он получает от приложений растровые изображения их окон и собирает из них картинку для отображения на экране (это и есть композиция), с другой — обрабатывает события, связанные с устройствами ввода: клики мышью и нажатия на кнопки клавиатуры. Quartz Compositor определяет, к какому окну относятся события, и пересылает их соответствующим приложениям.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="quartz-compositor.png"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28263%2Fquartz-compositor.png&amp;hash=a3836a9bee4cc0ee5d048b4d7eb780bc" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../quartz-compositor3cd6.png?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28263%2Fquartz-compositor.png&amp;hash=a3836a9bee4cc0ee5d048b4d7eb780bc"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28263/quartz-compositor.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="quartz-compositor.png"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Поскольку Quartz Compositor — это еще и оконный менеджер, в его задачи входит отрисовка пользовательского интерфейса. Это шрифты, меню, рамки окон, панели и прочие виджеты, которые коллективно называются интерфейсом Aqua. В ранних версиях Mac OS X некоторые его элементы действительно походили на капли воды, но с тех пор дизайн многократно меняли, и теперь это просто название.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<b> Другой «композитор»</b><br />
+Не стоит путать Quartz Compositor со средством разработки, которое называется Quartz Composer. Composer — это визуальный язык программирования в составе IDE Xcode, который позволяет из готовых блоков собирать сложные преобразования для изображений и видео. Именно в этом контексте слово Quartz иногда попадается в графических редакторах, которые позволяют напрямую использовать возможности Quartz Composer.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<span style="font-size: 18px"><b>XQuartz</b></span><br />
+<br />
+Если порыться в средствах разработки для macOS, то можно откопать еще один интересный артефакт — XQuartz. Это реализация оконного сервера XWindow из Unix. Долгое время его свободная реализация X.Org входила в каждый дистрибутив Linux и была стандартом де‑факто. Сейчас старые и не очень добрые «иксы» постепенно заменяют системами вроде Wayland и Mir, в чем‑то схожими по устройству с маковским Quartz Compositor.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="XQuartz"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28262%2Fxquartz.jpg&amp;hash=d5d135bf0ac723d9ad19ba335d4b6d62" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../xquartza1df.jpg?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28262%2Fxquartz.jpg&amp;hash=d5d135bf0ac723d9ad19ba335d4b6d62"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28262/xquartz.jpg"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="XQuartz"
+			title="XQuartz"
+			width="" height="" loading="lazy" />
+	</div>XQuartz<br />
+<br />
+Что до XQuartz, то он явно создавался в Apple с мыслью, что неплохо бы иметь возможность запускать графические приложения для Unix и Linux. Однако нужда в этом оказалась не так велика, и никакого развития XQuartz не получил. В Linux большинство графических программ опирается на библиотеки сред Gnome и KDE, а их портирование на «мак» в планы Apple не входило. В итоге XQuartz может пригодиться только для самых простых графических программ, которые общаются с XWindow напрямую.<br />
+<br />
+<span style="font-size: 22px"><b>APFS</b></span><br />
+<br />
+До выхода macOS 10.13 High Sierra файловой системой по умолчанию на любом «маке» была HFS+, унаследованная еще от классической Mac OS. В свое время она считалась передовой — у HFS+, к примеру, есть поддержка Unicode и журналирования (журнал ФС — история операций, которая помогает сохранить целостность данных в случае сбоя или отключения питания). Однако исходная HFS проектировалась еще в восьмидесятых годах и, несмотря на апгрейд до HFS+ в конце девяностых, не поддерживала многие важные новшества.<br />
+<br />
+В Apple разработали и в 2017 году успешно внедрили в iOS новую файловую систему, названную APFS — Apple File System. Она обладает множеством достоинств, которые пришлись кстати не только на айфонах и айпадах, но и на «маке».<br />
+<br />
+APFS изначально спроектирована с учетом использования твердотельных накопителей (SSD), в частности поддерживает команду TRIM. Также она может адресовать файлы с использованием 64-разрядных идентификаторов (вместо 32-разрядных в HFS+), поддерживает разреженные файлы (если файл пустой, система не занимает пространство нулями, а сжимает их), может шифровать данные на уровне файлов и каталогов (а не только весь диск) и позволяет открывать сетевой доступ к дискам с помощью разных сетевых протоколов.<br />
+<br />
+APFS дает прирост в скорости, заметный в повседневной работе. Например, гораздо быстрее, чем на HFS+, подсчитывается размер каталогов и копируются файлы.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="Создание тома APFS в Disk Utility"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28268%2Fdiskutil.png&amp;hash=fb1b628d0837f6595d0b6c8b0f140853" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../diskutil82aa.png?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28268%2Fdiskutil.png&amp;hash=fb1b628d0837f6595d0b6c8b0f140853"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28268/diskutil.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="Создание тома APFS в Disk Utility"
+			title="Создание тома APFS в Disk Utility"
+			width="" height="" loading="lazy" />
+	</div>Создание тома APFS в Disk Utility<br />
+<br />
+Наконец, самая заметная фича APFS — это возможность не задавать фиксированный размер логических томов. Они разделяют общее физическое пространство, и каждый из них будет занимать столько, сколько занимают его данные.<br />
+<br />
+Спецификации APFS открыты в достаточной мере, чтобы создавать драйверы «только для чтения». Однако уже существуют экспериментальные драйверы для Linux, работающие с APFS в режиме «чтение и запись».<br />
+<br />
+Важная особенность APFS, о которой стоит знать пользователю, — это нечувствительность к регистру. То есть FILE, file, FiLe и прочие подобные вариации — это с точки зрения APFS ровно одно и то же. Чувствительность к регистру можно включить при форматировании тома, но по умолчанию на всех «маках» эта настройка выключена.<br />
+<br />
+<span style="font-size: 22px"><b>iCloud</b></span><br />
+<br />
+Еще с начала двухтысячных в Apple экспериментировали с поддержкой собственных облачных сервисов на уровне macOS. iCloud предшествовали iTools, .Mac и MobileMe. Названия менялись, но основная суть всегда сводилась к синхронизации данных между устройствами.<br />
+<br />
+Здесь мы не будем погружаться в устройство iCloud. Важно знать лишь то, что его использование опционально, но значительно упрощает синхронизацию между компьютерами и гаджетами Apple.<br />
+<br />
+Наиболее заметный и важный компонент iCloud — это iCloud Drive, куда пользователь может сохранять документы, после чего система будет автоматически следить за их состоянием и передавать изменения в облако. Помимо этого, существует фреймворк CloudKit, который разработчики используют для синхронизации настроек и прочих отличных от документов данных.<br />
+<br />
+iCloud тесно связан с учетной записью Apple ID, однако это не одно и то же. Строго говоря, иметь Apple ID, чтобы пользоваться «маком», необязательно, но без этой учетки нельзя будет скачивать приложения из App Store. С Apple ID пользователь получает небольшое бесплатное хранилище в iCloud, на данный момент — 5 Гбайт.<br />
+<br />
+<br />
+<span style="font-size: 22px"><b>Защита</b></span><br />
+ <br />
+<span style="font-size: 18px"><b>SIP</b></span><br />
+<br />
+Раньше на «маках» пользователь с привилегиями администратора имел все те же возможности, что и root — «корневой» пользователь в Unix. Подтвердив команду вводом пароля, он мог, к примеру, изменять или удалять любые файлы в системе.<br />
+<br />
+Это оставляло лазейку для вредоносного ПО: если убаюкать осторожность пользователя и заставить его ввести пароль, то дальше можно скрытно творить что угодно.<br />
+<br />
+В OS X 10.11 El Capitan появилась система System Integrity Protection (SIP) — «защита целостности системы». На практике это реализованный на уровне ядра целый комплекс мер, который не дает затрагивать работу системы даже администратору.<br />
+<br />
+Системные файлы и каталоги теперь под защитой — это реализовано как специальный расширенный атрибут у файла; запрещена инъекция кода в процессы, причем не только системные, но и другие; запрещена загрузка в ядро неподписанных расширений.<br />
+<br />
+Конечно, бывают случаи, когда SIP мешает сделать что‑то нужное. Как любитель покопаться в системе, я спотыкаюсь об эту защиту регулярно с момента ее появления.<br />
+<br />
+Отключить SIP возможно. Для этого нужно перезагрузить компьютер в режиме восстановления, открыть терминал и использовать утилиту csrutil. Затем еще одна перезагрузка, и еще две — чтобы потом включить SIP обратно (что все же рекомендуется делать).<br />
+<br />
+ <br />
+<span style="font-size: 18px"><b>Gatekeeper</b></span><br />
+<br />
+Еще один механизм, призванный защитить «мак» от вирусов, называется Gatekeeper. Это система, которая, опираясь на базы данных Apple, распознает потенциально вредоносные файлы и препятствует их запуску.<br />
+<br />
+Работает это вот как. Каждый скачанный файл помещается в карантин, получая соответствующий расширенный атрибут. При попытке запустить исполняемый файл, стоящий на карантине, система проверяет, не находится ли он в черном списке, есть ли у него подпись сертифицированного разработчика, и если да, то не изменено ли содержимое файла.<br />
+<br />
+В зависимости от результатов проверки система либо сразу запускает файл, либо отказывается это делать. Если проблема в отсутствии подписи, то это легко обойти — достаточно открыть файл через контекстное меню, а не двойным кликом.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="scummvm_RJxwwzb.jpg"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28267%2Fscummvm_RJxwwzb.jpg&amp;hash=b88f461b3b14065d12e277a5faf79349" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../scummvm_RJxwwzb7caf.jpg?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28267%2Fscummvm_RJxwwzb.jpg&amp;hash=b88f461b3b14065d12e277a5faf79349"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28267/scummvm_RJxwwzb.jpg"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="scummvm_RJxwwzb.jpg"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+Gatekeeper при желании можно полностью отключить одной командой, причем не требуется даже перезагрузка. Хоть это и облегчит жизнь, делать так не рекомендуется. Программы просто так не попадают в черные списки!<br />
+ <br />
+<span style="font-size: 18px"><b>Secure Enclave</b></span><br />
+<br />
+В «маках» с чипами серии M либо с процессорами Intel и дополнительными чипами серии T используется специальное аппаратное решение для надежного хранения и подтверждения ключей шифрования и биометрической информации — Secure Enclave.<br />
+<br />
+Пользователю Secure Enclave не виден, взаимодействовать с ним напрямую никак нельзя. Зато система общается с ним каждый раз, когда ты подтверждаешь платеж или ввод пароля отпечатком пальца или разблокируешь компьютер при помощи Apple Watch.<br />
+<br />
+<span style="font-size: 18px"><b>App Sandbox</b></span><br />
+<br />
+Отдельно от SIP и Gatekeeper существует механизм App Sandbox, который контролирует доступ сторонних приложений к пользовательским и системным файлам и папкам. Точнее, позволяет разработчикам самим ограничивать возможности приложений! Для программ, распространяемых через App Store, это необходимое условие, для загружаемых другими способами — опциональное.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="Настройка App Sandbox в Xcode"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28253%2Fapp-sandbox.jpg&amp;hash=a053cc09c7e025ef2c565475a3a20e71" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../app-sandbox59a3.jpg?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28253%2Fapp-sandbox.jpg&amp;hash=a053cc09c7e025ef2c565475a3a20e71"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28253/app-sandbox.jpg"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="Настройка App Sandbox в Xcode"
+			title="Настройка App Sandbox в Xcode"
+			width="" height="" loading="lazy" />
+	</div><br />
+Настройка App Sandbox в Xcode<br />
+<br />
+Подключив App Sandbox в Xcode при сборке проекта, разработчик выбирает, какие функции могут понадобиться приложению: доступ к определенным папкам, сетевым протоколам, возможностям вроде Apple Pay. Приложение при работе будет просить пользователя подтвердить, что он разрешает использовать тот или иной ресурс.<br />
+<br />
+ <span style="font-size: 18px"><b>FairPlay</b></span><br />
+<br />
+Помимо механизмов, призванных защитить данные пользователей, в macOS есть и одна система, защищающая данные <u>от</u> пользователей. Речь о FairPlay — местной реализации цифровой защиты авторских прав (DRM). Это, пожалуй, единственное серьезное ограничение, намертво зашитое в macOS.<br />
+<br />
+FairPlay может распространяться как на отдельные файлы в форматах MP4 (видео) и AAC (звук), так и на потоковое вещание (FairPlay Streaming). В частности, эту защиту используют в Netflix.<br />
+<br />
+FairPlay жестко ограничивает копирование защищенной информации, поэтому если попытаться сделать скриншот фильма из Netflix или Apple TV, то получится только черный прямоугольник. Записать видео или захватить аудио из защищенного источника тоже не выйдет без дополнительных ухищрений.<br />
+<br />
+<span style="font-size: 22px"><b>Программирование</b></span><br />
+<br />
+Даже при беглом знакомстве с macOS легко заметить, что большинство программ здесь имеют единый визуальный стиль, стандартные диалоги открытия и сохранения файлов, выбора шрифтов и цвета и прочие общие элементы. Все это — благодаря тому, что они основаны на стандартных объектных библиотеках, реализующих интерфейс Aqua.<br />
+<br />
+Такой подход не только обеспечивает консистентный стиль и предсказуемое поведение программ, но еще и экономит оперативную память, а также позволяет Apple в любой момент вносить разного рода изменения. К примеру, когда в macOS 10.14 Mojave появился темный режим, его внедрение потребовало минимум усилий от разработчиков программ.<br />
+<br />
+Однако говорить о том, что в macOS есть только одна оконная библиотека, в наше время не приходится. В реальности фреймворков несколько: какие‑то из них оставлены для совместимости, другие пока носят экспериментальный характер.<br />
+ <br />
+<span style="font-size: 18px"><b>Objective-C</b></span><br />
+<br />
+Традиционный и до сих пор самый надежный способ разработки программ для macOS — это использование языка Objective-C и фреймворка Cocoa, известного также как AppKit (или NSApp, если заглянуть во времена NeXTSTEP).<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="Разработка в Xcode на Objective-C"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28260%2Fxcode-obj-c.png&amp;hash=931b61f310cbd872f90610cfec426e5c" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../xcode-obj-ca327.png?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28260%2Fxcode-obj-c.png&amp;hash=931b61f310cbd872f90610cfec426e5c"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28260/xcode-obj-c.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="Разработка в Xcode на Objective-C"
+			title="Разработка в Xcode на Objective-C"
+			width="" height="" loading="lazy" />
+	</div>Разработка в Xcode на Objective-C<br />
+<br />
+Objective-C — это высокоуровневый объектно ориентированный язык с поддержкой разных видов типизации. Он унаследовал идеи Smalltalk (объекты и сообщения) и C (базовый синтаксис, прямое управление памятью). Абстрактно его можно считать эппловским аналогом C++ или в какой‑то мере — C# и Java.<br />
+ <br />
+<span style="font-size: 18px"><b>AppKit</b></span><br />
+<br />
+Знания одного только Objective-C недостаточно для разработки маковских приложений. Гораздо больший пласт — это разнообразные API и фреймворки, которые поставляются с системой. Любой программист практически сразу же столкнется с Foundation Kit, где реализованы базовые объекты и структуры, а при написании графических приложений — с AppKit.<br />
+<br />
+AppKit реализует привычную в наше время схему MVC, то есть «модель — вид — контроллер», где модель отвечает за структуру данных, вид — за их отображение, а контроллер — за реакцию на действия пользователя. С помощью AppKit описывается внешний вид и поведение всех окон, меню, кнопок, текстовых полей и других элементов интерфейса.<br />
+<br />
+Для разработки программ на основе AppKit часто применяется Interface Builder, входящий в Xcode. Это визуальное средство разработки интерфейсов, которое позволяет собрать приложение из составных частей, как в детском конструкторе (если ты сразу вспомнил Visual Basic, Delphi, C++Builder или Qt Designer, то это верная аналогия). Разработчики нередко критикуют этот подход: вместо навыков программирования он требует именно умения обращаться с Interface Builder.<br />
+ <br />
+<span style="font-size: 18px"><b>Swift</b></span><br />
+<br />
+Objective-C служил NeXT и Apple верой и правдой с восьмидесятых годов и неплохо справлялся со своими задачами. Однако за все это время он очень мало изменился и лишен многих возможностей, привычных современным программистам.<br />
+<br />
+В 2014 году на конференции WWDC анонсировали новый язык для написания маковских приложений — Swift. За его созданием стоит Крис Латтнер, известный как один из основных разработчиков универсального компилятора LLVM.<br />
+<br />
+Как и Objective-C, Swift — компилируемый язык, нацеленный на разработку стабильных и производительных приложений. Он тоже использует схожий с С синтаксис, однако унаследовал некоторые парадигмы от скриптовых языков вроде JavaScript и Python.<br />
+<br />
+По своим возможностям Swift уже способен полностью заменить Objective-C и превосходит его в производительности. Однако базовые фреймворки еще не все переписаны на Swift, поэтому пока что разработчикам сложных приложений приходится регулярно сталкиваться с Objective-C и его наследием.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Исходники Swift открыты, и <a href="https://www.swift.org/platform-support/" target="_blank" class="link link--external" rel="nofollow ugc noopener">существуют</a> версии компилятора и REPL для Linux, Windows и Android. Однако широкого распространения за пределами macOS этот язык пока не получил.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<span style="font-size: 18px"><b>SwiftUI</b></span><br />
+<br />
+NSApp/AppKit разрабатывался вместе с Objective-C и с учетом его возможностей. И хоть из Swift и можно обращаться к нему, аналогичной парой для нового языка должен стать интерфейс SwiftUI.<br />
+<br />
+За основу SwiftUI взяли UIKit (CocoaTouch) — более новую модификацию AppKit, разработанную для iOS. SwiftUI должен заменить оба этих фреймворка и позволяет писать приложения, которые будут работать на всех платформах Apple: часах, телефонах, планшетах, компьютерах и телеприставках.<br />
+<br />
+Главная фишка SwiftUI — это возможность описывать приложения в декларативном стиле. То есть вместо того, чтобы команда за командой перечислять, какие элементы интерфейса куда поместить, достаточно описать, как будет выглядеть приложение, а промежуточные шаги и раскладку SwiftUI возьмет на себя. Interface Builder при этом уже не нужен.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="Разработка интерфейса на SwiftUI"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28259%2Fswiftui.png&amp;hash=59ab29499d707bee61e39855aaf63c61" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../swiftui9de5.png?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28259%2Fswiftui.png&amp;hash=59ab29499d707bee61e39855aaf63c61"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28259/swiftui.png"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="Разработка интерфейса на SwiftUI"
+			title="Разработка интерфейса на SwiftUI"
+			width="" height="" loading="lazy" />
+	</div>Разработка интерфейса на SwiftUI<br />
+<br />
+SwiftUI позволяет разработчикам экономить массу усилий, когда задумка совпадает с доступными возможностями. В противном же случае SwiftUI может стать серьезной преградой. Возможно, с развитием SwiftUI станет легче, но пока что ситуации, о которых в Apple не подумали заранее, встречаются на каждом шагу и вынуждают разработчика возвращаться к AppKit — благо смешивать его со SwiftUI никто не мешает.<br />
+ <br />
+<span style="font-size: 18px"><b>Catalyst</b></span><br />
+<br />
+И еще один современный эппловский фреймворк, о котором стоит упомянуть, называется Catalyst. Катализировать он призван портирование на «мак» приложений, написанных для iOS на UIKit. По заверениям Apple, создать десктопную программу из мобильной можно буквально за один день.<br />
+<br />
+В доказательство на презентации показали официальный клиент Twitter, портированный с iOS. И... им действительно при желании можно пользоваться. Однако по поведению он заметно отличается от «родных» маковских приложений.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="Клиент Twitter на Catalyst"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28254%2Ftwitter-client.jpg&amp;hash=5173d73d29a1e252494f357174c537c5" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../twitter-client244e.jpg?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28254%2Ftwitter-client.jpg&amp;hash=5173d73d29a1e252494f357174c537c5"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28254/twitter-client.jpg"
+			class="bbImage"
+			data-zoom-target="1"
+			style="width: 1200px"
+			alt="Клиент Twitter на Catalyst"
+			title="Клиент Twitter на Catalyst"
+			width="" height="" loading="lazy" />
+	</div><br />
+Клиент Twitter на Catalyst<br />
+<br />
+Catalyst — это переходный фреймворк, и постепенно его должен полностью вытеснить универсальный SwiftUI. Собственно, приложений, перенесенных на «мак» при помощи Catalyst, оказалось немного, и, скорее всего, его отправят на пенсию даже раньше времени.<br />
+<br />
+ <br />
+<span style="font-size: 18px"><b>Carbon</b></span><br />
+<br />
+История с Catalyst немало напоминает другой эпизод из жизни Apple. Когда Mac OS X была совсем новой и нуждалась в приложениях, в Apple решили помочь разработчикам программ для классической Mac OS переехать на новую систему.<br />
+<br />
+Так родился фреймворк Carbon, предоставляющий поддержку старых API, но для пользователя рисующий все тот же интерфейс Aqua. Carbon оказался серьезным подспорьем для разработчиков, и его, в частности, использовали в продуктах Adobe — вплоть до выхода Creative Suite 5.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Может сложиться впечатление, что на «маке» разрешено использовать только стандартные средства создания приложений. Это не так: есть множество популярных программ на кросс‑платформенных библиотеках вроде GTK+, Qt, vxWidgets или фреймворке Electron (на нем работают, например, VS Code и Slack). Просто пользователи Apple предпочитают нативные программы из‑за лучшей интеграции в систему.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<span style="font-size: 18px"><b>WebObjects</b></span><br />
+<br />
+Наконец, тебе еще кое‑где может встретиться слово WebObjects. Это название эппловского объектно ориентированного веб‑фреймворка, созданного на заре интернета и пришедшего еще из NeXT. По своим возможностям он серьезно опередил время, но использовать «мак» в качестве веб‑сервера было странной идеей что тогда, что сейчас. Единственная компания, которая до сих пор применяет WebObjects, — это сама Apple. На этой технологии частично работают App Store и Apple Music.<br />
+<br />
+<span style="font-size: 22px"><b>Apple Silicon</b></span><br />
+<br />
+В Apple очень серьезно относятся к тому, чтобы иметь не только собственный софт, но и свое железо, идеально подходящее к софту. Выбор центрального процессора здесь играет важнейшую стратегическую роль. В Apple уже трижды меняли тип CPU «макинтошей»: Motorola 68000 (32-разрядный CISC) на PowerPC (32- и 64-разрядный RISC), затем на Intel (32- и 64-разрядный CISC) и в 2020 году — на ARM (64-разрядный RISC).<br />
+<br />
+К моменту последнего перехода в Apple уже снабжали iPhone, iPad и прочие гаджеты своими системами на чипе серии A на основе ARM. Так что перевод «маков» на ту же аппаратную платформу не стал неожиданностью. Этого события ждали давно, и если что‑то и удивило, так это его почти полная безболезненность и даже невидимость изменений для пользователей.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="m1.jpg"
+		data-src="/proxy.php?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28258%2Fm1.jpg&amp;hash=d9a1fef84bb068d13fb3b7a6e3d431b6" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="../../m19de8.jpg?image=https%3A%2F%2Fstatic.xakep.ru%2Fimages%2F7c8868e11b3bb6add5f1cea941555ea5%2F28258%2Fm1.jpg&amp;hash=d9a1fef84bb068d13fb3b7a6e3d431b6"
+			data-url="../../../static.xakep.ru/images/7c8868e11b3bb6add5f1cea941555ea5/28258/m1.jpg"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="m1.jpg"
+			title=""
+			width="" height="" loading="lazy" />
+	</div><br />
+<br />
+«Макинтоши» на Apple Silicon (так официально называется эппловская разновидность ARM) не потеряли совместимость почти ни с одним приложением — в первую очередь за счет системы бинарной трансляции, известной как Rosetta 2.<br />
+<br />
+Rosetta 2 при первом запуске исполняемого файла, предназначенного для «маков» с чипом Intel, переводит инструкции x86 в инструкции ARM, то есть производит «компиляцию перед использованием» — AOT. При необходимости доступна и динамическая компиляция — JIT.<br />
+<br />
+Все это позволяет запускать те же приложения, что и раньше, даже если их разработчик не позаботился о пересборке под новую архитектуру. Причем зачастую производительность не только не уступает производительности «маков» с чипами x86, но и превосходит ее!<br />
+<br />
+Свою роль в том, что переход на Apple Silicon был легким и незаметным, сыграла и та подготовка, которую начали за много лет до решающего момента. В Apple очень ловко убрали поддержку старых 32-разрядных приложений за год до анонса Apple Silicon — в операционной системе macOS 10.15 Catalina. Rosetta 2 не позволяет запускать такие программы, и лишний год дал сторонним разработчикам время подготовиться.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Если что‑то и пострадало при переезде на Apple Silicon, то это виртуализация. Подробнее о том, как Parallels, VMware, QEMU и VirtualBox пережили переход, читай в статье «<a href="https://xakep.ru/2022/01/28/apple-m1-test/" target="_blank" class="link link--external" rel="nofollow ugc noopener">M1 для хакера</a>».
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+Что до приложений и фреймворков, поставляемых с macOS, то в них поддержку 64-разрядных архитектур начали добавлять еще c 2009 года, когда вышла Mac OS X 10.6 Snow Leopard. Библиотеки Carbon, не имевшие 64-разрядной версии, перестали поддерживать в 2012 году в OS X 10.8 Mountain Lion.<br />
+<br />
+Такие планомерные уборки в чулане позволяют Apple с легкостью менять аппаратные платформы и поддерживать «легаси» только в переходные периоды.<br />
+<br />
+<span style="font-size: 22px"><b>Прочее</b></span><br />
+<br />
+Помимо перечисленного, в macOS есть еще несколько компонентов, которые роднят эту ОС с миром Linux. К примеру, это система печати CUPS и сервер VNC, используемый для шейринга экрана. И конечно, командная оболочка Bash, стандартная для любого Linux (в последних версиях macOS по умолчанию установлен еще и ZSH).<br />
+<br />
+Долгое время с macOS поставлялись интерпретаторы языков Python, Perl и PHP. В macOS 12 Monterey убрали Python 2.7 и PHP, оставив только Perl, однако вместе с Xcode или Command Line Tools for Xcode устанавливается Python 3.<br />
+<br />
+Причина «уборки» — в том, что нужны эти языки в основном программистам и энтузиастам, причем зачастую в гораздо более новой версии, чем есть в системе. А раз ставить новую все равно придется, то старая будет только мешать.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			С macOS поставляется и веб‑сервер Apache, но это скорее просто интересный исторический факт. До версии 10.8 Mountain Lion «Апачем» можно было управлять через панель настроек. Теперь же доступ есть только из командной строки, и, скорее всего, в одной из будущих версий веб‑сервер уберут по тем же причинам, что и Python 2.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<span style="font-size: 22px"><b>Выводы</b></span><br />
+<br />
+Итак, думаю, ты уже понял, что macOS — это не Linux, хотя и гораздо более близкая к нему система, чем, например, Windows.<br />
+<br />
+Здесь используются свои ядро, графическая система, оконная среда и графические фреймворки. Поддержка стандарта POSIX обеспечивает возможность портировать на macOS Unix-совместимые программы. Некоторые из них уже поставляются вместе с системой.<br />
+<br />
+Что до слухов о том, насколько macOS закрыта, то они сильно преувеличены. «Закрыта» она не в большей мере, чем Windows, а местами в гораздо меньшей. С другой стороны, понятно, что это не Linux, где почти каждый компонент есть в нескольких вариантах и при желании можно сделать новый форк любого из них. И конечно, широко известно, что macOS официально нельзя установить на другие компьютеры, кроме «маков».<br />
+<br />
+Критика этих фактов каким‑то образом переродилась в слухи о том, что в macOS нельзя слушать музыку, если ты не купил ее в iTunes Store, или запустить скачанные из интернета приложения. Все это, конечно, полнейшая ерунда.<br />
+<br />
+Существует опасение, что macOS постепенно объединят с куда более закрытыми iOS и iPad OS. Чтобы понять стратегию Apple в этом плане, достаточно взглянуть на SwiftUI. Он позволяет писать единые приложения, имеющие разный внешний вид и поведение на разных устройствах с учетом их размера, возможностей и схемы использования. Очевидно, что и дальше в Apple будут не изничтожать, а скорее подчеркивать отличия между разными видами компьютеров.<br />
+<br />
+Так что объединение, с одной стороны, вряд ли произойдет, с другой — уже вовсю происходит. Просто оно работает совсем на другом уровне: унифицируют внутренние системы (например, APFS), создают общий базис для разработки приложений (SwiftUI), в macOS постепенно добавляют некоторые новые фичи из iOS (и наоборот — iOS и iPad OS получают кое‑что с «мака»).<br />
+<br />
+Уже много лет macOS — отличный выбор как для повседневной работы, так и для творчества и для многих видов разработки. Непрерывная оптимизация и чистка, практикуемые в Apple, позволяют сохранить производительность и внедрять новшества на всех уровнях системы. К тому же в macOS есть огромный потенциал для автоматизации, о котором мы уже не раз писали и еще вернемся к нему в будущем.</div>
+					
+
+					
+						
+
+	
+		
+	
+
+					
+					
+										
+
+					
+
+					
+						
+							
+							<ul class="attachmentList articleBody-attachments" style="display:none;">
+								
+									
+										
+	<li class="file file--linked">
+		<a class="u-anchorTarget" id="attachment-407"></a>
+		
+			
+	
+		
+		
+
+		
+		
+	
+
+
+			
+<a class="file-preview js-lbImage" data-lb-sidebar-href="" data-lb-caption-extra-html="" href="../../attachments/bezymyannyi-png.407/index.html" target="_blank">
+				<img src="../../data/attachments/0/407-5ff59c9b0ec1023b2f831bc1966d971cc157.jpg?hash=olMkHfdB7S" alt="Безымянный.png"
+					width="200" height="150" loading="lazy" />
+			</a>
+		
+
+		<div class="file-content">
+			<div class="file-info">
+				<span class="file-name" title="Безымянный.png">Безымянный.png</span>
+				<div class="file-meta">
+					651 КБ
+					
+					&middot; Просмотры: 30
+					
+				</div>
+			</div>
+		</div>
+	</li>
+
+									
+								
+							</ul>
+						
+					
+
+					
+
+					
+
+					<div class="reactionsBar js-reactionsList ">
+						
+					</div>
+
+					<div class="js-historyTarget toggleTarget" data-href="trigger-href"></div>
+				</article>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="columnContainer"
+		data-xf-init="lightbox"
+		data-lb-id="article-12"
+		data-lb-universal="0">
+
+		<span class="u-anchorTarget" id="comments"></span>
+
+		<div class="columnContainer-comments">
+			
+	
+	
+
+	<div class="block block--messages"
+		data-xf-init=""
+		data-type="ams_comment"
+		data-href="/inline-mod/">
+
+		
+	
+	
+
+
+		<div class="block-outer"></div>
+		
+		<div class="block-container"
+			data-xf-init="select-to-quote"
+			data-message-selector=".js-comment">
+			
+			<h3 class="block-header">Комментарии</h3>
+			<div class="block-body js-replyNewCommentContainer">
+				
+					<div class="blockMessage js-replyNoMessages">Нет комментариев для отображения.</div>
+				
+			</div>
+		</div>
+
+		<div class="block-outer block-outer--after">
+			
+			
+		</div>
+
+		
+	
+	
+
+	</div>
+
+	
+	
+	
+
+	
+
+
+		</div>
+	</div>	
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+
+	
+</div>
+					
+				</div>
+
+				
+					<div class="p-body-sidebar">
+						
+						
+							<div class="block">
+		<div class="block-container">
+			<h3 class="block-minorHeader">Информация о статье</h3>
+			<div class="block-body block-row block-row--minor">
+				<dl class="pairs pairs--justified">
+					<dt>Автор</dt>
+					
+						<dd><a href="https://osint42.org/members/0x42.1/" class="username " dir="auto" data-user-id="1" data-xf-init="member-tooltip"><span class="username--moderator username--admin">0x42</span></a></dd>
+					
+				</dl>
+				
+					<dl class="pairs pairs--justified">
+						<dt>Article read time</dt>
+						<dd>16 min read</dd>
+					</dl>
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Просмотры</dt>
+						<dd>280</dd>
+					</dl>
+				
+				
+				
+				
+					<dl class="pairs pairs--justified">
+						<dt>Последнее обновление</dt>
+						<dd><time  class="u-dt" dir="auto" datetime="2025-05-10T16:53:40+0300" data-timestamp="1746885220" data-date="10.05.2025" data-time="16:53" data-short="10 Май" title="10.05.2025 в 16:53">10.05.2025</time></dd>
+					</dl>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</div>
+						
+							<div class="block">
+			<div class="block-container">
+				<h3 class="block-minorHeader"><a href="../categories/issledovaniye-zashchity-operatsionnykh-sistem.8/index.html">Больше в Исследование защиты операционных систем</a></h3>
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../uyazvimosti-v-bash-skriptakh.69/index.html">Уязвимости в bash скриптах</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Вот кто хоть раз интересовался безопасностью, наверное помнят всякие инъекции в php и не...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../o-tom-k-chemu-privodit-profanatsiya.60/index.html">О том к чему приводит профанация</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				О наболевшем...
+
+Аэрофлот отчитался-аж в 2022 году, что перешел на отечественные IT-сервисы.
+
+Но...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../igry-s-uyazvimostyami.50/index.html">Игры с уязвимостями</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Всем привет!
+
+В сети много статей, где рассматриваются две ключевые уязвимости в приложениях...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../arkhitektura-antivirusov-i-edr-sistem.48/index.html">Архитектура антивирусов и EDR - систем</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Перевод статьи:SensePost | Sensecon 23: from windows drivers to an almost fully working edr...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../arkhitektura-microsoft-defender-antivirus.47/index.html">Архитектура Microsoft Defender Antivirus</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Перевод:https://retooling.io/blog/an-unexpected-journey-into-microsoft-defenders-signature-world...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+			<div class="block-container">
+				
+					<h3 class="block-minorHeader"><a href="../authors/0x42.1/index.html">Больше от 0x42</a></h3>
+				
+
+				<div class="block-body block-row">
+					<ul class="articleSidebarList">
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../o-tom-kak-boryut-sya-s-tor-v-rf.75/index.html">О том как борются с TOR в РФ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Недавно решил поддержать проект TOR, решил поднять middle relay.
+
+Напомню, что для поддержки...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../bezumnyi-maks-skam.74/index.html">Безумный МАКС/СКАМ</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				По телевизору передают, что мессенджер МАКС полюбили россияне, зарегистрировалось почти вся...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../pochemu-v-linux-vse-fail.73/index.html">Почему в Linux всё — файл?</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				---
+
+## 🔹 Оглавление
+
+[1. Философия UNIX: «Everything is a file»]
+[2. Как работает VFS — Virtual...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../obkhod-antivirusov-cherez-uyazvimyi-draiver.71/index.html">Обход антивирусов через уязвимый драйвер</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				Пока хакер не прикрыли, из-за дурацких законов, решил скопировать приватную статью.
+
+Вот...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+						<li>
+							
+	
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			<a href="https://osint42.org/members/0x42.1/" class="avatar avatar--xxs" data-user-id="1" data-xf-init="member-tooltip">
+			<img src="../../data/avatars/s/0/1b812.jpg?1746634773"  alt="0x42" class="avatar-u1-s" width="48" height="48" loading="lazy" /> 
+		</a>
+		</div>
+		
+		<div class="contentRow-main contentRow-main--close">
+			<a href="../zashchita-ot-roskomnadzora.70/index.html">Защита от Роскомнадзора</a>
+
+			
+			
+			<div class="contentRow-snippet">
+				В связи с тем-что РКН внедрили ботов для автоматического поиска неугодного контента и...
+			</div>				
+
+			
+		</div>
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+						
+							<div class="block">
+				<div class="block-container">
+					
+						<h3 class="block-minorHeader">Поделиться этой статьей</h3>
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			<span class="u-anchorTarget" id="_xfUid-1-1758965518"></span>
+
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" href="#_xfUid-1-1758965518" data-href="mailto:?subject={title}&amp;body={url}">
+							<i class="fa--xf far fa-envelope "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#envelope"></use></svg></i>
+							<span>Электронная почта</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden" href="#_xfUid-1-1758965518"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i class="fa--xf far fa-share-alt "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#share-alt"></use></svg></i>
+							<span>Поделиться</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" href="#_xfUid-1-1758965518" data-clipboard="{url}">
+							<i class="fa--xf far fa-link "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#link"></use></svg></i>
+							<span>Ссылка</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+								
+							</div>
+						
+						
+							<div class="block-body block-row block-row--separated">
+								
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-2-1758965518">Копировать BB-код адреса статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[URL=&quot;https://osint42.org/articles/kak-ustroyena-macos-razbirayemsya.12/&quot;]Как устроена macOS. Разбираемся[/URL]" id="_xfUid-2-1758965518" />
+		</div>
+	</div>
+
+									
+									
+										
+	
+
+	
+
+	<div class="shareInput" data-xf-init="share-input" data-success-text="">
+		
+			<label class="shareInput-label" for="_xfUid-3-1758965518">Копировать BB-код статьи</label>
+		
+		<div class="inputGroup inputGroup--joined">
+			<div class="shareInput-button inputGroup-text js-shareButton is-hidden"
+				data-xf-init="tooltip" title="Скопировать в буфер обмена">
+
+				<i class="fa--xf far fa-copy "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#copy"></use></svg></i>
+			</div>
+			<input type="text" class="input shareInput-input js-shareInput" readonly="readonly" value="[AMS=article, 12][/AMS]" id="_xfUid-3-1758965518" />
+		</div>
+	</div>
+
+									
+								
+							</div>
+						
+					
+				</div>
+			</div>
+						
+						
+					</div>
+				
+			</div>
+
+			
+			
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+			
+				
+
+				
+				
+
+				
+
+				
+				
+					
+					
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="../categories/issledovaniye-zashchity-operatsionnykh-sistem.8/index.html" itemprop="item">
+			<span itemprop="name">Исследование защиты операционных систем</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+				
+			
+		</ul>
+	
+
+			
+		</div>
+	</div>
+
+	<footer class="p-footer" id="footer">
+		<div class="p-footer-inner">
+
+			<div class="p-footer-row">
+				
+					<div class="p-footer-row-main">
+						<ul class="p-footer-linkList">
+							
+								
+								
+									<li>
+										
+											
+											
+												<a href="https://osint42.org/misc/style-variation" rel="nofollow"
+													class="js-styleVariationsLink"
+													data-xf-init="tooltip" title=" Выбор стиля"
+													data-xf-click="menu" data-z-index-ref=".u-bottomFixer" role="button" aria-expanded="false" aria-haspopup="true">
+
+													<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" ><title>Выбор стиля</title><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+												</a>
+
+												<div class="menu" data-menu="menu" aria-hidden="true">
+													<div class="menu-content js-styleVariationsMenu">
+														
+
+	
+		
+
+	<a href="https://osint42.org/misc/style-variation?reset=1&amp;t=1758965518%2C8db6b19ab843392c414e97c3f6ec0747"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="">
+
+		<i class="fa--xf far fa-adjust "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#adjust"></use></svg></i>
+
+		
+			Системный
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=default&amp;t=1758965518%2C8db6b19ab843392c414e97c3f6ec0747"
+		class="menu-linkRow "
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="default">
+
+		<i class="fa--xf far fa-sun "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#sun"></use></svg></i>
+
+		
+			Светлый
+		
+	</a>
+
+
+		
+
+	<a href="https://osint42.org/misc/style-variation?variation=alternate&amp;t=1758965518%2C8db6b19ab843392c414e97c3f6ec0747"
+		class="menu-linkRow is-selected"
+		rel="nofollow"
+		data-xf-click="style-variation" data-variation="alternate">
+
+		<i class="fa--xf far fa-moon "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#moon"></use></svg></i>
+
+		
+			Тёмный
+		
+	</a>
+
+	
+
+	
+		
+	
+
+													</div>
+												</div>
+											
+										
+									</li>
+								
+								
+									<li><a href="../../misc/language.html" data-xf-click="overlay"
+										data-xf-init="tooltip" title="Выбор языка" rel="nofollow">
+										<i class="fa--xf far fa-globe "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#globe"></use></svg></i> Русский (RU)</a></li>
+								
+							
+						</ul>
+					</div>
+				
+				<div class="p-footer-row-opposite">
+					<ul class="p-footer-linkList">
+						
+
+						
+							<li><a href="../../threads/pravila-resursa.56/index.html">Условия и правила</a></li>
+						
+
+						
+							<li><a href="../../help/privacy-policy/index.html">Политика конфиденциальности</a></li>
+						
+
+						
+							<li><a href="../../help/index.html">Помощь</a></li>
+						
+
+						
+							<li><a href="../../forums/index.html">Главная</a></li>
+						
+
+						<li><a href="../../forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#rss"></use></svg></i><span class="u-srOnly">RSS</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+	</footer>
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+</div>
+
+<div class="u-navButtons js-navButtons">
+	<a href="javascript:" class="button button--scroll"><span class="button-text"><i class="fa--xf far fa-arrow-left "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-left"></use></svg></i><span class="u-srOnly">Назад</span></span></a>
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="both">
+		<a href="#top" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-up"></use></svg></i><span class="u-srOnly">Верх</span></span></a>
+		
+			<a href="#footer" class="button button--scroll" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-down "><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" ><use href="../../data/local/icons/regulare419.svg?v=1757401797#arrow-down"></use></svg></i><span class="u-srOnly">Низ</span></span></a>
+		
+	</div>
+
+
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+
+
+    
+    
+        
+        
+            <script type="application/ld+json">
+                {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "@id": "https://osint42.org/articles/kak-ustroyena-macos-razbirayemsya.12/",
+    "name": "\u041a\u0430\u043a \u0443\u0441\u0442\u0440\u043e\u0435\u043d\u0430 macOS. \u0420\u0430\u0437\u0431\u0438\u0440\u0430\u0435\u043c\u0441\u044f",
+    "headline": "\u041a\u0430\u043a \u0443\u0441\u0442\u0440\u043e\u0435\u043d\u0430 macOS. \u0420\u0430\u0437\u0431\u0438\u0440\u0430\u0435\u043c\u0441\u044f",
+    "alternativeHeadline": "\u041a\u0430\u043a \u0443\u0441\u0442\u0440\u043e\u0435\u043d\u0430 macOS. \u0420\u0430\u0437\u0431\u0438\u0440\u0430\u0435\u043c\u0441\u044f",
+    "description": "\u0412\u0441\u0435\u043c \u043f\u0440\u0438\u0432\u0435\u0442!\n\n!\u041e\u0442\u043b\u0438\u0447\u043d\u0430\u044f \u0441\u0442\u0430\u0442\u044c\u044f!\n\n\u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b \u043d\u0430 \u0425\u0430\u043a\u0435\u0440\u0435:\u041b\u0438\u043a\u0431\u0435\u0437 \u043f\u043e macOS. \u0420\u0430\u0437\u0431\u0438\u0440\u0430\u0435\u043c \u0432 \u043f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0441\u0442\u044f\u0445, \u043a\u0430\u043a \u0443\u0441\u0442\u0440\u043e\u0435\u043d\u0430 macOS\n\n\u041f\u0440\u0435\u0434\u043f\u043e\u043b\u043e\u0436\u0438\u043c, \u0442\u044b \u043d\u0435\u0434\u0430\u0432\u043d\u043e \u043f\u0440\u0438\u043e\u0431\u0440\u0435\u043b \u00ab\u043c\u0430\u043a\u00bb \u0438\u043b\u0438 \u0440\u0430\u0437\u0434\u0443\u043c\u044b\u0432\u0430\u0435\u0448\u044c, \u043d\u0435 \u0441\u0434\u0435\u043b\u0430\u0442\u044c \u043b\u0438 \u044d\u0442\u043e. \u041d\u043e macOS \u043a\u0430\u0436\u0435\u0442\u0441\u044f \u0447\u0443\u0436\u0434\u043e\u0439 \u0438 \u043d\u0435\u043f\u043e\u043d\u044f\u0442\u043d\u043e\u0439, \u0434\u0430 \u0438 \u0432\u043e\u043e\u0431\u0449\u0435 \u0445\u043e\u0434\u044f\u0442...",
+    "keywords": "",
+    "dateCreated": "2025-05-10T13:53:40+00:00",
+    "dateModified": "2025-05-10T13:53:40+00:00",
+    "author": {
+        "@type": "Person",
+        "name": "0x42"
+    },
+    "thumbnailUrl": "https://osint42.org/data/attachments/0/407-5ff59c9b0ec1023b2f831bc1966d971c.jpg?hash=olMkHfdB7S",
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/CommentAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/LikeAction",
+            "userInteractionCount": "0"
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/ViewAction",
+            "userInteractionCount": "280"
+        }
+    ]
+}
+            </script>
+        
+    
+
+
+
+	
+			
+	
+
+				
+			
+		
+		
+	
+
+</body>
+
+<!-- Mirrored from osint42.org/articles/kak-ustroyena-macos-razbirayemsya.12/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 09:41:21 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

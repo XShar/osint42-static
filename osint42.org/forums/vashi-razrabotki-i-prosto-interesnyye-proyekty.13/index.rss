@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Ваши разработки и просто интересные проекты</title>
+    <description>Ваши разработки и просто интересные проекты</description>
+    <pubDate>Sat, 27 Sep 2025 09:37:57 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:37:57 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/vashi-razrabotki-i-prosto-interesnyye-proyekty.13/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/vashi-razrabotki-i-prosto-interesnyye-proyekty.13/index.rss"/>
+    <item>
+      <title>Анонимный jabber.osint42.com</title>
+      <pubDate>Tue, 05 Aug 2025 12:30:22 +0000</pubDate>
+      <link>https://osint42.org/threads/anonimnyi-jabber-osint42-com.115/</link>
+      <guid isPermaLink="false">115</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/vashi-razrabotki-i-prosto-interesnyye-proyekty.13/"><![CDATA[Ваши разработки и просто интересные проекты]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1753517552871-png.796/"
+			class="bbImage "
+			style=""
+			alt="1753517552871.png"
+			title="1753517552871.png"
+			width="512" height="512" loading="lazy" /><br />
+<br />
+Я тут для интереса решил поднять сервак Jabber/XMPP:<a href="https://prosody.im/" target="_blank" class="link link--external" rel="noopener">Welcome – Prosody IM</a><br />
+<br />
+В итоге получилось думаю не плохо.)<br />
+<br />
+Что получилось:<br />
+<br />
+1)Сделал акцент на безопасности, это отключение логов, защита от регистрации спамеров и т.д.<br />
+2)Можно  обмениваться файлами до 10Мб.<br />
+3)Регистрация только через веб:<a href="https://jabber.osint42.com/" target="_blank" class="link link--external" rel="noopener">XMPP Registration — osint42.com</a><br />
+<b>Код верификации:</b><br />
+[HIDE]VgSQ4VvDQzJ7zh2ZEz[/HIDE]<br />
+4)Сообщения не хранятся на сервере, кроме которые оффлайн и удаляются после прочтения, при обмене...<br />
+<br />
+<a href="https://osint42.org/threads/anonimnyi-jabber-osint42-com.115/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>IPCAMBRUTER - Тестирование безопасности веб-камер</title>
+      <pubDate>Thu, 19 Jun 2025 14:42:27 +0000</pubDate>
+      <link>https://osint42.org/threads/ipcambruter-testirovaniye-bezopasnosti-veb-kamer.76/</link>
+      <guid isPermaLink="false">76</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/vashi-razrabotki-i-prosto-interesnyye-proyekty.13/"><![CDATA[Ваши разработки и просто интересные проекты]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1749806587928-png.571/"
+			class="bbImage "
+			style=""
+			alt="1749806587928.png"
+			title="1749806587928.png"
+			width="940" height="304" loading="lazy" /><br />
+<br />
+Всем привет!<br />
+<br />
+На предыдущем форуме, IpcamBrutter был очень популярен.)<br />
+<br />
+Автор тулзы создал свой сайт:<a href="https://hhasihanov.wixsite.com/ipcam-bruter" target="_blank" class="link link--external" rel="noopener">https://hhasihanov.wixsite.com/ipcam-bruter</a><br />
+<br />
+Кому интересно, заходите.<br />
+<br />
+<b>Скачать программу можно ниже в теме во вложении...</b><br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-opisaniye-programmy"></a>Описание программы&#8203;<a class="hoverLink" href="#-opisaniye-programmy" title="Постоянная ссылка"></a></h3>Назначение программы :<br />
+<br />
+Программа предназначена исключительно для аудита и тестирования безопасности IP-камер на надёжность логинов и паролей.<br />
+<br />
+Язык интерфейса: Английский, Русский.<br />
+<br />
+<b>Функциональные возможности:</b><br />
+<br />
+<img class="smilie smilie--emoji" alt="🔹" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f539.png" title="Small blue diamond    :small_blue_diamond:" data-shortname=":small_blue_diamond:" loading="lazy" width="64" height="64" />...<br />
+<br />
+<a href="https://osint42.org/threads/ipcambruter-testirovaniye-bezopasnosti-veb-kamer.76/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Egida - Бот, который сохраняет малварные репозитории в гите</title>
+      <pubDate>Fri, 06 Jun 2025 17:08:33 +0000</pubDate>
+      <link>https://osint42.org/threads/egida-bot-kotoryi-sokhranyayet-malvarnyye-repozitorii-v-gite.66/</link>
+      <guid isPermaLink="false">66</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/vashi-razrabotki-i-prosto-interesnyye-proyekty.13/"><![CDATA[Ваши разработки и просто интересные проекты]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1749229704305-png.527/"
+			class="bbImage "
+			style=""
+			alt="1749229704305.png"
+			title="1749229704305.png"
+			width="192" height="189" loading="lazy" /><br />
+<br />
+Случайно наткнулся на репозиторий в гите:<a href="https://github.com/Egida?tab=repositories" target="_blank" class="link link--external" rel="noopener">Egida - Repositories</a><br />
+<br />
+Репозиторий ведёт какой-то бот, который делает форки малварных репозиториев к себе и обновляет их.<br />
+<br />
+Там накопилась огромная база ботнетов и прочих малварных веток.)<br />
+<br />
+Может пригодится кому!</div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <language>ru-RU</language>
+    <title>Osint42.Org - Безопасность и код</title>
+    <description>Osint42.Org - Безопасность и код</description>
+    <pubDate>Sat, 27 Sep 2025 09:30:40 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Sep 2025 09:30:40 +0000</lastBuildDate>
+    <generator>Osint42.Org - Безопасность и код</generator>
+    <link>https://osint42.org/forums/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://osint42.org/forums/-/index.rss"/>
+    <item>
+      <title>Архив форума!</title>
+      <pubDate>Fri, 26 Sep 2025 12:43:12 +0000</pubDate>
+      <link>https://osint42.org/threads/arkhiv-foruma.200/</link>
+      <guid isPermaLink="false">200</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/pro-resurs.2/"><![CDATA[Про ресурс]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1758890422976-png.935/"
+			class="bbImage "
+			style=""
+			alt="1758890422976.png"
+			title="1758890422976.png"
+			width="512" height="512" loading="lazy" /><br />
+<br />
+Всем привет!<br />
+<br />
+Буду краток, т.к. у меня нет времени на развитие проекта, также если честно окончательно надоело и уже понятно что поддержки посетителей не будет.<br />
+<br />
+<b>К сожалению посты, которые оставляют здесь посетители только лишь отвлекают и если честно напрягает меня, я уже и хайды даже уберал, непомогает...<img src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f641.png" class="smilie smilie--emoji" loading="lazy" width="64" height="64" alt=":(" title="Frown    :("  data-smilie="3"data-shortname=":(" /><br />
+<br />
+Решил пока сделать форум как архив.<br />
+<br />
+На форуме весь контент доступен гостям, регистрация также тоже возможна, но посты создавать нельзя.<br />
+Доступ к личной переписке...</b><br />
+<br />
+<a href="https://osint42.org/threads/arkhiv-foruma.200/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Они читают ваши письма!  Gmail под угрозой: ChatGPT мог тайно сливать ваши письма</title>
+      <pubDate>Fri, 26 Sep 2025 12:08:41 +0000</pubDate>
+      <link>https://osint42.org/threads/oni-chitayut-vashi-pis-ma-gmail-pod-ugrozoi-chatgpt-mog-taino-slivat-vashi-pis-ma.199/</link>
+      <guid isPermaLink="false">199</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Исследователи безопасности из компании Radware выявили серьёзную уязвимость в Deep Research Mode ChatGPT, которая позволяет злоумышленникам тайно получать доступ к личной переписке Gmail пользователей. Уязвимость получила название ShadowLeak и представляет собой новый тип атак, использующих скрытые инструкции в электронных письмах для манипуляции AI.<br />
+<br />
+Суть атаки проста и вместе с тем опасна. Злоумышленник отправляет жертве письмо, в котором скрыты инструкции — например, белый текст на белом...<br />
+<br />
+<a href="https://osint42.org/threads/oni-chitayut-vashi-pis-ma-gmail-pod-ugrozoi-chatgpt-mog-taino-slivat-vashi-pis-ma.199/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Новая функция ChatGPT</title>
+      <pubDate>Fri, 26 Sep 2025 12:07:59 +0000</pubDate>
+      <link>https://osint42.org/threads/novaya-funktsiya-chatgpt.198/</link>
+      <guid isPermaLink="false">198</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Глава OpenAI Сэм Альтман анонсировал в своем X добавление в ChatGP новых функций, который потребует значительных вычислительных мощностей. Из-за этого доступ к части новинок ограничат подпиской Pro, а за некоторые придется доплатить:<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			В ближайшие недели мы запускаем новые ресурсоемкие сервисы. Из-за связанных с ними затрат некоторые функции поначалу будут доступны только подписчикам Pro, а за часть новых продуктов придется платить дополнительно. Наша цель остается прежней — максимально...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://osint42.org/threads/novaya-funktsiya-chatgpt.198/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Подозрительные корейцы и мутная криптовалюта</title>
+      <pubDate>Fri, 26 Sep 2025 12:07:29 +0000</pubDate>
+      <link>https://osint42.org/threads/podozritel-nyye-koreitsy-i-mutnaya-kriptovalyuta.197/</link>
+      <guid isPermaLink="false">197</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Согласно Подразделению финансовой разведки Южной Кореи (FIU) и Корейской таможенной службе (KCS), с января по август местные поставщики услуг виртуальных активов (VASP) подали 36 684 отчета о подозрительных транзакциях. В 2023 и 2024 году было зафиксировано соответственно 16 076 и 19 658 подозрительных криптотранзакций. Текущий показатель также значительно превышает цифры 2022 года (10 797 случаев) и 2021 года (199 случаев).<br />
+<br />
+Согласно законам Южной Кореи, финансовые учреждения, казино и...<br />
+<br />
+<a href="https://osint42.org/threads/podozritel-nyye-koreitsy-i-mutnaya-kriptovalyuta.197/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Органы наблюдают за Microsoft в России</title>
+      <pubDate>Fri, 26 Sep 2025 12:05:53 +0000</pubDate>
+      <link>https://osint42.org/threads/organy-nablyudayut-za-microsoft-v-rossii.196/</link>
+      <guid isPermaLink="false">196</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Суд ввёл процедуру наблюдения в дочернем предприятии Microsoft в России. Американская бигтех‑компания прекратила работу в России в 2022 году, но продолжала обслуживание клиентов через дочернее предприятие до 2025 года. 23 сентября 2025 года Арбитражный суд Москвы ввёл процедуру наблюдения в отношении российского подразделения корпорации Microsoft ООО «Майкрософт Рус». Решение было принято в рамках дела о банкротстве, инициированного российским подразделением американской компании ещё в конце...<br />
+<br />
+<a href="https://osint42.org/threads/organy-nablyudayut-za-microsoft-v-rossii.196/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>За год количество криптомиллионеров увеличилось на 40%</title>
+      <pubDate>Fri, 26 Sep 2025 12:04:54 +0000</pubDate>
+      <link>https://osint42.org/threads/za-god-kolichestvo-kriptomillionerov-uvelichilos-na-40.195/</link>
+      <guid isPermaLink="false">195</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Согласно новому отчёту компании Henley &amp; Partners, число криптомиллионеров выросло по сравнению с прошлым годом на 40% и составило 241,700 человек.<br />
+<br />
+Количество людей, чьи криптовалютные активы превышают $100 млн, выросло на 38% и составило 450 человек, а число криптомиллиардеров к концу июня 2025 года увеличилось на 29% и достигло 36 человек.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<b>Этот значительный рост совпал с переломным годом для институционального внедрения, — заявили аналитики Henley &amp; Partners.</b>
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Нажмите, чтобы раскрыть...</a></div>
+	</div>
+</blockquote>...<br />
+<br />
+<a href="https://osint42.org/threads/za-god-kolichestvo-kriptomillionerov-uvelichilos-na-40.195/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>ФинТех. Банк России и ИИ в работе.</title>
+      <pubDate>Fri, 26 Sep 2025 12:03:18 +0000</pubDate>
+      <link>https://osint42.org/threads/fintekh-bank-rossii-i-ii-v-rabote.193/</link>
+      <guid isPermaLink="false">193</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Банк России в своём Telegram-канале рассказал, что применяет искусственный интеллект в своей деятельности. По словам ЦБ, ИИ используется при работе с жалобами и для адаптации языка аналитических материалов регулятора.<br />
+<br />
+Центробанк отметил, что ИИ — важный инструмент для аналитиков и экономистов, помогающий эффективно обрабатывать данные и собирать больше информации. Однако для его эффективного использования требуется большой объём исторических данных, которого сейчас нет.<br />
+<br />
+И работа экспертов...<br />
+<br />
+<a href="https://osint42.org/threads/fintekh-bank-rossii-i-ii-v-rabote.193/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Пробив Discord</title>
+      <pubDate>Wed, 24 Sep 2025 12:24:37 +0000</pubDate>
+      <link>https://osint42.org/threads/probiv-discord.90/</link>
+      <guid isPermaLink="false">90</guid>
+      <author>invalid@example.com (Ftftren)</author>
+      <category domain="https://osint42.org/forums/osint-forum.15/"><![CDATA[OSINT форум]]></category>
+      <dc:creator>Ftftren</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Введение: Всем привет сегодня я расскажу как найти человека по дискорду <br />
+<br />
+Примечание: Не всех можно найти так как дискорд довольно безопасная площадка так что если не получилось включайте навыки соц инженерии или вирусологии.<br />
+<br />
+Инструкция: Для начала нашей работы у вас должен быть перечень прог для сбора и анализа дискорд аккаунта с этим вам помогут Discord sensor и Discord Tracker <br />
+<br />
+<a href="https://discord-tracker.com/" target="_blank" class="link link--external" rel="nofollow ugc noopener">Discord-Tracker | Статистика и анализ Discord профилей</a> - САЙТ<br />
+@DiscordSensorbot - ТГ БОТ<br />
+<br />
+Они помогут...<br />
+<br />
+<a href="https://osint42.org/threads/probiv-discord.90/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>7</slash:comments>
+    </item>
+    <item>
+      <title>Идеи подарков для хакеров</title>
+      <pubDate>Sun, 21 Sep 2025 14:46:00 +0000</pubDate>
+      <link>https://osint42.org/threads/idei-podarkov-dlya-khakerov.192/</link>
+      <guid isPermaLink="false">192</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1758464478955-png.934/"
+			class="bbImage "
+			style=""
+			alt="1758464478955.png"
+			title="1758464478955.png"
+			width="512" height="512" loading="lazy" /><br />
+<br />
+Если твоя девушка или парень хакер, или может есть знакомые или друзья хакеры...<br />
+<br />
+Интересно что можно подарить ?<br />
+<br />
+Есть идеи на тему:<br />
+<br />
+<h3 class="bbHeading"><a class="u-anchorTarget" name="-nakleiki"></a>Наклейки&#8203;<a class="hoverLink" href="#-nakleiki" title="Постоянная ссылка"></a></h3><ul>
+<li data-xf-list-type="ul"><a href="https://neatstickersco.etsy.com/" target="_blank" class="link link--external" rel="noopener">https://neatstickersco.etsy.com</a> (используйте промокод REDDIT для скидки 5%) — наклейки на тему взлома и кибербезопасности</li>
+<li data-xf-list-type="ul">UwU Underground - <a href="https://uwu-underground-shop.fourthwall.com/collections/all" target="_blank" class="link link--external" rel="noopener">All Products | UwU Underground</a></li>
+<li data-xf-list-type="ul"><a href="https://www.etsy.com/shop/hackerculture" target="_blank" class="link link--external" rel="noopener">https://www.etsy.com/shop/hackerculture</a></li>
+</ul><h3 class="bbHeading"><a class="u-anchorTarget" name="-ustroistva"></a>Устройства&#8203;<a class="hoverLink" href="#-ustroistva" title="Постоянная ссылка"></a></h3><ul>
+<li data-xf-list-type="ul">FlipperZero - <a href="https://flipperzero.one/" target="_blank" class="link link--external" rel="noopener">https://flipperzero.one</a></li>
+<li data-xf-list-type="ul">Raspberry...</li>
+</ul><br />
+<a href="https://osint42.org/threads/idei-podarkov-dlya-khakerov.192/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Апдейт по ситуации с XSS.IS. Что с xss.is. Где теперь xss</title>
+      <pubDate>Sun, 21 Sep 2025 13:40:29 +0000</pubDate>
+      <link>https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/</link>
+      <guid isPermaLink="false">119</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1754139394458-png.804/"
+			class="bbImage "
+			style=""
+			alt="1754139394458.png"
+			title="1754139394458.png"
+			width="990" height="539" loading="lazy" /><br />
+<br />
+<b>Мне написали модеры:<br />
+<br />
+Апдейт по ситуации!</b><br />
+<br />
+Модераторы обращаются к вам с важным предупреждением:  <b>мы не смогли верифицировать личность нового админа.</b><br />
+<br />
+По нашему мнению,<b> Дамага находится под контролем французских правоохранительных органов и СБУ. </b><br />
+Он до сих пор онлайн как часть операции под прикрытием.<br />
+<br />
+Задачи этой операции: собрать еще больше доказательств на пользователей и совершить еще больше арестов!<br />
+<b>Уголовное дело касается не только Тохи, но и всей...</b><br />
+<br />
+<a href="https://osint42.org/threads/apdeit-po-situatsii-s-xss-is-chto-s-xss-is-gde-teper-xss.119/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>40</slash:comments>
+    </item>
+    <item>
+      <title>Абузоустойчивые хостинги</title>
+      <pubDate>Sun, 21 Sep 2025 12:52:33 +0000</pubDate>
+      <link>https://osint42.org/threads/abuzoustoichivyye-khostingi.78/</link>
+      <guid isPermaLink="false">78</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/reklama-i-otzyvy-khostingov.5/"><![CDATA[Реклама и отзывы хостингов]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Тут задавали вопрос в личке.<br />
+<br />
+Из того-что знаю:<br />
+<br />
+1)<a href="https://t.me/YeezyHost_robot" target="_blank" class="link link--external" rel="noopener"><img class="smilie smilie--emoji" alt="☁️" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/2601.png" title="Cloud    :cloud:" data-shortname=":cloud:" loading="lazy" width="64" height="64" /> YeezyHost BOT <img class="smilie smilie--emoji" alt="☁️" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/2601.png" title="Cloud    :cloud:" data-shortname=":cloud:" loading="lazy" width="64" height="64" /></a><br />
+Нужно выбрать именно абузоустойчивый сервер.<br />
+<br />
+2)<img class="smilie smilie--emoji" alt="🌐" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f310.png" title="Globe with meridians    :globe_with_meridians:" data-shortname=":globe_with_meridians:" loading="lazy" width="64" height="64" /> Сайт: <a href="https://abelohost.com/" target="_blank" class="link link--external" rel="noopener">Offshore Hosting | Trusted Offshore Host</a><br />
+<ul>
+<li data-xf-list-type="ul">Локация: Нидерланды</li>
+<li data-xf-list-type="ul">Принимает BTC, DMCA игнорируется</li>
+<li data-xf-list-type="ul">Позволяет adult, warez, торрент-трекеры</li>
+</ul>3)<a href="https://novogara.com/" target="_blank" class="link link--external" rel="noopener">Novogara BV</a><br />
+<ul>
+<li data-xf-list-type="ul">Дата-центры: Карибы (Кюрасао), Нидерланды</li>
+<li data-xf-list-type="ul">Известен своей толерантностью к спаму, фишингу</li>
+</ul>4)<a href="https://flokinet.is/" target="_blank" class="link link--external" rel="noopener">FlokiNET: Secure the Net</a><br />
+<ul>
+<li data-xf-list-type="ul">Локации: Исландия, Финляндия, Румыния...</li>
+</ul><br />
+<a href="https://osint42.org/threads/abuzoustoichivyye-khostingi.78/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>8</slash:comments>
+    </item>
+    <item>
+      <title>[0-Day + PoC] CVE-2025-29966/29967 — Zero-Click RDP Client RCE (Windows 11/10, Server 2022)</title>
+      <pubDate>Thu, 18 Sep 2025 03:11:38 +0000</pubDate>
+      <link>https://osint42.org/threads/0-day-poc-cve-2025-29966-29967-zero-click-rdp-client-rce-windows-11-10-server-2022.52/</link>
+      <guid isPermaLink="false">52</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/voprosy-obshcheniye-flud.11/"><![CDATA[Вопросы, общение, флуд]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">20 мая 2025 Microsoft тихо залатала две критические дыры (CVSS 8.8) в службах Remote Desktop — CVE-2025-29966 и CVE-2025-29967.  <br />
+Эксплойт уже гуляет в приватных чатах: одно подключение к подставному RDP-серверу = полный код на машине жертвы (zero-click для клиента, аутентификация не нужна).  <br />
+<br />
+В треде:<br />
+• технический разбор heap-based overflow,  <br />
+• PoC-скрипт (Python) + готовый Metasploit-модуль,  <br />
+• видео-демо ― SYSTEM-shell за 60 секунд,  <br />
+• mitigation-чеклист и сигнатуры YARA.  <br />
+<br />
+<img class="smilie smilie--emoji" alt="⚠️" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/26a0.png" title="Warning    :warning:" data-shortname=":warning:" loading="lazy" width="64" height="64" /> Файлы...<br />
+<br />
+<a href="https://osint42.org/threads/0-day-poc-cve-2025-29966-29967-zero-click-rdp-client-rce-windows-11-10-server-2022.52/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>Дамп крупнейшей утечки документов из Великого Китайского Файервола</title>
+      <pubDate>Mon, 15 Sep 2025 12:51:54 +0000</pubDate>
+      <link>https://osint42.org/threads/damp-krupneishei-utechki-dokumentov-iz-velikogo-kitaiskogo-faiervola.189/</link>
+      <guid isPermaLink="false">189</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/vsyakiye-slivy-i-dampy.30/"><![CDATA[Всякие сливы и дампы]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">В четверг 11 сентября 2025 года произошла крупнейшая за всю историю «Великого китайского файрвола» (GFW). <br />
+В сеть попало более 500 ГБ исходного кода, рабочих журналов и записей внутренней переписки, раскрывающих подробности исследований, разработок и деятельности GFW.<br />
+<br />
+Утечка данных произошла из-за ключевых технических источников, стоящих за GFW: Geedge Networks (главный научный сотрудник которой — Фан Биньсин) и лаборатории MESA при Институте информационной инженерии Китайской академии...<br />
+<br />
+<a href="https://osint42.org/threads/damp-krupneishei-utechki-dokumentov-iz-velikogo-kitaiskogo-faiervola.189/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Интервью Никиты Назарова про хакерские группировки</title>
+      <pubDate>Thu, 11 Sep 2025 10:24:59 +0000</pubDate>
+      <link>https://osint42.org/threads/interv-yu-nikity-nazarova-pro-khakerskiye-gruppirovki.187/</link>
+      <guid isPermaLink="false">187</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1757585515737-png.929/"
+			class="bbImage "
+			style=""
+			alt="1757585515737.png"
+			title="1757585515737.png"
+			width="960" height="540" loading="lazy" /><br />
+<br />
+Есть отчет Kaspersky Cyber Threat Intelligence про хакерсике группировки и угрозы:<a href="https://lp.kaspersky.com/ru/stream-analytical-report-by-CTI-and-TE/" target="_blank" class="link link--external" rel="noopener">Kaspersky Stream Analytical Report</a><br />
+<br />
+Но этот отчет для профи, можете его скачать и посмотреть.<br />
+<br />
+Для обычных людей интересно интервью ria.ru, там не много текста, но какое-то понимание думаю даст...<br />
+<br />
+<i>Прошедшее лето стало беспрецедентным по числу кибератак на российские компании, считает руководитель отдела расширенного исследования угроз &quot;Лаборатории Касперского&quot; Никита Назаров. <br />
+В интервью...</i><br />
+<br />
+<a href="https://osint42.org/threads/interv-yu-nikity-nazarova-pro-khakerskiye-gruppirovki.187/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Статистика этого ресурса</title>
+      <pubDate>Wed, 10 Sep 2025 19:18:38 +0000</pubDate>
+      <link>https://osint42.org/threads/statistika-etogo-resursa.184/</link>
+      <guid isPermaLink="false">184</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/pro-resurs.2/"><![CDATA[Про ресурс]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1757531595495-png.928/"
+			class="bbImage "
+			style=""
+			alt="1757531595495.png"
+			title="1757531595495.png"
+			width="458" height="191" loading="lazy" /><br />
+<br />
+Может кому интересно...<br />
+<br />
+Я тут принципиально убрал всякие следящие метрики вроде яндекс метрика и гугл аналитикс.<br />
+<br />
+Но есть логи апача, установил на сервер скрипт:<a href="https://www.awstats.org/" target="_blank" class="link link--external" rel="noopener">AWStats - Free advanced log file analyzer for web, ftp or mail statistics (GNU GPL)</a><br />
+<br />
+Прикольная штука, которая может собирать обезличенную статистику по логам...<br />
+<br />
+Можете посмотреть на скрине выше...<br />
+<br />
+<b>Но сразу скажу, что 80% ботов,</b> вот из 5000 посетителей, реально только 300-500 человек в день, не много, но...<br />
+<br />
+<a href="https://osint42.org/threads/statistika-etogo-resursa.184/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Делаем свой мессенджер MAX со звонками и анонимностью за 5 минут</title>
+      <pubDate>Wed, 10 Sep 2025 14:55:30 +0000</pubDate>
+      <link>https://osint42.org/threads/delayem-svoi-messendzher-max-so-zvonkami-i-anonimnost-yu-za-5-minut.172/</link>
+      <guid isPermaLink="false">172</guid>
+      <author>invalid@example.com (0x42)</author>
+      <category domain="https://osint42.org/forums/nastroika-serverov.10/"><![CDATA[Настройка серверов]]></category>
+      <dc:creator>0x42</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img src="https://osint42.org/attachments/1756554445740-png.898/"
+			class="bbImage "
+			style=""
+			alt="1756554445740.png"
+			title="1756554445740.png"
+			width="780" height="440" loading="lazy" /><br />
+<br />
+С хабра:<a href="https://habr.com/ru/articles/938760/" target="_blank" class="link link--external" rel="noopener">Звонки через Jabber в докер-контейнере за 5 минут</a><br />
+<br />
+В свете сами знаете чего, свой приватный мессенджер и возможность звонков на XMPP стали как никогда актуальны.<br />
+<br />
+Есть быстрый и простой способ: за несколько минут вы поднимаете собственный Jabber-сервер.<br />
+Дальше — дело техники: рассылаете приглашения маме, бабушке, теще, жене и соседке Даше.<br />
+После этого можно спокойно звонить и переписываться в защищённом мессенджере, который полностью под вашим контролем.<br />
+<br />
+Звонки идут...<br />
+<br />
+<a href="https://osint42.org/threads/delayem-svoi-messendzher-max-so-zvonkami-i-anonimnost-yu-za-5-minut.172/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>OpenAI. ChatGPT. Новые функции безопасности.</title>
+      <pubDate>Wed, 10 Sep 2025 05:40:52 +0000</pubDate>
+      <link>https://osint42.org/threads/openai-chatgpt-novyye-funktsii-bezopasnosti.177/</link>
+      <guid isPermaLink="false">177</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">OpenAI представила обновления системы безопасности в ChatGPT, направленные на защиту молодых пользователей и поддержку в кризисных ситуациях.<br />
+<br />
+Главное нововведение — это автоматическая маршрутизация диалога. Если система обнаружит признаки сильного психологического стресса, разговор будет передаваться так называемым «думающим» моделям. Эти модели обучены с помощью метода <i>Deliberative Alignment</i> и способны выдавать более медленные и взвешенные ответы. Запуск функции запланирован в...<br />
+<br />
+<a href="https://osint42.org/threads/openai-chatgpt-novyye-funktsii-bezopasnosti.177/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Усиление контроля за фейками перед выборами в России</title>
+      <pubDate>Tue, 09 Sep 2025 05:05:52 +0000</pubDate>
+      <link>https://osint42.org/threads/usileniye-kontrolya-za-feikami-pered-vyborami-v-rossii.183/</link>
+      <guid isPermaLink="false">183</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img class="smilie smilie--emoji" alt="🗳️" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f5f3.png" title="Ballot box with ballot    :ballot_box:" data-shortname=":ballot_box:" loading="lazy" width="64" height="64" /> <b>Методы и технологии борьбы:</b><br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><b>Инструменты:</b> ЦИК и АНО «Диалог» заявили о внедрении систем мониторинга на базе ИИ, способных в режиме реального времени анализировать соцсети и медиапространство на предмет глубоких подделок (deepfakes) и скоординированных кампаний по дезинформации.</li>
+<li data-xf-list-type="ul"><b>Статистика:</b> По данным Роскомнадзора, в предвыборный период 2024 года было выявлено и заблокировано более <b>350 тысяч</b> фейковых новостей и поддельных страниц.</li>
+<li data-xf-list-type="ul"><b>Источники:</b><ul>
+<li data-xf-list-type="ul">...</li>
+</ul></li>
+</ul><br />
+<a href="https://osint42.org/threads/usileniye-kontrolya-za-feikami-pered-vyborami-v-rossii.183/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Apple обвинили в использовании пиратских книг для обучения ИИ</title>
+      <pubDate>Tue, 09 Sep 2025 05:04:07 +0000</pubDate>
+      <link>https://osint42.org/threads/apple-obvinili-v-ispol-zovanii-pirat-skikh-knig-dlya-obucheniya-ii.182/</link>
+      <guid isPermaLink="false">182</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img class="smilie smilie--emoji" alt="🍎" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f34e.png" title="Red apple    :apple:" data-shortname=":apple:" loading="lazy" width="64" height="64" /> <b>Юридический прецедент и отраслевой контекст:</b><br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><b>Суть иска:</b> Писатели обвиняют Apple в скачивании тысяч нелицензированных книг из теневых интернет-библиотек (таких как Z-Library) для обучения своей ИИ-модели Apple Intelligence.</li>
+<li data-xf-list-type="ul"><b>Глобальный тренд:</b> Это не первый случай: аналогичные иски были поданы против <b>OpenAI</b> (авторами Джорджем Мартином и Джоди Пикулт) и <b>Meta</b>. Суды пока не выработали единой практики, что делает дело против Apple особенно важным...</li>
+</ul><br />
+<a href="https://osint42.org/threads/apple-obvinili-v-ispol-zovanii-pirat-skikh-knig-dlya-obucheniya-ii.182/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Белые списки сервисов при отключении интернета в России</title>
+      <pubDate>Tue, 09 Sep 2025 05:03:10 +0000</pubDate>
+      <link>https://osint42.org/threads/belyye-spiski-servisov-pri-otklyuchenii-interneta-v-rossii.181/</link>
+      <guid isPermaLink="false">181</guid>
+      <author>invalid@example.com (ЗашелТолькоПосмотреть)</author>
+      <category domain="https://osint42.org/forums/novosti-informatsionnoi-bezopasnosti.7/"><![CDATA[Новости информационной безопасности]]></category>
+      <dc:creator>ЗашелТолькоПосмотреть</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper"><img class="smilie smilie--emoji" alt="📱" src="https://cdn.jsdelivr.net/joypixels/assets/8.0/png/unicode/64/1f4f1.png" title="Mobile phone    :mobile_phone:" data-shortname=":mobile_phone:" loading="lazy" width="64" height="64" /> <b>Технические и регуляторные детали:</b><br />
+<br />
+<ul>
+<li data-xf-list-type="ul"><b>Реализация:</b> Механизм реализуется через технологию <b>TAS (Traffic Annotating System)</b>, которая позволяет маркировать и приоритизировать трафик критически важных сервисов на сетевом уровне.</li>
+<li data-xf-list-type="ul"><b>Правовая база:</b> Инициатива является частью исполнения закона о &quot;суверенном Рунете&quot; и регламентов Минцифры по обеспечению устойчивости интернета.</li>
+<li data-xf-list-type="ul"><b>Источники:</b><ul>
+<li data-xf-list-type="ul"><a href="https://digital.gov.ru/ru/documents/8024/" target="_blank" class="link link--external" rel="nofollow ugc noopener">Постановление Правительства РФ №1529</a> (о порядке...</li>
+</ul></li>
+</ul><br />
+<a href="https://osint42.org/threads/belyye-spiski-servisov-pri-otklyuchenii-interneta-v-rossii.181/" class="link link--internal">Подробнее</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+  </channel>
+</rss>
