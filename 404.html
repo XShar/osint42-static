@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8">
+<title>Redirect…</title>
+<script>
+const m = location.pathname.match(/\/%23post-([0-9]+)\.html$/);
+if (m) {
+  const target = location.pathname.replace(/\/%23post-([0-9]+)\.html$/, '/#post-' + m[1]);
+  location.replace(target); // мягкий редирект клиентом
+} else {
+  // обычная 404
+  document.write('<h1>404</h1><p>Page not found.</p>');
+}
+</script>
