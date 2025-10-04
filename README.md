@@ -4,7 +4,7 @@
 
 Зеркало в CloudFlare:https://osint42.pages.dev/osint42.org/
 
-Скачать локально можно здесь:https://mega.nz/file/zpY1lJAZ#xGIKf_if1RY3uuKiTRK5Y8BAF9uApeajy-1VyWK2N7c
+Скачать локально можно здесь:https://mega.nz/file/Ll4lSBDa#etOd-Rrihc9maZCVjfQ5ValoOsp-U2KJSgwkS1EsRdM
 
 ОСНОВНОЙ ДОМЕН:https://osint42.com/osint42.org/
 
