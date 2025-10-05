@@ -303,7 +303,87 @@ window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionPa
 	
 		<link rel="icon" type="image/png" href="../../data/assets/logo/favicon.png" sizes="32x32" />
 	
+<!-- КАСТОМНЫЕ СТИЛИ -->
+<style>
+  /* Центрируем основной контейнер всей страницы */
+  .p-body-inner {
+    max-width: 1400px;       /* ширина всей страницы */
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
 
+  /* Сетка: контент + сайдбар */
+  .p-body-main--withSidebar {
+    display: grid;
+    grid-template-columns: minmax(0, 1400px) 120px; /* контентная колонка + sidebar */
+    gap: 24px;
+    justify-content: center;  /* центрируем всю сетку */
+  }
+
+  /* Колонка с основным контентом */
+  .p-body-contentCol {
+    max-width: 1400px;        /* ширина контентной колонки */
+    width: 100%;
+  }
+
+  /* Внутренний контент (текст статьи) */
+  .p-body-content {
+    max-width: 1100px;        /* ширина текста статьи */
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  /* На узких экранах контент и сайдбар складываются в одну колонку */
+  @media (max-width: 1100px) {
+    .p-body-main--withSidebar {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* --- ФИКС СПОЙЛЕРА --- */
+  details.spoiler,
+  details.spoiler > div {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  /* Переносим длинные слова внутри спойлера */
+  details.spoiler,
+  details.spoiler * {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* Для блоков кода внутри спойлера */
+  details.spoiler pre,
+  details.spoiler code,
+  details.spoiler .bbCodeBlock,
+  details.spoiler .code,
+  details.spoiler .bbCodeCode {
+    white-space: pre-wrap !important; /* разрешаем переносы в pre */
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  /* Горизонтальная прокрутка только внутри спойлера */
+  details.spoiler > div {
+    overflow-x: auto;
+  }
+
+  /* Картинки внутри спойлера не должны вылезать */
+  details.spoiler img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* На всякий случай убираем возможные сдвиги */
+  details.spoiler {
+    margin-left: 0 !important;
+  }
+</style>
 	
 	
 </head>
