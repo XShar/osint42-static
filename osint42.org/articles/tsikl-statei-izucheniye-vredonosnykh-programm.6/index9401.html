@@ -316,25 +316,25 @@ window.addEventListener('DOMContentLoaded',()=>{XF.Push.updateUserSubscriptionPa
   .p-body-main--withSidebar {
     display: grid;
     grid-template-columns: minmax(0, 1400px) 120px; /* контентная колонка + sidebar */
-    gap: 24px;
+    gap: px;
     justify-content: center;  /* центрируем всю сетку */
   }
 
   /* Колонка с основным контентом */
   .p-body-contentCol {
-    max-width: 1400px;        /* ширина контентной колонки */
+    max-width: 1800px;        /* ширина контентной колонки */
     width: 100%;
   }
 
   /* Внутренний контент (текст статьи) */
   .p-body-content {
-    max-width: 1100px;        /* ширина текста статьи */
+    max-width: 1800px;        /* ширина текста статьи */
     width: 100%;
     margin-inline: auto;
   }
 
   /* На узких экранах контент и сайдбар складываются в одну колонку */
-  @media (max-width: 1100px) {
+  @media (max-width: 1200px) {
     .p-body-main--withSidebar {
       grid-template-columns: 1fr;
     }
