@@ -1614,19 +1614,17 @@ LLM → Prompt: создай Powershell-скрипт, качающий EXE и м
 <h2 class="bbHeading"><a class="u-anchorTarget" name="-2-bootkitty-moonstone-sleet-funksec-real-nyye-keisy"></a>2. Bootkitty, Moonstone Sleet, FunkSec: реальные кейсы&#8203;<a class="hoverLink" href="#-2-bootkitty-moonstone-sleet-funksec-real-nyye-keisy" title="Постоянная ссылка"></a></h2><br />
 
 
-<details class="spoiler">
-  <summary>Спойлер: Bootkitty: первый UEFI-боткит под Linux</summary>
+<summary>Bootkitty: первый UEFI-боткит под Linux</summary>
   <div>
 • <b>Где всплыло</b>: В ноябре 2024 года ESET <a href="https://www.welivesecurity.com/en/eset-research/bootkitty-uefi-rootkit-linux/" target="_blank" class="link link--external" rel="noopener">опубликовал исследование</a> о Bootkitty — редком UEFI-импланте под Linux.<br />
 • <b>Как работает</b>: Заменяет GRUB-загрузчик, подменяет ядро Ubuntu в памяти. Secure Boot остаётся включён, но не работает.<br />
 • <b>Что делает</b>: Загружает вредоносный payload на раннем этапе, до инициализации антивируса или EDR.<br />
 • <b>ИИ-признак</b>: Кастомизация скриптов конфигурации grub и EFI-модулей с автогенерацией уникальных образцов.
   </div>
-</details></div><br />
+</div><br />
 
 
-<details class="spoiler">
-  <summary>Спойлер: Moonstone Sleet: троян в виде игры от КНДР</summary>
+  <summary>Moonstone Sleet: троян в виде игры от КНДР</summary>
   <div>
 • <b>Кто стоит</b>: Новый северокорейский актор (связан с Lazarus), впервые упомянут Microsoft в <a href="https://www.microsoft.com/en-us/security/blog/2024/05/28/moonstone-sleet-new-north-korean-threat/" target="_blank" class="link link--external" rel="noopener">мае 2024</a><br />
 • <b>Механизм</b>: Жертвам (в основном разработчикам) предлагается попробовать игру <i>DeTankWar</i>.<br />
@@ -1634,11 +1632,10 @@ LLM → Prompt: создай Powershell-скрипт, качающий EXE и м
 • <b>Что внутри</b>: FakePenny ransomware, кастомный dropper, supply-chain атаки через npm.<br />
 • <b>ИИ-признак</b>: Сгенерированные шаблоны вакансий, ответы на письма, код-символы без репитиций (признак автогенерации).
   </div>
-</details></div><br />
+></div><br />
 
 
-<details class="spoiler">
-  <summary>Спойлер: FunkSec: рансомварь с LLM внутри</summary>
+  <summary>FunkSec: рансомварь с LLM внутри</summary>
   <div>
 • <b>Тип атаки</b>: Ransomware-as-a-Service, активен с начала 2025 года.<br />
 • <b>Главная фишка</b>: Внутренний AI-модуль на базе LLaMA или аналогов, обёрнутый в ONNX.<br />
@@ -1649,7 +1646,7 @@ LLM → Prompt: создай Powershell-скрипт, качающий EXE и м
 • <b>Монетизация</b>: Через дашборд-оператор, на выходе: криптокошельки и динамика выкупа.<br />
 • <b>Источник</b>: <a href="https://www.crowdstrike.com/blog/2025-threat-intelligence-predictions/" target="_blank" class="link link--external" rel="noopener">CrowdStrike 2025 TI</a>.
   </div>
-</details></div><br />
+</div><br />
 <h3 class="bbHeading"><a class="u-anchorTarget" name="-3-vyvod-klass-ugroz-novogo-tipa"></a>3.Вывод: класс угроз нового типа&#8203;<a class="hoverLink" href="#-3-vyvod-klass-ugroz-novogo-tipa" title="Постоянная ссылка"></a></h3>ИИ-малварь — это не просто троян или шифровальщик с новой обфускацией. Это <b>автономный атакующий организм</b>, который:<br />
 <ol>
 <li data-xf-list-type="ol">Собирает и анализирует OSINT-данные в реальном времени.</li>
