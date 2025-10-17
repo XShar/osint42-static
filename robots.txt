@@ -1,0 +1,37 @@
+User-agent: *
+Disallow: /register.html
+Disallow: /attachments/
+Disallow: /admin.php
+Disallow: /birthdays/
+Disallow: /find-new/
+Disallow: /forums/*/?direction
+Disallow: /forums/*/?order
+Disallow: /forums/*/page-*?order
+Disallow: /help/
+Disallow: /login/
+Disallow: /lost-password/
+Allow: /misc/style-variation
+Disallow: /misc/
+Disallow: /online/
+Disallow: /register
+Disallow: /search/
+Disallow: /search.php
+Disallow: /threads/*/poll
+Disallow: /WhoHasVisited/
+Disallow: /recent-activity/
+Disallow: /advstats/
+Disallow: /members/
+Disallow: /BanList/
+Disallow: /goto/
+Disallow: /conversations/
+Disallow: /cometchat/
+Disallow: /taigachat/
+Disallow: /chat/
+Disallow: /rating/
+Disallow: /cdn-cgi/
+Disallow: /latest-activity
+Disallow: /latest-activity/
+
+Host: osint42.com
+
+Sitemap: https://osint42.com/sitemap.xml
