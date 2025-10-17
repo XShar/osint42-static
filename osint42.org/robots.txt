@@ -10,7 +10,6 @@ Disallow: /forums/*/page-*?order
 Disallow: /help/
 Disallow: /login/
 Disallow: /lost-password/
-Allow: /misc/style-variation
 Disallow: /misc/
 Disallow: /online/
 Disallow: /register
